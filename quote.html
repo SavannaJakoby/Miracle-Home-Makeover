@@ -12,19 +12,10 @@ text-align: center;
 padding: 20px;
 }
 
-/* STEPS */
-.step {
-display: none;
-}
-
-.step.active {
-display: block;
-}
-
 /* INPUTS */
-input, select {
+input, textarea {
 padding: 10px;
-width: 80%;
+width: 85%;
 margin: 10px 0;
 }
 
@@ -35,6 +26,18 @@ background: #1b9aaa;
 color: white;
 border: none;
 cursor: pointer;
+border-radius: 5px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+display: inline-block;
+margin-top: 20px;
+text-decoration: none;
+color: white;
+background: #0d1b2a;
+padding: 10px 20px;
+border-radius: 5px;
 }
 </style>
 </head>
@@ -43,60 +46,63 @@ cursor: pointer;
 
 <h1>Request a Quote</h1>
 
-<!-- STEP 1 -->
-<div class="step active" id="step1">
+<!-- FORM -->
+<div id="form">
+
 <h3>Your Name</h3>
-<input type="text" id="name" placeholder="Enter your name">
-<br>
-<button onclick="nextStep(1)">Next</button>
-</div>
+<input type="text" id="name" placeholder="Full Name">
 
-<!-- STEP 2 -->
-<div class="step" id="step2">
-<h3>Your Address</h3>
-<input type="text" id="address" placeholder="Enter your address">
-<br>
-<button onclick="nextStep(2)">Next</button>
-</div>
+<h3>Full Address</h3>
+<input type="text" id="address" placeholder="Full Address">
 
-<!-- STEP 3 -->
-<div class="step" id="step3">
-<h3>Select Service</h3>
-<select id="service">
-<option>Deep Cleaning</option>
-<option>Home Organization</option>
-<option>Move In/Out Cleaning</option>
-</select>
-<br>
-<button onclick="nextStep(3)">Next</button>
-</div>
+<h3>What do you need done?</h3>
+<textarea id="details" placeholder="Describe services needed"></textarea>
 
-<!-- STEP 4 -->
-<div class="step" id="step4">
-<h3>Contact Info</h3>
-<input type="text" id="phone" placeholder="Phone Number">
-<input type="email" id="email" placeholder="Email">
-<br>
-<button onclick="submitForm()">Submit</button>
+<br><br>
+
+<button onclick="sendQuote()">Submit Request</button>
+
 </div>
 
 <!-- THANK YOU -->
-<div class="step" id="thankyou">
+<div id="thankyou" style="display:none;">
 <h2>Thank you!</h2>
-<p>I will contact you shortly.</p>
+<p>Your request is ready to send.</p>
+
+<a id="textLink" target="_blank">
+<button>Send Text Now</button>
+</a>
+
+<br>
+
+<a href="index.html" class="back-btn">Back to Website</a>
 </div>
 
 <script>
-function nextStep(step) {
-document.getElementById("step" + step).classList.remove("active");
-document.getElementById("step" + (step + 1)).classList.add("active");
-}
+function sendQuote() {
 
-function submitForm() {
-document.getElementById("step4").classList.remove("active");
-document.getElementById("thankyou").classList.add("active");
+var name = document.getElementById("name").value;
+var address = document.getElementById("address").value;
+var details = document.getElementById("details").value;
 
-// You can later send this data to email/backend
+/* FORMAT MESSAGE */
+var message =
+"Quote Request:%0A%0A" +
+"Name: " + name + "%0A" +
+"Address: " + address + "%0A" +
+"Details: " + details;
+
+/* YOUR PHONE NUMBER */
+var phone = "13043502545";
+
+/* CREATE SMS LINK */
+var link = "sms:" + phone + "?body=" + message;
+
+document.getElementById("textLink").href = link;
+
+/* SHOW THANK YOU */
+document.getElementById("form").style.display = "none";
+document.getElementById("thankyou").style.display = "block";
 }
 </script>
 
