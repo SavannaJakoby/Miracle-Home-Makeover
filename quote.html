@@ -3,108 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Request a Quote</title>
+<title>Request a Quote - Miracle Home Makeover</title>
 
 <style>
 body {
-font-family: Arial;
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f4f4f4;
+}
+
+/* NAV */
+nav {
+background: #0d1b2a;
+padding: 12px;
 text-align: center;
-padding: 20px;
 }
 
-/* INPUTS */
+nav a {
+color: white;
+padding: 12px 15px;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* HEADER */
+header {
+text-align: center;
+padding: 60px 20px;
+background: #1b9aaa;
+color: white;
+}
+
+/* FORM */
+.container {
+max-width: 500px;
+margin: 30px auto;
+background: white;
+padding: 25px;
+border-radius: 8px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
 input, textarea {
-padding: 10px;
-width: 85%;
+width: 100%;
+padding: 12px;
 margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
 }
 
-/* BUTTON */
 button {
-padding: 12px 20px;
+width: 100%;
+padding: 14px;
 background: #1b9aaa;
 color: white;
 border: none;
+border-radius: 6px;
+font-size: 16px;
+font-weight: bold;
 cursor: pointer;
-border-radius: 5px;
 }
 
-/* BACK BUTTON */
-.back-btn {
-display: inline-block;
-margin-top: 20px;
-text-decoration: none;
+button:hover {
+background: #168b97;
+}
+
+/* TEXT BUTTON */
+.text-btn {
+display: block;
+margin-top: 15px;
+padding: 14px;
+background: #ff7b00;
 color: white;
-background: #0d1b2a;
-padding: 10px 20px;
-border-radius: 5px;
+text-align: center;
+border-radius: 6px;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* SUCCESS MESSAGE */
+.success {
+display: none;
+text-align: center;
+color: green;
+margin-top: 15px;
+font-weight: bold;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+<a href="index.html">Home</a>
+<a href="index.html#services">Services</a>
+<a href="about.html">About</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+
+<header>
 <h1>Request a Quote</h1>
+<p>Tell me what you need and I’ll get back to you</p>
+</header>
 
-<!-- FORM -->
-<div id="form">
+<div class="container">
 
-<h3>Your Name</h3>
-<input type="text" id="name" placeholder="Full Name">
+<form action="https://formspree.io/f/mzdkjojj" method="POST">
 
-<h3>Full Address</h3>
-<input type="text" id="address" placeholder="Full Address">
+<input type="text" name="Name" placeholder="Full Name" required>
 
-<h3>What do you need done?</h3>
-<textarea id="details" placeholder="Describe services needed"></textarea>
+<input type="text" name="Address" placeholder="Full Address" required>
 
-<br><br>
+<textarea name="Details" placeholder="Describe what services you need..." rows="5" required></textarea>
 
-<button onclick="sendQuote()">Submit Request</button>
+<button type="submit">Get Quote by Email</button>
 
-</div>
+</form>
 
-<!-- THANK YOU -->
-<div id="thankyou" style="display:none;">
-<h2>Thank you!</h2>
-<p>Your request is ready to send.</p>
-
-<a id="textLink" target="_blank">
-<button>Send Text Now</button>
+<a href="sms:13043502545?body=Hi, I’d like a quote for cleaning services. Name: Address: Services Needed:"
+class="text-btn">
+Text Me Instead
 </a>
 
-<br>
-
-<a href="index.html" class="back-btn">Back to Website</a>
 </div>
-
-<script>
-function sendQuote() {
-
-var name = document.getElementById("name").value;
-var address = document.getElementById("address").value;
-var details = document.getElementById("details").value;
-
-/* FORMAT MESSAGE */
-var message =
-"Quote Request:%0A%0A" +
-"Name: " + name + "%0A" +
-"Address: " + address + "%0A" +
-"Details: " + details;
-
-/* YOUR PHONE NUMBER */
-var phone = "13043502545";
-
-/* CREATE SMS LINK */
-var link = "sms:" + phone + "?body=" + message;
-
-document.getElementById("textLink").href = link;
-
-/* SHOW THANK YOU */
-document.getElementById("form").style.display = "none";
-document.getElementById("thankyou").style.display = "block";
-}
-</script>
 
 </body>
 </html>
