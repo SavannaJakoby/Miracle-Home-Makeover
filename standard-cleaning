@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standard Cleaning - Miracle Home Makeover</title>
+
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background: #f4f4f4;
+}
+
+/* NAV */
+nav {
+background: #0d1b2a;
+padding: 12px;
+text-align: center;
+}
+
+nav a {
+color: white;
+padding: 12px 15px;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* HEADER */
+header {
+text-align: center;
+padding: 70px 20px;
+background: #1b9aaa;
+color: white;
+}
+
+/* CONTENT */
+section {
+max-width: 900px;
+margin: auto;
+padding: 30px 20px;
+background: white;
+}
+
+h2 {
+margin-top: 30px;
+color: #0d1b2a;
+}
+
+h3 {
+margin-top: 20px;
+color: #1b9aaa;
+}
+
+/* LIST */
+ul {
+padding-left: 20px;
+}
+
+/* BOX */
+.box {
+background: #f9f9f9;
+padding: 20px;
+margin-top: 20px;
+border-left: 5px solid #1b9aaa;
+border-radius: 6px;
+}
+
+/* BUTTON */
+.btn {
+display: inline-block;
+margin-top: 30px;
+padding: 14px 25px;
+background: #ff7b00;
+color: white;
+text-decoration: none;
+border-radius: 6px;
+font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="index.html#services">Services</a>
+<a href="about.html">About</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+
+<header>
+<h1>Standard / Routine Cleaning</h1>
+<p>Consistent, Reliable Cleaning for a Fresh & Comfortable Space</p>
+</header>
+
+<section>
+
+<p>
+My Standard Routine Cleaning is designed to maintain a clean, organized, and comfortable environment through regular upkeep. This package focuses on essential cleaning tasks to keep your home or business looking its best through your day-to-day life.
+</p>
+
+<div class="box">
+<h2>General Cleaning (All Areas)</h2>
+<ul>
+<li>Dusting all accessible surfaces (furniture, shelves, décor)</li>
+<li>Wiping down countertops and flat surfaces</li>
+<li>Vacuuming carpets and rugs</li>
+<li>Sweeping and mopping hard floors</li>
+<li>Emptying trash and replacing liners</li>
+<li>Light tidying and straightening</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Kitchen Cleaning</h2>
+<ul>
+<li>Wipe down countertops and backsplashes</li>
+<li>Clean exterior of appliances (stove, fridge, microwave, dishwasher)</li>
+<li>Clean and sanitize sink and faucet</li>
+<li>Wipe cabinet fronts</li>
+<li>Spot clean walls and high-touch areas</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Bathroom Cleaning</h2>
+<ul>
+<li>Clean and disinfect toilets</li>
+<li>Scrub sinks, counters, and faucets</li>
+<li>Clean tubs and showers (light buildup removal)</li>
+<li>Wipe mirrors and glass surfaces</li>
+<li>Sanitize high-touch areas</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Bedroom Cleaning</h2>
+<ul>
+<li>Dust furniture and surfaces</li>
+<li>Make beds (linen change optional)</li>
+<li>Vacuum floors and rugs</li>
+<li>Empty trash</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Living Areas & Common Spaces</h2>
+<ul>
+<li>Dust and wipe furniture</li>
+<li>Light upholstery vacuuming</li>
+<li>Clean floors (vacuum/mop)</li>
+<li>Straighten pillows, blankets, and décor</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Service Frequency Options</h2>
+<ul>
+<li>Weekly</li>
+<li>Bi-weekly</li>
+<li>Monthly</li>
+<li>Custom schedules available</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Not Included (Add-On Services)</h2>
+<ul>
+<li>Deep cleaning (baseboards, heavy buildup, inside appliances)</li>
+<li>Interior cabinet cleaning</li>
+<li>Carpet shampooing</li>
+<li>Exterior window cleaning</li>
+<li>Post-construction cleaning</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Ideal For</h2>
+<ul>
+<li>Busy families</li>
+<li>Working professionals</li>
+<li>Seniors</li>
+<li>Offices needing light maintenance</li>
+<li>Anyone wanting a consistently clean space</li>
+</ul>
+</div>
+
+<a href="quote.html" class="btn">Request a Quote</a>
+
+</section>
+
+</body>
+</html>
