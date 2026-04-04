@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,22 +11,21 @@ margin: 0;
 font-family: Arial, sans-serif;
 }
 
-/* NAV */
+/* 🔥 PREMIUM NAVBAR */
 nav {
 background: #0d1b2a;
-padding: 10px 15px;
+padding: 12px 30px;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
+/* NAV LAYOUT */
 .nav-top {
 display: flex;
 justify-content: space-between;
 align-items: center;
-}
-
-.menu-icon {
-color: white;
-font-size: 26px;
-cursor: pointer;
 }
 
 /* MENU */
@@ -37,41 +35,66 @@ flex-direction: column;
 text-align: center;
 }
 
-.menu a {
+.menu a, .dropdown > a {
 color: white;
-padding: 12px;
+padding: 12px 15px;
 text-decoration: none;
-font-weight: bold;
+font-weight: 600;
+position: relative;
 }
 
-.menu a:hover {
+/* HOVER EFFECT */
+.menu a::after, .dropdown > a::after {
+content: "";
+position: absolute;
+width: 0;
+height: 2px;
+bottom: 5px;
+left: 0;
 background: #1b9aaa;
+transition: 0.3s;
+}
+
+.menu a:hover::after, .dropdown > a:hover::after {
+width: 100%;
+}
+
+/* MENU ICON */
+.menu-icon {
+color: white;
+font-size: 26px;
+cursor: pointer;
 }
 
 /* DROPDOWN */
 .dropdown {
 position: relative;
+display: flex;
+align-items: center;
 }
 
 .dropdown-content {
 display: none;
 position: absolute;
+top: 40px;
 background: #0d1b2a;
-min-width: 180px;
-z-index: 1;
+min-width: 200px;
+border-radius: 6px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
 .dropdown-content a {
 display: block;
-padding: 10px;
+padding: 12px;
 color: white;
-text-decoration: none;
 }
 
 .dropdown-content a:hover {
 background: #1b9aaa;
 }
 
+/* SHOW DROPDOWN */
 .dropdown:hover .dropdown-content {
 display: block;
 }
@@ -91,16 +114,14 @@ background-repeat: no-repeat;
 background-position: center;
 }
 
-/* TEXT POP */
+/* TEXT */
 header h1 {
 font-size: 42px;
-font-weight: bold;
 text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
 }
 
 header p {
 font-size: 20px;
-margin-top: 10px;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
@@ -125,7 +146,12 @@ border-radius: 10px;
 text-align: center;
 text-decoration: none;
 color: black;
-display: block;
+transition: 0.2s;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* CONTACT */
@@ -144,12 +170,13 @@ text-align: center;
 padding: 20px;
 }
 
-/* DESKTOP MENU */
+/* DESKTOP */
 @media (min-width: 700px) {
 .menu {
 display: flex !important;
 flex-direction: row;
 justify-content: center;
+align-items: center;
 }
 
 .menu-icon {
@@ -157,7 +184,7 @@ display: none;
 }
 
 .menu a, .dropdown {
-margin: 0 10px;
+margin: 0 15px;
 }
 }
 </style>
@@ -197,6 +224,7 @@ margin: 0 10px;
 
 <section id="services">
 <h2>My Services</h2>
+
 <div class="services">
 
 <a href="deep-cleaning.html" class="card">
@@ -219,6 +247,7 @@ margin: 0 10px;
 
 <section id="contact">
 <h2>Contact Me</h2>
+
 <div class="contact-box">
 <p>📞 304-350-2545</p>
 <p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
@@ -240,6 +269,7 @@ menu.style.display = "flex";
 }
 }
 
+// MOBILE DROPDOWN
 document.addEventListener("DOMContentLoaded", function() {
 const dropdown = document.querySelector(".dropdown > a");
 
