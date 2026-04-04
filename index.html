@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -66,11 +66,10 @@ display: block;
 }
 }
 
-/* 🔥 PREMIUM HEADER */
+/* 🔥 HEADER */
 header {
-position: relative;
 text-align: center;
-padding: 140px 20px;
+padding: 120px 20px;
 color: white;
 
 background:
@@ -82,47 +81,33 @@ background-repeat: no-repeat;
 background-position: center;
 }
 
-/* TEXT WRAPPER (adds blur effect) */
-.header-content {
-backdrop-filter: blur(4px);
-background: rgba(0,0,0,0.25);
-padding: 20px;
-border-radius: 10px;
-display: inline-block;
-}
-
 /* TEXT */
 header h1 {
-font-size: 46px;
-margin: 0;
-text-shadow: 3px 3px 15px black;
+font-size: 42px;
+text-shadow: 3px 3px 10px black;
 }
 
 header p {
+text-shadow: 2px 2px 8px black;
 margin-top: 15px;
-font-size: 20px;
-text-shadow: 2px 2px 10px black;
 }
 
-/* 🔥 MOBILE PERFECT */
+/* 🔥 PERFECT MOBILE FIX */
 @media (max-width: 600px) {
 
 header {
-padding: 90px 20px;
-background-size: 80%;
+padding: 80px 20px;
+background-size: 85%;
 }
 
 header h1 {
 font-size: 30px;
+margin-bottom: 10px;
 }
 
 header p {
 font-size: 16px;
-margin-top: 20px;
-}
-
-.header-content {
-padding: 15px;
+margin-top: 25px;
 }
 }
 
@@ -138,7 +123,7 @@ margin: auto;
 background: #f4f4f4;
 padding: 20px;
 margin: 10px 0;
-border-radius: 10px;
+border-radius: 8px;
 text-decoration: none;
 color: black;
 display: block;
@@ -147,7 +132,7 @@ transition: 0.2s;
 
 .card:hover {
 transform: translateY(-5px);
-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 </style>
 </head>
@@ -171,10 +156,8 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 </nav>
 
 <header>
-<div class="header-content">
 <h1>Miracle Home Makeover</h1>
 <p>I don’t just clean homes — I transform them.</p>
-</div>
 </header>
 
 <section id="services">
