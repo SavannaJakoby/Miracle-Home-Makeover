@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miracle Home Makeover</title>
+
 <style>
 body {
 font-family: Arial, sans-serif;
@@ -11,29 +12,51 @@ margin: 0;
 background: #f5f7fa;
 color: #333;
 }
-header {
+
+/* NAV BAR */
+nav {
 background: #0d1b2a;
-color: white;
-padding: 40px 20px;
+padding: 15px;
 text-align: center;
 }
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+font-weight: bold;
+}
+nav a:hover {
+text-decoration: underline;
+}
+
+/* HEADER */
+header {
+background: #1b9aaa;
+color: white;
+padding: 60px 20px;
+text-align: center;
+}
+
 section {
-padding: 40px 20px;
+padding: 50px 20px;
 max-width: 900px;
 margin: auto;
 }
-h1, h2 {
-margin-bottom: 10px;
+
+h2 {
+margin-bottom: 15px;
 }
+
 .button {
 display: inline-block;
 margin-top: 15px;
 padding: 12px 20px;
-background: #1b9aaa;
+background: #0d1b2a;
 color: white;
 text-decoration: none;
 border-radius: 5px;
 }
+
 footer {
 background: #0d1b2a;
 color: white;
@@ -42,28 +65,40 @@ padding: 20px;
 }
 </style>
 </head>
+
 <body>
 
+<!-- NAVIGATION -->
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- HEADER -->
 <header>
 <h1>Miracle Home Makeover</h1>
 <p>I don’t just clean homes — I transform them.</p>
 <a class="button" href="tel:13043502545">Call Now</a>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
 <h2>About Us</h2>
-<p>We specialize in deep cleaning and home organization. Our goal is to bring your home back to life and make your space stress-free.</p>
+<p>At Miracle Home Makeover, we specialize in deep cleaning and home organization. We take pride in making your home feel fresh, clean, and stress-free.</p>
 </section>
 
-<section>
+<!-- SERVICES -->
+<section id="services">
 <h2>Services</h2>
 <p><strong>Deep Cleaning:</strong> Full top-to-bottom cleaning.</p>
 <p><strong>Home Organization:</strong> Declutter and organize your space.</p>
-<p><strong>Reset Cleaning:</strong> Perfect for a fresh start.</p>
+<p><strong>Move-In/Move-Out Cleaning:</strong> Perfect for transitions.</p>
 </section>
 
-<section>
-<h2>Contact</h2>
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Us</h2>
 <p>📞 304-350-2545</p>
 <p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
 </section>
