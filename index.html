@@ -26,7 +26,7 @@ font-weight: bold;
 position: relative;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 nav a::after {
 content: "";
 position: absolute;
@@ -60,7 +60,6 @@ z-index: 1;
 display: block;
 }
 
-/* DESKTOP HOVER */
 @media (min-width: 700px) {
 .dropdown:hover .dropdown-content {
 display: block;
@@ -82,7 +81,6 @@ background-repeat: no-repeat;
 background-position: center;
 }
 
-/* TEXT */
 header h1 {
 font-size: 42px;
 text-shadow: 3px 3px 10px black;
@@ -93,7 +91,7 @@ text-shadow: 2px 2px 8px black;
 margin-top: 15px;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width: 600px) {
 header {
 padding: 80px 20px;
@@ -141,7 +139,7 @@ transform: translateY(-5px);
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* 📞 CALL BUTTON */
+/* CALL BUTTON */
 .call-btn {
 display: inline-block;
 margin-top: 15px;
@@ -153,7 +151,7 @@ text-decoration: none;
 font-weight: bold;
 }
 
-/* 🔥 FLOATING BUTTON */
+/* FLOATING QUOTE */
 .floating-quote {
 position: fixed;
 bottom: 20px;
@@ -184,9 +182,7 @@ transform: scale(1.05);
 <div class="dropdown">
 <a href="#" onclick="toggleDropdown(event)">Services ▼</a>
 <div id="dropdownMenu" class="dropdown-content">
-<a href="deep-cleaning.html">Deep Cleaning</a>
-<a href="organization.html">Home Organization</a>
-<a href="move-cleaning.html">Move In/Out Cleaning</a>
+<a href="#">All Services</a>
 </div>
 </div>
 
@@ -208,20 +204,60 @@ transform: scale(1.05);
 <section id="services">
 <h2>My Services</h2>
 
-<a href="deep-cleaning.html" class="card">
+<a href="#" class="card">
+<h3>Residential & Commercial Cleaning</h3>
+<p>Reliable cleaning services for homes, offices, and businesses.</p>
+<p><strong>Free estimate available</strong></p>
+</a>
+
+<a href="#" class="card">
 <h3>Deep Cleaning</h3>
-<p>I provide detailed top-to-bottom cleaning.</p>
+<p>Detailed top-to-bottom cleaning to reset your entire space.</p>
+<p><strong>Free estimate available</strong></p>
 </a>
 
-<a href="organization.html" class="card">
-<h3>Home Organization</h3>
-<p>I help declutter and simplify your space.</p>
+<a href="#" class="card">
+<h3>Standard / Routine Cleaning</h3>
+<p>Regular maintenance cleaning to keep your home consistently fresh.</p>
+<p><strong>Free estimate available</strong></p>
 </a>
 
-<a href="move-cleaning.html" class="card">
-<h3>Move In/Out Cleaning</h3>
-<p>I make your home ready for a fresh start.</p>
+<a href="#" class="card">
+<h3>Move-In / Move-Out Cleaning</h3>
+<p>Get your home ready for a fresh start or leave it spotless.</p>
+<p><strong>Free estimate available</strong></p>
 </a>
+
+<a href="#" class="card">
+<h3>Airbnb / Rental Turnover Cleaning</h3>
+<p>Fast, reliable cleanings to keep your guests satisfied.</p>
+<p><strong>Free estimate available</strong></p>
+</a>
+
+<a href="#" class="card">
+<h3>Organizing & Decluttering</h3>
+<p>I help simplify and organize your space for better living.</p>
+<p><strong>Free estimate available</strong></p>
+</a>
+
+<a href="#" class="card">
+<h3>Laundry Services</h3>
+<p>Wash, dry, and fold services available upon request.</p>
+<p><strong>Free estimate available</strong></p>
+</a>
+
+<a href="#" class="card">
+<h3>Carpet Cleaning</h3>
+<p>Deep cleaning to refresh and restore your carpets.</p>
+<p><strong>Free estimate available</strong></p>
+</a>
+
+<a href="#" class="card">
+<h3>Post-Construction Cleaning</h3>
+<p>Remove dust and debris after renovations or builds.</p>
+<p><strong>Free estimate available</strong></p>
+</a>
+
 </section>
 
 <section id="contact">
@@ -230,12 +266,11 @@ transform: scale(1.05);
 <p>📞 304-350-2545</p>
 <p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
 
-<!-- 🔥 CALL BUTTON -->
 <a href="tel:13043502545" class="call-btn">Call Now</a>
 
 </section>
 
-<!-- 🔥 FLOATING QUOTE BUTTON -->
+<!-- FLOATING BUTTON -->
 <a href="quote.html" class="floating-quote">Get Free Quote</a>
 
 <script>
