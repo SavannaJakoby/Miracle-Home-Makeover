@@ -6,6 +6,17 @@
 <title>Miracle Home Makeover</title>
 
 <style>
+
+nav a.cta {
+background: #ff7b00;
+padding: 10px 15px;
+border-radius: 5px;
+}
+
+nav a.cta:hover {
+background: #e66a00;
+}
+  
 body {
 font-family: Arial, sans-serif;
 margin: 0;
@@ -73,6 +84,7 @@ padding: 20px;
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
+<a class="cta" href="#walkthrough">Request walkthrough</a>
 </nav>
 
 <!-- HEADER -->
@@ -96,6 +108,21 @@ padding: 20px;
 <p><strong>Move-In/Move-Out Cleaning:</strong> Perfect for transitions.</p>
 </section>
 
+<section id="walkthrough">
+<h2>Request a Walkthrough or Estimate</h2>
+<p>Fill out the form below and I"ll contact you to schedule your walkthrough and provide an estimate.</p>
+
+<form action="https://formspree.io/f/mzdkjojj" method="POST">
+<input type="text" name="name" placeholder="Your Name" required><br><br>
+<input type="tel" name="phone" placeholder="Phone Number" required><br><br>
+<input type="email" name="email" placeholder="Email Address" required><br><br>
+
+<textarea name="message" placeholder="Tell us about your home or what you need..." rows="5" required></textarea><br><br>
+
+<button type="submit">Request Walkthrough</button>
+</form>
+</section>
+  
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact Us</h2>
