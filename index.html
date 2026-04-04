@@ -18,7 +18,6 @@ padding: 12px;
 text-align: center;
 }
 
-/* LINKS */
 nav a {
 color: white;
 padding: 12px 15px;
@@ -27,7 +26,7 @@ font-weight: bold;
 position: relative;
 }
 
-/* 🔥 HOVER EFFECT */
+/* HOVER EFFECT */
 nav a::after {
 content: "";
 position: absolute;
@@ -67,14 +66,14 @@ display: block;
 }
 }
 
-/* HEADER */
+/* 🔥 HEADER */
 header {
 text-align: center;
-padding: 100px 20px;
+padding: 120px 20px;
 color: white;
 
 background:
-linear-gradient(rgba(27,154,170,0.6), rgba(27,154,170,0.6)),
+linear-gradient(rgba(27,154,170,0.75), rgba(27,154,170,0.75)),
 url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
 
 background-size: contain;
@@ -82,13 +81,34 @@ background-repeat: no-repeat;
 background-position: center;
 }
 
+/* TEXT */
 header h1 {
-font-size: 40px;
-text-shadow: 2px 2px 8px black;
+font-size: 42px;
+text-shadow: 3px 3px 10px black;
 }
 
 header p {
-text-shadow: 2px 2px 6px black;
+text-shadow: 2px 2px 8px black;
+margin-top: 15px;
+}
+
+/* 🔥 PERFECT MOBILE FIX */
+@media (max-width: 600px) {
+
+header {
+padding: 80px 20px;
+background-size: 85%;
+}
+
+header h1 {
+font-size: 30px;
+margin-bottom: 10px;
+}
+
+header p {
+font-size: 16px;
+margin-top: 25px;
+}
 }
 
 /* SECTIONS */
@@ -110,20 +130,11 @@ display: block;
 transition: 0.2s;
 }
 
-/* 🔥 CARD HOVER */
 .card:hover {
 transform: translateY(-5px);
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-
-/* MOBILE TEXT FIX */
-@media (max-width: 600px) {
-header p {
-margin-top: 25px;
-}
-}  
-  
-</style>  
+</style>
 </head>
 
 <body>
