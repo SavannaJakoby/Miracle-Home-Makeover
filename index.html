@@ -23,16 +23,14 @@ nav {
     align-items: center;
 }
 
-.nav-logo {
-    width: 45px;
-}
-
+/* MENU ICON */
 .menu-icon {
     color: white;
     font-size: 26px;
     cursor: pointer;
 }
 
+/* MENU LINKS */
 .menu {
     display: none;
     flex-direction: column;
@@ -50,14 +48,22 @@ nav {
     background: #1b9aaa;
 }
 
-/* HERO */
+/* HERO HEADER WITH LOGO BACKGROUND */
 header {
     text-align: center;
-    padding: 80px 20px;
-    background: #1b9aaa;
+    padding: 100px 20px;
     color: white;
+
+    background: 
+        linear-gradient(rgba(27,154,170,0.85), rgba(27,154,170,0.85)),
+        url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
+
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+/* BUTTON */
 .button {
     background: #0d1b2a;
     color: white;
@@ -129,7 +135,7 @@ footer {
 
 <nav>
     <div class="nav-top">
-        <img src="4446686E-2B02-4428-8340-7CB4CC64BDB7.png" class="nav-logo">
+        <div></div>
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </div>
 
@@ -192,6 +198,7 @@ footer {
 <script>
 function toggleMenu() {
     var menu = document.getElementById("menuLinks");
+
     if (menu.style.display === "flex") {
         menu.style.display = "none";
     } else {
@@ -202,23 +209,3 @@ function toggleMenu() {
 
 </body>
 </html>
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>Deep Cleaning</title>
-<style>
-body { font-family: Arial; padding: 20px; }
-</style>
-</head>
-<body>
-
-<h1>Deep Cleaning</h1>
-<p>Our deep cleaning service covers kitchens, bathrooms, floors, baseboards, and more. We remove built-up dirt and leave your home spotless.</p>
-
-<a href="index.html">← Back to Home</a>
-
-</body>
-</html>
-
-
