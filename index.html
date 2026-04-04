@@ -14,13 +14,22 @@ body {
 /* NAV */
 nav {
     background: #0d1b2a;
-    padding: 15px;
-    position: relative;
+    padding: 10px 15px;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 45px;
 }
 
 .menu-icon {
     color: white;
-    font-size: 24px;
+    font-size: 26px;
     cursor: pointer;
 }
 
@@ -34,7 +43,6 @@ nav {
     color: white;
     padding: 12px;
     text-decoration: none;
-    display: block;
     font-weight: bold;
 }
 
@@ -48,10 +56,6 @@ header {
     padding: 80px 20px;
     background: #1b9aaa;
     color: white;
-}
-
-.logo {
-    width: 100px;
 }
 
 .button {
@@ -81,6 +85,9 @@ section {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    text-decoration: none;
+    color: black;
+    display: block;
 }
 
 /* CONTACT */
@@ -121,9 +128,13 @@ footer {
 <body>
 
 <nav>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav-top">
+        <img src="4446686E-2B02-4428-8340-7CB4CC64BDB7.png" class="nav-logo">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
 
     <div id="menuLinks" class="menu">
+        <a href="index.html">Home</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -131,7 +142,6 @@ footer {
 </nav>
 
 <header>
-    <img src="logo.jpg" class="logo">
     <h1>Miracle Home Makeover</h1>
     <p>I don’t just clean homes — I transform them.</p>
     <br>
@@ -141,18 +151,22 @@ footer {
 <section id="services">
     <h2>Our Services</h2>
     <div class="services">
-        <div class="card">
+
+        <a href="deep-cleaning.html" class="card">
             <h3>Deep Cleaning</h3>
             <p>Detailed top-to-bottom cleaning.</p>
-        </div>
-        <div class="card">
+        </a>
+
+        <a href="organization.html" class="card">
             <h3>Home Organization</h3>
             <p>Declutter and simplify your space.</p>
-        </div>
-        <div class="card">
+        </a>
+
+        <a href="move-cleaning.html" class="card">
             <h3>Move In/Out Cleaning</h3>
             <p>Perfect for a fresh start.</p>
-        </div>
+        </a>
+
     </div>
 </section>
 
@@ -178,7 +192,6 @@ footer {
 <script>
 function toggleMenu() {
     var menu = document.getElementById("menuLinks");
-
     if (menu.style.display === "flex") {
         menu.style.display = "none";
     } else {
