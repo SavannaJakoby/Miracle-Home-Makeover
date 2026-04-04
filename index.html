@@ -6,20 +6,47 @@
 <title>Miracle Home Makeover</title>
 
 <style>
-body { margin: 0; font-family: Arial; }
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
 
-/* NAV */
+/* 🔥 NAVBAR */
 nav {
 background: #0d1b2a;
 padding: 12px;
+position: sticky;
+top: 0;
+z-index: 1000;
 text-align: center;
 }
 
 nav a {
 color: white;
-padding: 10px 15px;
+padding: 12px 15px;
 text-decoration: none;
 font-weight: bold;
+}
+
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background: #0d1b2a;
+min-width: 180px;
+}
+
+.dropdown-content a {
+display: block;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
 }
 
 /* HEADER */
@@ -27,9 +54,11 @@ header {
 text-align: center;
 padding: 100px 20px;
 color: white;
+
 background:
 linear-gradient(rgba(27,154,170,0.6), rgba(27,154,170,0.6)),
 url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
+
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
@@ -68,9 +97,18 @@ display: block;
 
 <nav>
 <a href="index.html">Home</a>
-<a href="index.html#services">Services</a>
+
+<div class="dropdown">
+<a href="#">Services ▼</a>
+<div class="dropdown-content">
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="organization.html">Home Organization</a>
+<a href="move-cleaning.html">Move In/Out Cleaning</a>
+</div>
+</div>
+
 <a href="about.html">About</a>
-<a href="index.html#contact">Contact</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <header>
