@@ -10,6 +10,7 @@ body {
 margin: 0;
 font-family: Arial, sans-serif;
 line-height: 1.6;
+background: #f4f4f4;
 }
 
 /* NAV */
@@ -29,16 +30,17 @@ font-weight: bold;
 /* HEADER */
 header {
 text-align: center;
-padding: 80px 20px;
+padding: 70px 20px;
 background: #1b9aaa;
 color: white;
 }
 
 /* CONTENT */
 section {
-padding: 40px 20px;
 max-width: 900px;
 margin: auto;
+padding: 30px 20px;
+background: white;
 }
 
 h2 {
@@ -46,7 +48,21 @@ margin-top: 30px;
 color: #0d1b2a;
 }
 
-/* LISTS */
+h3 {
+margin-top: 20px;
+color: #1b9aaa;
+}
+
+/* BOX STYLE (MATCHES OTHER PAGES) */
+.box {
+background: #f9f9f9;
+padding: 20px;
+margin-top: 20px;
+border-left: 5px solid #1b9aaa;
+border-radius: 6px;
+}
+
+/* LIST */
 ul {
 padding-left: 20px;
 }
@@ -55,7 +71,7 @@ padding-left: 20px;
 .btn {
 display: inline-block;
 margin-top: 30px;
-padding: 12px 25px;
+padding: 14px 25px;
 background: #ff7b00;
 color: white;
 text-decoration: none;
@@ -80,16 +96,18 @@ font-weight: bold;
 
 <section>
 
+<!-- RESIDENTIAL -->
 <h2>Residential Cleaning</h2>
 
 <p>
-I focus on maintaining a spotless living environment for homeowners, renters, and families. My services are customized to fit the needs of each home—whether it’s routine upkeep or a full deep clean.
+I focus on maintaining a spotless living environment for homeowners, renters, and families. My services are customized to fit your needs—whether it’s routine upkeep or a full deep clean.
 </p>
 
 <p>
-Residential cleaning is designed to improve comfort, hygiene, and peace of mind while saving you time and effort. Your home won’t just look clean—it will truly feel clean.
+My residential cleaning improves comfort, hygiene, and peace of mind while saving you time and effort. Your home won’t just look clean—it will truly feel clean.
 </p>
 
+<div class="box">
 <h3>General Cleaning Tasks</h3>
 <ul>
 <li>Dusting furniture, shelves, and décor</li>
@@ -98,15 +116,19 @@ Residential cleaning is designed to improve comfort, hygiene, and peace of mind 
 <li>Emptying trash and replacing liners</li>
 <li>Making beds and general tidying</li>
 </ul>
+</div>
 
+<div class="box">
 <h3>Kitchen Cleaning</h3>
 <ul>
 <li>Cleaning countertops, backsplashes, and cabinets</li>
 <li>Wiping down appliances (microwave, stove, refrigerator exterior)</li>
 <li>Scrubbing sinks and faucets</li>
-<li>Degreasing surfaces and removing food buildup</li>
+<li>Degreasing surfaces and removing buildup</li>
 </ul>
+</div>
 
+<div class="box">
 <h3>Bathroom Cleaning</h3>
 <ul>
 <li>Disinfecting toilets, tubs, showers, and sinks</li>
@@ -114,72 +136,88 @@ Residential cleaning is designed to improve comfort, hygiene, and peace of mind 
 <li>Removing soap scum, mold, and mildew</li>
 <li>Sanitizing high-touch areas</li>
 </ul>
+</div>
 
+<div class="box">
 <h3>Deep Cleaning (Optional Add-On)</h3>
 <ul>
-<li>Baseboards, doors, ceiling fans, light fixtures, and blinds</li>
+<li>Baseboards, doors, ceiling fans, and blinds</li>
 <li>Behind and under furniture</li>
-<li>Inside kitchen appliances (oven, refrigerator)</li>
+<li>Inside appliances (oven, refrigerator)</li>
 <li>Detailed scrubbing of grout and buildup areas</li>
 </ul>
+</div>
 
 <hr>
 
+<!-- COMMERCIAL -->
 <h2>Commercial Cleaning</h2>
 
 <p>
-I provide cleaning services designed to maintain clean, safe, and professional environments for businesses, employees, and customers. Services can be scheduled regularly and tailored to your space.
+I provide cleaning services that maintain clean, safe, and professional environments for businesses, employees, and customers. Services are tailored to your space and schedule.
 </p>
 
 <p>
-Commercial cleaning helps maintain a professional image, ensures health and safety standards, and creates a better environment for both staff and customers.
+My commercial cleaning helps maintain your professional image, ensures health standards, and creates a better environment for staff and customers.
 </p>
 
+<div class="box">
 <h3>General Facility Cleaning</h3>
 <ul>
-<li>Dusting and wiping desks, counters, and surfaces</li>
+<li>Dusting desks, counters, and surfaces</li>
 <li>Vacuuming carpets and cleaning floors</li>
 <li>Trash removal and recycling</li>
-<li>Cleaning entryways, hallways, and common areas</li>
+<li>Cleaning entryways and common areas</li>
 </ul>
+</div>
 
+<div class="box">
 <h3>Restroom Sanitation</h3>
 <ul>
-<li>Disinfecting toilets, urinals, sinks, and partitions</li>
-<li>Restocking paper products and soap</li>
-<li>Sanitizing high-touch surfaces</li>
+<li>Disinfecting toilets, sinks, and partitions</li>
+<li>Restocking supplies</li>
+<li>Sanitizing high-touch areas</li>
 <li>Odor control and deep sanitation</li>
 </ul>
+</div>
 
+<div class="box">
 <h3>Office & Workspace Cleaning</h3>
 <ul>
-<li>Cleaning workstations, conference rooms, and breakrooms</li>
-<li>Sanitizing shared equipment (phones, keyboards, door handles)</li>
-<li>Maintaining a clean, organized environment</li>
+<li>Cleaning workstations and breakrooms</li>
+<li>Sanitizing shared equipment</li>
+<li>Maintaining a clean work environment</li>
 </ul>
+</div>
 
+<div class="box">
 <h3>Retail & Customer Areas</h3>
 <ul>
-<li>Cleaning display areas, shelves, and floors</li>
+<li>Cleaning display areas and floors</li>
 <li>Glass and window cleaning</li>
 <li>Keeping high-traffic areas spotless</li>
 </ul>
+</div>
 
+<div class="box">
 <h3>Janitorial Services</h3>
 <ul>
-<li>Daily, weekly, or custom cleaning schedules</li>
+<li>Daily, weekly, or custom schedules</li>
 </ul>
+</div>
 
+<div class="box">
 <h3>Specialized Services</h3>
 <ul>
 <li>Medical office cleaning</li>
-<li>Post-construction commercial cleanup</li>
+<li>Post-construction cleanup</li>
 <li>Organization and decluttering</li>
 <li>Seasonal or spring cleaning</li>
 <li>Pre/Post party clean-up</li>
 </ul>
+</div>
 
-<a href="quote.html" class="btn">Get a Quote</a>
+<a href="quote.html" class="btn">Request a Quote</a>
 
 </section>
 
