@@ -99,18 +99,6 @@ text-shadow: 2px 2px 8px black;
 margin-top: 15px;
 }
 
-/* HEADER BUTTON */
-.header-btn {
-display: inline-block;
-margin-top: 25px;
-padding: 12px 25px;
-background: #ff7b00;
-color: white;
-border-radius: 6px;
-text-decoration: none;
-font-weight: bold;
-}
-
 /* MOBILE FIX */
 @media (max-width: 600px) {
 header {
@@ -158,6 +146,27 @@ transition: 0.2s;
 transform: translateY(-5px);
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+/* 🔥 FLOATING BUTTON */
+.floating-quote {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #ff7b00;
+color: white;
+padding: 15px 20px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+z-index: 1000;
+transition: 0.2s;
+}
+
+.floating-quote:hover {
+background: #e66a00;
+transform: scale(1.05);
+}
 </style>
 </head>
 
@@ -184,8 +193,6 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 <header>
 <h1>Miracle Home Makeover</h1>
 <p>I don’t just clean homes — I transform them.</p>
-
-<a href="quote.html" class="header-btn">Get a Free Quote</a>
 </header>
 
 <section class="trust">
@@ -218,6 +225,9 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 <p>📞 304-350-2545</p>
 <p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
 </section>
+
+<!-- 🔥 FLOATING BUTTON -->
+<a href="quote.html" class="floating-quote">Get Free Quote</a>
 
 <script>
 function toggleDropdown(event) {
