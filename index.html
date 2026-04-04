@@ -15,17 +15,32 @@ font-family: Arial, sans-serif;
 nav {
 background: #0d1b2a;
 padding: 12px;
-position: sticky;
-top: 0;
-z-index: 1000;
 text-align: center;
 }
 
+/* LINKS */
 nav a {
 color: white;
 padding: 12px 15px;
 text-decoration: none;
 font-weight: bold;
+position: relative;
+}
+
+/* 🔥 HOVER EFFECT */
+nav a::after {
+content: "";
+position: absolute;
+width: 0;
+height: 2px;
+bottom: 5px;
+left: 0;
+background: #1b9aaa;
+transition: 0.3s;
+}
+
+nav a:hover::after {
+width: 100%;
 }
 
 /* DROPDOWN */
@@ -36,8 +51,8 @@ position: relative;
 
 .dropdown-content {
 display: none;
-position: absolute;
 background: #0d1b2a;
+position: absolute;
 min-width: 180px;
 }
 
@@ -45,8 +60,11 @@ min-width: 180px;
 display: block;
 }
 
+/* DESKTOP HOVER */
+@media (min-width: 700px) {
 .dropdown:hover .dropdown-content {
 display: block;
+}
 }
 
 /* HEADER */
@@ -89,6 +107,13 @@ border-radius: 8px;
 text-decoration: none;
 color: black;
 display: block;
+transition: 0.2s;
+}
+
+/* 🔥 CARD HOVER */
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 </style>
 </head>
@@ -99,8 +124,8 @@ display: block;
 <a href="index.html">Home</a>
 
 <div class="dropdown">
-<a href="#">Services ▼</a>
-<div class="dropdown-content">
+<a href="#" onclick="toggleDropdown(event)">Services ▼</a>
+<div id="dropdownMenu" class="dropdown-content">
 <a href="deep-cleaning.html">Deep Cleaning</a>
 <a href="organization.html">Home Organization</a>
 <a href="move-cleaning.html">Move In/Out Cleaning</a>
@@ -140,6 +165,21 @@ display: block;
 <p>📞 304-350-2545</p>
 <p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
 </section>
+
+<script>
+function toggleDropdown(event) {
+if (window.innerWidth < 700) {
+event.preventDefault();
+var menu = document.getElementById("dropdownMenu");
+
+if (menu.style.display === "block") {
+menu.style.display = "none";
+} else {
+menu.style.display = "block";
+}
+}
+}
+</script>
 
 </body>
 </html>
