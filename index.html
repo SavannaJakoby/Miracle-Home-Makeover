@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Miracle Home Makeover</title>
+<title>Miracle Home Makeover</title>
 
 <style>
 body {
@@ -29,6 +30,7 @@ font-size: 26px;
 cursor: pointer;
 }
 
+/* MENU */
 .menu {
 display: none;
 flex-direction: column;
@@ -46,24 +48,92 @@ font-weight: bold;
 background: #1b9aaa;
 }
 
+/* DROPDOWN */
+.dropdown {
+position: relative;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background: #0d1b2a;
+min-width: 180px;
+z-index: 1;
+}
+
+.dropdown-content a {
+display: block;
+padding: 10px;
+color: white;
+text-decoration: none;
+}
+
+.dropdown-content a:hover {
+background: #1b9aaa;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
 /* HEADER */
 header {
 text-align: center;
-padding: 80px 20px;
-background: #1b9aaa;
+padding: 120px 20px;
 color: white;
+
+background:
+linear-gradient(rgba(27,154,170,0.6), rgba(27,154,170,0.6)),
+url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
+
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
+/* TEXT POP */
 header h1 {
+font-size: 42px;
+font-weight: bold;
+text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+}
+
+header p {
+font-size: 20px;
+margin-top: 10px;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
-/* CONTENT */
+/* SECTIONS */
 section {
 padding: 50px 20px;
-max-width: 800px;
+max-width: 1000px;
 margin: auto;
-line-height: 1.6;
+}
+
+/* SERVICES */
+.services {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+
+.card {
+background: #f4f4f4;
+padding: 25px;
+border-radius: 10px;
+text-align: center;
+text-decoration: none;
+color: black;
+display: block;
+}
+
+/* CONTACT */
+.contact-box {
+background: #eee;
+padding: 20px;
+border-radius: 8px;
+text-align: center;
 }
 
 /* FOOTER */
@@ -86,7 +156,7 @@ justify-content: center;
 display: none;
 }
 
-.menu a {
+.menu a, .dropdown {
 margin: 0 10px;
 }
 }
@@ -102,31 +172,57 @@ margin: 0 10px;
 </div>
 
 <div id="menuLinks" class="menu">
+
 <a href="index.html">Home</a>
-<a href="index.html#services">Services</a>
+
+<div class="dropdown">
+<a href="index.html#services">Services ▼</a>
+<div class="dropdown-content">
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="organization.html">Home Organization</a>
+<a href="move-cleaning.html">Move In/Out Cleaning</a>
+</div>
+</div>
+
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
+
 </div>
 </nav>
 
 <header>
-<h1>About Miracle Home Makeover</h1>
+<h1>Miracle Home Makeover</h1>
+<p>I don’t just clean homes — I transform them.</p>
 </header>
 
-<section>
-<p>
-At Miracle Home Makeover, I specialize in deep cleaning and home organization.
-Our goal is to transform your home into a clean, peaceful, and stress-free space.
-</p>
+<section id="services">
+<h2>My Services</h2>
+<div class="services">
 
-<p>
-I take pride in my attention to detail, reliability, and the satisfaction of every customer.
-Whether you need a full deep clean or help organizing your home, Im here to help.
-</p>
+<a href="deep-cleaning.html" class="card">
+<h3>Deep Cleaning</h3>
+<p>I provide detailed top-to-bottom cleaning.</p>
+</a>
 
-<p>
-Proudly serving Martinsburg, WV and surrounding areas.
-</p>
+<a href="organization.html" class="card">
+<h3>Home Organization</h3>
+<p>I help declutter and simplify your space.</p>
+</a>
+
+<a href="move-cleaning.html" class="card">
+<h3>Move In/Out Cleaning</h3>
+<p>I make your home ready for a fresh start.</p>
+</a>
+
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<div class="contact-box">
+<p>📞 304-350-2545</p>
+<p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
+</div>
 </section>
 
 <footer>
@@ -143,6 +239,23 @@ menu.style.display = "none";
 menu.style.display = "flex";
 }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+const dropdown = document.querySelector(".dropdown > a");
+
+dropdown.addEventListener("click", function(e) {
+if (window.innerWidth < 700) {
+e.preventDefault();
+const content = this.nextElementSibling;
+
+if (content.style.display === "block") {
+content.style.display = "none";
+} else {
+content.style.display = "block";
+}
+}
+});
+});
 </script>
 
 </body>
