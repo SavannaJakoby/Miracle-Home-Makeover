@@ -7,126 +7,139 @@
 
 <style>
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+margin: 0;
+font-family: Arial, sans-serif;
 }
 
 /* NAV */
 nav {
-    background: #0d1b2a;
-    padding: 10px 15px;
+background: #0d1b2a;
+padding: 10px 15px;
 }
 
 .nav-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 .menu-icon {
-    color: white;
-    font-size: 26px;
-    cursor: pointer;
+color: white;
+font-size: 26px;
+cursor: pointer;
 }
 
 /* MENU */
 .menu {
-    display: none;
-    flex-direction: column;
-    text-align: center;
+display: none;
+flex-direction: column;
+text-align: center;
 }
 
 .menu a {
-    color: white;
-    padding: 12px;
-    text-decoration: none;
-    font-weight: bold;
+color: white;
+padding: 12px;
+text-decoration: none;
+font-weight: bold;
 }
 
 .menu a:hover {
-    background: #1b9aaa;
+background: #1b9aaa;
 }
 
-/* HEADER WITH LOGO BACKGROUND */
+/* 🔥 HEADER WITH IMPROVED TEXT */
 header {
-    text-align: center;
-    padding: 120px 20px;
-    color: white;
-    width: 100%;
+text-align: center;
+padding: 120px 20px;
+color: white;
+width: 100%;
 
-    background:
-        linear-gradient(rgba(27,154,170,0.75), rgba(27,154,170,0.75)),
-        url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
+background:
+linear-gradient(rgba(27,154,170,0.6), rgba(27,154,170,0.6)),
+url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+/* 🔥 TEXT POP EFFECT */
+header h1 {
+font-size: 42px;
+font-weight: bold;
+text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+}
+
+header p {
+font-size: 20px;
+margin-top: 10px;
+text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
 /* BUTTON */
 .button {
-    background: #0d1b2a;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+background: #0d1b2a;
+color: white;
+padding: 12px 20px;
+border-radius: 5px;
+text-decoration: none;
 }
 
 /* SECTIONS */
 section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
+padding: 50px 20px;
+max-width: 1000px;
+margin: auto;
 }
 
 /* SERVICES */
 .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
 }
 
 .card {
-    background: #f4f4f4;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    display: block;
+background: #f4f4f4;
+padding: 25px;
+border-radius: 10px;
+text-align: center;
+text-decoration: none;
+color: black;
+display: block;
 }
 
 /* CONTACT */
 .contact-box {
-    background: #eee;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+background: #eee;
+padding: 20px;
+border-radius: 8px;
+text-align: center;
 }
 
 /* FOOTER */
 footer {
-    background: #0d1b2a;
-    color: white;
-    text-align: center;
-    padding: 20px;
+background: #0d1b2a;
+color: white;
+text-align: center;
+padding: 20px;
 }
 
 /* DESKTOP MENU */
 @media (min-width: 700px) {
-    .menu {
-        display: flex !important;
-        flex-direction: row;
-        justify-content: center;
-    }
+.menu {
+display: flex !important;
+flex-direction: row;
+justify-content: center;
+}
 
-    .menu-icon {
-        display: none;
-    }
+.menu-icon {
+display: none;
+}
 
-    .menu a {
-        margin: 0 10px;
-    }
+.menu a {
+margin: 0 10px;
+}
 }
 </style>
 </head>
@@ -134,74 +147,74 @@ footer {
 <body>
 
 <nav>
-    <div class="nav-top">
-        <div></div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    </div>
+<div class="nav-top">
+<div></div>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+</div>
 
-    <div id="menuLinks" class="menu">
-        <a href="index.html">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
+<div id="menuLinks" class="menu">
+<a href="index.html">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
 <header>
-    <h1>Miracle Home Makeover</h1>
-    <p>I don’t just clean homes — I transform them.</p>
+<h1>Miracle Home Makeover</h1>
+<p>I don’t just clean homes — I transform them.</p>
 </header>
 
 <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
+<h2>Our Services</h2>
+<div class="services">
 
-        <a href="deep-cleaning.html" class="card">
-            <h3>Deep Cleaning</h3>
-            <p>Detailed top-to-bottom cleaning.</p>
-        </a>
+<a href="deep-cleaning.html" class="card">
+<h3>Deep Cleaning</h3>
+<p>Detailed top-to-bottom cleaning.</p>
+</a>
 
-        <a href="organization.html" class="card">
-            <h3>Home Organization</h3>
-            <p>Declutter and simplify your space.</p>
-        </a>
+<a href="organization.html" class="card">
+<h3>Home Organization</h3>
+<p>Declutter and simplify your space.</p>
+</a>
 
-        <a href="move-cleaning.html" class="card">
-            <h3>Move In/Out Cleaning</h3>
-            <p>Perfect for a fresh start.</p>
-        </a>
+<a href="move-cleaning.html" class="card">
+<h3>Move In/Out Cleaning</h3>
+<p>Perfect for a fresh start.</p>
+</a>
 
-    </div>
+</div>
 </section>
 
 <section id="about">
-    <h2>About Us</h2>
-    <p>Miracle Home Makeover provides professional cleaning and organization services in Martinsburg, WV. We focus on quality, detail, and making your home feel brand new.</p>
+<h2>About Us</h2>
+<p>Miracle Home Makeover provides professional cleaning and organization services in Martinsburg, WV. We focus on quality, detail, and making your home feel brand new.</p>
 </section>
 
 <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-box">
-        <p>📞 304-350-2545</p>
-        <p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
-        <br>
-        <a href="tel:13043502545" class="button">Call Now</a>
-    </div>
+<h2>Contact Us</h2>
+<div class="contact-box">
+<p>📞 304-350-2545</p>
+<p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
+<br>
+<a href="tel:13043502545" class="button">Call Now</a>
+</div>
 </section>
 
 <footer>
-    <p>© 2026 Miracle Home Makeover LLC</p>
+<p>© 2026 Miracle Home Makeover LLC</p>
 </footer>
 
 <script>
 function toggleMenu() {
-    var menu = document.getElementById("menuLinks");
+var menu = document.getElementById("menuLinks");
 
-    if (menu.style.display === "flex") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "flex";
-    }
+if (menu.style.display === "flex") {
+menu.style.display = "none";
+} else {
+menu.style.display = "flex";
+}
 }
 </script>
 
