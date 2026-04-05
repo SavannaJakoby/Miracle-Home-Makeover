@@ -11,9 +11,10 @@ margin: 0;
 font-family: Arial, sans-serif;
 line-height: 1.7;
 background: #f4f4f4;
+color: #333;
 }
 
-/* NAV */
+/* 🔥 NAVBAR */
 nav {
 background: #0d1b2a;
 padding: 12px;
@@ -27,59 +28,94 @@ text-decoration: none;
 font-weight: bold;
 }
 
-/* HEADER */
+/* 🔥 HEADER */
 header {
 text-align: center;
-padding: 70px 20px;
-background: #1b9aaa;
+padding: 90px 20px 60px;
+background: linear-gradient(rgba(27,154,170,0.85), rgba(27,154,170,0.85)),
+url("https://raw.githubusercontent.com/SavannaJakoby/Miracle-Home-Makeover/main/4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
+background-size: cover;
+background-position: center;
 color: white;
 }
 
-/* PROFILE IMAGE */
+header h1 {
+font-size: 42px;
+margin-bottom: 10px;
+text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+}
+
+header p {
+font-size: 18px;
+text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* 🔥 PROFILE IMAGE */
 .profile {
 text-align: center;
-margin-top: -40px;
+margin-top: -50px;
+margin-bottom: 20px;
 }
 
 .profile img {
-width: 180px;
-border-radius: 50%;
+width: 260px;
+max-width: 90%;
+border-radius: 12px;
 border: 4px solid white;
-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* CONTENT */
+/* 🔥 CONTENT CARD */
 section {
 max-width: 900px;
 margin: auto;
-padding: 30px 20px;
+padding: 40px 25px;
 background: white;
+border-radius: 12px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 /* TEXT */
 p {
 margin-bottom: 20px;
+font-size: 17px;
 }
 
-/* THANK YOU BOX */
+/* 🔥 HIGHLIGHT BOX */
 .highlight {
 background: #fff8f0;
-padding: 20px;
+padding: 25px;
 border-left: 5px solid #ff7b00;
-border-radius: 6px;
+border-radius: 8px;
 margin-top: 30px;
 }
 
-/* BUTTON */
+/* 🔥 BUTTON */
 .btn {
 display: inline-block;
 margin-top: 30px;
-padding: 14px 25px;
+padding: 14px 28px;
 background: #ff7b00;
 color: white;
 text-decoration: none;
 border-radius: 6px;
 font-weight: bold;
+transition: 0.3s;
+}
+
+.btn:hover {
+background: #e96d00;
+}
+
+/* 🔥 MOBILE */
+@media (max-width: 600px) {
+header h1 {
+font-size: 28px;
+}
+
+.profile img {
+width: 200px;
+}
 }
 </style>
 </head>
@@ -100,7 +136,7 @@ font-weight: bold;
 
 <!-- 🔥 IMAGE -->
 <div class="profile">
-<img src="MEETTHECLEANER.JPG" alt="Meet the Cleaner">
+<img src="https://raw.githubusercontent.com/SavannaJakoby/Miracle-Home-Makeover/main/MEETTHECLEANER.JPG" alt="Meet the Cleaner">
 </div>
 
 <section>
