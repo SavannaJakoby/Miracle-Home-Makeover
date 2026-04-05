@@ -14,9 +14,9 @@ background: #f4f4f4;
 color: #333;
 }
 
-/* NAVBAR */
+/* NAVBAR (PINK) */
 nav {
-background: #0d1b2a;
+background: #e84d8a;
 padding: 12px;
 text-align: center;
 }
@@ -26,6 +26,33 @@ color: white;
 padding: 12px 15px;
 text-decoration: none;
 font-weight: bold;
+}
+
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
+
+.dropdown-content {
+display: none;
+background: #e84d8a;
+position: absolute;
+min-width: 220px;
+z-index: 999;
+}
+
+.dropdown-content a {
+display: block;
+padding: 10px;
+color: white;
+}
+
+/* DESKTOP */
+@media (min-width: 700px) {
+.dropdown:hover .dropdown-content {
+display: block;
+}
 }
 
 /* HEADER */
@@ -45,7 +72,7 @@ header p {
 font-size: 18px;
 }
 
-/* PROFILE SECTION */
+/* PROFILE */
 .profile {
 text-align: center;
 margin-top: -50px;
@@ -77,25 +104,21 @@ border-radius: 12px;
 box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-p {
-margin-bottom: 20px;
-}
-
-/* THANK YOU BOX */
+/* TEAL THANK YOU BOX */
 .highlight {
-background: #fff8f0;
+background: #eaf7f9;
 padding: 20px;
-border-left: 5px solid #ff7b00;
+border-left: 5px solid #1b9aaa;
 border-radius: 8px;
 margin-top: 30px;
 }
 
-/* BUTTON */
+/* BUTTON (PINK) */
 .btn {
 display: inline-block;
 margin-top: 30px;
 padding: 14px 28px;
-background: #ff7b00;
+background: #e84d8a;
 color: white;
 text-decoration: none;
 border-radius: 6px;
@@ -116,7 +139,21 @@ height: 200px;
 
 <nav>
 <a href="index.html">Home</a>
-<a href="index.html#services">Services</a>
+
+<div class="dropdown">
+<a href="#">Services ▼</a>
+<div class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move Cleaning</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
+
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
 </nav>
@@ -126,7 +163,6 @@ height: 200px;
 <p>The Heart Behind Miracle Home Makeover LLC</p>
 </header>
 
-<!-- IMAGE + NAME -->
 <div class="profile">
 <img src="savanna.jpg" alt="Savanna Jakoby">
 <h2>Savanna Jakoby</h2>
