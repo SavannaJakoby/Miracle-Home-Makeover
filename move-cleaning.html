@@ -13,9 +13,9 @@ line-height: 1.6;
 background: #f4f4f4;
 }
 
-/* NAV */
+/* NAV (PINK) */
 nav {
-background: #0d1b2a;
+background: #e84d8a;
 padding: 12px;
 text-align: center;
 }
@@ -25,6 +25,38 @@ color: white;
 padding: 12px 15px;
 text-decoration: none;
 font-weight: bold;
+}
+
+nav a:hover {
+color: #f4e1c1;
+}
+
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
+
+.dropdown-content {
+display: none;
+background: #e84d8a;
+position: absolute;
+min-width: 220px;
+z-index: 999;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+display: block;
+padding: 10px;
+color: white;
+}
+
+/* DESKTOP */
+@media (min-width: 700px) {
+.dropdown:hover .dropdown-content {
+display: block;
+}
 }
 
 /* HEADER */
@@ -67,12 +99,12 @@ ul {
 padding-left: 20px;
 }
 
-/* BUTTON */
+/* BUTTON (PINK) */
 .btn {
 display: inline-block;
 margin-top: 30px;
 padding: 14px 25px;
-background: #ff7b00;
+background: #e84d8a;
 color: white;
 text-decoration: none;
 border-radius: 6px;
@@ -85,7 +117,22 @@ font-weight: bold;
 
 <nav>
 <a href="index.html">Home</a>
-<a href="index.html#services">Services</a>
+
+<div class="dropdown">
+<a href="#" onclick="toggleDropdown(event)">Services ▼</a>
+
+<div id="dropdownMenu" class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move Cleaning</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
+
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
 </nav>
@@ -98,7 +145,7 @@ font-weight: bold;
 <section>
 
 <p>
-My Move-In / Move-Out Cleaning service provides a thorough, top-to-bottom deep clean designed to prepare a home for new occupants or ensure it’s left in pristine condition. Whether you’re moving in or moving out, I handle the cleaning so you can focus on your transition.
+My Move-In / Move-Out Cleaning service provides a thorough, top-to-bottom deep clean designed to prepare a home for new occupants or ensure it’s left in pristine condition.
 </p>
 
 <div class="box">
@@ -107,7 +154,7 @@ My Move-In / Move-Out Cleaning service provides a thorough, top-to-bottom deep c
 <li>Dusting all surfaces, baseboards, ceiling fans, and light fixtures</li>
 <li>Cleaning doors, vents, and light switches</li>
 <li>Vacuuming and mopping all floors</li>
-<li>Removing cobwebs and buildup in corners</li>
+<li>Removing cobwebs and buildup</li>
 </ul>
 </div>
 
@@ -116,36 +163,30 @@ My Move-In / Move-Out Cleaning service provides a thorough, top-to-bottom deep c
 <ul>
 <li>Clean inside and outside of cabinets and drawers</li>
 <li>Deep clean countertops and backsplashes</li>
-<li>Clean inside and outside of appliances:
-<ul>
-<li>Refrigerator</li>
-<li>Oven & stovetop</li>
-<li>Microwave</li>
-</ul>
-</li>
-<li>Scrub and sanitize sink and faucet</li>
-<li>Remove grease, food residue, and buildup</li>
+<li>Clean appliances (fridge, oven, microwave)</li>
+<li>Scrub and sanitize sink</li>
+<li>Remove grease and buildup</li>
 </ul>
 </div>
 
 <div class="box">
 <h2>Bathroom Cleaning</h2>
 <ul>
-<li>Deep scrub and disinfect toilets, tubs, and showers</li>
-<li>Clean sinks, counters, and fixtures</li>
-<li>Remove soap scum, mildew, and hard water stains</li>
+<li>Deep scrub toilets, tubs, and showers</li>
+<li>Clean sinks and fixtures</li>
+<li>Remove soap scum and stains</li>
 <li>Clean mirrors and glass</li>
-<li>Sanitize all high-touch areas</li>
+<li>Sanitize high-touch areas</li>
 </ul>
 </div>
 
 <div class="box">
 <h2>Bedrooms & Living Areas</h2>
 <ul>
-<li>Clean closets, shelves, and storage spaces</li>
-<li>Dust and wipe all surfaces</li>
-<li>Vacuum carpets and clean floors</li>
-<li>Clean interior windows, sills, and blinds</li>
+<li>Clean closets and storage spaces</li>
+<li>Dust and wipe surfaces</li>
+<li>Vacuum carpets and floors</li>
+<li>Clean windows and blinds</li>
 </ul>
 </div>
 
@@ -153,8 +194,8 @@ My Move-In / Move-Out Cleaning service provides a thorough, top-to-bottom deep c
 <h2>Optional Add-Ons</h2>
 <ul>
 <li>Carpet shampooing</li>
-<li>Wall washing (full surface)</li>
-<li>Baseboards hand-scrubbed throughout</li>
+<li>Wall washing</li>
+<li>Baseboards hand-scrubbed</li>
 <li>Garage or basement cleaning</li>
 </ul>
 </div>
@@ -162,16 +203,32 @@ My Move-In / Move-Out Cleaning service provides a thorough, top-to-bottom deep c
 <div class="box">
 <h2>Ideal For</h2>
 <ul>
-<li>Renters looking to secure deposits</li>
+<li>Renters securing deposits</li>
 <li>Homeowners buying or selling</li>
-<li>Property managers and landlords</li>
-<li>Real estate staging and showings</li>
+<li>Landlords and property managers</li>
+<li>Real estate showings</li>
 </ul>
 </div>
 
 <a href="quote.html" class="btn">Request a Quote</a>
 
 </section>
+
+<!-- DROPDOWN SCRIPT -->
+<script>
+function toggleDropdown(event) {
+event.preventDefault();
+var menu = document.getElementById("dropdownMenu");
+menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+document.addEventListener("click", function(e) {
+var menu = document.getElementById("dropdownMenu");
+if (!e.target.closest(".dropdown")) {
+menu.style.display = "none";
+}
+});
+</script>
 
 </body>
 </html>
