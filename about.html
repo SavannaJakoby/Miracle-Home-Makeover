@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me - Miracle Home Makeover</title>
+<title>About - Miracle Home Makeover</title>
 
 <style>
 body {
@@ -14,7 +14,7 @@ background: #f4f4f4;
 color: #333;
 }
 
-/* NAVBAR (PINK) */
+/* NAV (PINK) */
 nav {
 background: #e84d8a;
 padding: 12px;
@@ -39,25 +39,34 @@ position: relative;
 }
 
 .dropdown-content {
-display: none;
+opacity: 0;
+visibility: hidden;
+transform: translateY(10px);
+transition: all 0.3s ease;
 background: #e84d8a;
 position: absolute;
 min-width: 220px;
 z-index: 999;
-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+border-radius: 8px;
+overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
 }
 
 .dropdown-content a {
 display: block;
-padding: 10px;
+padding: 12px;
 color: white;
 }
 
-/* DESKTOP HOVER */
-@media (min-width: 700px) {
-.dropdown:hover .dropdown-content {
-display: block;
-}
+.dropdown-content a:hover {
+background: #f4e1c1;
+color: #e84d8a;
 }
 
 /* HEADER */
@@ -73,10 +82,14 @@ font-size: 40px;
 margin-bottom: 10px;
 }
 
+header p {
+font-size: 18px;
+}
+
 /* PROFILE */
 .profile {
 text-align: center;
-margin-top: -50px;
+margin-top: -60px;
 margin-bottom: 25px;
 }
 
@@ -84,14 +97,15 @@ margin-bottom: 25px;
 width: 280px;
 height: 280px;
 object-fit: cover;
-border-radius: 16px;
-border: 5px solid white;
-box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+border-radius: 20px;
+border: 6px solid white;
+box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
 .profile h2 {
 margin-top: 12px;
-font-size: 22px;
+font-size: 24px;
+color: #0d1b2a;
 }
 
 /* CONTENT */
@@ -104,25 +118,38 @@ border-radius: 12px;
 box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* TEAL BOX */
+p {
+margin-bottom: 20px;
+}
+
+/* THANK YOU */
 .highlight {
-background: #eaf7f9;
+background: #fff8f0;
 padding: 20px;
-border-left: 5px solid #1b9aaa;
+border-left: 5px solid #e84d8a;
 border-radius: 8px;
 margin-top: 30px;
 }
 
-/* BUTTON */
-.btn {
-display: inline-block;
-margin-top: 30px;
-padding: 14px 28px;
+/* FLOAT BUTTON */
+.quote-btn {
+position: fixed;
+bottom: 60px;
+right: 15px;
 background: #e84d8a;
 color: white;
+padding: 10px 16px;
+border-radius: 25px;
 text-decoration: none;
-border-radius: 6px;
 font-weight: bold;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
 }
 
 /* MOBILE */
@@ -141,13 +168,13 @@ height: 200px;
 <a href="index.html">Home</a>
 
 <div class="dropdown">
-<a href="#" onclick="toggleDropdown(event)">Services ▼</a>
-
-<div id="dropdownMenu" class="dropdown-content">
+<a href="#">Services ▼</a>
+<div class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
 <a href="standard-cleaning.html">Routine Cleaning</a>
-<a href="move-cleaning.html">Move Cleaning</a>
+<a href="move-cleaning.html">Move In / Move Out Cleaning</a>
+<a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
 <a href="organization.html">Organization</a>
 <a href="laundry.html">Laundry</a>
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
@@ -177,38 +204,22 @@ height: 200px;
 
 <p>I love to read, craft, and spend time on the water, whether that’s swimming or relaxing by the river. It’s where I recharge and find peace.</p>
 
-<p>I was definitely a little sassy growing up—and honestly, that spark helped shape me into the strong, independent woman I am today. I’m one of five children, raised in a loving and hardworking family that truly shaped who I am. My father gave me the drive, determination, and strong work ethic that pushed me to build something of my own. My mother taught me the value of a clean, organized, and beautifully maintained home.</p>
+<p>I was definitely a little sassy growing up—and honestly, that spark helped shape me into the strong, independent woman I am today. I’m one of five children, raised in a loving and hardworking family that truly shaped who I am. My father gave me the drive, determination, and strong work ethic that pushed me to build something of my own. My mother taught me the value of a clean, organized, and beautifully maintained home. These are all skills that became the foundation of my business.</p>
 
-<p>Recently, my boyfriend and I renovated an entire home from the ground up. I’ve experienced firsthand how important a clean, structured space truly is.</p>
+<p>Recently, my boyfriend and I renovated an entire home from the ground up. From post-construction cleaning to painting, decorating, organizing, and personalizing every detail for our little family. I’ve experienced firsthand just how important a clean, structured, and comfortable space truly is.</p>
 
-<p>I don’t just clean homes, I help create environments where people can relax and enjoy their space.</p>
+<p>That experience deepened my passion even more. I don’t just clean homes, I help create environments where people can relax, feel proud, and truly enjoy their space. Every home deserves a miracle.</p>
 
-<p>Your comfort and satisfaction mean everything to me.</p>
+<p>When I come into your home, I treat it with the same care, respect, and attention to detail as I would my own. Your comfort and satisfaction mean everything to me.</p>
 
 <div class="highlight">
 <h2>💛 A Personal Thank You</h2>
-<p>From the bottom of my heart, thank you for supporting my journey and trusting me with your home.</p>
+<p>From the bottom of my heart, thank you for supporting my journey and trusting me with your home. It truly means more than words can express.</p>
 </div>
-
-<a href="quote.html" class="btn">Request a Quote</a>
 
 </section>
 
-<!-- DROPDOWN SCRIPT -->
-<script>
-function toggleDropdown(event) {
-event.preventDefault();
-var menu = document.getElementById("dropdownMenu");
-menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
-
-document.addEventListener("click", function(e) {
-var menu = document.getElementById("dropdownMenu");
-if (!e.target.closest(".dropdown")) {
-menu.style.display = "none";
-}
-});
-</script>
+<a href="quote.html" class="quote-btn">Request Quote</a>
 
 </body>
 </html>
