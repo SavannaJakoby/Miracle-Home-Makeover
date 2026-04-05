@@ -12,9 +12,9 @@ font-family: Arial, sans-serif;
 background: #f4f4f4;
 }
 
-/* NAV */
+/* NAV (PINK) */
 nav {
-background: #0d1b2a;
+background: #e84d8a;
 padding: 12px;
 text-align: center;
 }
@@ -24,6 +24,47 @@ color: white;
 padding: 12px 15px;
 text-decoration: none;
 font-weight: bold;
+}
+
+nav a:hover {
+color: #f4e1c1;
+}
+
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
+
+.dropdown-content {
+opacity: 0;
+visibility: hidden;
+transform: translateY(10px);
+transition: all 0.3s ease;
+background: #e84d8a;
+position: absolute;
+min-width: 220px;
+z-index: 999;
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+border-radius: 8px;
+overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+.dropdown-content a {
+display: block;
+padding: 12px;
+color: white;
+}
+
+.dropdown-content a:hover {
+background: #f4e1c1;
+color: #e84d8a;
 }
 
 /* HEADER */
@@ -40,8 +81,8 @@ max-width: 500px;
 margin: 30px auto;
 background: white;
 padding: 25px;
-border-radius: 8px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+border-radius: 10px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 input, textarea {
@@ -49,14 +90,15 @@ width: 100%;
 padding: 12px;
 margin: 10px 0;
 border: 1px solid #ccc;
-border-radius: 5px;
+border-radius: 6px;
 font-size: 16px;
 }
 
+/* BUTTON (PINK) */
 button {
 width: 100%;
 padding: 14px;
-background: #1b9aaa;
+background: #e84d8a;
 color: white;
 border: none;
 border-radius: 6px;
@@ -66,15 +108,15 @@ cursor: pointer;
 }
 
 button:hover {
-background: #168b97;
+background: #d63c78;
 }
 
-/* TEXT BUTTON */
+/* TEXT BUTTON (PINK) */
 .text-btn {
 display: block;
 margin-top: 15px;
 padding: 14px;
-background: #ff7b00;
+background: #e84d8a;
 color: white;
 text-align: center;
 border-radius: 6px;
@@ -82,13 +124,8 @@ text-decoration: none;
 font-weight: bold;
 }
 
-/* SUCCESS MESSAGE */
-.success {
-display: none;
-text-align: center;
-color: green;
-margin-top: 15px;
-font-weight: bold;
+.text-btn:hover {
+background: #d63c78;
 }
 </style>
 </head>
@@ -97,7 +134,22 @@ font-weight: bold;
 
 <nav>
 <a href="index.html">Home</a>
-<a href="index.html#services">Services</a>
+
+<div class="dropdown">
+<a href="#">Services ▼</a>
+<div class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move In / Move Out Cleaning</a>
+<a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
+
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
 </nav>
@@ -117,11 +169,11 @@ font-weight: bold;
 
 <textarea name="Details" placeholder="Describe what services you need..." rows="5" required></textarea>
 
-<button type="submit">Get Quote by Email</button>
+<button type="submit">Request Quote</button>
 
 </form>
 
-<a href="sms:13043502545?body=Hi, I’d like a quote for cleaning services. Name: Address: Services Needed:"
+<a href="sms:13043502545?body=Hi, I’d like a quote for cleaning services. Name: Address: Services Needed:" 
 class="text-btn">
 Text Me Instead
 </a>
