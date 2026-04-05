@@ -47,7 +47,6 @@ display: block;
 padding: 10px;
 }
 
-/* DESKTOP */
 @media (min-width: 700px) {
 .dropdown:hover .dropdown-content {
 display: block;
@@ -71,12 +70,47 @@ header h1 {
 font-size: 42px;
 }
 
-/* TEXT */
-.about-preview {
-max-width: 900px;
-margin: auto;
-padding: 30px 20px;
+/* TRUST SECTION */
+.trust-section {
+position: relative;
+padding: 60px 20px;
+background: #eaf4f6;
 text-align: center;
+overflow: hidden;
+}
+
+.trust-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 500px;
+height: 500px;
+background: url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
+background-size: contain;
+background-repeat: no-repeat;
+opacity: 0.08;
+z-index: 0;
+}
+
+.trust-grid {
+position: relative;
+z-index: 2;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 30px;
+max-width: 600px;
+margin: auto;
+}
+
+.trust-item {
+font-weight: bold;
+}
+
+.trust-item i {
+font-size: 32px;
+color: #28a745;
+margin-bottom: 10px;
 }
 
 /* SERVICES */
@@ -108,7 +142,7 @@ margin-right: 10px;
 color: #ff7b00;
 }
 
-/* SOCIAL BUTTONS */
+/* SOCIAL */
 .social-btn {
 display: inline-block;
 margin: 10px 10px 0 0;
@@ -122,22 +156,18 @@ font-weight: bold;
 .facebook { background: #1877f2; }
 .instagram { background: #e1306c; }
 
-/* 🔥 FIXED FLOATING BUTTON */
+/* FLOATING BUTTON */
 .quote-btn {
 position: fixed;
-bottom: 70px; /* moved up so it doesn’t cover social links */
+bottom: 70px;
 right: 15px;
-
 background: #ff7b00;
 color: white;
-
-padding: 10px 14px; /* smaller size */
+padding: 10px 14px;
 font-size: 14px;
-
 border-radius: 25px;
 text-decoration: none;
 font-weight: bold;
-
 box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 z-index: 1000;
 }
@@ -147,6 +177,15 @@ z-index: 1000;
 header {
 padding: 80px 20px;
 background-size: 85%;
+}
+
+.trust-grid {
+grid-template-columns: 1fr;
+}
+
+.trust-overlay {
+width: 300px;
+height: 300px;
 }
 }
 </style>
@@ -180,10 +219,36 @@ background-size: 85%;
 <p>I don’t just clean homes — I transform them.</p>
 </header>
 
-<div class="about-preview">
-<p>Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia.</p>
-<p>I focus on transforming spaces into clean, comfortable, stress-free environments.</p>
+<!-- TRUST BADGES -->
+<section class="trust-section">
+
+<div class="trust-overlay"></div>
+
+<div class="trust-grid">
+
+<div class="trust-item">
+<i class="fas fa-check-circle"></i>
+<p>Licensed & Insured</p>
 </div>
+
+<div class="trust-item">
+<i class="fas fa-check-circle"></i>
+<p>Background Checked Cleaner</p>
+</div>
+
+<div class="trust-item">
+<i class="fas fa-check-circle"></i>
+<p>Flexible Scheduling</p>
+</div>
+
+<div class="trust-item">
+<i class="fas fa-check-circle"></i>
+<p>Customizable Cleaning Plan</p>
+</div>
+
+</div>
+
+</section>
 
 <section id="services">
 <h2>My Services</h2>
