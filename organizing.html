@@ -13,9 +13,9 @@ line-height: 1.6;
 background: #f4f4f4;
 }
 
-/* NAV */
+/* NAV (PINK) */
 nav {
-background: #0d1b2a;
+background: #e84d8a;
 padding: 12px;
 text-align: center;
 }
@@ -25,6 +25,38 @@ color: white;
 padding: 12px 15px;
 text-decoration: none;
 font-weight: bold;
+}
+
+nav a:hover {
+color: #f4e1c1;
+}
+
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
+
+.dropdown-content {
+display: none;
+background: #e84d8a;
+position: absolute;
+min-width: 220px;
+z-index: 999;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+display: block;
+padding: 10px;
+color: white;
+}
+
+/* DESKTOP */
+@media (min-width: 700px) {
+.dropdown:hover .dropdown-content {
+display: block;
+}
 }
 
 /* HEADER */
@@ -67,12 +99,12 @@ ul {
 padding-left: 20px;
 }
 
-/* BUTTON */
+/* BUTTON (PINK) */
 .btn {
 display: inline-block;
 margin-top: 30px;
 padding: 14px 25px;
-background: #ff7b00;
+background: #e84d8a;
 color: white;
 text-decoration: none;
 border-radius: 6px;
@@ -85,7 +117,22 @@ font-weight: bold;
 
 <nav>
 <a href="index.html">Home</a>
-<a href="index.html#services">Services</a>
+
+<div class="dropdown">
+<a href="#" onclick="toggleDropdown(event)">Services ▼</a>
+
+<div id="dropdownMenu" class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move Cleaning</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
+
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
 </nav>
@@ -98,7 +145,7 @@ font-weight: bold;
 <section>
 
 <p>
-My organizing and decluttering services are designed to help you create clean, functional, and stress-free spaces. Whether you’re overwhelmed with clutter or just want better organization, I can truly transform your home or workspace into an efficient and visually pleasing environment.
+My organizing and decluttering services are designed to help you create clean, functional, and stress-free spaces.
 </p>
 
 <div class="box">
@@ -107,40 +154,37 @@ My organizing and decluttering services are designed to help you create clean, f
 <h3>Decluttering & Sorting</h3>
 <ul>
 <li>Sort items into keep, donate, discard, or relocate</li>
-<li>Remove unnecessary clutter and unwanted items</li>
-<li>Help clients make decisions on what to keep or let go</li>
-<li>Bag and organize items for donation or disposal</li>
+<li>Remove unnecessary clutter</li>
+<li>Help decide what to keep or remove</li>
+<li>Organize items for donation or disposal</li>
 </ul>
 
 <h3>Space Organization</h3>
 <ul>
-<li>Organize closets, cabinets, drawers, and storage areas</li>
-<li>Create functional systems for easy access and maintenance</li>
-<li>Arrange items by category, use, or frequency</li>
-<li>Maximize space in small or crowded areas</li>
+<li>Organize closets, cabinets, and storage areas</li>
+<li>Create functional systems</li>
+<li>Arrange items by category or use</li>
+<li>Maximize space efficiently</li>
 </ul>
 
 <h3>Room-by-Room Organization</h3>
 <ul>
-<li>Kitchens (pantries, cabinets, countertops)</li>
-<li>Bedrooms (closets, dressers, under-bed storage)</li>
-<li>Bathrooms (cabinets, toiletries, linens)</li>
-<li>Living areas (shelves, entertainment centers)</li>
-<li>Offices (desks, paperwork, supplies)</li>
+<li>Kitchens, bedrooms, bathrooms</li>
+<li>Living areas and offices</li>
 </ul>
 
-<h3>Light Cleaning Included</h3>
+<h3>Light Cleaning</h3>
 <ul>
-<li>Wipe down surfaces after decluttering</li>
-<li>Dust and clean newly organized spaces</li>
-<li>Vacuum or sweep areas once cleared</li>
+<li>Wipe surfaces</li>
+<li>Dust organized spaces</li>
+<li>Vacuum or sweep</li>
 </ul>
 
-<h3>Personalized Organization Plan</h3>
+<h3>Personalized Plan</h3>
 <ul>
-<li>Tailored solutions based on your lifestyle and needs</li>
-<li>Tips on maintaining a clutter-free environment</li>
-<li>Suggestions for storage solutions and layout improvements</li>
+<li>Custom solutions</li>
+<li>Maintenance tips</li>
+<li>Storage recommendations</li>
 </ul>
 
 </div>
@@ -148,28 +192,44 @@ My organizing and decluttering services are designed to help you create clean, f
 <div class="box">
 <h2>Optional Add-Ons</h2>
 <ul>
-<li>Donation drop-off service</li>
-<li>Storage bin labeling and setup</li>
-<li>Garage, attic, or basement organization</li>
-<li>Paperwork and file organization</li>
-<li>Moving - packing / unpacking</li>
+<li>Donation drop-off</li>
+<li>Labeling and storage setup</li>
+<li>Garage or attic organization</li>
+<li>Paperwork organization</li>
+<li>Packing / unpacking</li>
 </ul>
 </div>
 
 <div class="box">
 <h2>Ideal For</h2>
 <ul>
-<li>Busy households needing structure</li>
-<li>Downsizing or preparing for a move</li>
-<li>Hoarded or cluttered spaces</li>
-<li>Home offices needing efficiency</li>
-<li>Anyone wanting a fresh, organized start</li>
+<li>Busy households</li>
+<li>Downsizing or moving</li>
+<li>Cluttered spaces</li>
+<li>Home offices</li>
+<li>Anyone wanting a fresh start</li>
 </ul>
 </div>
 
 <a href="quote.html" class="btn">Request a Quote</a>
 
 </section>
+
+<!-- DROPDOWN SCRIPT -->
+<script>
+function toggleDropdown(event) {
+event.preventDefault();
+var menu = document.getElementById("dropdownMenu");
+menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+document.addEventListener("click", function(e) {
+var menu = document.getElementById("dropdownMenu");
+if (!e.target.closest(".dropdown")) {
+menu.style.display = "none";
+}
+});
+</script>
 
 </body>
 </html>
