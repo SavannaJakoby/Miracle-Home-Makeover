@@ -28,6 +28,10 @@ text-decoration: none;
 font-weight: bold;
 }
 
+nav a:hover {
+color: #f4e1c1;
+}
+
 /* DROPDOWN */
 .dropdown {
 display: inline-block;
@@ -40,6 +44,7 @@ background: #e84d8a;
 position: absolute;
 min-width: 220px;
 z-index: 999;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
@@ -48,7 +53,7 @@ padding: 10px;
 color: white;
 }
 
-/* DESKTOP */
+/* DESKTOP HOVER */
 @media (min-width: 700px) {
 .dropdown:hover .dropdown-content {
 display: block;
@@ -66,10 +71,6 @@ color: white;
 header h1 {
 font-size: 40px;
 margin-bottom: 10px;
-}
-
-header p {
-font-size: 18px;
 }
 
 /* PROFILE */
@@ -91,7 +92,6 @@ box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 .profile h2 {
 margin-top: 12px;
 font-size: 22px;
-color: #0d1b2a;
 }
 
 /* CONTENT */
@@ -104,7 +104,7 @@ border-radius: 12px;
 box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* TEAL THANK YOU BOX */
+/* TEAL BOX */
 .highlight {
 background: #eaf7f9;
 padding: 20px;
@@ -113,7 +113,7 @@ border-radius: 8px;
 margin-top: 30px;
 }
 
-/* BUTTON (PINK) */
+/* BUTTON */
 .btn {
 display: inline-block;
 margin-top: 30px;
@@ -141,8 +141,9 @@ height: 200px;
 <a href="index.html">Home</a>
 
 <div class="dropdown">
-<a href="#">Services ▼</a>
-<div class="dropdown-content">
+<a href="#" onclick="toggleDropdown(event)">Services ▼</a>
+
+<div id="dropdownMenu" class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
 <a href="standard-cleaning.html">Routine Cleaning</a>
@@ -176,22 +177,38 @@ height: 200px;
 
 <p>I love to read, craft, and spend time on the water, whether that’s swimming or relaxing by the river. It’s where I recharge and find peace.</p>
 
-<p>I was definitely a little sassy growing up—and honestly, that spark helped shape me into the strong, independent woman I am today. I’m one of five children, raised in a loving and hardworking family that truly shaped who I am. My father gave me the drive, determination, and strong work ethic that pushed me to build something of my own. My mother taught me the value of a clean, organized, and beautifully maintained home. These are all skills that became the foundation of my business.</p>
+<p>I was definitely a little sassy growing up—and honestly, that spark helped shape me into the strong, independent woman I am today. I’m one of five children, raised in a loving and hardworking family that truly shaped who I am. My father gave me the drive, determination, and strong work ethic that pushed me to build something of my own. My mother taught me the value of a clean, organized, and beautifully maintained home.</p>
 
-<p>Recently, my boyfriend and I renovated an entire home from the ground up. From post-construction cleaning to painting, decorating, organizing, and personalizing every detail for our little family. I’ve experienced firsthand just how important a clean, structured, and comfortable space truly is.</p>
+<p>Recently, my boyfriend and I renovated an entire home from the ground up. I’ve experienced firsthand how important a clean, structured space truly is.</p>
 
-<p>That experience deepened my passion even more. I don’t just clean homes, I help create environments where people can relax, feel proud, and truly enjoy their space. Every home deserves a miracle.</p>
+<p>I don’t just clean homes, I help create environments where people can relax and enjoy their space.</p>
 
-<p>When I come into your home, I treat it with the same care, respect, and attention to detail as I would my own. Your comfort and satisfaction mean everything to me.</p>
+<p>Your comfort and satisfaction mean everything to me.</p>
 
 <div class="highlight">
 <h2>💛 A Personal Thank You</h2>
-<p>From the bottom of my heart, thank you for supporting my journey and trusting me with your home. It truly means more than words can express.</p>
+<p>From the bottom of my heart, thank you for supporting my journey and trusting me with your home.</p>
 </div>
 
 <a href="quote.html" class="btn">Request a Quote</a>
 
 </section>
+
+<!-- DROPDOWN SCRIPT -->
+<script>
+function toggleDropdown(event) {
+event.preventDefault();
+var menu = document.getElementById("dropdownMenu");
+menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+document.addEventListener("click", function(e) {
+var menu = document.getElementById("dropdownMenu");
+if (!e.target.closest(".dropdown")) {
+menu.style.display = "none";
+}
+});
+</script>
 
 </body>
 </html>
