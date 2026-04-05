@@ -13,9 +13,9 @@ line-height: 1.6;
 background: #f4f4f4;
 }
 
-/* NAV */
+/* NAV (PINK) */
 nav {
-background: #0d1b2a;
+background: #e84d8a;
 padding: 12px;
 text-align: center;
 }
@@ -25,6 +25,38 @@ color: white;
 padding: 12px 15px;
 text-decoration: none;
 font-weight: bold;
+}
+
+nav a:hover {
+color: #f4e1c1;
+}
+
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
+
+.dropdown-content {
+display: none;
+background: #e84d8a;
+position: absolute;
+min-width: 220px;
+z-index: 999;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+display: block;
+padding: 10px;
+color: white;
+}
+
+/* DESKTOP */
+@media (min-width: 700px) {
+.dropdown:hover .dropdown-content {
+display: block;
+}
 }
 
 /* HEADER */
@@ -53,7 +85,6 @@ margin-top: 20px;
 color: #1b9aaa;
 }
 
-/* LIST */
 ul {
 padding-left: 20px;
 }
@@ -67,12 +98,12 @@ border-left: 5px solid #1b9aaa;
 border-radius: 6px;
 }
 
-/* BUTTON */
+/* BUTTON (PINK) */
 .btn {
 display: inline-block;
 margin-top: 30px;
 padding: 14px 25px;
-background: #ff7b00;
+background: #e84d8a;
 color: white;
 text-decoration: none;
 border-radius: 6px;
@@ -85,7 +116,22 @@ font-weight: bold;
 
 <nav>
 <a href="index.html">Home</a>
-<a href="index.html#services">Services</a>
+
+<div class="dropdown">
+<a href="#" onclick="toggleDropdown(event)">Services ▼</a>
+
+<div id="dropdownMenu" class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move Cleaning</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
+
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
 </nav>
@@ -101,7 +147,6 @@ font-weight: bold;
 Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup, and hard-to-reach areas to restore your space to a like-new condition.
 </p>
 
-<!-- STANDARD -->
 <div class="package">
 <h2>Standard Deep Clean</h2>
 <p><strong>Perfect for homes that need a refresh</strong></p>
@@ -123,7 +168,6 @@ Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup,
 <p><strong>Best For:</strong> First-time clients, seasonal cleaning</p>
 </div>
 
-<!-- PREMIUM -->
 <div class="package">
 <h2>Premium Deep Clean</h2>
 <p><strong>More detailed attention for heavily used spaces</strong></p>
@@ -138,10 +182,9 @@ Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup,
 <li>Spot cleaning walls and high-touch areas</li>
 </ul>
 
-<p><strong>Best For:</strong> Homes needing extra care or long gaps between cleanings</p>
+<p><strong>Best For:</strong> Homes needing extra care</p>
 </div>
 
-<!-- ULTIMATE -->
 <div class="package">
 <h2>Ultimate Deep Clean</h2>
 <p><strong>Top-to-bottom, no-detail-missed cleaning</strong></p>
@@ -152,28 +195,41 @@ Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup,
 <li>Behind and under furniture/appliances (if accessible)</li>
 <li>Hand-scrubbed baseboards throughout</li>
 <li>Upholstery vacuuming</li>
-<li>Closet and pantry wipe-down (upon request)</li>
-<li>Extra attention to buildup, stains, and neglected areas</li>
+<li>Closet and pantry wipe-down</li>
+<li>Extra attention to buildup and stains</li>
 </ul>
 
-<p><strong>Best For:</strong> Move-ins, move-outs, extreme deep cleaning</p>
+<p><strong>Best For:</strong> Move-ins, move-outs, extreme cleaning</p>
 </div>
 
-<!-- ADD ONS -->
 <div class="package">
 <h2>Add-On Services</h2>
-
 <ul>
 <li>Carpet shampooing</li>
 <li>Post-construction cleanup</li>
 <li>Laundry or linen changing services</li>
 </ul>
-
 </div>
 
 <a href="quote.html" class="btn">Request a Quote</a>
 
 </section>
+
+<!-- DROPDOWN SCRIPT -->
+<script>
+function toggleDropdown(event) {
+event.preventDefault();
+var menu = document.getElementById("dropdownMenu");
+menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+document.addEventListener("click", function(e) {
+var menu = document.getElementById("dropdownMenu");
+if (!e.target.closest(".dropdown")) {
+menu.style.display = "none";
+}
+});
+</script>
 
 </body>
 </html>
