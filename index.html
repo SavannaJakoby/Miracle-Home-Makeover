@@ -66,6 +66,10 @@ background-repeat: no-repeat;
 background-position: center;
 }
 
+header h1 {
+font-size: 42px;
+}
+
 /* BIO */
 .about-preview {
 max-width: 900px;
@@ -73,6 +77,7 @@ margin: auto;
 padding: 40px 20px;
 text-align: center;
 line-height: 1.6;
+font-size: 17px;
 }
 
 /* TRUST BADGES */
@@ -99,7 +104,7 @@ opacity: 0.08;
 position: relative;
 z-index: 2;
 display: grid;
-grid-template-columns: repeat(2, 1fr); /* ALWAYS 2x2 */
+grid-template-columns: repeat(2, 1fr);
 gap: 25px;
 max-width: 600px;
 margin: auto;
@@ -173,7 +178,7 @@ text-decoration: none;
 font-weight: bold;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width: 600px) {
 header {
 padding: 80px 20px;
@@ -211,22 +216,53 @@ background-size: 85%;
 <p>I don’t just clean homes — I transform them.</p>
 </header>
 
+<!-- BIO -->
 <div class="about-preview">
-<p>Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia...</p>
+
+<p>
+Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients. I specialize in deep cleaning, routine maintenance, move-in and move-out services, and comprehensive home organization.
+</p>
+
+<p>
+My approach goes beyond basic cleaning. I focus on transforming spaces into clean, comfortable, and stress-free environments. Every service is customized to meet the unique needs of each home or business, ensuring consistent, high-quality results and attention to detail.
+</p>
+
+<p>
+Proudly serving Martinsburg, WV and the surrounding areas, Miracle Home Makeover LLC is committed to professionalism and exceeding client expectations.
+</p>
+
 </div>
 
+<!-- TRUST BADGES -->
 <section class="trust-section">
 <div class="trust-overlay"></div>
 
 <div class="trust-grid">
-<div class="trust-item"><i class="fas fa-check-circle"></i><p>Licensed & Insured</p></div>
-<div class="trust-item"><i class="fas fa-check-circle"></i><p>Background Checked Cleaner</p></div>
-<div class="trust-item"><i class="fas fa-check-circle"></i><p>Flexible Scheduling</p></div>
-<div class="trust-item"><i class="fas fa-check-circle"></i><p>Customizable Cleaning Plan</p></div>
+
+<div class="trust-item">
+<i class="fas fa-check-circle"></i>
+<p>Licensed & Insured</p>
 </div>
 
+<div class="trust-item">
+<i class="fas fa-check-circle"></i>
+<p>Background Checked Cleaner</p>
+</div>
+
+<div class="trust-item">
+<i class="fas fa-check-circle"></i>
+<p>Flexible Scheduling</p>
+</div>
+
+<div class="trust-item">
+<i class="fas fa-check-circle"></i>
+<p>Customizable Cleaning Plan</p>
+</div>
+
+</div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
 <h2>My Services</h2>
 
@@ -241,6 +277,7 @@ background-size: 85%;
 
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact Me</h2>
 
