@@ -26,7 +26,7 @@ font-weight: bold;
 position: relative;
 }
 
-/* HOVER */
+/* HOVER EFFECT */
 nav a::after {
 content: "";
 position: absolute;
@@ -53,7 +53,6 @@ display: none;
 background: #0d1b2a;
 position: absolute;
 min-width: 200px;
-z-index: 1;
 }
 
 .dropdown-content a {
@@ -72,11 +71,9 @@ header {
 text-align: center;
 padding: 120px 20px;
 color: white;
-
 background:
 linear-gradient(rgba(27,154,170,0.75), rgba(27,154,170,0.75)),
 url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
-
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
@@ -92,21 +89,23 @@ text-shadow: 2px 2px 8px black;
 margin-top: 15px;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-header {
-padding: 80px 20px;
-background-size: 85%;
+/* IMAGE SECTION */
+.showcase {
+background: url("cleanhouse3.jpeg") center/cover no-repeat;
+height: 250px;
 }
 
-header h1 {
-font-size: 30px;
+/* TEXT SECTION */
+.about-preview {
+max-width: 900px;
+margin: auto;
+padding: 40px 20px;
+text-align: center;
 }
 
-header p {
-font-size: 16px;
-margin-top: 25px;
-}
+.about-preview p {
+margin-bottom: 18px;
+line-height: 1.6;
 }
 
 /* SECTIONS */
@@ -114,13 +113,6 @@ section {
 padding: 40px 20px;
 max-width: 900px;
 margin: auto;
-}
-
-/* TRUST */
-.trust {
-text-align: center;
-margin-top: 20px;
-font-weight: bold;
 }
 
 /* CARDS */
@@ -140,37 +132,12 @@ transform: translateY(-5px);
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* CALL BUTTON */
-.call-btn {
-display: inline-block;
-margin-top: 15px;
-padding: 12px 25px;
-background: #1b9aaa;
-color: white;
-border-radius: 6px;
-text-decoration: none;
-font-weight: bold;
+/* MOBILE */
+@media (max-width: 600px) {
+header {
+padding: 80px 20px;
+background-size: 85%;
 }
-
-/* FLOATING QUOTE */
-.floating-quote {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: #ff7b00;
-color: white;
-padding: 15px 20px;
-border-radius: 50px;
-text-decoration: none;
-font-weight: bold;
-box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-z-index: 1000;
-transition: 0.2s;
-}
-
-.floating-quote:hover {
-background: #e66a00;
-transform: scale(1.05);
 }
 </style>
 </head>
@@ -183,17 +150,14 @@ transform: scale(1.05);
 <div class="dropdown">
 <a href="#" onclick="toggleDropdown(event)">Services ▼</a>
 <div id="dropdownMenu" class="dropdown-content">
-
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
-<a href="standard-cleaning.html">Standard Cleaning</a>
-<a href="move-cleaning.html">Move-In / Move-Out</a>
-<a href="airbnb-cleaning.html">Airbnb Cleaning</a>
-<a href="organizing.html">Organizing</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move Cleaning</a>
+<a href="organization.html">Organization</a>
 <a href="laundry.html">Laundry</a>
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
-<a href="post-construction.html">Post-Construction</a>
-
+<a href="post-construction.html">Post Construction</a>
 </div>
 </div>
 
@@ -203,82 +167,51 @@ transform: scale(1.05);
 
 <header>
 <h1>Miracle Home Makeover</h1>
-<p>I dont just clean homes i transform them!!</p>
+<p>I don’t just clean homes — I transform them.</p>
 </header>
+
+<div class="showcase"></div>
+
+<div class="about-preview">
+<p>Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients. I specialize in deep cleaning, routine maintenance, move-in and move-out services, and comprehensive home organization.</p>
+
+<p>My approach goes beyond basic cleaning. I focus on transforming spaces into clean, comfortable, and stress-free environments. Every service is customized to meet the unique needs of each home or business, ensuring consistent, high-quality results.</p>
+
+<p>Miracle Home Makeover LLC is committed to professionalism and exceeding client expectations.</p>
+</div>
 
 <section id="services">
 <h2>My Services</h2>
 
-<a href="residential-commercial.html" class="card">
-<h3>Residential & Commercial Cleaning</h3>
-<p>Reliable cleaning services for homes, offices, and businesses.</p>
-</a>
-
 <a href="deep-cleaning.html" class="card">
 <h3>Deep Cleaning</h3>
-<p>Detailed top-to-bottom cleaning to reset your entire space.</p>
+<p>I provide detailed top-to-bottom cleaning.</p>
 </a>
 
 <a href="standard-cleaning.html" class="card">
-<h3>Standard / Routine Cleaning</h3>
-<p>Regular maintenance cleaning to keep your home consistently fresh.</p>
+<h3>Routine Cleaning</h3>
+<p>Consistent upkeep for a fresh home.</p>
 </a>
 
 <a href="move-cleaning.html" class="card">
-<h3>Move-In / Move-Out Cleaning</h3>
-<p>Get your home ready for a fresh start or leave it spotless.</p>
-</a>
-
-<a href="airbnb-cleaning.html" class="card">
-<h3>Airbnb / Rental Turnover Cleaning</h3>
-<p>Fast, reliable cleanings to keep your guests satisfied.</p>
-</a>
-
-<a href="organizing.html" class="card">
-<h3>Organizing & Decluttering</h3>
-<p>I help simplify and organize your space for better living.</p>
-</a>
-
-<a href="laundry.html" class="card">
-<h3>Laundry Services</h3>
-<p>Wash, dry, and fold services available upon request.</p>
-</a>
-
-<a href="carpet-cleaning.html" class="card">
-<h3>Carpet Cleaning</h3>
-<p>Deep cleaning to refresh and restore your carpets.</p>
-</a>
-
-<a href="post-construction.html" class="card">
-<h3>Post-Construction Cleaning</h3>
-<p>Remove dust and debris after renovations or builds.</p>
+<h3>Move Cleaning</h3>
+<p>Perfect for move-ins and move-outs.</p>
 </a>
 
 </section>
 
 <section id="contact">
 <h2>Contact Me</h2>
-
-<p>📞 304-350-2545</p>
+<p>📞 <a href="tel:13043502545">304-350-2545</a></p>
 <p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
-
-<a href="tel:13043502545" class="call-btn">Call Now</a>
-
 </section>
-
-<a href="quote.html" class="floating-quote">Get Free Quote</a>
 
 <script>
 function toggleDropdown(event) {
 if (window.innerWidth < 700) {
 event.preventDefault();
 var menu = document.getElementById("dropdownMenu");
-
-if (menu.style.display === "block") {
-menu.style.display = "none";
-} else {
-menu.style.display = "block";
-}
+menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 }
 </script>
