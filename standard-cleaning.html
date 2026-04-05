@@ -13,9 +13,9 @@ line-height: 1.6;
 background: #f4f4f4;
 }
 
-/* NAV */
+/* NAV (PINK) */
 nav {
-background: #0d1b2a;
+background: #e84d8a;
 padding: 12px;
 text-align: center;
 }
@@ -25,6 +25,38 @@ color: white;
 padding: 12px 15px;
 text-decoration: none;
 font-weight: bold;
+}
+
+nav a:hover {
+color: #f4e1c1;
+}
+
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
+
+.dropdown-content {
+display: none;
+background: #e84d8a;
+position: absolute;
+min-width: 220px;
+z-index: 999;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+display: block;
+padding: 10px;
+color: white;
+}
+
+/* DESKTOP */
+@media (min-width: 700px) {
+.dropdown:hover .dropdown-content {
+display: block;
+}
 }
 
 /* HEADER */
@@ -53,7 +85,6 @@ margin-top: 20px;
 color: #1b9aaa;
 }
 
-/* LIST */
 ul {
 padding-left: 20px;
 }
@@ -67,12 +98,12 @@ border-left: 5px solid #1b9aaa;
 border-radius: 6px;
 }
 
-/* BUTTON */
+/* BUTTON (PINK) */
 .btn {
 display: inline-block;
 margin-top: 30px;
 padding: 14px 25px;
-background: #ff7b00;
+background: #e84d8a;
 color: white;
 text-decoration: none;
 border-radius: 6px;
@@ -85,7 +116,22 @@ font-weight: bold;
 
 <nav>
 <a href="index.html">Home</a>
-<a href="index.html#services">Services</a>
+
+<div class="dropdown">
+<a href="#" onclick="toggleDropdown(event)">Services ▼</a>
+
+<div id="dropdownMenu" class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move Cleaning</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
+
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
 </nav>
@@ -98,39 +144,39 @@ font-weight: bold;
 <section>
 
 <p>
-My Standard Routine Cleaning is designed to maintain a clean, organized, and comfortable environment through regular upkeep. This package focuses on essential cleaning tasks to keep your home or business looking its best through your day-to-day life.
+My Standard Routine Cleaning is designed to maintain a clean, organized, and comfortable environment through regular upkeep. This package focuses on essential cleaning tasks to keep your home or business looking its best.
 </p>
 
 <div class="box">
 <h2>General Cleaning (All Areas)</h2>
 <ul>
-<li>Dusting all accessible surfaces (furniture, shelves, décor)</li>
-<li>Wiping down countertops and flat surfaces</li>
+<li>Dusting all accessible surfaces</li>
+<li>Wiping down countertops</li>
 <li>Vacuuming carpets and rugs</li>
-<li>Sweeping and mopping hard floors</li>
-<li>Emptying trash and replacing liners</li>
-<li>Light tidying and straightening</li>
+<li>Sweeping and mopping floors</li>
+<li>Emptying trash</li>
+<li>Light tidying</li>
 </ul>
 </div>
 
 <div class="box">
 <h2>Kitchen Cleaning</h2>
 <ul>
-<li>Wipe down countertops and backsplashes</li>
-<li>Clean exterior of appliances (stove, fridge, microwave, dishwasher)</li>
-<li>Clean and sanitize sink and faucet</li>
+<li>Clean countertops and backsplashes</li>
+<li>Clean appliance exteriors</li>
+<li>Sanitize sink and faucet</li>
 <li>Wipe cabinet fronts</li>
-<li>Spot clean walls and high-touch areas</li>
+<li>Spot clean walls</li>
 </ul>
 </div>
 
 <div class="box">
 <h2>Bathroom Cleaning</h2>
 <ul>
-<li>Clean and disinfect toilets</li>
-<li>Scrub sinks, counters, and faucets</li>
-<li>Clean tubs and showers (light buildup removal)</li>
-<li>Wipe mirrors and glass surfaces</li>
+<li>Disinfect toilets</li>
+<li>Scrub sinks and counters</li>
+<li>Clean tubs and showers</li>
+<li>Wipe mirrors</li>
 <li>Sanitize high-touch areas</li>
 </ul>
 </div>
@@ -138,40 +184,40 @@ My Standard Routine Cleaning is designed to maintain a clean, organized, and com
 <div class="box">
 <h2>Bedroom Cleaning</h2>
 <ul>
-<li>Dust furniture and surfaces</li>
-<li>Make beds (linen change optional)</li>
-<li>Vacuum floors and rugs</li>
+<li>Dust furniture</li>
+<li>Make beds</li>
+<li>Vacuum floors</li>
 <li>Empty trash</li>
 </ul>
 </div>
 
 <div class="box">
-<h2>Living Areas & Common Spaces</h2>
+<h2>Living Areas</h2>
 <ul>
-<li>Dust and wipe furniture</li>
+<li>Dust furniture</li>
 <li>Light upholstery vacuuming</li>
-<li>Clean floors (vacuum/mop)</li>
-<li>Straighten pillows, blankets, and décor</li>
+<li>Clean floors</li>
+<li>Straighten décor</li>
 </ul>
 </div>
 
 <div class="box">
-<h2>Service Frequency Options</h2>
+<h2>Service Frequency</h2>
 <ul>
 <li>Weekly</li>
 <li>Bi-weekly</li>
 <li>Monthly</li>
-<li>Custom schedules available</li>
+<li>Custom schedules</li>
 </ul>
 </div>
 
 <div class="box">
-<h2>Not Included (Add-On Services)</h2>
+<h2>Not Included (Add-Ons)</h2>
 <ul>
-<li>Deep cleaning (baseboards, heavy buildup, inside appliances)</li>
-<li>Interior cabinet cleaning</li>
+<li>Deep cleaning</li>
+<li>Cabinet interiors</li>
 <li>Carpet shampooing</li>
-<li>Exterior window cleaning</li>
+<li>Window exterior cleaning</li>
 <li>Post-construction cleaning</li>
 </ul>
 </div>
@@ -180,16 +226,32 @@ My Standard Routine Cleaning is designed to maintain a clean, organized, and com
 <h2>Ideal For</h2>
 <ul>
 <li>Busy families</li>
-<li>Working professionals</li>
+<li>Professionals</li>
 <li>Seniors</li>
-<li>Offices needing light maintenance</li>
-<li>Anyone wanting a consistently clean space</li>
+<li>Offices</li>
+<li>Anyone wanting a clean space</li>
 </ul>
 </div>
 
 <a href="quote.html" class="btn">Request a Quote</a>
 
 </section>
+
+<!-- DROPDOWN SCRIPT -->
+<script>
+function toggleDropdown(event) {
+event.preventDefault();
+var menu = document.getElementById("dropdownMenu");
+menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+document.addEventListener("click", function(e) {
+var menu = document.getElementById("dropdownMenu");
+if (!e.target.closest(".dropdown")) {
+menu.style.display = "none";
+}
+});
+</script>
 
 </body>
 </html>
