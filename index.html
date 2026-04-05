@@ -13,21 +13,26 @@ margin: 0;
 font-family: Arial, sans-serif;
 }
 
-/* NAVBAR */
+/* NAVBAR (TAN) */
 nav {
-background: #0d1b2a;
+background: #f4e1c1;
 padding: 12px;
 text-align: center;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 nav a {
-color: white;
+color: #333;
 padding: 12px 15px;
 text-decoration: none;
 font-weight: bold;
 }
 
-/* DROPDOWN */
+nav a:hover {
+color: #e84d8a;
+}
+
+/* DROPDOWN (MATCH TAN) */
 .dropdown {
 display: inline-block;
 position: relative;
@@ -35,15 +40,17 @@ position: relative;
 
 .dropdown-content {
 display: none;
-background: #0d1b2a;
+background: #f4e1c1;
 position: absolute;
 min-width: 220px;
 z-index: 999;
+box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .dropdown-content a {
 display: block;
 padding: 10px;
+color: #333;
 }
 
 /* Desktop hover */
@@ -53,7 +60,7 @@ display: block;
 }
 }
 
-/* HEADER */
+/* HEADER (TEAL) */
 header {
 text-align: center;
 padding: 120px 20px;
@@ -80,7 +87,7 @@ line-height: 1.6;
 font-size: 17px;
 }
 
-/* TRUST SECTION */
+/* TRUST */
 .trust-section {
 position: relative;
 padding: 60px 20px;
@@ -103,13 +110,11 @@ opacity: 0.05;
 }
 
 .trust-grid {
-position: relative;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 30px;
 max-width: 600px;
 margin: auto;
-z-index: 2;
 }
 
 .trust-item {
@@ -132,17 +137,13 @@ max-width: 1000px;
 margin: auto;
 }
 
-.services h2 {
-margin-bottom: 20px;
-}
-
 .service-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 }
 
-/* SERVICE CARD (TEAL) */
+/* TEAL CARDS */
 .card {
 background: #1b9aaa;
 padding: 25px;
@@ -157,11 +158,6 @@ box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 transform: translateY(-8px);
 background: #178a97;
 box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-}
-
-.card h3 {
-margin: 0;
-font-size: 18px;
 }
 
 .card i {
@@ -247,7 +243,6 @@ background-size: 85%;
 <p>I don’t just clean homes — I transform them.</p>
 </header>
 
-<!-- BIO -->
 <div class="about-preview">
 <p>
 Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients.
@@ -260,7 +255,6 @@ Miracle Home Makeover LLC is committed to professionalism and exceeding client e
 </p>
 </div>
 
-<!-- TRUST -->
 <section class="trust-section">
 <div class="trust-overlay"></div>
 
@@ -272,25 +266,22 @@ Miracle Home Makeover LLC is committed to professionalism and exceeding client e
 </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services">
 <h2>My Services</h2>
 
 <div class="service-grid">
-
-<a href="residential-commercial.html" class="card"><h3><i class="fas fa-building"></i>Residential & Commercial</h3></a>
-<a href="deep-cleaning.html" class="card"><h3><i class="fas fa-broom"></i>Deep Cleaning</h3></a>
-<a href="standard-cleaning.html" class="card"><h3><i class="fas fa-spray-can"></i>Routine Cleaning</h3></a>
-<a href="move-cleaning.html" class="card"><h3><i class="fas fa-truck-moving"></i>Move Cleaning</h3></a>
-<a href="organization.html" class="card"><h3><i class="fas fa-box-open"></i>Organization</h3></a>
-<a href="laundry.html" class="card"><h3><i class="fas fa-shirt"></i>Laundry</h3></a>
-<a href="carpet-cleaning.html" class="card"><h3><i class="fas fa-rug"></i>Carpet Cleaning</h3></a>
-<a href="post-construction.html" class="card"><h3><i class="fas fa-hard-hat"></i>Post Construction</h3></a>
-
+<a href="residential-commercial.html" class="card"><i class="fas fa-building"></i>Residential & Commercial</a>
+<a href="deep-cleaning.html" class="card"><i class="fas fa-broom"></i>Deep Cleaning</a>
+<a href="standard-cleaning.html" class="card"><i class="fas fa-spray-can"></i>Routine Cleaning</a>
+<a href="move-cleaning.html" class="card"><i class="fas fa-truck-moving"></i>Move Cleaning</a>
+<a href="organization.html" class="card"><i class="fas fa-box-open"></i>Organization</a>
+<a href="laundry.html" class="card"><i class="fas fa-shirt"></i>Laundry</a>
+<a href="carpet-cleaning.html" class="card"><i class="fas fa-rug"></i>Carpet Cleaning</a>
+<a href="post-construction.html" class="card"><i class="fas fa-hard-hat"></i>Post Construction</a>
 </div>
+
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2>Contact Me</h2>
 
