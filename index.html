@@ -16,6 +16,7 @@ nav {
 background: #0d1b2a;
 padding: 12px;
 text-align: center;
+position: relative;
 }
 
 nav a {
@@ -52,14 +53,16 @@ position: relative;
 display: none;
 background: #0d1b2a;
 position: absolute;
-min-width: 200px;
+min-width: 220px;
+z-index: 999;
 }
 
 .dropdown-content a {
 display: block;
+padding: 10px;
 }
 
-/* DESKTOP HOVER */
+/* DESKTOP DROPDOWN */
 @media (min-width: 700px) {
 .dropdown:hover .dropdown-content {
 display: block;
@@ -91,15 +94,19 @@ margin-top: 15px;
 
 /* IMAGE SECTION */
 .showcase {
+max-width: 900px;
+height: 220px;
+margin: 30px auto;
+border-radius: 10px;
 background: url("cleanhouse3.jpeg") center/cover no-repeat;
-height: 80px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* TEXT SECTION */
 .about-preview {
 max-width: 900px;
 margin: auto;
-padding: 40px 20px;
+padding: 20px;
 text-align: center;
 }
 
@@ -108,14 +115,13 @@ margin-bottom: 18px;
 line-height: 1.6;
 }
 
-/* SECTIONS */
+/* SERVICES */
 section {
 padding: 40px 20px;
 max-width: 900px;
 margin: auto;
 }
 
-/* CARDS */
 .card {
 background: #f4f4f4;
 padding: 20px;
@@ -132,11 +138,37 @@ transform: translateY(-5px);
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* CONTACT */
+#contact a {
+color: #1b9aaa;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* FLOATING BUTTON */
+.quote-btn {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #ff7b00;
+color: white;
+padding: 15px 20px;
+border-radius: 30px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+z-index: 1000;
+}
+
 /* MOBILE */
 @media (max-width: 600px) {
 header {
 padding: 80px 20px;
 background-size: 85%;
+}
+
+.showcase {
+height: 180px;
 }
 }
 </style>
@@ -167,15 +199,15 @@ background-size: 85%;
 
 <header>
 <h1>Miracle Home Makeover</h1>
-<p>I don’t just clean homes I transform them.</p>
+<p>I don’t just clean homes — I transform them.</p>
 </header>
 
 <div class="showcase"></div>
 
 <div class="about-preview">
-<p>Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients. I specialize in deep cleaning, routine maintenance, move-in and move-out services, and comprehensive home organization.</p>
+<p>Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients.</p>
 
-<p>My approach goes beyond basic cleaning. I focus on transforming spaces into clean, comfortable, and stress-free environments. Every service is customized to meet the unique needs of each home or business, ensuring consistent, high-quality results.</p>
+<p>My approach goes beyond basic cleaning. I focus on transforming spaces into clean, comfortable, and stress-free environments.</p>
 
 <p>Miracle Home Makeover LLC is committed to professionalism and exceeding client expectations.</p>
 </div>
@@ -183,19 +215,44 @@ background-size: 85%;
 <section id="services">
 <h2>My Services</h2>
 
+<a href="residential-commercial.html" class="card">
+<h3>Residential & Commercial Cleaning</h3>
+<p>Customized cleaning for homes and businesses.</p>
+</a>
+
 <a href="deep-cleaning.html" class="card">
 <h3>Deep Cleaning</h3>
-<p>I provide detailed top-to-bottom cleaning.</p>
+<p>Detailed top-to-bottom cleaning.</p>
 </a>
 
 <a href="standard-cleaning.html" class="card">
 <h3>Routine Cleaning</h3>
-<p>Consistent upkeep for a fresh home.</p>
+<p>Consistent upkeep for a fresh space.</p>
 </a>
 
 <a href="move-cleaning.html" class="card">
-<h3>Move Cleaning</h3>
-<p>Perfect for move-ins and move-outs.</p>
+<h3>Move-In / Move-Out Cleaning</h3>
+<p>Perfect for moving and fresh starts.</p>
+</a>
+
+<a href="organization.html" class="card">
+<h3>Organizing & Decluttering</h3>
+<p>Create clean, functional spaces.</p>
+</a>
+
+<a href="laundry.html" class="card">
+<h3>Laundry Services</h3>
+<p>Wash, dry, fold services available.</p>
+</a>
+
+<a href="carpet-cleaning.html" class="card">
+<h3>Carpet Cleaning</h3>
+<p>Deep clean carpets for a fresh feel.</p>
+</a>
+
+<a href="post-construction.html" class="card">
+<h3>Post-Construction Cleaning</h3>
+<p>Remove dust and debris after projects.</p>
 </a>
 
 </section>
@@ -206,12 +263,16 @@ background-size: 85%;
 <p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
 </section>
 
+<!-- FLOATING BUTTON -->
+<a href="quote.html" class="quote-btn">Request a Quote</a>
+
 <script>
 function toggleDropdown(event) {
 if (window.innerWidth < 700) {
 event.preventDefault();
 var menu = document.getElementById("dropdownMenu");
-menu.style.display = menu.style.display === "block" ? "none" : "block";
+menu.style.display =
+menu.style.display === "block" ? "none" : "block";
 }
 }
 </script>
