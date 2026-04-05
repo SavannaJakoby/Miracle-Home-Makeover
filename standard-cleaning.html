@@ -27,36 +27,43 @@ text-decoration: none;
 font-weight: bold;
 }
 
-nav a:hover {
-color: #f4e1c1;
-}
-
-/* DROPDOWN */
+/* 🔥 ANIMATED DROPDOWN */
 .dropdown {
 display: inline-block;
 position: relative;
 }
 
 .dropdown-content {
-display: none;
+opacity: 0;
+visibility: hidden;
+transform: translateY(10px);
+transition: all 0.3s ease;
 background: #e84d8a;
 position: absolute;
 min-width: 220px;
 z-index: 999;
-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+border-radius: 8px;
+overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
 }
 
 .dropdown-content a {
 display: block;
-padding: 10px;
+padding: 12px;
 color: white;
+transition: all 0.25s ease;
 }
 
-/* DESKTOP */
-@media (min-width: 700px) {
-.dropdown:hover .dropdown-content {
-display: block;
-}
+.dropdown-content a:hover {
+background: #f4e1c1;
+color: #e84d8a;
+padding-left: 18px;
 }
 
 /* HEADER */
@@ -98,16 +105,25 @@ border-left: 5px solid #1b9aaa;
 border-radius: 6px;
 }
 
-/* BUTTON (PINK) */
-.btn {
-display: inline-block;
-margin-top: 30px;
-padding: 14px 25px;
+/* 🔥 FLOAT BUTTON */
+.quote-btn {
+position: fixed;
+bottom: 60px;
+right: 15px;
 background: #e84d8a;
 color: white;
+padding: 10px 16px;
+border-radius: 25px;
 text-decoration: none;
-border-radius: 6px;
 font-weight: bold;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
 }
 </style>
 </head>
@@ -118,17 +134,14 @@ font-weight: bold;
 <a href="index.html">Home</a>
 
 <div class="dropdown">
-<a href="#" onclick="toggleDropdown(event)">Services ▼</a>
+<a href="#">Services ▼</a>
 
-<div id="dropdownMenu" class="dropdown-content">
+<div class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
 <a href="standard-cleaning.html">Routine Cleaning</a>
 <a href="move-cleaning.html">Move Cleaning</a>
-
-<!-- ✅ ADDED AIRBNB -->
 <a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
-
 <a href="organization.html">Organization</a>
 <a href="laundry.html">Laundry</a>
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
@@ -237,25 +250,10 @@ My Standard Routine Cleaning is designed to maintain a clean, organized, and com
 </ul>
 </div>
 
-<a href="quote.html" class="btn">Request a Quote</a>
-
 </section>
 
-<!-- DROPDOWN SCRIPT -->
-<script>
-function toggleDropdown(event) {
-event.preventDefault();
-var menu = document.getElementById("dropdownMenu");
-menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
-
-document.addEventListener("click", function(e) {
-var menu = document.getElementById("dropdownMenu");
-if (!e.target.closest(".dropdown")) {
-menu.style.display = "none";
-}
-});
-</script>
+<!-- 🔥 FLOAT BUTTON -->
+<a href="quote.html" class="quote-btn">Request Quote</a>
 
 </body>
 </html>
