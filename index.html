@@ -72,6 +72,7 @@ max-width: 900px;
 margin: auto;
 padding: 40px 20px;
 text-align: center;
+line-height: 1.6;
 }
 
 /* SERVICES */
@@ -103,24 +104,11 @@ color: #e84d8a;
 font-size: 20px;
 }
 
-/* 🔥 CONTACT (PINK SECTION) */
-.contact {
-background: #e84d8a;
-color: white;
-text-align: center;
+/* CONTACT */
+section {
 padding: 40px 20px;
-}
-
-.contact a {
-color: white;
-text-decoration: none;
-display: block;
-margin: 10px 0;
-font-size: 18px;
-}
-
-.contact i {
-margin-right: 8px;
+max-width: 900px;
+margin: auto;
 }
 
 /* FLOAT BUTTON */
@@ -133,6 +121,7 @@ color: white;
 padding: 10px 14px;
 border-radius: 20px;
 text-decoration: none;
+font-weight: bold;
 }
 </style>
 </head>
@@ -168,15 +157,24 @@ text-decoration: none;
 </header>
 
 <section class="bio">
-<p>Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, WV.</p>
-<p>I specialize in deep cleaning, routine cleaning, and organization.</p>
-<p>I focus on transforming spaces into clean, comfortable environments.</p>
+<p>
+Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions.
+</p>
+
+<p>
+I specialize in deep cleaning, routine maintenance, move-in and move-out services, and home organization.
+</p>
+
+<p>
+I focus on transforming spaces into clean, comfortable, and stress-free environments.
+</p>
 </section>
 
 <section class="services">
 <h2>My Services</h2>
 
 <div class="service-grid">
+
 <a href="residential-commercial.html" class="card"><i class="fas fa-building"></i> Residential & Commercial</a>
 <a href="deep-cleaning.html" class="card"><i class="fas fa-broom"></i> Deep Cleaning</a>
 <a href="standard-cleaning.html" class="card"><i class="fas fa-spray-can"></i> Routine Cleaning</a>
@@ -186,32 +184,41 @@ text-decoration: none;
 <a href="laundry.html" class="card"><i class="fas fa-shirt"></i> Laundry</a>
 <a href="carpet-cleaning.html" class="card"><i class="fas fa-rug"></i> Carpet Cleaning</a>
 <a href="post-construction.html" class="card"><i class="fas fa-hard-hat"></i> Post Construction</a>
+
 </div>
 </section>
 
-<!-- 🔥 NEW CONTACT SECTION -->
-<section class="contact" id="contact">
-<h2>Contact Me</h2>
+<section id="contact">
+<h2 style="color:#e84d8a;">Contact Me</h2>
 
-<a href="tel:3043502545">
-<i class="fas fa-phone"></i> 304-350-2545
-</a>
+<p>
+<i class="fas fa-phone" style="color:#e84d8a;"></i>
+<a href="tel:3043502545">304-350-2545</a>
+</p>
 
+<p>
+<i class="fas fa-envelope" style="color:#e84d8a;"></i>
 <a href="mailto:MiracleHomeMakeoverLLC@gmail.com">
-<i class="fas fa-envelope"></i> MiracleHomeMakeoverLLC@gmail.com
+MiracleHomeMakeoverLLC@gmail.com
 </a>
+</p>
 
+<p>
+<i class="fab fa-facebook" style="color:#e84d8a;"></i>
 <a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank">
-<i class="fab fa-facebook"></i> Facebook
+Facebook
 </a>
+</p>
 
+<p>
+<i class="fab fa-instagram" style="color:#e84d8a;"></i>
 <a href="https://www.instagram.com/miraclehomemakeover/" target="_blank">
-<i class="fab fa-instagram"></i> Instagram
+Instagram
 </a>
-
+</p>
 </section>
 
-<a href="quote.html" class="quote-btn">Quote</a>
+<a href="quote.html" class="quote-btn">Request Quote</a>
 
 <script>
 function toggleDropdown(event) {
