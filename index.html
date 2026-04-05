@@ -80,32 +80,39 @@ line-height: 1.6;
 font-size: 17px;
 }
 
-/* TRUST BADGES */
+/* TRUST SECTION */
 .trust-section {
 position: relative;
-padding: 50px 20px;
+padding: 60px 20px;
 background: #eaf4f6;
 text-align: center;
+overflow: hidden;
 }
 
+/* ✅ FIXED LOGO (ONLY ONE) */
 .trust-overlay {
 position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 450px;
-height: 450px;
-background: url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
-background-size: contain;
-opacity: 0.08;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+
+background-image: url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 260px;
+
+opacity: 0.05;
+pointer-events: none;
 }
 
+/* GRID */
 .trust-grid {
 position: relative;
 z-index: 2;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-gap: 25px;
+gap: 30px;
 max-width: 600px;
 margin: auto;
 }
@@ -118,7 +125,8 @@ font-size: 18px;
 .trust-item i {
 font-size: 28px;
 color: #28a745;
-margin-bottom: 8px;
+margin-bottom: 10px;
+display: block;
 }
 
 /* SERVICES */
@@ -164,18 +172,19 @@ font-weight: bold;
 .facebook { background: #1877f2; }
 .instagram { background: #e1306c; }
 
-/* FLOAT BUTTON */
+/* FLOAT BUTTON (FIXED SIZE) */
 .quote-btn {
 position: fixed;
-bottom: 70px;
+bottom: 60px;
 right: 15px;
 background: #ff7b00;
 color: white;
 padding: 10px 14px;
-font-size: 14px;
-border-radius: 25px;
+font-size: 13px;
+border-radius: 20px;
 text-decoration: none;
 font-weight: bold;
+z-index: 999;
 }
 
 /* MOBILE */
@@ -241,22 +250,22 @@ Proudly serving Martinsburg, WV and the surrounding areas, Miracle Home Makeover
 
 <div class="trust-item">
 <i class="fas fa-check-circle"></i>
-<p>Licensed & Insured</p>
+Licensed & Insured
 </div>
 
 <div class="trust-item">
 <i class="fas fa-check-circle"></i>
-<p>Background Checked Cleaner</p>
+Background Checked Cleaner
 </div>
 
 <div class="trust-item">
 <i class="fas fa-check-circle"></i>
-<p>Flexible Scheduling</p>
+Flexible Scheduling
 </div>
 
 <div class="trust-item">
 <i class="fas fa-check-circle"></i>
-<p>Customizable Cleaning Plan</p>
+Customizable Cleaning Plan
 </div>
 
 </div>
