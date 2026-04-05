@@ -122,17 +122,24 @@ font-weight: bold;
 .facebook { background: #1877f2; }
 .instagram { background: #e1306c; }
 
-/* FLOATING BUTTON */
+/* 🔥 FIXED FLOATING BUTTON */
 .quote-btn {
 position: fixed;
-bottom: 20px;
-right: 20px;
+bottom: 70px; /* moved up so it doesn’t cover social links */
+right: 15px;
+
 background: #ff7b00;
 color: white;
-padding: 15px 20px;
-border-radius: 30px;
+
+padding: 10px 14px; /* smaller size */
+font-size: 14px;
+
+border-radius: 25px;
 text-decoration: none;
 font-weight: bold;
+
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+z-index: 1000;
 }
 
 /* MOBILE */
@@ -233,7 +240,7 @@ MiracleHomeMakeoverLLC@gmail.com</a></p>
 
 </section>
 
-<a href="quote.html" class="quote-btn">Request a Quote</a>
+<a href="quote.html" class="quote-btn">Request Quote</a>
 
 <script>
 function toggleDropdown(event) {
