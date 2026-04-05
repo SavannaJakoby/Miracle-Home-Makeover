@@ -27,7 +27,7 @@ font-weight: bold;
 position: relative;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 nav a::after {
 content: "";
 position: absolute;
@@ -92,21 +92,11 @@ text-shadow: 2px 2px 8px black;
 margin-top: 15px;
 }
 
-/* IMAGE SECTION */
-.showcase {
-max-width: 900px;
-height: 220px;
-margin: 30px auto;
-border-radius: 10px;
-background: url("cleanhouse3.jpeg") center/cover no-repeat;
-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* TEXT SECTION */
+/* TEXT */
 .about-preview {
 max-width: 900px;
 margin: auto;
-padding: 20px;
+padding: 30px 20px;
 text-align: center;
 }
 
@@ -138,11 +128,30 @@ transform: translateY(-5px);
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* CONTACT */
+/* CONTACT LINKS */
 #contact a {
 color: #1b9aaa;
 text-decoration: none;
 font-weight: bold;
+}
+
+/* SOCIAL BUTTONS */
+.social-btn {
+display: inline-block;
+margin: 10px 10px 0 0;
+padding: 10px 18px;
+border-radius: 6px;
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+.facebook {
+background: #1877f2;
+}
+
+.instagram {
+background: #e1306c;
 }
 
 /* FLOATING BUTTON */
@@ -165,10 +174,6 @@ z-index: 1000;
 header {
 padding: 80px 20px;
 background-size: 85%;
-}
-
-.showcase {
-height: 180px;
 }
 }
 </style>
@@ -202,8 +207,6 @@ height: 180px;
 <p>I don’t just clean homes — I transform them.</p>
 </header>
 
-<div class="showcase"></div>
-
 <div class="about-preview">
 <p>Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients.</p>
 
@@ -215,52 +218,35 @@ height: 180px;
 <section id="services">
 <h2>My Services</h2>
 
-<a href="residential-commercial.html" class="card">
-<h3>Residential & Commercial Cleaning</h3>
-<p>Customized cleaning for homes and businesses.</p>
-</a>
-
-<a href="deep-cleaning.html" class="card">
-<h3>Deep Cleaning</h3>
-<p>Detailed top-to-bottom cleaning.</p>
-</a>
-
-<a href="standard-cleaning.html" class="card">
-<h3>Routine Cleaning</h3>
-<p>Consistent upkeep for a fresh space.</p>
-</a>
-
-<a href="move-cleaning.html" class="card">
-<h3>Move-In / Move-Out Cleaning</h3>
-<p>Perfect for moving and fresh starts.</p>
-</a>
-
-<a href="organization.html" class="card">
-<h3>Organizing & Decluttering</h3>
-<p>Create clean, functional spaces.</p>
-</a>
-
-<a href="laundry.html" class="card">
-<h3>Laundry Services</h3>
-<p>Wash, dry, fold services available.</p>
-</a>
-
-<a href="carpet-cleaning.html" class="card">
-<h3>Carpet Cleaning</h3>
-<p>Deep clean carpets for a fresh feel.</p>
-</a>
-
-<a href="post-construction.html" class="card">
-<h3>Post-Construction Cleaning</h3>
-<p>Remove dust and debris after projects.</p>
-</a>
+<a href="residential-commercial.html" class="card"><h3>Residential & Commercial Cleaning</h3></a>
+<a href="deep-cleaning.html" class="card"><h3>Deep Cleaning</h3></a>
+<a href="standard-cleaning.html" class="card"><h3>Routine Cleaning</h3></a>
+<a href="move-cleaning.html" class="card"><h3>Move-In / Move-Out Cleaning</h3></a>
+<a href="organization.html" class="card"><h3>Organizing & Decluttering</h3></a>
+<a href="laundry.html" class="card"><h3>Laundry Services</h3></a>
+<a href="carpet-cleaning.html" class="card"><h3>Carpet Cleaning</h3></a>
+<a href="post-construction.html" class="card"><h3>Post-Construction Cleaning</h3></a>
 
 </section>
 
 <section id="contact">
 <h2>Contact Me</h2>
+
 <p>📞 <a href="tel:13043502545">304-350-2545</a></p>
-<p>📧 MiracleHomeMakeoverLLC@gmail.com</p>
+
+<p>📧 <a href="mailto:MiracleHomeMakeoverLLC@gmail.com">
+MiracleHomeMakeoverLLC@gmail.com</a></p>
+
+<div>
+<a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank" class="social-btn facebook">
+📘 Facebook
+</a>
+
+<a href="https://www.instagram.com/miraclehomemakeover/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-btn instagram">
+📸 Instagram
+</a>
+</div>
+
 </section>
 
 <!-- FLOATING BUTTON -->
