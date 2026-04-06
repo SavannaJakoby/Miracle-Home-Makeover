@@ -30,7 +30,7 @@ nav a:hover {
 color: #f4e1c1;
 }
 
-/* DROPDOWN */
+/* DROPDOWN (SMOOTH LIKE OTHER PAGES) */
 .dropdown {
 display: inline-block;
 position: relative;
@@ -42,8 +42,9 @@ background: #e84d8a;
 min-width: 220px;
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 opacity: 0;
+transform: translateY(10px);
+transition: all 0.25s ease;
 visibility: hidden;
-transition: opacity 0.2s ease;
 z-index: 999;
 }
 
@@ -55,32 +56,34 @@ color: white;
 
 .dropdown:hover .dropdown-content {
 opacity: 1;
+transform: translateY(0);
 visibility: visible;
 }
 
 /* HEADER */
 header {
 text-align: center;
-padding: 60px 20px;
+padding: 70px 20px;
 background: #1b9aaa;
 color: white;
 }
 
-/* LOGO (FIXED CLEAN LOOK) */
+/* 🔥 LOGO (CLEAN + POPPING) */
 .logo {
-max-width: 260px;
-margin-bottom: 15px;
+max-width: 300px;
 display: block;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto 15px auto;
 
-/* no blend = no weird box effect */
-mix-blend-mode: normal;
+/* makes it stand out */
+filter: drop-shadow(0 8px 20px rgba(0,0,0,0.35))
+        brightness(1.05);
 
-/* makes it pop */
-filter: drop-shadow(0 6px 18px rgba(0,0,0,0.3));
+/* slight glow effect */
+transition: 0.3s;
+}
 
-background: transparent;
+.logo:hover {
+transform: scale(1.03);
 }
 
 /* BIO */
@@ -218,7 +221,6 @@ z-index: 999;
 <p>Professional Cleaning & Organization Services</p>
 </header>
 
-<!-- BIO -->
 <section class="bio">
 <h2>About Miracle Home Makeover</h2>
 
@@ -235,15 +237,13 @@ Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeove
 </p>
 </section>
 
-<!-- TRUST BADGES -->
 <section class="trust">
 <div class="badge">✔ Licensed & Insured</div>
 <div class="badge">✔ Background Checked Cleaner</div>
 <div class="badge">✔ Flexible Scheduling</div>
-<div class="badge">✔ Customizable Cleaning Plans</div>
+<div class="badge">✔ Custom Cleaning Plans</div>
 </section>
 
-<!-- SERVICES -->
 <section class="services">
 <a href="residential-commercial.html" class="tile">🏠 Residential & Commercial</a>
 <a href="deep-cleaning.html" class="tile">✨ Deep Cleaning</a>
@@ -256,13 +256,10 @@ Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeove
 <a href="post-construction.html" class="tile">🏗 Post Construction</a>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Contact Me</h2>
-
 <a href="tel:13043502545">📞 304-350-2545</a>
 <a href="mailto:miraclehomemakeover@gmail.com">📧 miraclehomemakeover@gmail.com</a>
-
 <a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank">📘 Facebook</a>
 <a href="https://www.instagram.com/miraclehomemakeover/" target="_blank">📸 Instagram</a>
 </section>
