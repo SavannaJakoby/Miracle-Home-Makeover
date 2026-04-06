@@ -58,7 +58,7 @@ visibility: visible;
 /* HEADER */
 header {
 text-align: center;
-padding: 40px 10px 10px;
+padding: 25px 10px 5px;
 background: #1b9aaa;
 color: white;
 }
@@ -72,10 +72,10 @@ color: white;
 
 /* LOGO */
 .logo {
-width: 95%;
-max-width: 600px;
+width: 110%;
+max-width: 700px;
 display: block;
-margin: 0 auto 10px auto;
+margin: 0 auto;
 animation: shimmer 3s infinite ease-in-out;
 filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
 }
@@ -83,7 +83,8 @@ filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
 /* TEXT */
 header h1 {
 font-size: 30px;
-margin: 5px 0;
+margin-top: -10px;
+margin-bottom: 5px;
 }
 
 header p {
@@ -106,7 +107,7 @@ text-align: center;
 color: #e84d8a;
 }
 
-/* TRUST BADGES */
+/* TRUST */
 .trust {
 max-width: 900px;
 margin: 20px auto;
@@ -141,6 +142,12 @@ border-radius: 10px;
 text-decoration: none;
 display: block;
 font-weight: bold;
+transition: all 0.2s ease;
+}
+
+.tile:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* CONTACT */
