@@ -30,7 +30,7 @@ nav a:hover {
 color: #f4e1c1;
 }
 
-/* DROPDOWN (MATCHES ALL PAGES) */
+/* DROPDOWN */
 .dropdown {
 display: inline-block;
 position: relative;
@@ -41,12 +41,9 @@ position: absolute;
 background: #e84d8a;
 min-width: 220px;
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-
-/* clean fade */
 opacity: 0;
 visibility: hidden;
 transition: opacity 0.2s ease;
-
 z-index: 999;
 }
 
@@ -69,15 +66,21 @@ background: #1b9aaa;
 color: white;
 }
 
-/* LOGO */
+/* LOGO (FIXED CLEAN LOOK) */
 .logo {
-max-width: 240px;
+max-width: 260px;
 margin-bottom: 15px;
 display: block;
 margin-left: auto;
 margin-right: auto;
-mix-blend-mode: multiply;
-filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+
+/* no blend = no weird box effect */
+mix-blend-mode: normal;
+
+/* makes it pop */
+filter: drop-shadow(0 6px 18px rgba(0,0,0,0.3));
+
+background: transparent;
 }
 
 /* BIO */
