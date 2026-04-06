@@ -35,7 +35,7 @@ text-decoration: none;
 font-weight: 600;
 }
 
-/* DROPDOWN */
+/* DROPDOWN CLEAN */
 .dropdown {
 display: inline-block;
 position: relative;
@@ -43,25 +43,43 @@ position: relative;
 
 .dropdown-content {
 position: absolute;
-background: #e84d8a;
-min-width: 220px;
+top: 120%;
+left: 50%;
+transform: translateX(-50%) translateY(10px);
+background: white;
+min-width: 240px;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 opacity: 0;
-transform: translateY(10px);
-transition: all 0.25s ease;
 visibility: hidden;
-z-index: 999;
-border-radius: 10px;
+transition: all 0.25s ease;
 overflow: hidden;
+z-index: 999;
+}
+
+.dropdown-content a {
+display: block;
+padding: 14px 18px;
+color: #333;
+text-decoration: none;
+font-weight: 500;
+border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.dropdown-content a:last-child {
+border-bottom: none;
 }
 
 .dropdown-content a:hover {
-background: rgba(255,255,255,0.15);
+background: #f8f8f8;
+color: #e84d8a;
+padding-left: 22px;
 }
 
 .dropdown:hover .dropdown-content {
 opacity: 1;
-transform: translateY(0);
 visibility: visible;
+transform: translateX(-50%) translateY(0);
 }
 
 /* HEADER */
@@ -208,7 +226,8 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 <a href="index.html">Home</a>
 
 <div class="dropdown">
-<a href="#">Services ▼</a>
+<a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+
 <div class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
