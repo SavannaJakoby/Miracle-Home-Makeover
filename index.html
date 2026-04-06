@@ -60,36 +60,19 @@ transform: translateY(0);
 visibility: visible;
 }
 
-/* HEADER WITH LOGO BACKGROUND */
+/* HEADER */
 header {
 text-align: center;
-padding: 110px 20px;
+padding: 80px 20px;
 background: #1b9aaa;
 color: white;
-position: relative;
-overflow: hidden;
 }
 
-/* BIG BACKGROUND LOGO */
-header::before {
-content: "";
-position: absolute;
-top: 50%;
-left: 50%;
-width: 650px;
-height: 650px;
-background: url("logo.png") no-repeat center;
-background-size: contain;
-transform: translate(-50%, -50%);
-opacity: 0.10;
-pointer-events: none;
-}
-
-/* TEXT ABOVE */
-header h1,
-header p {
-position: relative;
-z-index: 2;
+/* LOGO (NEW CLEAN STYLE) */
+.logo {
+max-width: 320px;
+width: 100%;
+margin-bottom: 15px;
 }
 
 /* BIO */
@@ -222,6 +205,7 @@ z-index: 999;
 </nav>
 
 <header>
+<img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo">
 <h1>Miracle Home Makeover LLC</h1>
 <p>Professional Cleaning & Organization Services</p>
 </header>
