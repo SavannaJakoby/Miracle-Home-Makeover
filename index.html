@@ -63,24 +63,28 @@ visibility: visible;
 /* HEADER */
 header {
 text-align: center;
-padding: 40px 0 20px;
+padding: 90px 20px 40px;
 background: #1b9aaa;
 color: white;
+position: relative;
+overflow: hidden;
 }
 
-/* 🔥 BIG LOGO */
+/* 🔥 BIG PRO LOGO */
 .logo {
-width: 100%;
+width: 110%;
 max-width: 1100px;
 height: auto;
 display: block;
-margin: 0 auto 10px auto;
+margin: 0 auto;
+transform: translateY(-40px);
+filter: drop-shadow(0 10px 25px rgba(0,0,0,0.3));
 }
 
 /* TITLE */
 header h1 {
-font-size: 32px;
-margin: 5px 0;
+font-size: 34px;
+margin-top: -20px;
 }
 
 header p {
@@ -108,7 +112,7 @@ margin-bottom: 18px;
 line-height: 1.7;
 }
 
-/* TRUST */
+/* TRUST BADGES */
 .trust {
 max-width: 900px;
 margin: 20px auto;
@@ -125,6 +129,7 @@ padding: 18px;
 border-radius: 12px;
 text-align: center;
 font-weight: bold;
+box-shadow: 0 8px 20px rgba(232,77,138,0.4);
 }
 
 /* SERVICES */
@@ -143,6 +148,11 @@ border-radius: 10px;
 text-decoration: none;
 display: block;
 font-weight: bold;
+transition: 0.2s;
+}
+
+.tile:hover {
+background: #168b97;
 }
 
 /* CONTACT */
@@ -208,7 +218,7 @@ z-index: 999;
 
 <header>
 
-<!-- ✅ YOUR EXACT FILE -->
+<!-- 🔥 YOUR LOGO (WORKING + BIG) -->
 <img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo">
 
 <h1>Miracle Home Makeover LLC</h1>
