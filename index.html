@@ -35,7 +35,7 @@ text-decoration: none;
 font-weight: 600;
 }
 
-/* DROPDOWN CLEAN */
+/* DROPDOWN (PINK CLEAN) */
 .dropdown {
 display: inline-block;
 position: relative;
@@ -46,24 +46,25 @@ position: absolute;
 top: 120%;
 left: 50%;
 transform: translateX(-50%) translateY(10px);
-background: white;
+background: #e84d8a;
 min-width: 240px;
 border-radius: 12px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 opacity: 0;
 visibility: hidden;
 transition: all 0.25s ease;
 overflow: hidden;
 z-index: 999;
+border: 1px solid rgba(255,255,255,0.2);
 }
 
 .dropdown-content a {
 display: block;
 padding: 14px 18px;
-color: #333;
+color: white;
 text-decoration: none;
 font-weight: 500;
-border-bottom: 1px solid rgba(0,0,0,0.05);
+border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 .dropdown-content a:last-child {
@@ -71,8 +72,7 @@ border-bottom: none;
 }
 
 .dropdown-content a:hover {
-background: #f8f8f8;
-color: #e84d8a;
+background: rgba(255,255,255,0.15);
 padding-left: 22px;
 }
 
