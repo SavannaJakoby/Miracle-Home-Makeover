@@ -26,10 +26,6 @@ text-decoration: none;
 font-weight: bold;
 }
 
-nav a:hover {
-color: #f4e1c1;
-}
-
 /* DROPDOWN */
 .dropdown {
 display: inline-block;
@@ -44,7 +40,7 @@ min-width: 220px;
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 opacity: 0;
 transform: translateY(10px);
-transition: all 0.3s ease;
+transition: 0.3s;
 }
 
 .dropdown-content a {
@@ -62,9 +58,14 @@ transform: translateY(0);
 /* HEADER */
 header {
 text-align: center;
-padding: 80px 20px;
+padding: 60px 20px;
 background: #1b9aaa;
 color: white;
+}
+
+.logo {
+max-width: 180px;
+margin-bottom: 15px;
 }
 
 /* BIO */
@@ -82,9 +83,23 @@ text-align: center;
 color: #e84d8a;
 }
 
-.bio p {
-margin-bottom: 18px;
-line-height: 1.7;
+/* TRUST BADGES */
+.trust {
+max-width: 900px;
+margin: 20px auto;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+padding: 0 20px;
+}
+
+.badge {
+background: white;
+padding: 15px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+font-weight: bold;
 }
 
 /* SERVICES */
@@ -103,11 +118,6 @@ border-radius: 10px;
 text-decoration: none;
 display: block;
 font-weight: bold;
-transition: 0.3s;
-}
-
-.tile:hover {
-background: #168b97;
 }
 
 /* CONTACT */
@@ -130,7 +140,7 @@ font-weight: bold;
 text-decoration: none;
 }
 
-/* FLOATING BUTTON */
+/* FLOAT BUTTON */
 .float-btn {
 position: fixed;
 bottom: 20px;
@@ -157,7 +167,7 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
 <a href="standard-cleaning.html">Routine Cleaning</a>
-<a href="move-cleaning.html">Move in / Move out Cleaning</a>
+<a href="move-cleaning.html">Move Cleaning</a>
 <a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
 <a href="organization.html">Organization</a>
 <a href="laundry.html">Laundry</a>
@@ -171,13 +181,13 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 </nav>
 
 <header>
+<img src="logo.png" class="logo">
 <h1>Miracle Home Makeover LLC</h1>
 <p>Professional Cleaning & Organization Services</p>
 </header>
 
 <!-- BIO -->
 <section class="bio">
-
 <h2>About Miracle Home Makeover</h2>
 
 <p>
@@ -191,43 +201,40 @@ My approach goes beyond basic cleaning. I focus on transforming spaces into clea
 <p>
 Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeover LLC is committed to reliability, professionalism, and exceeding client expectations.
 </p>
+</section>
 
+<!-- TRUST BADGES -->
+<section class="trust">
+<div class="badge">✔ Licensed & Insured</div>
+<div class="badge">✔ Background Checked Cleaner</div>
+<div class="badge">✔ Flexible Scheduling</div>
+<div class="badge">✔ Customizable Cleaning Plans</div>
 </section>
 
 <!-- SERVICES -->
 <section class="services">
-
 <a href="residential-commercial.html" class="tile">🏠 Residential & Commercial</a>
 <a href="deep-cleaning.html" class="tile">✨ Deep Cleaning</a>
 <a href="standard-cleaning.html" class="tile">🧼 Routine Cleaning</a>
-<a href="move-cleaning.html" class="tile">📦 Move in / Move out Cleaning</a>
+<a href="move-cleaning.html" class="tile">📦 Move Cleaning</a>
 <a href="airbnb-cleaning.html" class="tile">🛏 Airbnb Turnover</a>
 <a href="organization.html" class="tile">📂 Organization</a>
 <a href="laundry.html" class="tile">🧺 Laundry</a>
 <a href="carpet-cleaning.html" class="tile">🧽 Carpet Cleaning</a>
 <a href="post-construction.html" class="tile">🏗 Post Construction</a>
-
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
-
 <h2>Contact Me</h2>
 
 <a href="tel:13043502545">📞 304-350-2545</a>
 <a href="mailto:miraclehomemakeover@gmail.com">📧 miraclehomemakeover@gmail.com</a>
 
-<a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank">
-📘 Facebook
-</a>
-
-<a href="https://www.instagram.com/miraclehomemakeover/" target="_blank">
-📸 Instagram
-</a>
-
+<a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank">📘 Facebook</a>
+<a href="https://www.instagram.com/miraclehomemakeover/" target="_blank">📸 Instagram</a>
 </section>
 
-<!-- FLOAT BUTTON -->
 <a href="quote.html" class="float-btn">Request a Quote</a>
 
 </body>
