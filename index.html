@@ -30,21 +30,23 @@ nav a:hover {
 color: #f4e1c1;
 }
 
-/* DROPDOWN */
+/* DROPDOWN (MATCHES ALL PAGES) */
 .dropdown {
 display: inline-block;
 position: relative;
 }
 
 .dropdown-content {
-display: none;
 position: absolute;
 background: #e84d8a;
 min-width: 220px;
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+/* clean fade */
 opacity: 0;
-transform: translateY(10px);
-transition: 0.3s;
+visibility: hidden;
+transition: opacity 0.2s ease;
+
 z-index: 999;
 }
 
@@ -55,9 +57,8 @@ color: white;
 }
 
 .dropdown:hover .dropdown-content {
-display: block;
 opacity: 1;
-transform: translateY(0);
+visibility: visible;
 }
 
 /* HEADER */
@@ -68,9 +69,15 @@ background: #1b9aaa;
 color: white;
 }
 
+/* LOGO */
 .logo {
-max-width: 180px;
+max-width: 240px;
 margin-bottom: 15px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+mix-blend-mode: multiply;
+filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
 }
 
 /* BIO */
