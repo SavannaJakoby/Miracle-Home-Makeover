@@ -36,7 +36,6 @@ position: relative;
 position: absolute;
 background: #e84d8a;
 min-width: 220px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 opacity: 0;
 transform: translateY(10px);
 transition: all 0.25s ease;
@@ -59,37 +58,34 @@ visibility: visible;
 /* HEADER */
 header {
 text-align: center;
-padding: 50px 10px 15px;
+padding: 40px 10px 10px;
 background: #1b9aaa;
 color: white;
 overflow: hidden;
-position: relative;
 }
 
-/* ✨ SHIMMER ANIMATION */
+/* ✨ shimmer */
 @keyframes shimmer {
 0% { filter: brightness(1); }
-50% { filter: brightness(1.2); }
+50% { filter: brightness(1.15); }
 100% { filter: brightness(1); }
 }
 
-/* 🔥 BIG CENTERED LOGO */
+/* 🔥 FIXED LOGO */
 .logo {
-width: 160%;
-max-width: none;
+width: 95%;              /* BIG but safe */
+max-width: 520px;        /* keeps it clean */
 height: auto;
 display: block;
-margin: 0 auto;
-transform: translateY(-40px);
-filter: drop-shadow(0 10px 25px rgba(0,0,0,0.3));
+margin: 0 auto 10px auto; /* PERFECT CENTER */
 animation: shimmer 3s infinite ease-in-out;
+filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
 }
 
 /* TEXT */
 header h1 {
-font-size: 32px;
-margin-top: -25px;
-margin-bottom: 5px;
+font-size: 30px;
+margin: 5px 0;
 }
 
 header p {
@@ -113,68 +109,6 @@ text-align: center;
 color: #e84d8a;
 }
 
-.bio p {
-margin-bottom: 18px;
-line-height: 1.7;
-}
-
-/* TRUST */
-.trust {
-max-width: 900px;
-margin: 20px auto;
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 15px;
-padding: 0 20px;
-}
-
-.badge {
-background: #e84d8a;
-color: white;
-padding: 18px;
-border-radius: 12px;
-text-align: center;
-font-weight: bold;
-}
-
-/* SERVICES */
-.services {
-max-width: 900px;
-margin: auto;
-padding: 20px;
-}
-
-.tile {
-background: #1b9aaa;
-color: white;
-padding: 20px;
-margin-bottom: 15px;
-border-radius: 10px;
-text-decoration: none;
-display: block;
-font-weight: bold;
-}
-
-/* CONTACT */
-.contact {
-text-align: center;
-padding: 40px 20px;
-background: white;
-margin-top: 40px;
-}
-
-.contact h2 {
-color: #e84d8a;
-}
-
-.contact a {
-display: block;
-margin: 10px;
-color: #e84d8a;
-font-weight: bold;
-text-decoration: none;
-}
-
 /* FLOAT BUTTON */
 .float-btn {
 position: fixed;
@@ -187,7 +121,6 @@ border-radius: 30px;
 text-decoration: none;
 font-weight: bold;
 box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-z-index: 999;
 }
 </style>
 </head>
@@ -239,33 +172,6 @@ My approach goes beyond basic cleaning. I focus on transforming spaces into clea
 <p>
 Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeover LLC is committed to reliability, professionalism, and exceeding client expectations.
 </p>
-</section>
-
-<section class="trust">
-<div class="badge">✔ Licensed & Insured</div>
-<div class="badge">✔ Background Checked Cleaner</div>
-<div class="badge">✔ Flexible Scheduling</div>
-<div class="badge">✔ Custom Cleaning Plans</div>
-</section>
-
-<section class="services">
-<a href="residential-commercial.html" class="tile">🏠 Residential & Commercial</a>
-<a href="deep-cleaning.html" class="tile">✨ Deep Cleaning</a>
-<a href="standard-cleaning.html" class="tile">🧼 Routine Cleaning</a>
-<a href="move-cleaning.html" class="tile">📦 Move Cleaning</a>
-<a href="airbnb-cleaning.html" class="tile">🛏 Airbnb Turnover</a>
-<a href="organization.html" class="tile">📂 Organization</a>
-<a href="laundry.html" class="tile">🧺 Laundry</a>
-<a href="carpet-cleaning.html" class="tile">🧽 Carpet Cleaning</a>
-<a href="post-construction.html" class="tile">🏗 Post Construction</a>
-</section>
-
-<section id="contact" class="contact">
-<h2>Contact Me</h2>
-<a href="tel:13043502545">📞 304-350-2545</a>
-<a href="mailto:miraclehomemakeover@gmail.com">📧 miraclehomemakeover@gmail.com</a>
-<a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank">📘 Facebook</a>
-<a href="https://www.instagram.com/miraclehomemakeover/" target="_blank">📸 Instagram</a>
 </section>
 
 <a href="quote.html" class="float-btn">Request a Quote</a>
