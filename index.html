@@ -26,6 +26,10 @@ text-decoration: none;
 font-weight: bold;
 }
 
+nav a:hover {
+color: #f4e1c1;
+}
+
 /* DROPDOWN */
 .dropdown {
 display: inline-block;
@@ -41,6 +45,7 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 opacity: 0;
 transform: translateY(10px);
 transition: 0.3s;
+z-index: 999;
 }
 
 .dropdown-content a {
@@ -83,6 +88,11 @@ text-align: center;
 color: #e84d8a;
 }
 
+.bio p {
+margin-bottom: 18px;
+line-height: 1.7;
+}
+
 /* TRUST BADGES */
 .trust {
 max-width: 900px;
@@ -94,12 +104,18 @@ padding: 0 20px;
 }
 
 .badge {
-background: white;
-padding: 15px;
-border-radius: 10px;
+background: #e84d8a;
+color: white;
+padding: 18px;
+border-radius: 12px;
 text-align: center;
-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+box-shadow: 0 8px 20px rgba(232,77,138,0.4);
 font-weight: bold;
+transition: 0.3s;
+}
+
+.badge:hover {
+transform: translateY(-5px);
 }
 
 /* SERVICES */
@@ -118,6 +134,11 @@ border-radius: 10px;
 text-decoration: none;
 display: block;
 font-weight: bold;
+transition: 0.3s;
+}
+
+.tile:hover {
+background: #168b97;
 }
 
 /* CONTACT */
@@ -152,6 +173,7 @@ border-radius: 30px;
 text-decoration: none;
 font-weight: bold;
 box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+z-index: 999;
 }
 </style>
 </head>
@@ -181,7 +203,7 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 </nav>
 
 <header>
-<img src="logo.png" class="logo">
+<img src="4446686E-2B02-4428-8340-7CB4CC64BDB7.png" class="logo">
 <h1>Miracle Home Makeover LLC</h1>
 <p>Professional Cleaning & Organization Services</p>
 </header>
