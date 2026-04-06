@@ -13,6 +13,7 @@
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: #f4f4f4;
+      padding-bottom: 120px;
     }
 
     nav {
@@ -194,16 +195,24 @@
 
     .float-btn {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      right: 14px;
+      bottom: 14px;
       background: linear-gradient(135deg, #e84d8a, #d63d78);
       color: white;
-      padding: 15px 22px;
-      border-radius: 30px;
+      padding: 12px 18px;
+      border-radius: 999px;
       text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.22);
       z-index: 1001;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+
+    .float-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.26);
     }
 
     @media (max-width: 700px) {
@@ -221,6 +230,26 @@
 
       .subtext {
         font-size: 16px;
+      }
+
+      .float-btn {
+        right: 14px;
+        bottom: 14px;
+        padding: 12px 18px;
+        font-size: 16px;
+      }
+
+      body {
+        padding-bottom: 110px;
+      }
+    }
+
+    @media (min-width: 701px) {
+      .float-btn {
+        right: 20px;
+        bottom: 20px;
+        padding: 14px 22px;
+        font-size: 17px;
       }
     }
   </style>
