@@ -26,10 +26,6 @@ text-decoration: none;
 font-weight: bold;
 }
 
-nav a:hover {
-color: #f4e1c1;
-}
-
 /* DROPDOWN */
 .dropdown {
 display: inline-block;
@@ -63,31 +59,42 @@ visibility: visible;
 /* HEADER */
 header {
 text-align: center;
-padding: 100px 0 40px;
+padding: 50px 10px 15px;
 background: #1b9aaa;
 color: white;
-overflow: hidden; /* 🔥 keeps it clean when oversized */
+overflow: hidden;
+position: relative;
 }
 
-/* 🔥 MASSIVE LOGO */
+/* ✨ SHIMMER ANIMATION */
+@keyframes shimmer {
+0% { filter: brightness(1); }
+50% { filter: brightness(1.2); }
+100% { filter: brightness(1); }
+}
+
+/* 🔥 BIG CENTERED LOGO */
 .logo {
-width: 170%;
+width: 160%;
 max-width: none;
 height: auto;
 display: block;
 margin: 0 auto;
-transform: translateX(-30%) translateY(-50px);
-filter: drop-shadow(0 12px 30px rgba(0,0,0,0.35));
+transform: translateY(-40px);
+filter: drop-shadow(0 10px 25px rgba(0,0,0,0.3));
+animation: shimmer 3s infinite ease-in-out;
 }
 
-/* TITLE */
+/* TEXT */
 header h1 {
-font-size: 34px;
-margin-top: -30px;
+font-size: 32px;
+margin-top: -25px;
+margin-bottom: 5px;
 }
 
 header p {
-font-size: 18px;
+font-size: 16px;
+margin: 0;
 opacity: 0.9;
 }
 
@@ -111,7 +118,7 @@ margin-bottom: 18px;
 line-height: 1.7;
 }
 
-/* TRUST BADGES */
+/* TRUST */
 .trust {
 max-width: 900px;
 margin: 20px auto;
@@ -211,7 +218,6 @@ z-index: 999;
 
 <header>
 
-<!-- 🔥 YOUR LOGO -->
 <img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo">
 
 <h1>Miracle Home Makeover LLC</h1>
