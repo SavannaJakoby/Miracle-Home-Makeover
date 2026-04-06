@@ -1,325 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miracle Home Makeover LLC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miracle Home Makeover LLC</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f4f4f4;
-      padding-bottom: 120px;
-    }
+<style>
+body {
+margin: 0;
+font-family: 'Poppins', sans-serif;
+background: #f4f4f4;
+padding-bottom: 120px;
+}
 
-    nav {
-      background: #e84d8a;
-      padding: 14px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+/* NAV */
+nav {
+background: #e84d8a;
+padding: 14px;
+text-align: center;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
 
-    nav a {
-      color: white;
-      padding: 12px 15px;
-      text-decoration: none;
-      font-weight: 600;
-    }
+nav a {
+color: white;
+padding: 12px 15px;
+text-decoration: none;
+font-weight: 600;
+}
 
-    .dropdown {
-      display: inline-block;
-      position: relative;
-    }
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
 
-    .dropdown-content {
-      position: absolute;
-      top: 120%;
-      left: 50%;
-      transform: translateX(-50%) translateY(10px);
-      background: #e84d8a;
-      min-width: 240px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.25s ease;
-      overflow: hidden;
-      z-index: 999;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
+.dropdown-content {
+position: absolute;
+top: 120%;
+left: 50%;
+transform: translateX(-50%) translateY(10px);
+background: #e84d8a;
+min-width: 240px;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+opacity: 0;
+visibility: hidden;
+transition: all 0.25s ease;
+overflow: hidden;
+z-index: 999;
+border: 1px solid rgba(255,255,255,0.2);
+}
 
-    .dropdown-content a {
-      display: block;
-      padding: 14px 18px;
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
+.dropdown-content a {
+display: block;
+padding: 14px 18px;
+color: white;
+text-decoration: none;
+font-weight: 500;
+border-bottom: 1px solid rgba(255,255,255,0.2);
+}
 
-    .dropdown-content a:last-child {
-      border-bottom: none;
-    }
+.dropdown-content a:last-child {
+border-bottom: none;
+}
 
-    .dropdown-content a:hover {
-      background: rgba(255,255,255,0.15);
-      padding-left: 22px;
-    }
+.dropdown-content a:hover {
+background: rgba(255,255,255,0.15);
+padding-left: 22px;
+}
 
-    .dropdown:hover .dropdown-content {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) translateY(0);
-    }
+.dropdown:hover .dropdown-content {
+opacity: 1;
+visibility: visible;
+transform: translateX(-50%) translateY(0);
+}
 
-    header {
-      text-align: center;
-      padding: 10px 10px 5px;
-      background: linear-gradient(135deg, #1b9aaa, #157f86);
-      color: white;
-    }
+/* HEADER */
+header {
+text-align: center;
+padding: 10px 10px 5px;
+background: linear-gradient(135deg, #1b9aaa, #157f86);
+color: white;
+}
 
-    .logo {
-      width: 100%;
-      max-width: 580px;
-      display: block;
-      margin: 0 auto 0;
-      filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3));
-    }
+/* LOGO */
+.logo {
+width: 100%;
+max-width: 580px;
+display: block;
+margin: 0 auto 0;
+filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3));
+}
 
-    header p {
-      margin: 5px 0 2px;
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    }
+header p {
+margin: 5px 0 2px;
+font-size: 22px;
+font-weight: 700;
+letter-spacing: 0.3px;
+text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
 
-    .subtext {
-      font-size: 18px;
-      font-weight: 600;
-      opacity: 0.95;
-      margin-top: 2px;
-      margin-bottom: 0;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    }
+.subtext {
+font-size: 18px;
+font-weight: 600;
+opacity: 0.95;
+margin-top: 2px;
+margin-bottom: 0;
+text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
 
-    .bio {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 35px 25px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
+/* BIO */
+.bio {
+max-width: 900px;
+margin: 40px auto;
+padding: 35px 25px;
+background: white;
+border-radius: 15px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
-    .bio h2 {
-      text-align: center;
-      color: #e84d8a;
-      font-weight: 700;
-    }
+.bio h2 {
+text-align: center;
+color: #e84d8a;
+font-weight: 700;
+}
 
-    .trust {
-      max-width: 900px;
-      margin: 20px auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      padding: 0 20px;
-    }
+/* TRUST */
+.trust {
+max-width: 900px;
+margin: 20px auto;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+padding: 0 20px;
+}
 
-    .badge {
-      background: linear-gradient(135deg, #e84d8a, #d63d78);
-      color: white;
-      padding: 18px;
-      border-radius: 12px;
-      text-align: center;
-      font-weight: 600;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+.badge {
+background: linear-gradient(135deg, #e84d8a, #d63d78);
+color: white;
+padding: 18px;
+border-radius: 12px;
+text-align: center;
+font-weight: 600;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-    .services {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+/* SERVICES */
+.services {
+max-width: 900px;
+margin: auto;
+padding: 20px;
+}
 
-    .tile {
-      background: white;
-      color: #333;
-      padding: 20px;
-      margin-bottom: 15px;
-      border-radius: 12px;
-      text-decoration: none;
-      display: block;
-      font-weight: 600;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: 0.2s;
-    }
+.tile {
+background: white;
+color: #333;
+padding: 20px;
+margin-bottom: 15px;
+border-radius: 12px;
+text-decoration: none;
+display: block;
+font-weight: 600;
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+transition: 0.2s;
+}
 
-    .tile:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-    }
+.tile:hover {
+transform: translateY(-6px);
+box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
 
-    .icon {
-      color: #e84d8a;
-      margin-right: 10px;
-    }
+.icon {
+color: #e84d8a;
+margin-right: 10px;
+}
 
-    .contact {
-      text-align: center;
-      padding: 50px 20px;
-      background: white;
-      margin-top: 40px;
-    }
+/* CONTACT */
+.contact {
+text-align: center;
+padding: 50px 20px;
+background: white;
+margin-top: 40px;
+}
 
-    .contact h2 {
-      color: #e84d8a;
-      font-weight: 700;
-    }
+.contact h2 {
+color: #e84d8a;
+font-weight: 700;
+}
 
-    .contact a {
-      display: block;
-      margin: 12px;
-      color: #e84d8a;
-      font-weight: 600;
-      text-decoration: none;
-    }
+.contact a {
+display: block;
+margin: 12px;
+color: #e84d8a;
+font-weight: 600;
+text-decoration: none;
+}
 
-    .float-btn {
-      position: fixed;
-      right: 14px;
-      bottom: 14px;
-      background: linear-gradient(135deg, #e84d8a, #d63d78);
-      color: white;
-      padding: 12px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 1;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.22);
-      z-index: 1001;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-    }
+/* FLOAT BUTTON */
+.float-btn {
+position: fixed;
+right: 14px;
+bottom: 14px;
+background: linear-gradient(135deg, #e84d8a, #d63d78);
+color: white;
+padding: 12px 18px;
+border-radius: 999px;
+text-decoration: none;
+font-weight: 700;
+font-size: 16px;
+line-height: 1;
+box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+z-index: 1001;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    .float-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.26);
-    }
+.float-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 22px rgba(0,0,0,0.26);
+}
 
-    /* ✅ ONLY CHANGE: keep 2x2 on mobile */
-    @media (max-width: 700px) {
-      .trust {
-        grid-template-columns: 1fr 1fr;
-      }
+@media (max-width: 700px) {
+.trust {
+grid-template-columns: 1fr;
+}
 
-      .logo {
-        max-width: 500px;
-      }
+.logo {
+max-width: 500px;
+}
 
-      header p {
-        font-size: 20px;
-      }
+header p {
+font-size: 20px;
+}
 
-      .subtext {
-        font-size: 16px;
-      }
+.subtext {
+font-size: 16px;
+}
 
-      .float-btn {
-        right: 14px;
-        bottom: 14px;
-        padding: 12px 18px;
-        font-size: 16px;
-      }
-
-      body {
-        padding-bottom: 110px;
-      }
-    }
-
-    @media (min-width: 701px) {
-      .float-btn {
-        right: 20px;
-        bottom: 20px;
-        padding: 14px 22px;
-        font-size: 17px;
-      }
-    }
-  </style>
+body {
+padding-bottom: 110px;
+}
+}
+</style>
 </head>
+
 <body>
 
-  <nav>
-    <a href="index.html">Home</a>
+<nav>
+<a href="index.html">Home</a>
 
-    <div class="dropdown">
-      <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
-      <div class="dropdown-content">
-        <a href="residential-commercial.html">Residential & Commercial</a>
-        <a href="deep-cleaning.html">Deep Cleaning</a>
-        <a href="standard-cleaning.html">Routine Cleaning</a>
-        <a href="move-cleaning.html">Move in / Move out Cleaning</a>
-        <a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
-        <a href="organization.html">Organization</a>
-        <a href="laundry.html">Laundry</a>
-        <a href="carpet-cleaning.html">Carpet Cleaning</a>
-        <a href="post-construction.html">Post Construction</a>
-      </div>
-    </div>
+<div class="dropdown">
+<a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+<div class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move in / Move out Cleaning</a>
+<a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
 
-    <a href="about.html">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<a href="about.html">About</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  <header>
-    <img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo" />
-    <p>Professional Cleaning & Organization Services</p>
-    <p class="subtext">I dont just clean houses I transform them.</p>
-  </header>
+<header>
+<img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo">
+<p>Professional Cleaning & Organization Services</p>
+<p class="subtext">I dont just clean houses I transform them.</p>
+</header>
 
-  <section class="bio">
-    <h2>About Miracle Home Makeover</h2>
-    <p>Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients.</p>
-    <p>I specialize in deep cleaning, routine maintenance, move-in and move-out services, and comprehensive home organization.</p>
-    <p>Every service is customized to meet the unique needs of each home or business, ensuring consistent, high-quality results and attention to detail.</p>
-  </section>
+<section class="bio">
+<h2>About Miracle Home Makeover</h2>
 
-  <section class="trust">
-    <div class="badge">✔ Licensed & Insured</div>
-    <div class="badge">✔ Background Checked Cleaner</div>
-    <div class="badge">✔ Flexible Scheduling</div>
-    <div class="badge">✔ Custom Cleaning Plans</div>
-  </section>
+<p>
+Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients.
+</p>
 
-  <section class="services">
-    <a href="residential-commercial.html" class="tile"><i class="fa-solid fa-house icon"></i>Residential & Commercial</a>
-    <a href="deep-cleaning.html" class="tile"><i class="fa-solid fa-wand-magic-sparkles icon"></i>Deep Cleaning</a>
-    <a href="standard-cleaning.html" class="tile"><i class="fa-solid fa-broom icon"></i>Routine Cleaning</a>
-    <a href="move-cleaning.html" class="tile"><i class="fa-solid fa-box icon"></i>Move in / Move out Cleaning</a>
-    <a href="airbnb-cleaning.html" class="tile"><i class="fa-solid fa-bed icon"></i>Airbnb Turnover</a>
-    <a href="organization.html" class="tile"><i class="fa-solid fa-folder-open icon"></i>Organization</a>
-    <a href="laundry.html" class="tile"><i class="fa-solid fa-shirt icon"></i>Laundry</a>
-    <a href="carpet-cleaning.html" class="tile"><i class="fa-solid fa-soap icon"></i>Carpet Cleaning</a>
-    <a href="post-construction.html" class="tile"><i class="fa-solid fa-hammer icon"></i>Post Construction</a>
-  </section>
+<p>
+I specialize in deep cleaning, routine maintenance, move-in and move-out services, and comprehensive home organization.
+</p>
 
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <a href="tel:13043502545"><i class="fa-solid fa-phone icon"></i>304-350-2545</a>
-    <a href="mailto:miraclehomemakeover@gmail.com"><i class="fa-solid fa-envelope icon"></i>miraclehomemakeover@gmail.com</a>
-    <a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook icon"></i>Facebook</a>
-    <a href="https://www.instagram.com/miraclehomemakeover/" target="_blank"><i class="fa-brands fa-instagram icon"></i>Instagram</a>
-  </section>
+<p>
+Every service is customized to meet the unique needs of each home or business, ensuring consistent, high-quality results and attention to detail.
+</p>
+</section>
 
-  <a href="quote.html" class="float-btn">Request Quote</a>
+<section class="trust">
+<div class="badge">✔ Licensed & Insured</div>
+<div class="badge">✔ Background Checked Cleaner</div>
+<div class="badge">✔ Flexible Scheduling</div>
+<div class="badge">✔ Custom Cleaning Plans</div>
+</section>
+
+<section class="services">
+<a href="residential-commercial.html" class="tile"><i class="fa-solid fa-house icon"></i>Residential & Commercial</a>
+<a href="deep-cleaning.html" class="tile"><i class="fa-solid fa-wand-magic-sparkles icon"></i>Deep Cleaning</a>
+<a href="standard-cleaning.html" class="tile"><i class="fa-solid fa-broom icon"></i>Routine Cleaning</a>
+<a href="move-cleaning.html" class="tile"><i class="fa-solid fa-box icon"></i>Move in / Move out Cleaning</a>
+<a href="airbnb-cleaning.html" class="tile"><i class="fa-solid fa-bed icon"></i>Airbnb Turnover</a>
+<a href="organization.html" class="tile"><i class="fa-solid fa-folder-open icon"></i>Organization</a>
+<a href="laundry.html" class="tile"><i class="fa-solid fa-shirt icon"></i>Laundry</a>
+<a href="carpet-cleaning.html" class="tile"><i class="fa-solid fa-soap icon"></i>Carpet Cleaning</a>
+<a href="post-construction.html" class="tile"><i class="fa-solid fa-hammer icon"></i>Post Construction</a>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Me</h2>
+<a href="tel:13043502545"><i class="fa-solid fa-phone icon"></i>304-350-2545</a>
+<a href="mailto:miraclehomemakeover@gmail.com"><i class="fa-solid fa-envelope icon"></i>miraclehomemakeover@gmail.com</a>
+<a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook icon"></i>Facebook</a>
+<a href="https://www.instagram.com/miraclehomemakeover/" target="_blank"><i class="fa-brands fa-instagram icon"></i>Instagram</a>
+</section>
+
+<footer style="text-align:center; padding:20px; font-size:14px; background:#f4f4f4;">
+<a href="privacy.html" style="color:#e84d8a; text-decoration:none;">Privacy Policy</a> | 
+<a href="terms.html" style="color:#e84d8a; text-decoration:none;">Terms of Service</a>
+</footer>
+
+<a href="quote.html" class="float-btn">Request Quote</a>
 
 </body>
 </html>
