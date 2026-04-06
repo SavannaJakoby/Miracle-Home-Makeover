@@ -5,28 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miracle Home Makeover LLC</title>
 
-<!-- FONT AWESOME -->
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body {
 margin: 0;
-font-family: Arial, sans-serif;
+font-family: 'Poppins', sans-serif;
 background: #f4f4f4;
 }
 
 /* NAV */
 nav {
 background: #e84d8a;
-padding: 12px;
+padding: 14px;
 text-align: center;
+position: sticky;
+top: 0;
+z-index: 1000;
 }
 
 nav a {
 color: white;
 padding: 12px 15px;
 text-decoration: none;
-font-weight: bold;
+font-weight: 600;
 }
 
 /* DROPDOWN */
@@ -44,12 +50,12 @@ transform: translateY(10px);
 transition: all 0.25s ease;
 visibility: hidden;
 z-index: 999;
+border-radius: 10px;
+overflow: hidden;
 }
 
-.dropdown-content a {
-display: block;
-padding: 10px;
-color: white;
+.dropdown-content a:hover {
+background: rgba(255,255,255,0.15);
 }
 
 .dropdown:hover .dropdown-content {
@@ -61,48 +67,54 @@ visibility: visible;
 /* HEADER */
 header {
 text-align: center;
-padding: 20px 10px 10px; /* 🔥 tightened */
-background: #1b9aaa;
+padding: 20px 10px 30px;
+background: linear-gradient(135deg, #1b9aaa, #157f86);
 color: white;
+animation: fadeIn 1s ease;
 }
 
-/* SHIMMER */
-@keyframes shimmer {
-0% { filter: brightness(1); }
-50% { filter: brightness(1.15); }
-100% { filter: brightness(1); }
-}
-
-/* LOGO (FIXED CENTER) */
+/* LOGO */
 .logo {
 width: 100%;
-max-width: 550px;
+max-width: 600px;
 display: block;
-margin: 0 auto;
-animation: shimmer 3s infinite ease-in-out;
-filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
+margin: 0 auto 10px;
+filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3));
 }
 
-/* TAGLINE */
+/* TEXT */
 header p {
-margin-top: 10px;
+margin: 5px 0;
+font-size: 20px;
+font-weight: 600;
+}
+
+.subtext {
 font-size: 16px;
 opacity: 0.9;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(15px); }
+to { opacity: 1; transform: translateY(0); }
 }
 
 /* BIO */
 .bio {
 max-width: 900px;
 margin: 40px auto;
-padding: 30px 20px;
+padding: 35px 25px;
 background: white;
-border-radius: 12px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+border-radius: 15px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+animation: fadeIn 1s ease;
 }
 
 .bio h2 {
 text-align: center;
 color: #e84d8a;
+font-weight: 700;
 }
 
 /* TRUST */
@@ -116,12 +128,13 @@ padding: 0 20px;
 }
 
 .badge {
-background: #e84d8a;
+background: linear-gradient(135deg, #e84d8a, #d63d78);
 color: white;
 padding: 18px;
 border-radius: 12px;
 text-align: center;
-font-weight: bold;
+font-weight: 600;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* SERVICES */
@@ -132,20 +145,21 @@ padding: 20px;
 }
 
 .tile {
-background: #1b9aaa;
-color: white;
+background: white;
+color: #333;
 padding: 20px;
 margin-bottom: 15px;
-border-radius: 10px;
+border-radius: 12px;
 text-decoration: none;
 display: block;
-font-weight: bold;
-transition: all 0.2s ease;
+font-weight: 600;
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+transition: 0.2s;
 }
 
 .tile:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+transform: translateY(-6px);
+box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 
 /* ICON */
@@ -157,20 +171,21 @@ margin-right: 10px;
 /* CONTACT */
 .contact {
 text-align: center;
-padding: 40px 20px;
+padding: 50px 20px;
 background: white;
 margin-top: 40px;
 }
 
 .contact h2 {
 color: #e84d8a;
+font-weight: 700;
 }
 
 .contact a {
 display: block;
-margin: 10px;
+margin: 12px;
 color: #e84d8a;
-font-weight: bold;
+font-weight: 600;
 text-decoration: none;
 }
 
@@ -179,13 +194,13 @@ text-decoration: none;
 position: fixed;
 bottom: 20px;
 right: 20px;
-background: #e84d8a;
+background: linear-gradient(135deg, #e84d8a, #d63d78);
 color: white;
-padding: 14px 20px;
+padding: 15px 22px;
 border-radius: 30px;
 text-decoration: none;
-font-weight: bold;
-box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+font-weight: 600;
+box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 </style>
 </head>
@@ -219,23 +234,19 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 <img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo">
 
 <p>Professional Cleaning & Organization Services</p>
-<p>I dont just clean houses I transform them.<p>
+<p class="subtext">I don’t just clean houses — I transform them.</p>
+
 </header>
 
 <section class="bio">
 <h2>About Miracle Home Makeover</h2>
 
-<p>
-Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients. I specialize in deep cleaning, routine maintenance, move-in and move-out services, and comprehensive home organization.
-</p>
+<p>Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients.</p>
 
-<p>
-My approach goes beyond basic cleaning. I focus on transforming spaces into clean, comfortable, and stress-free environments. Every service is customized to meet the unique needs of each home or business, ensuring consistent, high-quality results and attention to detail.
-</p>
+<p>I specialize in deep cleaning, routine maintenance, move-in and move-out services, and comprehensive home organization.</p>
 
-<p>
-Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeover LLC is committed to reliability, professionalism, and exceeding client expectations.
-</p>
+<p>Every service is customized to meet the unique needs of each home or business, ensuring consistent, high-quality results and attention to detail.</p>
+
 </section>
 
 <section class="trust">
@@ -247,7 +258,7 @@ Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeove
 
 <section class="services">
 <a href="residential-commercial.html" class="tile"><i class="fa-solid fa-house icon"></i>Residential & Commercial</a>
-<a href="deep-cleaning.html" class="tile"><i class="fa-solid fa-star icon"></i>Deep Cleaning</a>
+<a href="deep-cleaning.html" class="tile"><i class="fa-solid fa-sparkles icon"></i>Deep Cleaning</a>
 <a href="standard-cleaning.html" class="tile"><i class="fa-solid fa-broom icon"></i>Routine Cleaning</a>
 <a href="move-cleaning.html" class="tile"><i class="fa-solid fa-box icon"></i>Move in / Move out Cleaning</a>
 <a href="airbnb-cleaning.html" class="tile"><i class="fa-solid fa-bed icon"></i>Airbnb Turnover</a>
@@ -260,21 +271,10 @@ Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeove
 <section id="contact" class="contact">
 <h2>Contact Me</h2>
 
-<a href="tel:13043502545">
-<i class="fa-solid fa-phone icon"></i>304-350-2545
-</a>
-
-<a href="mailto:miraclehomemakeover@gmail.com">
-<i class="fa-solid fa-envelope icon"></i>miraclehomemakeover@gmail.com
-</a>
-
-<a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank">
-<i class="fa-brands fa-facebook icon"></i>Facebook
-</a>
-
-<a href="https://www.instagram.com/miraclehomemakeover/" target="_blank">
-<i class="fa-brands fa-instagram icon"></i>Instagram
-</a>
+<a href="tel:13043502545"><i class="fa-solid fa-phone icon"></i>304-350-2545</a>
+<a href="mailto:miraclehomemakeover@gmail.com"><i class="fa-solid fa-envelope icon"></i>miraclehomemakeover@gmail.com</a>
+<a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook icon"></i>Facebook</a>
+<a href="https://www.instagram.com/miraclehomemakeover/" target="_blank"><i class="fa-brands fa-instagram icon"></i>Instagram</a>
 
 </section>
 
