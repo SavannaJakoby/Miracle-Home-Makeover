@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miracle Home Makeover</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Miracle Home Makeover LLC</title>
 
 <style>
 body {
 margin: 0;
 font-family: Arial, sans-serif;
+background: #f4f4f4;
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
 background: #e84d8a;
 padding: 12px;
@@ -27,6 +26,10 @@ text-decoration: none;
 font-weight: bold;
 }
 
+nav a:hover {
+color: #f4e1c1;
+}
+
 /* DROPDOWN */
 .dropdown {
 display: inline-block;
@@ -35,10 +38,13 @@ position: relative;
 
 .dropdown-content {
 display: none;
-background: #e84d8a;
 position: absolute;
+background: #e84d8a;
 min-width: 220px;
-z-index: 999;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+opacity: 0;
+transform: translateY(10px);
+transition: all 0.3s ease;
 }
 
 .dropdown-content a {
@@ -47,81 +53,95 @@ padding: 10px;
 color: white;
 }
 
-@media (min-width: 700px) {
 .dropdown:hover .dropdown-content {
 display: block;
-}
+opacity: 1;
+transform: translateY(0);
 }
 
 /* HEADER */
 header {
 text-align: center;
-padding: 120px 20px;
+padding: 80px 20px;
+background: #1b9aaa;
 color: white;
-background:
-linear-gradient(rgba(27,154,170,0.75), rgba(27,154,170,0.75)),
-url("4446686E-2B02-4428-8340-7CB4CC64BDB7.png");
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
 }
 
 /* BIO */
 .bio {
 max-width: 900px;
-margin: auto;
-padding: 40px 20px;
+margin: 40px auto;
+padding: 30px 20px;
+background: white;
+border-radius: 12px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.bio h2 {
 text-align: center;
-line-height: 1.6;
+color: #e84d8a;
+}
+
+.bio p {
+margin-bottom: 18px;
+line-height: 1.7;
 }
 
 /* SERVICES */
 .services {
-padding: 40px 20px;
 max-width: 900px;
 margin: auto;
-}
-
-.service-grid {
-display: grid;
-grid-template-columns: 1fr;
-gap: 15px;
-}
-
-.card {
-background: #1b9aaa;
 padding: 20px;
+}
+
+.tile {
+background: #1b9aaa;
+color: white;
+padding: 20px;
+margin-bottom: 15px;
 border-radius: 10px;
 text-decoration: none;
-color: white;
-display: flex;
-align-items: center;
+display: block;
+font-weight: bold;
+transition: 0.3s;
 }
 
-.card i {
-margin-right: 12px;
-color: #e84d8a;
-font-size: 20px;
+.tile:hover {
+background: #168b97;
 }
 
 /* CONTACT */
-section {
+.contact {
+text-align: center;
 padding: 40px 20px;
-max-width: 900px;
-margin: auto;
+background: white;
+margin-top: 40px;
 }
 
-/* FLOAT BUTTON */
-.quote-btn {
+.contact h2 {
+color: #e84d8a;
+}
+
+.contact a {
+display: block;
+margin: 10px;
+color: #e84d8a;
+font-weight: bold;
+text-decoration: none;
+}
+
+/* FLOATING BUTTON */
+.float-btn {
 position: fixed;
-bottom: 60px;
-right: 15px;
+bottom: 20px;
+right: 20px;
 background: #e84d8a;
 color: white;
-padding: 10px 14px;
-border-radius: 20px;
+padding: 14px 20px;
+border-radius: 30px;
 text-decoration: none;
 font-weight: bold;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 </style>
 </head>
@@ -132,13 +152,12 @@ font-weight: bold;
 <a href="index.html">Home</a>
 
 <div class="dropdown">
-<a href="#" onclick="toggleDropdown(event)">Services ▼</a>
-
-<div id="dropdownMenu" class="dropdown-content">
+<a href="#">Services ▼</a>
+<div class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
 <a href="standard-cleaning.html">Routine Cleaning</a>
-<a href="move-cleaning.html">Move in / Move out Cleaning</a>
+<a href="move-cleaning.html">Move Cleaning</a>
 <a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
 <a href="organization.html">Organization</a>
 <a href="laundry.html">Laundry</a>
@@ -152,81 +171,64 @@ font-weight: bold;
 </nav>
 
 <header>
-<h1>Miracle Home Makeover</h1>
-<p>I don’t just clean homes — I transform them.</p>
+<h1>Miracle Home Makeover LLC</h1>
+<p>Professional Cleaning & Organization Services</p>
 </header>
 
+<!-- BIO -->
 <section class="bio">
+
+<h2>About Miracle Home Makeover</h2>
+
 <p>
-Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions.
+Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients. I specialize in deep cleaning, routine maintenance, move-in and move-out services, and comprehensive home organization.
 </p>
 
 <p>
-I specialize in deep cleaning, routine maintenance, move-in and move-out services, and home organization.
+My approach goes beyond basic cleaning. I focus on transforming spaces into clean, comfortable, and stress-free environments. Every service is customized to meet the unique needs of each home or business, ensuring consistent, high-quality results and attention to detail.
 </p>
 
 <p>
-I focus on transforming spaces into clean, comfortable, and stress-free environments.
+Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeover LLC is committed to reliability, professionalism, and exceeding client expectations.
 </p>
+
 </section>
 
+<!-- SERVICES -->
 <section class="services">
-<h2>My Services</h2>
 
-<div class="service-grid">
+<a href="residential-commercial.html" class="tile">🏠 Residential & Commercial</a>
+<a href="deep-cleaning.html" class="tile">✨ Deep Cleaning</a>
+<a href="standard-cleaning.html" class="tile">🧼 Routine Cleaning</a>
+<a href="move-cleaning.html" class="tile">📦 Move Cleaning</a>
+<a href="airbnb-cleaning.html" class="tile">🛏 Airbnb Turnover</a>
+<a href="organization.html" class="tile">📂 Organization</a>
+<a href="laundry.html" class="tile">🧺 Laundry</a>
+<a href="carpet-cleaning.html" class="tile">🧽 Carpet Cleaning</a>
+<a href="post-construction.html" class="tile">🏗 Post Construction</a>
 
-<a href="residential-commercial.html" class="card"><i class="fas fa-building"></i> Residential & Commercial</a>
-<a href="deep-cleaning.html" class="card"><i class="fas fa-broom"></i> Deep Cleaning</a>
-<a href="standard-cleaning.html" class="card"><i class="fas fa-spray-can"></i> Routine Cleaning</a>
-<a href="move-cleaning.html" class="card"><i class="fas fa-truck-moving"></i> Move in / Move out Cleaning</a>
-<a href="airbnb-cleaning.html" class="card"><i class="fas fa-key"></i> Airbnb Cleaning</a>
-<a href="organization.html" class="card"><i class="fas fa-box-open"></i> Organization</a>
-<a href="laundry.html" class="card"><i class="fas fa-shirt"></i> Laundry</a>
-<a href="carpet-cleaning.html" class="card"><i class="fas fa-rug"></i> Carpet Cleaning</a>
-<a href="post-construction.html" class="card"><i class="fas fa-hard-hat"></i> Post Construction</a>
-
-</div>
 </section>
 
-<section id="contact">
-<h2 style="color:#e84d8a;">Contact Me</h2>
+<!-- CONTACT -->
+<section id="contact" class="contact">
 
-<p>
-<i class="fas fa-phone" style="color:#e84d8a;"></i>
-<a href="tel:3043502545">304-350-2545</a>
-</p>
+<h2>Contact Me</h2>
 
-<p>
-<i class="fas fa-envelope" style="color:#e84d8a;"></i>
-<a href="mailto:MiracleHomeMakeoverLLC@gmail.com">
-MiracleHomeMakeoverLLC@gmail.com
-</a>
-</p>
+<a href="tel:13043502545">📞 304-350-2545</a>
+<a href="mailto:miraclehomemakeover@gmail.com">📧 miraclehomemakeover@gmail.com</a>
 
-<p>
-<i class="fab fa-facebook" style="color:#e84d8a;"></i>
 <a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank">
-Facebook
+📘 Facebook
 </a>
-</p>
 
-<p>
-<i class="fab fa-instagram" style="color:#e84d8a;"></i>
 <a href="https://www.instagram.com/miraclehomemakeover/" target="_blank">
-Instagram
+📸 Instagram
 </a>
-</p>
+
 </section>
 
-<a href="quote.html" class="quote-btn">Request Quote</a>
-
-<script>
-function toggleDropdown(event) {
-event.preventDefault();
-var menu = document.getElementById("dropdownMenu");
-menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
-</script>
+<!-- FLOAT BUTTON -->
+<a href="quote.html" class="float-btn">Request a Quote</a>
 
 </body>
 </html>
