@@ -5,29 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Request a Quote - Miracle Home Makeover</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 body {
 margin: 0;
-font-family: Arial, sans-serif;
+font-family: 'Poppins', sans-serif;
 background: #f4f4f4;
 }
 
-/* NAV (PINK) */
+/* NAV */
 nav {
 background: #e84d8a;
-padding: 12px;
+padding: 14px;
 text-align: center;
+position: sticky;
+top: 0;
+z-index: 1000;
 }
 
 nav a {
 color: white;
 padding: 12px 15px;
 text-decoration: none;
-font-weight: bold;
-}
-
-nav a:hover {
-color: #f4e1c1;
+font-weight: 600;
 }
 
 /* DROPDOWN */
@@ -45,8 +46,7 @@ background: #e84d8a;
 position: absolute;
 min-width: 220px;
 z-index: 999;
-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-border-radius: 8px;
+border-radius: 10px;
 overflow: hidden;
 }
 
@@ -63,69 +63,110 @@ color: white;
 }
 
 .dropdown-content a:hover {
-background: #f4e1c1;
-color: #e84d8a;
+background: rgba(255,255,255,0.15);
 }
 
 /* HEADER */
 header {
 text-align: center;
 padding: 60px 20px;
-background: #1b9aaa;
+background: linear-gradient(135deg, #1b9aaa, #157f86);
 color: white;
+}
+
+header h1 {
+margin: 0;
+}
+
+header p {
+margin-top: 10px;
+font-weight: 600;
 }
 
 /* FORM */
 .container {
-max-width: 500px;
+max-width: 520px;
 margin: 30px auto;
 background: white;
-padding: 25px;
-border-radius: 10px;
-box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+padding: 30px;
+border-radius: 14px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 input, textarea {
 width: 100%;
 padding: 12px;
 margin: 10px 0;
-border: 1px solid #ccc;
-border-radius: 6px;
+border: 1px solid #ddd;
+border-radius: 8px;
 font-size: 16px;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
 }
 
-/* BUTTON (PINK) */
-button {
-width: 100%;
-padding: 14px;
-background: #e84d8a;
-color: white;
-border: none;
-border-radius: 6px;
-font-size: 16px;
-font-weight: bold;
+/* WALKTHROUGH BOX */
+.walkthrough-option {
+margin: 18px 0 10px;
+padding: 16px;
+background: linear-gradient(135deg, #fff0f6, #ffe6ef);
+border-radius: 10px;
+border: 1px solid #f3c6d9;
+}
+
+.walkthrough-option label {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+font-weight: 700;
+color: #e84d8a;
 cursor: pointer;
 }
 
-button:hover {
-background: #d63c78;
+.walkthrough-option input {
+width: auto;
+margin-top: 3px;
 }
 
-/* TEXT BUTTON (PINK) */
+.walkthrough-note {
+margin: 10px 0 0 26px;
+font-size: 14px;
+color: #555;
+line-height: 1.5;
+}
+
+/* BUTTON */
+button {
+width: 100%;
+padding: 14px;
+background: linear-gradient(135deg, #e84d8a, #d63c78);
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+transition: 0.2s;
+}
+
+button:hover {
+transform: translateY(-1px);
+}
+
+/* TEXT BUTTON */
 .text-btn {
 display: block;
 margin-top: 15px;
 padding: 14px;
-background: #e84d8a;
+background: linear-gradient(135deg, #e84d8a, #d63c78);
 color: white;
 text-align: center;
-border-radius: 6px;
+border-radius: 8px;
 text-decoration: none;
-font-weight: bold;
+font-weight: 700;
 }
 
 .text-btn:hover {
-background: #d63c78;
+transform: translateY(-1px);
 }
 </style>
 </head>
@@ -169,11 +210,22 @@ background: #d63c78;
 
 <textarea name="Details" placeholder="Describe what services you need..." rows="5" required></textarea>
 
+<div class="walkthrough-option">
+<label>
+<input type="checkbox" name="Video Walkthrough Requested" value="Yes">
+<span>Request a Video Walkthrough</span>
+</label>
+
+<p class="walkthrough-note">
+Fast, simple, and flexible. A video walkthrough lets us evaluate your space and tailor your cleaning plan, all on your schedule!
+</p>
+</div>
+
 <button type="submit">Request Quote</button>
 
 </form>
 
-<a href="sms:13043502545?body=Hi, I’d like a quote for cleaning services. Name: Address: Services Needed:" 
+<a href="sms:13043502545?body=Hi, I’d like a quote for cleaning services. Name: Address: Services Needed: I would also like to request a video walkthrough." 
 class="text-btn">
 Text Me Instead
 </a>
