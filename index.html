@@ -24,6 +24,7 @@ text-align: center;
 position: sticky;
 top: 0;
 z-index: 1000;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 nav a {
@@ -92,18 +93,25 @@ color: white;
 width: 100%;
 max-width: 580px;
 display: block;
-margin: 0 auto;
+margin: 0 auto 0;
+filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3));
 }
 
 header p {
-margin: 5px 0;
+margin: 5px 0 2px;
 font-size: 22px;
 font-weight: 700;
+letter-spacing: 0.3px;
+text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
 .subtext {
 font-size: 18px;
 font-weight: 600;
+opacity: 0.95;
+margin-top: 2px;
+margin-bottom: 0;
+text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
 /* BIO */
@@ -119,12 +127,260 @@ box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 .bio h2 {
 text-align: center;
 color: #e84d8a;
+font-weight: 700;
+}
+
+/* HOW IT WORKS */
+.how-it-works {
+max-width: 1100px;
+margin: 30px auto 10px;
+padding: 35px 25px;
+background: white;
+border-radius: 22px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.how-title {
+text-align: center;
+margin-bottom: 25px;
+line-height: 1;
+}
+
+.how-title-main {
+font-size: 54px;
+font-weight: 700;
+color: #111;
+display: inline-block;
+margin-right: 8px;
+}
+
+.how-title-accent {
+font-size: 54px;
+font-weight: 700;
+color: #e84d8a;
+font-style: italic;
+display: inline-block;
+}
+
+.how-grid {
+display: grid;
+grid-template-columns: 1.4fr 0.9fr;
+gap: 28px;
+align-items: stretch;
+}
+
+.how-left {
+display: grid;
+gap: 18px;
+}
+
+.how-step {
+background: #fafafa;
+border-radius: 20px;
+padding: 22px 20px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+display: grid;
+grid-template-columns: 72px 1fr;
+gap: 18px;
+align-items: start;
+}
+
+.step-number {
+width: 62px;
+height: 62px;
+border-radius: 50%;
+background: #1b9aaa;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 34px;
+font-weight: 700;
+flex-shrink: 0;
+}
+
+.step-content h3 {
+margin: 0 0 8px;
+font-size: 20px;
+color: #111;
+}
+
+.step-content p {
+margin: 0;
+font-size: 16px;
+line-height: 1.55;
+color: #333;
+}
+
+.how-right {
+display: flex;
+flex-direction: column;
+gap: 18px;
+}
+
+.phone-card {
+background: #f7f7f7;
+border-radius: 24px;
+padding: 20px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100%;
+}
+
+.phone-mockup {
+width: 230px;
+max-width: 100%;
+background: #111;
+border-radius: 34px;
+padding: 10px;
+box-shadow: 0 16px 28px rgba(0,0,0,0.25);
+position: relative;
+animation: floatPhone 3s ease-in-out infinite, glowPhone 2.5s ease-in-out infinite;
+}
+
+.phone-mockup::before {
+content: "";
+position: absolute;
+top: 9px;
+left: 50%;
+transform: translateX(-50%);
+width: 82px;
+height: 10px;
+background: #222;
+border-radius: 20px;
+z-index: 2;
+}
+
+.phone-screen {
+background: linear-gradient(180deg, #28b7b3 0%, #0f4d7a 100%);
+border-radius: 26px;
+padding: 28px 18px 22px;
+text-align: center;
+color: white;
+min-height: 440px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+box-sizing: border-box;
+}
+
+.phone-icon {
+width: 75px;
+height: 75px;
+border-radius: 50%;
+background: #e84d8a;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 14px auto 18px;
+font-size: 34px;
+color: white;
+box-shadow: 0 0 18px rgba(232,77,138,0.45);
+}
+
+.phone-screen h3 {
+margin: 0 0 14px;
+font-size: 26px;
+line-height: 1.08;
+font-weight: 700;
+}
+
+.phone-screen p {
+margin: 0 0 12px;
+font-size: 15px;
+line-height: 1.45;
+font-weight: 500;
+}
+
+.phone-cta {
+margin-top: 18px;
+display: inline-block;
+background: #e84d8a;
+color: white;
+padding: 14px 22px;
+border-radius: 18px;
+text-decoration: none;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.1;
+box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+@keyframes floatPhone {
+0% { transform: translateY(0); }
+50% { transform: translateY(-8px); }
+100% { transform: translateY(0); }
+}
+
+@keyframes glowPhone {
+0% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 0 rgba(27,154,170,0); }
+50% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 22px rgba(27,154,170,0.35); }
+100% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 0 rgba(27,154,170,0); }
+}
+
+.ideal-wrap {
+margin-top: 18px;
+}
+
+.ideal-title-row {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 14px;
+margin-bottom: 20px;
+}
+
+.ideal-line {
+height: 4px;
+width: 120px;
+background: #1b9aaa;
+border-radius: 4px;
+}
+
+.ideal-pill {
+background: #1b9aaa;
+color: white;
+padding: 10px 30px;
+border-radius: 999px;
+font-size: 20px;
+font-weight: 700;
+}
+
+.ideal-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+}
+
+.ideal-card {
+background: #fafafa;
+border-radius: 18px;
+padding: 26px 16px;
+text-align: center;
+box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.ideal-card i {
+font-size: 46px;
+color: #1b9aaa;
+margin-bottom: 14px;
+display: block;
+}
+
+.ideal-card h4 {
+margin: 0;
+font-size: 20px;
+line-height: 1.25;
+color: #111;
 }
 
 /* RESULTS BUTTON */
 .results-section {
-text-align: center;
-margin: 25px auto;
+text-align: left;
+margin: 6px 0 0 90px;
 }
 
 .results-btn {
@@ -137,22 +393,51 @@ padding: 16px 32px;
 border-radius: 30px;
 text-decoration: none;
 font-weight: 700;
+font-size: 18px;
+letter-spacing: 1px;
 box-shadow:
 0 0 10px #1b9aaa,
-0 0 20px #1b9aaa;
-animation: pulseGlow 2s infinite;
+0 0 20px #1b9aaa,
+0 0 30px #1b9aaa;
+animation: pulseGlow 2s infinite ease-in-out;
+transition: 0.25s ease;
 }
 
 .results-btn i {
 color: #e84d8a;
+font-size: 18px;
+}
+
+.results-btn:hover {
+transform: scale(1.08);
+box-shadow:
+0 0 15px #1b9aaa,
+0 0 30px #1b9aaa,
+0 0 60px #1b9aaa;
 }
 
 @keyframes pulseGlow {
-0%,100% { box-shadow: 0 0 10px #1b9aaa; }
-50% { box-shadow: 0 0 30px #1b9aaa; }
+0% {
+box-shadow:
+0 0 8px #1b9aaa,
+0 0 16px #1b9aaa,
+0 0 24px #1b9aaa;
+}
+50% {
+box-shadow:
+0 0 20px #1b9aaa,
+0 0 40px #1b9aaa,
+0 0 60px #1b9aaa;
+}
+100% {
+box-shadow:
+0 0 8px #1b9aaa,
+0 0 16px #1b9aaa,
+0 0 24px #1b9aaa;
+}
 }
 
-/* TRUST GRID */
+/* TRUST */
 .trust {
 max-width: 900px;
 margin: 20px auto;
@@ -163,11 +448,13 @@ padding: 0 20px;
 }
 
 .badge {
-background: #e84d8a;
+background: linear-gradient(135deg, #e84d8a, #d63d78);
 color: white;
 padding: 18px;
 border-radius: 12px;
 text-align: center;
+font-weight: 600;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* SERVICES */
@@ -185,6 +472,14 @@ margin-bottom: 15px;
 border-radius: 12px;
 text-decoration: none;
 display: block;
+font-weight: 600;
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+transition: 0.2s;
+}
+
+.tile:hover {
+transform: translateY(-6px);
+box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 
 .icon {
@@ -195,30 +490,36 @@ margin-right: 10px;
 /* SERVICE AREA */
 .service-area {
 max-width: 900px;
-margin: 50px auto;
-padding: 20px;
+margin: 30px auto;
+padding: 30px 20px;
+background: white;
+border-radius: 15px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 text-align: center;
 }
 
 .service-area h2 {
 color: #e84d8a;
+font-weight: 700;
 margin-bottom: 10px;
 }
 
 .service-area p {
-font-weight: 600;
-margin-bottom: 20px;
+color: #555;
+font-weight: 500;
+margin-bottom: 15px;
 }
 
 .service-area img {
 width: 100%;
 border-radius: 15px;
 box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+display: block;
 }
 
-.service-area small {
-display: block;
-margin-top: 10px;
+.small-note {
+margin-top: 15px;
+font-size: 14px;
 color: #777;
 }
 
@@ -232,12 +533,14 @@ margin-top: 40px;
 
 .contact h2 {
 color: #e84d8a;
+font-weight: 700;
 }
 
 .contact a {
 display: block;
-margin: 10px;
+margin: 12px;
 color: #e84d8a;
+font-weight: 600;
 text-decoration: none;
 }
 
@@ -246,18 +549,128 @@ text-decoration: none;
 position: fixed;
 right: 14px;
 bottom: 14px;
-background: #e84d8a;
+background: linear-gradient(135deg, #e84d8a, #d63d78);
 color: white;
 padding: 12px 18px;
 border-radius: 999px;
 text-decoration: none;
 font-weight: 700;
+font-size: 16px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+z-index: 1001;
+transition: transform 0.2s ease;
+}
+
+.float-btn:hover {
+transform: translateY(-2px);
 }
 
 /* MOBILE */
+@media (max-width: 900px) {
+.how-title-main,
+.how-title-accent {
+font-size: 44px;
+}
+
+.how-grid {
+grid-template-columns: 1fr;
+}
+
+.phone-mockup {
+width: 260px;
+}
+
+.ideal-grid {
+grid-template-columns: 1fr;
+}
+}
+
 @media (max-width: 700px) {
+.logo {
+max-width: 500px;
+}
+
+header p {
+font-size: 20px;
+}
+
+.subtext {
+font-size: 16px;
+}
+
+.how-it-works {
+padding: 28px 16px;
+border-radius: 18px;
+}
+
+.how-title-main,
+.how-title-accent {
+font-size: 36px;
+}
+
+.how-step {
+grid-template-columns: 58px 1fr;
+gap: 14px;
+padding: 18px 16px;
+}
+
+.step-number {
+width: 52px;
+height: 52px;
+font-size: 28px;
+}
+
+.step-content h3 {
+font-size: 18px;
+}
+
+.step-content p {
+font-size: 15px;
+}
+
+.phone-mockup {
+width: 220px;
+}
+
+.phone-screen {
+min-height: 420px;
+padding: 26px 16px 20px;
+}
+
+.phone-screen h3 {
+font-size: 24px;
+}
+
+.phone-screen p {
+font-size: 14px;
+}
+
+.phone-icon {
+width: 68px;
+height: 68px;
+font-size: 30px;
+}
+
+.ideal-line {
+width: 50px;
+}
+
+.ideal-pill {
+font-size: 18px;
+padding: 10px 20px;
+}
+
+.results-section {
+text-align: center;
+margin: 6px 0 0 0;
+}
+
 .trust {
 grid-template-columns: 1fr;
+}
+
+body {
+padding-bottom: 110px;
 }
 }
 </style>
@@ -269,13 +682,13 @@ grid-template-columns: 1fr;
 <a href="index.html">Home</a>
 
 <div class="dropdown">
-<a href="#">Services ▼</a>
+<a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
 <div class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
 <a href="standard-cleaning.html">Routine Cleaning</a>
 <a href="move-cleaning.html">Move in / Move out Cleaning</a>
-<a href="airbnb-cleaning.html">Airbnb</a>
+<a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
 <a href="organization.html">Organization</a>
 <a href="laundry.html">Laundry</a>
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
@@ -288,7 +701,7 @@ grid-template-columns: 1fr;
 </nav>
 
 <header>
-<img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo">
+<img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo" alt="Miracle Home Makeover LLC logo">
 <p>Professional Cleaning</p>
 <p>& Organization Services</p>
 <p class="subtext">I don't just clean houses, I transform them!</p>
@@ -296,21 +709,109 @@ grid-template-columns: 1fr;
 
 <section class="bio">
 <h2>About Miracle Home Makeover</h2>
+
 <p>
 Miracle Home Makeover LLC is a professional cleaning service based in Martinsburg, West Virginia, dedicated to delivering exceptional cleaning and organization solutions for both residential and commercial clients. I specialize in deep cleaning, routine maintenance, move-in and move-out services, and comprehensive home organization.
 </p>
+
 <p>
 My approach goes beyond basic cleaning. I focus on transforming spaces into clean, comfortable, and stress-free environments. Every service is customized to meet the unique needs of each home or business, ensuring consistent, high-quality results and attention to detail.
 </p>
+
 <p>
 Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeover LLC is committed to reliability, professionalism, and exceeding client expectations.
 </p>
 </section>
 
-<section class="results-section">
+<section class="how-it-works">
+<div class="how-title">
+<span class="how-title-main">How It</span>
+<span class="how-title-accent">Works</span>
+</div>
+
+<div class="how-grid">
+<div class="how-left">
+<div class="how-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h3>Schedule Your Walkthrough</h3>
+<p>Begin by scheduling either an in-person or virtual walkthrough. This allows me to view your space and discuss your specific needs, preferences, and expectations for your cleaning service.</p>
+</div>
+</div>
+
+<div class="how-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h3>Customized Cleaning Plan</h3>
+<p>Based on your walkthrough, I will create a personalized cleaning plan tailored to your home or business, ensuring every detail aligns with your needs.</p>
+</div>
+</div>
+
+<div class="how-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h3>Book Your First Cleaning</h3>
+<p>Once your plan is finalized, we’ll schedule your first service and officially welcome you to Miracle Home Makeover LLC.</p>
+</div>
+</div>
+
+<div class="how-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<h3>Enjoy the Transformation</h3>
+<p>Step into a beautifully refreshed, spotless home. Experience the comfort, peace of mind, and elevated living that comes with a professionally cleaned space.</p>
+</div>
+</div>
+
+<div class="results-section">
 <a href="results.html" class="results-btn">
-<i class="fa-solid fa-camera"></i> RESULTS
+<i class="fa-solid fa-camera"></i>
+RESULTS
 </a>
+</div>
+</div>
+
+<div class="how-right">
+<div class="phone-card">
+<div class="phone-mockup">
+<div class="phone-screen">
+<div class="phone-icon">
+<i class="fa-solid fa-video"></i>
+</div>
+<h3>Video Call Walkthroughs Available</h3>
+<p>Get a fast quote with a quick video call.</p>
+<p>Show me your space live.</p>
+<div class="phone-cta">SCHEDULE<br>TODAY</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ideal-wrap">
+<div class="ideal-title-row">
+<div class="ideal-line"></div>
+<div class="ideal-pill">Ideal for:</div>
+<div class="ideal-line"></div>
+</div>
+
+<div class="ideal-grid">
+<div class="ideal-card">
+<i class="fa-solid fa-people-group"></i>
+<h4>Busy families</h4>
+</div>
+
+<div class="ideal-card">
+<i class="fa-solid fa-clock"></i>
+<h4>Clients with tight schedules</h4>
+</div>
+
+<div class="ideal-card">
+<i class="fa-solid fa-house-signal"></i>
+<h4>Those who prefer a remote consultation</h4>
+</div>
+</div>
+</div>
 </section>
 
 <section class="trust">
@@ -332,27 +833,24 @@ Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeove
 <a href="post-construction.html" class="tile"><i class="fa-solid fa-hammer icon"></i>Post Construction</a>
 </section>
 
-<!-- ✅ SERVICE AREA -->
 <section class="service-area">
 <h2>Service Area</h2>
 <p>Serving Martinsburg, WV and all locations within approximately an 80 air mile radius.</p>
-
 <img src="5B29B772-C51E-48DE-BC98-57CB7E9B80BF.png" alt="Service Area Map">
-
-<small>Not sure if you're in range? Reach out — I’ll confirm!</small>
+<p class="small-note">Not sure if you're in range? Reach out — I’ll confirm!</p>
 </section>
 
 <section id="contact" class="contact">
 <h2>Contact Me</h2>
-<a href="tel:13043502545">304-350-2545</a>
-<a href="mailto:miraclehomemakeover@gmail.com">miraclehomemakeover@gmail.com</a>
-<a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank">Facebook</a>
-<a href="https://www.instagram.com/miraclehomemakeover/" target="_blank">Instagram</a>
+<a href="tel:13043502545"><i class="fa-solid fa-phone icon"></i>304-350-2545</a>
+<a href="mailto:miraclehomemakeover@gmail.com"><i class="fa-solid fa-envelope icon"></i>miraclehomemakeover@gmail.com</a>
+<a href="https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook icon"></i>Facebook</a>
+<a href="https://www.instagram.com/miraclehomemakeover/" target="_blank"><i class="fa-brands fa-instagram icon"></i>Instagram</a>
 </section>
 
-<footer style="text-align:center; padding:20px;">
-<a href="privacy.html">Privacy Policy</a> | 
-<a href="terms.html">Terms of Service</a>
+<footer style="text-align:center; padding:20px; font-size:14px; background:#f4f4f4;">
+<a href="privacy.html" style="color:#e84d8a;">Privacy Policy</a> | 
+<a href="terms.html" style="color:#e84d8a;">Terms of Service</a>
 </footer>
 
 <a href="quote.html" class="float-btn">Request Quote</a>
