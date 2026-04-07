@@ -137,7 +137,9 @@ margin: 25px auto 10px;
 }
 
 .results-btn {
-display: inline-block;
+display: inline-flex;
+align-items: center;
+gap: 10px;
 background: #1b9aaa;
 color: white;
 padding: 16px 32px;
@@ -150,7 +152,13 @@ box-shadow:
 0 0 10px #1b9aaa,
 0 0 20px #1b9aaa,
 0 0 30px #1b9aaa;
+animation: pulseGlow 2s infinite ease-in-out;
 transition: 0.25s ease;
+}
+
+.results-btn i {
+color: #e84d8a;
+font-size: 18px;
 }
 
 .results-btn:hover {
@@ -158,7 +166,28 @@ transform: scale(1.08);
 box-shadow:
 0 0 15px #1b9aaa,
 0 0 30px #1b9aaa,
-0 0 50px #1b9aaa;
+0 0 60px #1b9aaa;
+}
+
+@keyframes pulseGlow {
+0% {
+box-shadow:
+0 0 8px #1b9aaa,
+0 0 16px #1b9aaa,
+0 0 24px #1b9aaa;
+}
+50% {
+box-shadow:
+0 0 20px #1b9aaa,
+0 0 40px #1b9aaa,
+0 0 60px #1b9aaa;
+}
+100% {
+box-shadow:
+0 0 8px #1b9aaa,
+0 0 16px #1b9aaa,
+0 0 24px #1b9aaa;
+}
 }
 
 /* TRUST */
@@ -246,6 +275,11 @@ font-weight: 700;
 font-size: 16px;
 box-shadow: 0 8px 20px rgba(0,0,0,0.22);
 z-index: 1001;
+transition: transform 0.2s ease;
+}
+
+.float-btn:hover {
+transform: translateY(-2px);
 }
 
 /* MOBILE */
@@ -260,6 +294,10 @@ font-size: 20px;
 
 .subtext {
 font-size: 16px;
+}
+
+body {
+padding-bottom: 110px;
 }
 }
 </style>
@@ -290,7 +328,7 @@ font-size: 16px;
 </nav>
 
 <header>
-<img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo">
+<img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo" alt="Miracle Home Makeover LLC logo">
 <p>Professional Cleaning & Organization Services</p>
 <p class="subtext">I dont just clean houses I transform them.</p>
 </header>
@@ -312,7 +350,10 @@ Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeove
 </section>
 
 <section class="results-section">
-<a href="results.html" class="results-btn">RESULTS</a>
+<a href="results.html" class="results-btn">
+<i class="fa-solid fa-camera"></i>
+RESULTS
+</a>
 </section>
 
 <section class="trust">
