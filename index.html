@@ -317,9 +317,9 @@ box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
 
 @keyframes glowPhone {
-0% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 0 rgba(27,154,170,0.0); }
+0% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 0 rgba(27,154,170,0); }
 50% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 22px rgba(27,154,170,0.35); }
-100% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 0 rgba(27,154,170,0.0); }
+100% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 0 rgba(27,154,170,0); }
 }
 
 .ideal-wrap {
@@ -486,6 +486,75 @@ box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 .icon {
 color: #e84d8a;
 margin-right: 10px;
+}
+
+/* SERVICE AREA */
+.service-area {
+max-width: 900px;
+margin: 30px auto;
+padding: 30px 20px;
+background: white;
+border-radius: 15px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+text-align: center;
+}
+
+.service-area h2 {
+color: #e84d8a;
+font-weight: 700;
+margin-bottom: 10px;
+}
+
+.service-area p {
+color: #555;
+font-weight: 500;
+margin-bottom: 15px;
+}
+
+.map-container {
+position: relative;
+width: 100%;
+height: 320px;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.map-container iframe {
+width: 100%;
+height: 100%;
+border: 0;
+}
+
+.radius-circle {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 75%;
+height: 75%;
+border-radius: 50%;
+border: 3px dashed rgba(27,154,170,0.8);
+background: rgba(27,154,170,0.08);
+pointer-events: none;
+}
+
+.center-dot {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 10px;
+height: 10px;
+background: #e84d8a;
+border-radius: 50%;
+box-shadow: 0 0 10px #e84d8a;
+}
+
+.small-note {
+margin-top: 15px;
+font-size: 14px;
+color: #777;
 }
 
 /* CONTACT */
@@ -792,6 +861,28 @@ RESULTS
 <a href="laundry.html" class="tile"><i class="fa-solid fa-shirt icon"></i>Laundry</a>
 <a href="carpet-cleaning.html" class="tile"><i class="fa-solid fa-soap icon"></i>Carpet Cleaning</a>
 <a href="post-construction.html" class="tile"><i class="fa-solid fa-hammer icon"></i>Post Construction</a>
+</section>
+
+<section class="service-area">
+<h2>Service Area</h2>
+
+<p>
+Serving Martinsburg, WV and all locations within approximately an 80 air mile radius.
+</p>
+
+<div class="map-container">
+<iframe
+src="https://www.google.com/maps?q=Martinsburg,WV&output=embed"
+loading="lazy">
+</iframe>
+
+<div class="radius-circle"></div>
+<div class="center-dot"></div>
+</div>
+
+<p class="small-note">
+Not sure if you're in range? Reach out — I’ll confirm!
+</p>
 </section>
 
 <section id="contact" class="contact">
