@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results - Miracle Home Makeover LLC</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+margin: 0;
+font-family: 'Poppins', sans-serif;
+background: #f4f4f4;
+padding-bottom: 120px;
+}
+
+/* NAV */
+nav {
+background: #e84d8a;
+padding: 14px;
+text-align: center;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+nav a {
+color: white;
+padding: 12px 15px;
+text-decoration: none;
+font-weight: 600;
+}
+
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
+
+.dropdown-content {
+position: absolute;
+top: 120%;
+left: 50%;
+transform: translateX(-50%) translateY(10px);
+background: #e84d8a;
+min-width: 240px;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+opacity: 0;
+visibility: hidden;
+transition: all 0.25s ease;
+overflow: hidden;
+z-index: 999;
+border: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown-content a {
+display: block;
+padding: 14px 18px;
+color: white;
+text-decoration: none;
+font-weight: 500;
+border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown-content a:last-child {
+border-bottom: none;
+}
+
+.dropdown-content a:hover {
+background: rgba(255,255,255,0.15);
+padding-left: 22px;
+}
+
+.dropdown:hover .dropdown-content {
+opacity: 1;
+visibility: visible;
+transform: translateX(-50%) translateY(0);
+}
+
+/* HEADER */
+header {
+text-align: center;
+padding: 60px 20px;
+background: linear-gradient(135deg, #1b9aaa, #157f86);
+color: white;
+}
+
+header h1 {
+margin: 0 0 10px;
+font-size: 32px;
+}
+
+header p {
+margin: 0;
+font-size: 18px;
+font-weight: 600;
+}
+
+/* GALLERY */
+.gallery {
+max-width: 1000px;
+margin: 30px auto;
+padding: 20px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+
+.gallery img {
+width: 100%;
+height: 280px;
+object-fit: cover;
+border-radius: 12px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+transition: 0.3s;
+background: white;
+}
+
+.gallery img:hover {
+transform: scale(1.03);
+}
+
+/* FLOAT BUTTON */
+.float-btn {
+position: fixed;
+right: 14px;
+bottom: 14px;
+background: linear-gradient(135deg, #e84d8a, #d63d78);
+color: white;
+padding: 12px 18px;
+border-radius: 999px;
+text-decoration: none;
+font-weight: 700;
+font-size: 16px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+z-index: 1001;
+transition: transform 0.2s ease;
+}
+
+.float-btn:hover {
+transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+.gallery {
+grid-template-columns: 1fr;
+}
+
+.gallery img {
+height: 220px;
+}
+
+body {
+padding-bottom: 110px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+
+<div class="dropdown">
+<a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+<div class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move in / Move out Cleaning</a>
+<a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
+
+<a href="about.html">About</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+
+<header>
+<h1>Results</h1>
+<p>See the difference I make</p>
+</header>
+
+<section class="gallery">
+<img src="E5FA79F1-9DAB-4D20-AC94-664BAA2A257B.png" alt="Cleaning result photo">
+</section>
+
+<a href="quote.html" class="float-btn">Request Quote</a>
+
+</body>
+</html>
