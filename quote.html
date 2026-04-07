@@ -78,9 +78,26 @@ header h1 {
 margin: 0;
 }
 
-header p {
-margin-top: 10px;
-font-weight: 600;
+/* GLOW TEXT */
+.glow-text {
+margin-top: 15px;
+font-weight: 700;
+font-size: 18px;
+line-height: 1.5;
+animation: glowPulse 2s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+0% {
+text-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+50% {
+text-shadow: 0 0 15px rgba(255,255,255,0.8),
+             0 0 25px rgba(255,255,255,0.6);
+}
+100% {
+text-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
 }
 
 /* FORM */
@@ -101,10 +118,9 @@ border: 1px solid #ddd;
 border-radius: 8px;
 font-size: 16px;
 box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
 }
 
-/* WALKTHROUGH BOX */
+/* WALKTHROUGH */
 .walkthrough-option {
 margin: 18px 0 10px;
 padding: 16px;
@@ -131,7 +147,6 @@ margin-top: 3px;
 margin: 10px 0 0 26px;
 font-size: 14px;
 color: #555;
-line-height: 1.5;
 }
 
 /* BUTTON */
@@ -145,11 +160,6 @@ border-radius: 8px;
 font-size: 16px;
 font-weight: 700;
 cursor: pointer;
-transition: 0.2s;
-}
-
-button:hover {
-transform: translateY(-1px);
 }
 
 /* TEXT BUTTON */
@@ -163,10 +173,6 @@ text-align: center;
 border-radius: 8px;
 text-decoration: none;
 font-weight: 700;
-}
-
-.text-btn:hover {
-transform: translateY(-1px);
 }
 </style>
 </head>
@@ -197,22 +203,26 @@ transform: translateY(-1px);
 
 <header>
 <h1>Request a Quote</h1>
-<p>Tell me what you need and I’ll get back to you</p>
+
+<p class="glow-text">
+Welcome yourself to Miracle Home Makeover LLC by booking your complimentary walkthrough today.<br>
+Experience the difference for yourself!
+</p>
 </header>
 
 <div class="container">
 
 <form action="https://formspree.io/f/mzdkjojj" method="POST">
 
-<input type="text" name="Name" placeholder="Full Name" required>
+<input type="text" id="name" name="Name" placeholder="Full Name" required>
 
-<input type="text" name="Address" placeholder="Full Address" required>
+<input type="text" id="address" name="Address" placeholder="Full Address" required>
 
-<textarea name="Details" placeholder="Describe what services you need..." rows="5" required></textarea>
+<textarea id="details" name="Details" placeholder="Describe what services you need..." rows="5" required></textarea>
 
 <div class="walkthrough-option">
 <label>
-<input type="checkbox" name="Video Walkthrough Requested" value="Yes">
+<input type="checkbox" id="walkthrough" name="Video Walkthrough Requested" value="Yes">
 <span>Request a Video Walkthrough</span>
 </label>
 
@@ -225,12 +235,33 @@ Fast, simple, and flexible. A video walkthrough lets us evaluate your space and 
 
 </form>
 
-<a href="sms:13043502545?body=Hi, I’d like a quote for cleaning services. Name: Address: Services Needed: I would also like to request a video walkthrough." 
-class="text-btn">
+<a href="#" onclick="sendText()" class="text-btn">
 Text Me Instead
 </a>
 
 </div>
+
+<script>
+function sendText() {
+const name = document.getElementById('name').value;
+const address = document.getElementById('address').value;
+const details = document.getElementById('details').value;
+const walkthrough = document.getElementById('walkthrough').checked;
+
+let message = "Hi, I'd like a quote for cleaning services.\n\n";
+
+if (walkthrough) {
+message += "I would like to schedule a video walkthrough.\n\n";
+}
+
+message += "Name: " + name + "\n";
+message += "Address: " + address + "\n";
+message += "Services Needed: " + details;
+
+const encoded = encodeURIComponent(message);
+window.location.href = "sms:13043502545?body=" + encoded;
+}
+</script>
 
 </body>
 </html>
