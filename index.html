@@ -493,7 +493,7 @@ color: #e84d8a;
 margin-right: 10px;
 }
 
-/* SERVICE AREA */
+/* SERVICE AREA - ONLY CHANGED SECTION */
 .service-area {
 max-width: 1100px;
 margin: 30px auto;
@@ -516,15 +516,12 @@ font-weight: 500;
 margin-bottom: 15px;
 }
 
-.service-area img {
+#service-map {
 width: 100%;
-max-width: 1100px;
-height: auto;
+height: 460px;
 border-radius: 18px;
+overflow: hidden;
 box-shadow: 0 15px 35px rgba(0,0,0,0.18);
-display: block;
-margin: 0 auto;
-cursor: zoom-in;
 }
 
 .small-note {
@@ -673,6 +670,10 @@ padding: 10px 20px;
 .results-section {
 text-align: center;
 margin: 6px 0 0 0;
+}
+
+#service-map {
+height: 320px;
 }
 
 body {
@@ -842,7 +843,7 @@ RESULTS
 <section class="service-area">
 <h2>Service Area</h2>
 <p>Serving Martinsburg, WV and all locations within approximately an 80 air mile radius.</p>
-<img src="5B29B772-C51E-48DE-BC98-57CB7E9B80BF.png" alt="Service Area Map">
+<div id="service-map"></div>
 <p class="small-note">Not sure if you're in range? Reach out — I’ll confirm!</p>
 </section>
 
@@ -860,6 +861,53 @@ RESULTS
 </footer>
 
 <a href="quote.html" class="float-btn">Request Quote</a>
+
+<script>
+function initServiceMap() {
+  const martinsburg = { lat: 39.4562, lng: -77.9639 };
+
+  const map = new google.maps.Map(document.getElementById("service-map"), {
+    center: martinsburg,
+    zoom: 8,
+    mapTypeId: "roadmap",
+    disableDefaultUI: true,
+    gestureHandling: "none",
+    keyboardShortcuts: false,
+    clickableIcons: false,
+    styles: [
+      {
+        featureType: "poi",
+        stylers: [{ visibility: "off" }]
+      },
+      {
+        featureType: "transit",
+        stylers: [{ visibility: "off" }]
+      }
+    ]
+  });
+
+  new google.maps.Circle({
+    strokeColor: "#1b9aaa",
+    strokeOpacity: 0.9,
+    strokeWeight: 3,
+    fillColor: "#1b9aaa",
+    fillOpacity: 0.12,
+    map,
+    center: martinsburg,
+    radius: 128747.2
+  });
+
+  new google.maps.Marker({
+    position: martinsburg,
+    map,
+    title: "Martinsburg, WV"
+  });
+}
+</script>
+
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initServiceMap">
+</script>
 
 </body>
 </html>
