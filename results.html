@@ -88,6 +88,17 @@ background: linear-gradient(135deg, #1b9aaa, #157f86);
 color: white;
 }
 
+header h1 {
+margin: 0 0 10px;
+font-size: 32px;
+}
+
+header p {
+margin: 0;
+font-size: 18px;
+font-weight: 600;
+}
+
 /* GALLERY */
 .gallery {
 max-width: 1000px;
@@ -106,10 +117,49 @@ border-radius: 12px;
 box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 transition: 0.3s;
 background: white;
+cursor: pointer;
 }
 
 .gallery img:hover {
 transform: scale(1.03);
+}
+
+/* LIGHTBOX */
+.lightbox {
+display: none;
+position: fixed;
+z-index: 2000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.9);
+justify-content: center;
+align-items: center;
+padding: 20px;
+box-sizing: border-box;
+}
+
+.lightbox img {
+max-width: 95%;
+max-height: 90%;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.lightbox.active {
+display: flex;
+}
+
+.close-lightbox {
+position: absolute;
+top: 20px;
+right: 25px;
+font-size: 36px;
+font-weight: bold;
+color: white;
+cursor: pointer;
+line-height: 1;
 }
 
 /* FLOAT BUTTON */
@@ -136,6 +186,10 @@ grid-template-columns: 1fr;
 
 .gallery img {
 height: 220px;
+}
+
+body {
+padding-bottom: 110px;
 }
 }
 </style>
@@ -171,30 +225,54 @@ height: 220px;
 </header>
 
 <section class="gallery">
-
-<img src="E5FA79F1-9DAB-4D20-AC94-664BAA2A257B.png">
-<img src="IMG_5378.jpeg">
-
-<img src="IMG_5205.jpeg">
-<img src="IMG_5199.jpeg">
-<img src="IMG_5200.jpeg">
-
-<img src="IMG_5111.jpeg">
-<img src="IMG_5113.jpeg">
-
-<img src="IMG_5382.jpeg">
-<img src="IMG_5381.jpeg">
-<img src="IMG_5380.jpeg">
-
-<img src="IMG_5374.jpeg">
-<img src="IMG_5371.jpeg">
-<img src="IMG_5370.jpeg">
-<img src="IMG_5373.jpeg">
-<img src="IMG_5372.jpeg">
-
+<img src="E5FA79F1-9DAB-4D20-AC94-664BAA2A257B.png" alt="Cleaning result photo">
+<img src="IMG_5378.jpeg" alt="Cleaning result photo">
+<img src="IMG_5205.jpeg" alt="Cleaning result photo">
+<img src="IMG_5199.jpeg" alt="Cleaning result photo">
+<img src="IMG_5200.jpeg" alt="Cleaning result photo">
+<img src="IMG_5111.jpeg" alt="Cleaning result photo">
+<img src="IMG_5113.jpeg" alt="Cleaning result photo">
+<img src="IMG_5382.jpeg" alt="Cleaning result photo">
+<img src="IMG_5381.jpeg" alt="Cleaning result photo">
+<img src="IMG_5380.jpeg" alt="Cleaning result photo">
+<img src="IMG_5374.jpeg" alt="Cleaning result photo">
+<img src="IMG_5371.jpeg" alt="Cleaning result photo">
+<img src="IMG_5370.jpeg" alt="Cleaning result photo">
+<img src="IMG_5373.jpeg" alt="Cleaning result photo">
+<img src="IMG_5372.jpeg" alt="Cleaning result photo">
 </section>
 
+<div class="lightbox" id="lightbox">
+<span class="close-lightbox" id="closeLightbox">&times;</span>
+<img id="lightbox-img" src="" alt="Expanded gallery image">
+</div>
+
 <a href="quote.html" class="float-btn">Request Quote</a>
+
+<script>
+const galleryImages = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeLightbox = document.getElementById('closeLightbox');
+
+galleryImages.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.classList.add('active');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+  });
+});
+
+closeLightbox.addEventListener('click', () => {
+  lightbox.classList.remove('active');
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove('active');
+  }
+});
+</script>
 
 </body>
 </html>
