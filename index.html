@@ -24,6 +24,7 @@ text-align: center;
 position: sticky;
 top: 0;
 z-index: 1000;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 nav a {
@@ -230,23 +231,24 @@ min-height: 100%;
 }
 
 .phone-mockup {
-width: 290px;
+width: 230px;
 max-width: 100%;
 background: #111;
-border-radius: 38px;
-padding: 12px;
-box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+border-radius: 34px;
+padding: 10px;
+box-shadow: 0 16px 28px rgba(0,0,0,0.25);
 position: relative;
+animation: floatPhone 3s ease-in-out infinite, glowPhone 2.5s ease-in-out infinite;
 }
 
 .phone-mockup::before {
 content: "";
 position: absolute;
-top: 10px;
+top: 9px;
 left: 50%;
 transform: translateX(-50%);
-width: 100px;
-height: 12px;
+width: 82px;
+height: 10px;
 background: #222;
 border-radius: 20px;
 z-index: 2;
@@ -254,11 +256,11 @@ z-index: 2;
 
 .phone-screen {
 background: linear-gradient(180deg, #28b7b3 0%, #0f4d7a 100%);
-border-radius: 30px;
-padding: 34px 22px 28px;
+border-radius: 26px;
+padding: 28px 18px 22px;
 text-align: center;
 color: white;
-min-height: 540px;
+min-height: 440px;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
@@ -267,44 +269,57 @@ box-sizing: border-box;
 }
 
 .phone-icon {
-width: 96px;
-height: 96px;
+width: 75px;
+height: 75px;
 border-radius: 50%;
 background: #e84d8a;
 display: flex;
 align-items: center;
 justify-content: center;
-margin: 18px auto 22px;
-font-size: 42px;
+margin: 14px auto 18px;
+font-size: 34px;
 color: white;
+box-shadow: 0 0 18px rgba(232,77,138,0.45);
 }
 
 .phone-screen h3 {
-margin: 0 0 16px;
-font-size: 34px;
+margin: 0 0 14px;
+font-size: 26px;
 line-height: 1.08;
 font-weight: 700;
 }
 
 .phone-screen p {
-margin: 0 0 14px;
-font-size: 17px;
+margin: 0 0 12px;
+font-size: 15px;
 line-height: 1.45;
 font-weight: 500;
 }
 
 .phone-cta {
-margin-top: 22px;
+margin-top: 18px;
 display: inline-block;
 background: #e84d8a;
 color: white;
-padding: 16px 26px;
+padding: 14px 22px;
 border-radius: 18px;
 text-decoration: none;
 font-weight: 700;
-font-size: 17px;
+font-size: 16px;
 line-height: 1.1;
 box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+@keyframes floatPhone {
+0% { transform: translateY(0); }
+50% { transform: translateY(-8px); }
+100% { transform: translateY(0); }
+}
+
+@keyframes glowPhone {
+0% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 0 rgba(27,154,170,0.0); }
+50% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 22px rgba(27,154,170,0.35); }
+100% { box-shadow: 0 16px 28px rgba(0,0,0,0.25), 0 0 0 rgba(27,154,170,0.0); }
 }
 
 .ideal-wrap {
@@ -365,8 +380,8 @@ color: #111;
 
 /* RESULTS BUTTON */
 .results-section {
-text-align: center;
-margin: 25px auto 10px;
+text-align: left;
+margin: 6px 0 0 90px;
 }
 
 .results-btn {
@@ -527,7 +542,7 @@ grid-template-columns: 1fr;
 }
 
 .phone-mockup {
-width: 320px;
+width: 260px;
 }
 
 .ideal-grid {
@@ -579,21 +594,26 @@ font-size: 15px;
 }
 
 .phone-mockup {
-width: 100%;
-max-width: 320px;
+width: 220px;
 }
 
 .phone-screen {
-min-height: 500px;
-padding: 30px 18px 24px;
+min-height: 420px;
+padding: 26px 16px 20px;
 }
 
 .phone-screen h3 {
-font-size: 30px;
+font-size: 24px;
 }
 
 .phone-screen p {
-font-size: 16px;
+font-size: 14px;
+}
+
+.phone-icon {
+width: 68px;
+height: 68px;
+font-size: 30px;
 }
 
 .ideal-line {
@@ -603,6 +623,11 @@ width: 50px;
 .ideal-pill {
 font-size: 18px;
 padding: 10px 20px;
+}
+
+.results-section {
+text-align: center;
+margin: 6px 0 0 0;
 }
 
 body {
@@ -660,94 +685,94 @@ Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeove
 </section>
 
 <section class="how-it-works">
-  <div class="how-title">
-    <span class="how-title-main">How It</span>
-    <span class="how-title-accent">Works</span>
-  </div>
+<div class="how-title">
+<span class="how-title-main">How It</span>
+<span class="how-title-accent">Works</span>
+</div>
 
-  <div class="how-grid">
-    <div class="how-left">
-      <div class="how-step">
-        <div class="step-number">1</div>
-        <div class="step-content">
-          <h3>Schedule Your Walkthrough</h3>
-          <p>Begin by scheduling either an in-person or virtual walkthrough. This allows me to view your space and discuss your specific needs, preferences, and expectations for your cleaning service.</p>
-        </div>
-      </div>
+<div class="how-grid">
+<div class="how-left">
+<div class="how-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h3>Schedule Your Walkthrough</h3>
+<p>Begin by scheduling either an in-person or virtual walkthrough. This allows me to view your space and discuss your specific needs, preferences, and expectations for your cleaning service.</p>
+</div>
+</div>
 
-      <div class="how-step">
-        <div class="step-number">2</div>
-        <div class="step-content">
-          <h3>Customized Cleaning Plan</h3>
-          <p>Based on your walkthrough, I will create a personalized cleaning plan tailored to your home or business, ensuring every detail aligns with your needs.</p>
-        </div>
-      </div>
+<div class="how-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h3>Customized Cleaning Plan</h3>
+<p>Based on your walkthrough, I will create a personalized cleaning plan tailored to your home or business, ensuring every detail aligns with your needs.</p>
+</div>
+</div>
 
-      <div class="how-step">
-        <div class="step-number">3</div>
-        <div class="step-content">
-          <h3>Book Your First Cleaning</h3>
-          <p>Once your plan is finalized, we’ll schedule your first service and officially welcome you to Miracle Home Makeover LLC.</p>
-        </div>
-      </div>
+<div class="how-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h3>Book Your First Cleaning</h3>
+<p>Once your plan is finalized, we’ll schedule your first service and officially welcome you to Miracle Home Makeover LLC.</p>
+</div>
+</div>
 
-      <div class="how-step">
-        <div class="step-number">4</div>
-        <div class="step-content">
-          <h3>Enjoy the Transformation</h3>
-          <p>Step into a beautifully refreshed, spotless home. Experience the comfort, peace of mind, and elevated living that comes with a professionally cleaned space.</p>
-        </div>
-      </div>
-    </div>
+<div class="how-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<h3>Enjoy the Transformation</h3>
+<p>Step into a beautifully refreshed, spotless home. Experience the comfort, peace of mind, and elevated living that comes with a professionally cleaned space.</p>
+</div>
+</div>
 
-    <div class="how-right">
-      <div class="phone-card">
-        <div class="phone-mockup">
-          <div class="phone-screen">
-            <div class="phone-icon">
-              <i class="fa-solid fa-video"></i>
-            </div>
-            <h3>Video Call Walkthroughs Available</h3>
-            <p>Get a fast quote with a quick video call.</p>
-            <p>Show me your space live.</p>
-            <div class="phone-cta">SCHEDULE<br>TODAY</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ideal-wrap">
-    <div class="ideal-title-row">
-      <div class="ideal-line"></div>
-      <div class="ideal-pill">Ideal for:</div>
-      <div class="ideal-line"></div>
-    </div>
-
-    <div class="ideal-grid">
-      <div class="ideal-card">
-        <i class="fa-solid fa-people-group"></i>
-        <h4>Busy families</h4>
-      </div>
-
-      <div class="ideal-card">
-        <i class="fa-solid fa-clock"></i>
-        <h4>Clients with tight schedules</h4>
-      </div>
-
-      <div class="ideal-card">
-        <i class="fa-solid fa-house-signal"></i>
-        <h4>Those who prefer a remote consultation</h4>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="results-section">
+<div class="results-section">
 <a href="results.html" class="results-btn">
 <i class="fa-solid fa-camera"></i>
 RESULTS
 </a>
+</div>
+</div>
+
+<div class="how-right">
+<div class="phone-card">
+<div class="phone-mockup">
+<div class="phone-screen">
+<div class="phone-icon">
+<i class="fa-solid fa-video"></i>
+</div>
+<h3>Video Call Walkthroughs Available</h3>
+<p>Get a fast quote with a quick video call.</p>
+<p>Show me your space live.</p>
+<div class="phone-cta">SCHEDULE<br>TODAY</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ideal-wrap">
+<div class="ideal-title-row">
+<div class="ideal-line"></div>
+<div class="ideal-pill">Ideal for:</div>
+<div class="ideal-line"></div>
+</div>
+
+<div class="ideal-grid">
+<div class="ideal-card">
+<i class="fa-solid fa-people-group"></i>
+<h4>Busy families</h4>
+</div>
+
+<div class="ideal-card">
+<i class="fa-solid fa-clock"></i>
+<h4>Clients with tight schedules</h4>
+</div>
+
+<div class="ideal-card">
+<i class="fa-solid fa-house-signal"></i>
+<h4>Those who prefer a remote consultation</h4>
+</div>
+</div>
+</div>
 </section>
 
 <section class="trust">
