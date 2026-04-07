@@ -130,6 +130,37 @@ color: #e84d8a;
 font-weight: 700;
 }
 
+/* RESULTS BUTTON */
+.results-section {
+text-align: center;
+margin: 25px auto 10px;
+}
+
+.results-btn {
+display: inline-block;
+background: #1b9aaa;
+color: white;
+padding: 16px 32px;
+border-radius: 30px;
+text-decoration: none;
+font-weight: 700;
+font-size: 18px;
+letter-spacing: 1px;
+box-shadow:
+0 0 10px #1b9aaa,
+0 0 20px #1b9aaa,
+0 0 30px #1b9aaa;
+transition: 0.25s ease;
+}
+
+.results-btn:hover {
+transform: scale(1.08);
+box-shadow:
+0 0 15px #1b9aaa,
+0 0 30px #1b9aaa,
+0 0 50px #1b9aaa;
+}
+
 /* TRUST */
 .trust {
 max-width: 900px;
@@ -215,13 +246,9 @@ font-weight: 700;
 font-size: 16px;
 box-shadow: 0 8px 20px rgba(0,0,0,0.22);
 z-index: 1001;
-transition: transform 0.2s ease;
 }
 
-.float-btn:hover {
-transform: translateY(-2px);
-}
-
+/* MOBILE */
 @media (max-width: 700px) {
 .logo {
 max-width: 500px;
@@ -233,10 +260,6 @@ font-size: 20px;
 
 .subtext {
 font-size: 16px;
-}
-
-body {
-padding-bottom: 110px;
 }
 }
 </style>
@@ -267,9 +290,9 @@ padding-bottom: 110px;
 </nav>
 
 <header>
-<img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo" alt="Miracle Home Makeover LLC logo">
+<img src="1818846A-DCDF-4D12-9A19-FACBD9968E1A.png" class="logo">
 <p>Professional Cleaning & Organization Services</p>
-<p class="subtext">I don't just clean houses, I transform them!</p>
+<p class="subtext">I dont just clean houses I transform them.</p>
 </header>
 
 <section class="bio">
@@ -286,6 +309,10 @@ My approach goes beyond basic cleaning. I focus on transforming spaces into clea
 <p>
 Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeover LLC is committed to reliability, professionalism, and exceeding client expectations.
 </p>
+</section>
+
+<section class="results-section">
+<a href="results.html" class="results-btn">RESULTS</a>
 </section>
 
 <section class="trust">
@@ -316,8 +343,8 @@ Proudly serving Martinsburg, WV, and the surrounding areas, Miracle Home Makeove
 </section>
 
 <footer style="text-align:center; padding:20px; font-size:14px; background:#f4f4f4;">
-<a href="privacy.html" style="color:#e84d8a; text-decoration:none;">Privacy Policy</a> | 
-<a href="terms.html" style="color:#e84d8a; text-decoration:none;">Terms of Service</a>
+<a href="privacy.html" style="color:#e84d8a;">Privacy Policy</a> | 
+<a href="terms.html" style="color:#e84d8a;">Terms of Service</a>
 </footer>
 
 <a href="quote.html" class="float-btn">Request Quote</a>
