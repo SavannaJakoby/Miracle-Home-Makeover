@@ -162,6 +162,26 @@ cursor: pointer;
 line-height: 1;
 }
 
+/* ARROWS */
+.arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 40px;
+color: white;
+cursor: pointer;
+padding: 10px;
+user-select: none;
+}
+
+.arrow.left {
+left: 20px;
+}
+
+.arrow.right {
+right: 20px;
+}
+
 /* FLOAT BUTTON */
 .float-btn {
 position: fixed;
@@ -225,23 +245,27 @@ padding-bottom: 110px;
 </header>
 
 <section class="gallery">
-<img src="E5FA79F1-9DAB-4D20-AC94-664BAA2A257B.png" alt="Cleaning result photo">
-<img src="IMG_5378.jpeg" alt="Cleaning result photo">
-<img src="IMG_5205.jpeg" alt="Cleaning result photo">
-<img src="IMG_5199.jpeg" alt="Cleaning result photo">
-<img src="IMG_5200.jpeg" alt="Cleaning result photo">
-<img src="IMG_5111.jpeg" alt="Cleaning result photo">
-<img src="IMG_5113.jpeg" alt="Cleaning result photo">
-<img src="IMG_5382.jpeg" alt="Cleaning result photo">
-<img src="IMG_5381.jpeg" alt="Cleaning result photo">
-<img src="IMG_5380.jpeg" alt="Cleaning result photo">
-<img src="IMG_5374.jpeg" alt="Cleaning result photo">
-<img src="IMG_5371.jpeg" alt="Cleaning result photo">
+<img src="E5FA79F1-9DAB-4D20-AC94-664BAA2A257B.png">
+<img src="IMG_5378.jpeg">
+<img src="IMG_5205.jpeg">
+<img src="IMG_5199.jpeg">
+<img src="IMG_5200.jpeg">
+<img src="IMG_5111.jpeg">
+<img src="IMG_5113.jpeg">
+<img src="IMG_5382.jpeg">
+<img src="IMG_5381.jpeg">
+<img src="IMG_5380.jpeg">
+<img src="IMG_5374.jpeg">
+<img src="IMG_5371.jpeg">
 </section>
 
 <div class="lightbox" id="lightbox">
 <span class="close-lightbox" id="closeLightbox">&times;</span>
-<img id="lightbox-img" src="" alt="Expanded gallery image">
+
+<div class="arrow left" id="prev">&#10094;</div>
+<img id="lightbox-img">
+<div class="arrow right" id="next">&#10095;</div>
+
 </div>
 
 <a href="quote.html" class="float-btn">Request Quote</a>
@@ -251,23 +275,64 @@ const galleryImages = document.querySelectorAll('.gallery img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const closeLightbox = document.getElementById('closeLightbox');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
 
-galleryImages.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.classList.add('active');
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-  });
+let currentIndex = 0;
+
+function showImage(index) {
+lightboxImg.src = galleryImages[index].src;
+currentIndex = index;
+}
+
+galleryImages.forEach((img, index) => {
+img.addEventListener('click', () => {
+lightbox.classList.add('active');
+showImage(index);
+});
 });
 
-closeLightbox.addEventListener('click', () => {
-  lightbox.classList.remove('active');
+nextBtn.onclick = () => {
+currentIndex = (currentIndex + 1) % galleryImages.length;
+showImage(currentIndex);
+};
+
+prevBtn.onclick = () => {
+currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+showImage(currentIndex);
+};
+
+closeLightbox.onclick = () => {
+lightbox.classList.remove('active');
+};
+
+lightbox.onclick = (e) => {
+if (e.target === lightbox) {
+lightbox.classList.remove('active');
+}
+};
+
+/* KEYBOARD SUPPORT */
+document.addEventListener('keydown', (e) => {
+if (!lightbox.classList.contains('active')) return;
+
+if (e.key === 'ArrowRight') nextBtn.click();
+if (e.key === 'ArrowLeft') prevBtn.click();
+if (e.key === 'Escape') lightbox.classList.remove('active');
 });
 
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
-    lightbox.classList.remove('active');
-  }
+/* SWIPE SUPPORT */
+let startX = 0;
+
+lightbox.addEventListener('touchstart', e => {
+startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener('touchend', e => {
+let endX = e.changedTouches[0].clientX;
+
+if (startX - endX > 50) nextBtn.click();
+if (endX - startX > 50) prevBtn.click();
 });
 </script>
 
