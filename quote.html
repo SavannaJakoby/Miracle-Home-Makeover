@@ -78,7 +78,6 @@ header h1 {
 margin: 0;
 }
 
-/* GLOW TEXT */
 .glow-text {
 margin-top: 15px;
 font-weight: 700;
@@ -118,6 +117,7 @@ border: 1px solid #ddd;
 border-radius: 8px;
 font-size: 16px;
 box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
 }
 
 /* WALKTHROUGH */
@@ -127,6 +127,20 @@ padding: 16px;
 background: linear-gradient(135deg, #fff0f6, #ffe6ef);
 border-radius: 10px;
 border: 1px solid #f3c6d9;
+animation: walkthroughGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes walkthroughGlow {
+0% {
+box-shadow: 0 0 0 rgba(232,77,138,0);
+}
+50% {
+box-shadow: 0 0 18px rgba(232,77,138,0.5),
+            0 0 30px rgba(232,77,138,0.3);
+}
+100% {
+box-shadow: 0 0 0 rgba(232,77,138,0);
+}
 }
 
 .walkthrough-option label {
@@ -141,12 +155,16 @@ cursor: pointer;
 .walkthrough-option input {
 width: auto;
 margin-top: 3px;
+transform: scale(1.2);
+accent-color: #e84d8a;
+cursor: pointer;
 }
 
 .walkthrough-note {
 margin: 10px 0 0 26px;
 font-size: 14px;
 color: #555;
+line-height: 1.5;
 }
 
 /* BUTTON */
@@ -160,6 +178,11 @@ border-radius: 8px;
 font-size: 16px;
 font-weight: 700;
 cursor: pointer;
+font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+transform: translateY(-1px);
 }
 
 /* TEXT BUTTON */
@@ -203,7 +226,6 @@ font-weight: 700;
 
 <header>
 <h1>Request a Quote</h1>
-
 <p class="glow-text">
 Welcome yourself to Miracle Home Makeover LLC by booking your complimentary walkthrough today.<br>
 Experience the difference for yourself!
