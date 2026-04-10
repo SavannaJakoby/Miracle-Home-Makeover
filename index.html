@@ -944,35 +944,25 @@ function initServiceMap() {
     }
   });
 
-  const cities = [
-    { name: "Hagerstown", lat: 39.6418, lng: -77.7200 },
-    { name: "Winchester", lat: 39.1857, lng: -78.1633 },
-    { name: "Frederick", lat: 39.4143, lng: -77.4105 },
-    { name: "Leesburg", lat: 39.1157, lng: -77.5636 },
-    { name: "Chambersburg", lat: 39.9376, lng: -77.6611 }
-  ];
-
-  cities.forEach(city => {
-    new google.maps.Marker({
-      position: { lat: city.lat, lng: city.lng },
-      map: map,
-      label: {
-        text: city.name,
-        color: "#333",
-        fontSize: "12px",
-        fontWeight: "600"
-      },
-      icon: {
-        path: google.maps.SymbolPath.CIRCLE,
-        scale: 0
-      }
-    });
+  new google.maps.Marker({
+    position: { lat: 39.6418, lng: -77.7200 },
+    map: map,
+    label: {
+      text: "Hagerstown",
+      color: "#333",
+      fontSize: "12px",
+      fontWeight: "600"
+    },
+    icon: {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 0
+    }
   });
 
   let pulseStep = 0;
 
   setInterval(() => {
-    pulseStep += 0.08;
+    pulseStep += 0.04;
 
     const radiusOffset = (Math.sin(pulseStep) + 1) / 2;
     const opacityOffset = (Math.sin(pulseStep) + 1) / 2;
