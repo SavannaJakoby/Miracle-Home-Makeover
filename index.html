@@ -896,31 +896,28 @@ function initServiceMap() {
 
   const map = new google.maps.Map(document.getElementById("service-map"), {
     center: martinsburg,
-    zoom: 9, // ✅ slightly closer so circle fits better
+    zoom: 9,
     mapTypeId: "roadmap",
     disableDefaultUI: true,
     gestureHandling: "none",
     keyboardShortcuts: false,
     clickableIcons: false,
     minZoom: 9,
-    maxZoom: 9,
-    styles: [
-      { featureType: "poi", stylers: [{ visibility: "off" }] },
-      { featureType: "transit", stylers: [{ visibility: "off" }] }
-    ]
+    maxZoom: 9
   });
 
-  // ✅ BETTER VISUAL SIZE (clean 80-mile feel)
-  new google.maps.Circle({
+  // ✅ FORCE circle to render properly
+  const serviceCircle = new google.maps.Circle({
     strokeColor: "#e84d8a",
     strokeOpacity: 1,
     strokeWeight: 4,
     fillColor: "#e84d8a",
     fillOpacity: 0.25,
-    map: map,
     center: martinsburg,
-    radius: 90000 // ✅ adjusted for better visual size
+    radius: 90000
   });
+
+  serviceCircle.setMap(map); // 👈 THIS is the key fix
 
   new google.maps.Marker({
     position: martinsburg,
