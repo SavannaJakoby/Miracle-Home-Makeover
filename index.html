@@ -910,21 +910,31 @@ function initServiceMap() {
     ]
   });
 
+  // ✅ FIXED VISIBLE CIRCLE
   new google.maps.Circle({
-    strokeColor: "#1b9aaa",
-    strokeOpacity: 0.9,
-    strokeWeight: 3,
-    fillColor: "#1b9aaa",
-    fillOpacity: 0.12,
-    map,
+    strokeColor: "#e84d8a",
+    strokeOpacity: 1,
+    strokeWeight: 4,
+    fillColor: "#e84d8a",
+    fillOpacity: 0.25,
+    map: map,
     center: martinsburg,
     radius: 128747.2
   });
 
+  // ✅ CLEAN MARKER
   new google.maps.Marker({
     position: martinsburg,
-    map,
-    title: "Martinsburg, WV"
+    map: map,
+    title: "Martinsburg, WV",
+    icon: {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 8,
+      fillColor: "#e84d8a",
+      fillOpacity: 1,
+      strokeWeight: 2,
+      strokeColor: "#ffffff"
+    }
   });
 }
 </script>
