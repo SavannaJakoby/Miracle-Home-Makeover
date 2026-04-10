@@ -526,65 +526,31 @@ font-weight: 500;
 margin-bottom: 15px;
 }
 
-.service-area img {
+.map-shell {
+position: relative;
 width: 100%;
 max-width: 1200px;
-height: auto;
-border-radius: 18px;
-box-shadow: 0 15px 35px rgba(0,0,0,0.18);
-display: block;
 margin: 0 auto;
-cursor: zoom-in;
+border-radius: 18px;
+overflow: hidden;
+box-shadow: 0 15px 35px rgba(0,0,0,0.18);
 }
 
-.tap-zoom {
-margin-top: 10px;
-font-size: 14px;
-color: #888;
+#service-map {
+width: 100%;
+height: 460px;
+}
+
+.map-lock {
+position: absolute;
+inset: 0;
+z-index: 5;
 }
 
 .small-note {
 margin-top: 15px;
 font-size: 14px;
 color: #777;
-}
-
-/* MAP LIGHTBOX */
-.lightbox {
-display: none;
-position: fixed;
-z-index: 2000;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-background: rgba(0,0,0,0.9);
-justify-content: center;
-align-items: center;
-padding: 20px;
-box-sizing: border-box;
-}
-
-.lightbox img {
-max-width: 95%;
-max-height: 90%;
-border-radius: 12px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.lightbox.active {
-display: flex;
-}
-
-.close-lightbox {
-position: absolute;
-top: 20px;
-right: 25px;
-font-size: 36px;
-font-weight: bold;
-color: white;
-cursor: pointer;
-line-height: 1;
 }
 
 /* CONTACT */
@@ -727,6 +693,10 @@ padding: 10px 20px;
 .results-section {
 text-align: center;
 margin: 6px 0 0 0;
+}
+
+#service-map {
+height: 320px;
 }
 
 body {
@@ -886,7 +856,7 @@ RESULTS
 <a href="deep-cleaning.html" class="tile"><i class="fa-solid fa-wand-magic-sparkles icon"></i>Deep Cleaning</a>
 <a href="standard-cleaning.html" class="tile"><i class="fa-solid fa-broom icon"></i>Routine Cleaning</a>
 <a href="move-cleaning.html" class="tile"><i class="fa-solid fa-box icon"></i>Move in / Move out Cleaning</a>
-<a href="airbnb-cleaning.html" class="tile"><i class="fa-solid fa-bed icon"></i>Airbnb Turnover</a>
+<a href="airbnb-cleaning.html" class="tile"><i class="fa-solid fa-bed icon"></i>Airbnb / Rental Turnover</a>
 <a href="organization.html" class="tile"><i class="fa-solid fa-folder-open icon"></i>Organization</a>
 <a href="laundry.html" class="tile"><i class="fa-solid fa-shirt icon"></i>Laundry</a>
 <a href="carpet-cleaning.html" class="tile"><i class="fa-solid fa-soap icon"></i>Carpet Cleaning</a>
@@ -896,15 +866,14 @@ RESULTS
 <section class="service-area">
 <h2>Service Area</h2>
 <p>Serving Martinsburg, WV and all locations within approximately an 80 air mile radius.</p>
-<img src="5B29B772-C51E-48DE-BC98-57CB7E9B80BF.png" alt="Service Area Map" id="serviceAreaMap">
-<p class="tap-zoom">Tap image to zoom</p>
+
+<div class="map-shell">
+<div id="service-map"></div>
+<div class="map-lock"></div>
+</div>
+
 <p class="small-note">Not sure if you're in range? Reach out — I’ll confirm!</p>
 </section>
-
-<div id="mapLightbox" class="lightbox">
-<span class="close-lightbox" id="closeMap">&times;</span>
-<img id="mapFull" src="" alt="Expanded Service Area Map">
-</div>
 
 <section id="contact" class="contact">
 <h2>Contact Me</h2>
@@ -922,27 +891,45 @@ RESULTS
 <a href="quote.html" class="float-btn">Request Quote</a>
 
 <script>
-const mapImg = document.getElementById('serviceAreaMap');
-const mapLightbox = document.getElementById('mapLightbox');
-const mapFull = document.getElementById('mapFull');
-const closeMap = document.getElementById('closeMap');
+function initServiceMap() {
+  const martinsburg = { lat: 39.4562, lng: -77.9639 };
 
-mapImg.addEventListener('click', () => {
-  mapLightbox.classList.add('active');
-  mapFull.src = mapImg.src;
-  mapFull.alt = mapImg.alt;
-});
+  const map = new google.maps.Map(document.getElementById("service-map"), {
+    center: martinsburg,
+    zoom: 8,
+    mapTypeId: "roadmap",
+    disableDefaultUI: true,
+    gestureHandling: "none",
+    keyboardShortcuts: false,
+    clickableIcons: false,
+    minZoom: 8,
+    maxZoom: 8,
+    styles: [
+      { featureType: "poi", stylers: [{ visibility: "off" }] },
+      { featureType: "transit", stylers: [{ visibility: "off" }] }
+    ]
+  });
 
-closeMap.addEventListener('click', () => {
-  mapLightbox.classList.remove('active');
-});
+  new google.maps.Circle({
+    strokeColor: "#1b9aaa",
+    strokeOpacity: 0.9,
+    strokeWeight: 3,
+    fillColor: "#1b9aaa",
+    fillOpacity: 0.12,
+    map,
+    center: martinsburg,
+    radius: 128747.2
+  });
 
-mapLightbox.addEventListener('click', (e) => {
-  if (e.target === mapLightbox) {
-    mapLightbox.classList.remove('active');
-  }
-});
+  new google.maps.Marker({
+    position: martinsburg,
+    map,
+    title: "Martinsburg, WV"
+  });
+}
 </script>
+
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLCY8YSgkBE-KKq10-zEV6TcJaCc03YU&callback=initServiceMap"></script>
 
 </body>
 </html>
