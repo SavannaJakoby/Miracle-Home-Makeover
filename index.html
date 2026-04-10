@@ -896,14 +896,14 @@ function initServiceMap() {
 
   const map = new google.maps.Map(document.getElementById("service-map"), {
     center: martinsburg,
-    zoom: 9,
+    zoom: 8, // 👈 zoomed out (was 9)
     mapTypeId: "roadmap",
     disableDefaultUI: true,
     gestureHandling: "none",
     keyboardShortcuts: false,
     clickableIcons: false,
-    minZoom: 9,
-    maxZoom: 9
+    minZoom: 8,
+    maxZoom: 8
   });
 
   const serviceCircle = new google.maps.Circle({
@@ -913,7 +913,7 @@ function initServiceMap() {
     fillColor: "#e84d8a",
     fillOpacity: 0.22,
     center: martinsburg,
-    radius: 80467.2
+    radius: 100000 // 👈 sweet spot (~62 miles visually)
   });
 
   serviceCircle.setMap(map);
