@@ -908,28 +908,18 @@ function initServiceMap() {
 
   const baseRadius = 65000;
 
-  // 🔥 OUTER SOFT GLOW
-  new google.maps.Circle({
-    strokeOpacity: 0,
+  const glowCircle = new google.maps.Circle({
+    strokeColor: "#e84d8a",
+    strokeOpacity: 0.35,
+    strokeWeight: 6,
     fillColor: "#e84d8a",
-    fillOpacity: 0.08,
+    fillOpacity: 0.10,
     center: martinsburg,
-    radius: baseRadius + 12000,
+    radius: baseRadius,
     map: map
   });
 
-  // 🔥 MIDDLE GLOW
-  new google.maps.Circle({
-    strokeOpacity: 0,
-    fillColor: "#e84d8a",
-    fillOpacity: 0.12,
-    center: martinsburg,
-    radius: baseRadius + 6000,
-    map: map
-  });
-
-  // ✅ MAIN SERVICE AREA
-  new google.maps.Circle({
+  const mainCircle = new google.maps.Circle({
     strokeColor: "#e84d8a",
     strokeOpacity: 1,
     strokeWeight: 4,
@@ -940,7 +930,6 @@ function initServiceMap() {
     map: map
   });
 
-  // 📍 MAIN MARKER (Martinsburg)
   new google.maps.Marker({
     position: martinsburg,
     map: map,
@@ -955,7 +944,6 @@ function initServiceMap() {
     }
   });
 
-  // 🏙️ CITY LABELS (clean subtle markers)
   const cities = [
     { name: "Hagerstown", lat: 39.6418, lng: -77.7200 },
     { name: "Winchester", lat: 39.1857, lng: -78.1633 },
@@ -976,10 +964,25 @@ function initServiceMap() {
       },
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
-        scale: 0 // 👈 hides dot, keeps label only
+        scale: 0
       }
     });
   });
+
+  let pulseStep = 0;
+
+  setInterval(() => {
+    pulseStep += 0.08;
+
+    const radiusOffset = (Math.sin(pulseStep) + 1) / 2;
+    const opacityOffset = (Math.sin(pulseStep) + 1) / 2;
+
+    glowCircle.setRadius(baseRadius + radiusOffset * 9000);
+    glowCircle.setOptions({
+      strokeOpacity: 0.2 + opacityOffset * 0.35,
+      fillOpacity: 0.04 + opacityOffset * 0.10
+    });
+  }, 60);
 }
 </script>
 
