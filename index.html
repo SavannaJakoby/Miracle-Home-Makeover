@@ -896,21 +896,21 @@ function initServiceMap() {
 
   const map = new google.maps.Map(document.getElementById("service-map"), {
     center: martinsburg,
-    zoom: 8,
+    zoom: 9, // ✅ slightly closer so circle fits better
     mapTypeId: "roadmap",
     disableDefaultUI: true,
     gestureHandling: "none",
     keyboardShortcuts: false,
     clickableIcons: false,
-    minZoom: 8,
-    maxZoom: 8,
+    minZoom: 9,
+    maxZoom: 9,
     styles: [
       { featureType: "poi", stylers: [{ visibility: "off" }] },
       { featureType: "transit", stylers: [{ visibility: "off" }] }
     ]
   });
 
-  // ✅ FIXED VISIBLE CIRCLE
+  // ✅ BETTER VISUAL SIZE (clean 80-mile feel)
   new google.maps.Circle({
     strokeColor: "#e84d8a",
     strokeOpacity: 1,
@@ -919,10 +919,9 @@ function initServiceMap() {
     fillOpacity: 0.25,
     map: map,
     center: martinsburg,
-    radius: 128747.2
+    radius: 90000 // ✅ adjusted for better visual size
   });
 
-  // ✅ CLEAN MARKER
   new google.maps.Marker({
     position: martinsburg,
     map: map,
