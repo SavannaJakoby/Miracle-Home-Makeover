@@ -896,7 +896,7 @@ function initServiceMap() {
 
   const map = new google.maps.Map(document.getElementById("service-map"), {
     center: martinsburg,
-    zoom: 8, // 👈 zoomed out (was 9)
+    zoom: 8,
     mapTypeId: "roadmap",
     disableDefaultUI: true,
     gestureHandling: "none",
@@ -913,7 +913,7 @@ function initServiceMap() {
     fillColor: "#e84d8a",
     fillOpacity: 0.22,
     center: martinsburg,
-    radius: 100000 // 👈 sweet spot (~62 miles visually)
+    radius: 85000 // 👈 PERFECT fit for Leesburg + Chambersburg
   });
 
   serviceCircle.setMap(map);
