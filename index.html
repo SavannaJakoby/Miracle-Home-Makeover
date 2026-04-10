@@ -906,18 +906,41 @@ function initServiceMap() {
     maxZoom: 8
   });
 
-  const serviceCircle = new google.maps.Circle({
+  const baseRadius = 65000;
+
+  // 🔥 OUTER SOFT GLOW
+  new google.maps.Circle({
+    strokeOpacity: 0,
+    fillColor: "#e84d8a",
+    fillOpacity: 0.08,
+    center: martinsburg,
+    radius: baseRadius + 12000,
+    map: map
+  });
+
+  // 🔥 MIDDLE GLOW
+  new google.maps.Circle({
+    strokeOpacity: 0,
+    fillColor: "#e84d8a",
+    fillOpacity: 0.12,
+    center: martinsburg,
+    radius: baseRadius + 6000,
+    map: map
+  });
+
+  // ✅ MAIN SERVICE AREA
+  new google.maps.Circle({
     strokeColor: "#e84d8a",
     strokeOpacity: 1,
     strokeWeight: 4,
     fillColor: "#e84d8a",
-    fillOpacity: 0.22,
+    fillOpacity: 0.18,
     center: martinsburg,
-    radius: 65000
+    radius: baseRadius,
+    map: map
   });
 
-  serviceCircle.setMap(map);
-
+  // 📍 MAIN MARKER (Martinsburg)
   new google.maps.Marker({
     position: martinsburg,
     map: map,
@@ -930,6 +953,32 @@ function initServiceMap() {
       strokeWeight: 2,
       strokeColor: "#ffffff"
     }
+  });
+
+  // 🏙️ CITY LABELS (clean subtle markers)
+  const cities = [
+    { name: "Hagerstown", lat: 39.6418, lng: -77.7200 },
+    { name: "Winchester", lat: 39.1857, lng: -78.1633 },
+    { name: "Frederick", lat: 39.4143, lng: -77.4105 },
+    { name: "Leesburg", lat: 39.1157, lng: -77.5636 },
+    { name: "Chambersburg", lat: 39.9376, lng: -77.6611 }
+  ];
+
+  cities.forEach(city => {
+    new google.maps.Marker({
+      position: { lat: city.lat, lng: city.lng },
+      map: map,
+      label: {
+        text: city.name,
+        color: "#333",
+        fontSize: "12px",
+        fontWeight: "600"
+      },
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 0 // 👈 hides dot, keeps label only
+      }
+    });
   });
 }
 </script>
