@@ -906,18 +906,17 @@ function initServiceMap() {
     maxZoom: 9
   });
 
-  // ✅ FORCE circle to render properly
   const serviceCircle = new google.maps.Circle({
     strokeColor: "#e84d8a",
     strokeOpacity: 1,
     strokeWeight: 4,
     fillColor: "#e84d8a",
-    fillOpacity: 0.25,
+    fillOpacity: 0.22,
     center: martinsburg,
-    radius: 90000
+    radius: 80467.2
   });
 
-  serviceCircle.setMap(map); // 👈 THIS is the key fix
+  serviceCircle.setMap(map);
 
   new google.maps.Marker({
     position: martinsburg,
