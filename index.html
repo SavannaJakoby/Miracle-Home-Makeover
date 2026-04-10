@@ -896,15 +896,15 @@ function initServiceMap() {
 
   const map = new google.maps.Map(document.getElementById("service-map"), {
     center: martinsburg,
-    zoom: 8, // temporary (will auto-adjust)
+    zoom: 8,
     mapTypeId: "roadmap",
     disableDefaultUI: true,
     gestureHandling: "none",
     keyboardShortcuts: false,
-    clickableIcons: false
+    clickableIcons: false,
+    minZoom: 8,
+    maxZoom: 8
   });
-
-  const radius = 80467.2; // ✅ 50 air miles
 
   const serviceCircle = new google.maps.Circle({
     strokeColor: "#e84d8a",
@@ -913,19 +913,10 @@ function initServiceMap() {
     fillColor: "#e84d8a",
     fillOpacity: 0.22,
     center: martinsburg,
-    radius: radius
+    radius: 65000
   });
 
   serviceCircle.setMap(map);
-
-  // ✅ AUTO FIT MAP TO CIRCLE
-  const bounds = serviceCircle.getBounds();
-  map.fitBounds(bounds);
-
-  // Slight zoom adjustment so it doesn't touch edges
-  google.maps.event.addListenerOnce(map, "bounds_changed", function () {
-    map.setZoom(map.getZoom() - 0.3);
-  });
 
   new google.maps.Marker({
     position: martinsburg,
