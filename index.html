@@ -574,11 +574,46 @@ font-weight: 600;
 text-decoration: none;
 }
 
-/* FLOAT BUTTON */
-.float-btn {
+/* FLOATING BUTTONS */
+.float-base {
 position: fixed;
-right: 14px;
 bottom: 14px;
+z-index: 1001;
+transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.45s ease;
+box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+opacity: 0;
+}
+
+.float-base.show-btn {
+opacity: 1;
+}
+
+.gift-btn {
+left: 14px;
+width: 52px;
+height: 52px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+background: linear-gradient(135deg, #1b9aaa, #157f86);
+color: white;
+text-decoration: none;
+font-size: 20px;
+transform: translateX(-90px);
+}
+
+.gift-btn.show-btn {
+transform: translateX(0);
+}
+
+.gift-btn:hover {
+transform: translateY(-2px) scale(1.05);
+box-shadow: 0 12px 24px rgba(0,0,0,0.28);
+}
+
+.quote-btn {
+right: 14px;
 background: linear-gradient(135deg, #e84d8a, #d63d78);
 color: white;
 padding: 12px 18px;
@@ -586,13 +621,16 @@ border-radius: 999px;
 text-decoration: none;
 font-weight: 700;
 font-size: 16px;
-box-shadow: 0 8px 20px rgba(0,0,0,0.22);
-z-index: 1001;
-transition: transform 0.2s ease;
+transform: translateX(120px);
 }
 
-.float-btn:hover {
+.quote-btn.show-btn {
+transform: translateX(0);
+}
+
+.quote-btn:hover {
 transform: translateY(-2px);
+box-shadow: 0 12px 24px rgba(0,0,0,0.28);
 }
 
 /* MOBILE */
@@ -697,6 +735,21 @@ margin: 6px 0 0 0;
 
 #service-map {
 height: 320px;
+}
+
+.gift-btn {
+width: 48px;
+height: 48px;
+font-size: 18px;
+left: 12px;
+bottom: 12px;
+}
+
+.quote-btn {
+right: 12px;
+bottom: 12px;
+font-size: 14px;
+padding: 11px 16px;
 }
 
 body {
@@ -865,7 +918,7 @@ RESULTS
 
 <section class="service-area">
 <h2>Service Area</h2>
-<p>Serving Martinsburg, WV and all locations within approximately an 50 air mile radius.</p>
+<p>Serving Martinsburg, WV and all locations within approximately a 50 air mile radius.</p>
 
 <div class="map-shell">
 <div id="service-map"></div>
@@ -888,7 +941,11 @@ RESULTS
 <a href="terms.html" style="color:#e84d8a;">Terms of Service</a>
 </footer>
 
-<a href="quote.html" class="float-btn">Request Quote</a>
+<a href="gift-cards.html" class="float-base gift-btn" id="giftBtn" title="Gift Cards">
+<i class="fa-solid fa-gift"></i>
+</a>
+
+<a href="quote.html" class="float-base quote-btn" id="quoteBtn">Request Quote</a>
 
 <script>
 function initServiceMap() {
@@ -974,6 +1031,13 @@ function initServiceMap() {
     });
   }, 60);
 }
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('giftBtn').classList.add('show-btn');
+    document.getElementById('quoteBtn').classList.add('show-btn');
+  }, 700);
+});
 </script>
 
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLCY8YSgkBE-KKq10-zEV6TcJaCc03YU&callback=initServiceMap"></script>
