@@ -39,7 +39,7 @@ color: white;
 
 /* MAIN */
 .main {
-max-width: 900px;
+max-width: 950px;
 margin: 30px auto;
 padding: 20px;
 }
@@ -80,7 +80,7 @@ line-height: 1.7;
 color: #555;
 }
 
-/* BUTTONS */
+/* TEXT BUTTON */
 .text-btn {
 display: inline-block;
 margin-top: 15px;
@@ -90,10 +90,6 @@ padding: 14px 22px;
 border-radius: 30px;
 text-decoration: none;
 font-weight: 700;
-}
-
-.text-btn:hover {
-opacity: 0.9;
 }
 
 /* FORM */
@@ -130,6 +126,15 @@ font-weight: 700;
 cursor: pointer;
 }
 
+/* NOTE */
+.note {
+margin-top: 15px;
+background: #fff7fb;
+padding: 15px;
+border-radius: 12px;
+font-size: 14px;
+}
+
 /* POPUP */
 .modal {
 position: fixed;
@@ -141,16 +146,16 @@ justify-content: center;
 z-index: 2000;
 }
 
+.modal.show {
+display: flex;
+}
+
 .modal-box {
 background: white;
 padding: 25px;
 border-radius: 15px;
 text-align: center;
 max-width: 350px;
-}
-
-.modal.show {
-display: flex;
 }
 
 /* FLOAT */
@@ -193,7 +198,7 @@ font-weight: 700;
 
 <header>
 <h1>Gift Certificates</h1>
-<p>Give the gift of a clean, refreshed home</p>
+<p>Give the gift of a clean, refreshed, stress-free home</p>
 </header>
 
 <div class="main">
@@ -201,6 +206,7 @@ font-weight: 700;
 <!-- INTRO -->
 <div class="card">
 <div class="hero-title">Every Home Deserves a Miracle!</div>
+
 <p>
 Give the gift of a clean, refreshed, and stress-free space. A Miracle Home Makeover LLC gift certificate is more than just a cleaning; it’s time, peace of mind, and a beautifully transformed home.
 </p>
@@ -208,57 +214,6 @@ Give the gift of a clean, refreshed, and stress-free space. A Miracle Home Makeo
 <a href="sms:13043502545?body=Hi! I’d like to purchase a gift card." class="text-btn">
 📲 Text Me to Purchase
 </a>
-</div>
-
-<!-- SERVICES -->
-<div class="card">
-<div class="section-title">What This Certificate Can Be Used For:</div>
-
-<p>Gift recipients can apply this certificate toward:</p>
-
-<ul>
-<li>Deep Cleaning – Top-to-bottom transformation</li>
-<li>Standard Cleaning – Routine maintenance</li>
-<li>Move-In/Move-Out Cleaning</li>
-<li>Carpet Cleaning</li>
-<li>Appliance Detailing</li>
-<li>Kitchen & Bathroom Detailing</li>
-<li>Laundry Services</li>
-<li>Organizing & Decluttering</li>
-</ul>
-
-<p>✨ And so much more! Each service is tailored during your walkthrough.</p>
-</div>
-
-<!-- WHO -->
-<div class="card">
-<div class="section-title">Who This Gift Is Perfect For:</div>
-
-<ul>
-<li>Busy individuals</li>
-<li>Parents who need a break</li>
-<li>New homeowners</li>
-<li>Move-ins / move-outs</li>
-<li>Holiday or birthday gifts</li>
-<li>Realtors & home prep</li>
-</ul>
-</div>
-
-<!-- WHY -->
-<div class="card">
-<div class="section-title">Why Choose Miracle Home Makeover LLC?</div>
-
-<p>
-I go beyond basic cleaning to transform your space into a clean, stress-free environment with attention to detail and care.
-</p>
-</div>
-
-<!-- REDEEM -->
-<div class="card">
-<div class="section-title">How to Redeem:</div>
-
-<p><strong>Call or text:</strong> (304) 350-2545</p>
-<p><strong>Visit:</strong> www.miraclehomemakeover.com</p>
 </div>
 
 <!-- FORM -->
@@ -279,26 +234,65 @@ I go beyond basic cleaning to transform your space into a clean, stress-free env
 </div>
 
 <div class="form-group">
-<label>Who is the Certificate for?</label>
+<label>Who is the Certificate for? (Full Name)</label>
 <input type="text" name="For" required>
 </div>
 
 <div class="form-group">
-<label>Recipient phone</label>
-<input type="tel" name="Phone" required>
-</div>
-
-<div class="form-group">
-<label>Address for Services</label>
+<label>Address for Services?</label>
 <input type="text" name="Address" required>
 </div>
 
 <div class="form-group">
-<label>Gift amount</label>
-<input type="text" name="Amount">
+<label>What’s the occasion?</label>
+<input type="text" name="Occasion">
 </div>
 
-<button class="submit-btn">Send Gift Request</button>
+<div class="form-group">
+<label>What kind of Service would you like me to perform:</label>
+<select name="Service" required>
+<option value="">Select</option>
+<option>Deep Cleaning</option>
+<option>Standard Cleaning</option>
+<option>Move-In/Move-Out</option>
+<option>Carpet Cleaning</option>
+<option>Laundry Services</option>
+<option>Appliance Detailing</option>
+<option>Organizing/Tidying</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Would you like to include a message for the recipient?</label>
+<textarea name="Message"></textarea>
+</div>
+
+<div class="form-group">
+<label>Pre-schedule or let them book?</label>
+<select name="Schedule">
+<option>Pre-schedule</option>
+<option>Let them book</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Gift certificate value?</label>
+<input type="text" name="Amount" placeholder="$100">
+</div>
+
+<div class="form-group">
+<label>Physical or Digital certificate?</label>
+<select name="Type">
+<option>Physical</option>
+<option>Digital</option>
+</select>
+</div>
+
+<div class="note">
+Final service details will be customized and confirmed during a complimentary walkthrough to ensure the best results for your recipient.
+</div>
+
+<button class="submit-btn">Send Gift Certificate Request</button>
 
 </form>
 
