@@ -27,7 +27,7 @@ text-decoration: none;
 font-weight: bold;
 }
 
-/* 🔥 ANIMATED DROPDOWN */
+/* DROPDOWN */
 .dropdown {
 display: inline-block;
 position: relative;
@@ -57,13 +57,11 @@ transform: translateY(0);
 display: block;
 padding: 12px;
 color: white;
-transition: all 0.25s ease;
 }
 
 .dropdown-content a:hover {
 background: #f4e1c1;
 color: #e84d8a;
-padding-left: 18px;
 }
 
 /* HEADER */
@@ -87,11 +85,6 @@ margin-top: 30px;
 color: #0d1b2a;
 }
 
-h3 {
-margin-top: 20px;
-color: #1b9aaa;
-}
-
 ul {
 padding-left: 20px;
 }
@@ -105,34 +98,34 @@ border-left: 5px solid #1b9aaa;
 border-radius: 6px;
 }
 
-/* 🔥 IMAGE ROW (NEW) */
+/* ✅ SIDE BY SIDE FIX */
 .image-row {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
+display: flex;
+gap: 12px;
 margin: 20px 0;
 }
 
 .image-row img {
-width: 100%;
-height: 260px;
+width: 50%;
+height: 220px;
 object-fit: cover;
-border-radius: 10px;
+border-radius: 12px;
+display: block;
 box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 /* MOBILE */
 @media (max-width: 700px) {
 .image-row {
-grid-template-columns: 1fr;
+flex-direction: column;
 }
 
 .image-row img {
-height: 220px;
+width: 100%;
 }
 }
 
-/* 🔥 FLOAT BUTTON */
+/* FLOAT BUTTON */
 .quote-btn {
 position: fixed;
 bottom: 60px;
@@ -191,7 +184,7 @@ animation: pulse 2s infinite;
 Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup, and hard-to-reach areas to restore your space to a like-new condition.
 </p>
 
-<!-- ✅ SIDE BY SIDE IMAGES -->
+<!-- ✅ FIXED SIDE BY SIDE -->
 <div class="image-row">
   <img src="IMG_5660.jpeg" alt="Deep cleaning">
   <img src="IMG_5659.jpeg" alt="Deep cleaning">
@@ -222,8 +215,6 @@ Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup,
 <h2>Premium Deep Clean</h2>
 <p><strong>More detailed attention for heavily used spaces</strong></p>
 
-<p><strong>Includes everything in Standard PLUS:</strong></p>
-
 <ul>
 <li>Cabinet interior wipe-down</li>
 <li>Door and vent cleaning</li>
@@ -231,33 +222,15 @@ Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup,
 <li>Detailed tile and grout scrubbing</li>
 <li>Spot cleaning walls and high-touch areas</li>
 </ul>
-
-<p><strong>Best For:</strong> Homes needing extra care</p>
 </div>
 
 <div class="package">
 <h2>Ultimate Deep Clean</h2>
-<p><strong>Top-to-bottom, no-detail-missed cleaning</strong></p>
-
-<p><strong>Includes everything in Premium PLUS:</strong></p>
-
 <ul>
-<li>Behind and under furniture/appliances (if accessible)</li>
-<li>Hand-scrubbed baseboards throughout</li>
+<li>Behind and under furniture/appliances</li>
+<li>Hand-scrubbed baseboards</li>
 <li>Upholstery vacuuming</li>
 <li>Closet and pantry wipe-down</li>
-<li>Extra attention to buildup and stains</li>
-</ul>
-
-<p><strong>Best For:</strong> Move-ins, move-outs, extreme cleaning</p>
-</div>
-
-<div class="package">
-<h2>Add-On Services</h2>
-<ul>
-<li>Carpet shampooing</li>
-<li>Post-construction cleanup</li>
-<li>Laundry or linen changing services</li>
 </ul>
 </div>
 
