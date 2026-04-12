@@ -6,7 +6,6 @@
 <title>Gift Cards - Miracle Home Makeover LLC</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body {
@@ -14,7 +13,6 @@ margin: 0;
 font-family: 'Poppins', sans-serif;
 background: #f4f4f4;
 padding-bottom: 120px;
-color: #333;
 }
 
 /* NAV */
@@ -22,10 +20,6 @@ nav {
 background: #e84d8a;
 padding: 14px;
 text-align: center;
-position: sticky;
-top: 0;
-z-index: 1000;
-box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 nav a {
@@ -33,53 +27,6 @@ color: white;
 padding: 12px 15px;
 text-decoration: none;
 font-weight: 600;
-}
-
-/* DROPDOWN */
-.dropdown {
-display: inline-block;
-position: relative;
-}
-
-.dropdown-content {
-position: absolute;
-top: 120%;
-left: 50%;
-transform: translateX(-50%) translateY(10px);
-background: #e84d8a;
-min-width: 240px;
-border-radius: 12px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-opacity: 0;
-visibility: hidden;
-transition: all 0.25s ease;
-overflow: hidden;
-z-index: 999;
-border: 1px solid rgba(255,255,255,0.2);
-}
-
-.dropdown-content a {
-display: block;
-padding: 14px 18px;
-color: white;
-text-decoration: none;
-font-weight: 500;
-border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-
-.dropdown-content a:last-child {
-border-bottom: none;
-}
-
-.dropdown-content a:hover {
-background: rgba(255,255,255,0.15);
-padding-left: 22px;
-}
-
-.dropdown:hover .dropdown-content {
-opacity: 1;
-visibility: visible;
-transform: translateX(-50%) translateY(0);
 }
 
 /* HEADER */
@@ -91,243 +38,112 @@ color: white;
 }
 
 header h1 {
-margin: 0 0 10px;
-font-size: 38px;
-}
-
-header p {
 margin: 0;
-font-size: 18px;
-font-weight: 600;
+font-size: 36px;
 }
 
 /* MAIN */
-.main-wrap {
-max-width: 1100px;
+.main {
+max-width: 900px;
 margin: 30px auto;
-padding: 0 20px;
-}
-
-.content-card,
-.form-card {
+padding: 20px;
 background: white;
-padding: 30px 24px;
-border-radius: 20px;
+border-radius: 15px;
 box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-margin-bottom: 28px;
 }
 
-.content-card h2,
-.form-card h2 {
-margin: 0 0 14px;
-color: #e84d8a;
-font-size: 30px;
+.hero {
 text-align: center;
+margin-bottom: 25px;
 }
 
-.content-card p,
-.form-card p {
-margin: 0 0 16px;
-font-size: 16px;
-line-height: 1.75;
-color: #555;
-}
-
-.content-card ul {
-margin: 0;
-padding-left: 22px;
-color: #555;
-line-height: 1.75;
-}
-
-.content-card li {
-margin-bottom: 10px;
-}
-
-.intro-center {
-text-align: center;
-}
-
-.hero-line {
-font-size: 24px;
-font-weight: 700;
+.hero h2 {
 color: #e84d8a;
-margin-bottom: 14px;
-}
-
-.soft-note {
-background: #fff7fb;
-border: 1px solid rgba(232,77,138,0.15);
-padding: 18px;
-border-radius: 16px;
-margin-top: 18px;
 }
 
 /* FORM */
-.form-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-}
-
 .form-group {
-display: flex;
-flex-direction: column;
-}
-
-.form-group.full {
-grid-column: 1 / -1;
+margin-bottom: 18px;
 }
 
 label {
-font-size: 14px;
+display: block;
 font-weight: 600;
-color: #444;
-margin-bottom: 8px;
+margin-bottom: 6px;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
 width: 100%;
-box-sizing: border-box;
-padding: 14px;
+padding: 12px;
+border-radius: 10px;
 border: 1px solid #ddd;
-border-radius: 12px;
 font-size: 15px;
 font-family: inherit;
-background: #fff;
-color: #333;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-outline: none;
-border-color: #1b9aaa;
-box-shadow: 0 0 0 3px rgba(27,154,170,0.12);
 }
 
 textarea {
-min-height: 120px;
-resize: vertical;
+min-height: 100px;
 }
 
-.helper-text {
-font-size: 14px;
-color: #666;
-margin-top: 8px;
-line-height: 1.6;
+input:focus, select:focus, textarea:focus {
+outline: none;
+border-color: #1b9aaa;
 }
 
-.submit-wrap {
-text-align: center;
-margin-top: 22px;
-}
-
+/* BUTTON */
 .submit-btn {
-background: linear-gradient(135deg, #e84d8a, #d63d78);
+margin-top: 20px;
+width: 100%;
+background: #e84d8a;
 color: white;
+padding: 14px;
 border: none;
-padding: 15px 28px;
-border-radius: 999px;
+border-radius: 30px;
 font-size: 16px;
 font-weight: 700;
 cursor: pointer;
-box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-transition: 0.2s ease;
 }
 
 .submit-btn:hover {
-transform: translateY(-2px);
+opacity: 0.9;
 }
 
-/* FLOATING BUTTONS */
-.float-base {
+/* NOTE */
+.note {
+margin-top: 20px;
+background: #fff7fb;
+padding: 15px;
+border-radius: 12px;
+font-size: 14px;
+}
+
+/* FLOAT BUTTONS */
+.float-gift {
 position: fixed;
-bottom: 14px;
-z-index: 1001;
-transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.45s ease;
-box-shadow: 0 8px 20px rgba(0,0,0,0.22);
-opacity: 0;
-}
-
-.float-base.show-btn {
-opacity: 1;
-}
-
-.gift-float {
 left: 14px;
-width: 52px;
-height: 52px;
+bottom: 14px;
+background: #1b9aaa;
+color: white;
+width: 50px;
+height: 50px;
+border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
-border-radius: 50%;
-background: linear-gradient(135deg, #1b9aaa, #157f86);
-color: white;
-text-decoration: none;
 font-size: 20px;
-transform: translateX(-90px);
+text-decoration: none;
 }
 
-.gift-float.show-btn {
-transform: translateX(0);
-}
-
-.quote-btn {
+.float-quote {
+position: fixed;
 right: 14px;
-background: linear-gradient(135deg, #e84d8a, #d63d78);
+bottom: 14px;
+background: #e84d8a;
 color: white;
 padding: 12px 18px;
 border-radius: 999px;
 text-decoration: none;
 font-weight: 700;
-font-size: 16px;
-transform: translateX(120px);
-}
-
-.quote-btn.show-btn {
-transform: translateX(0);
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-header h1 {
-font-size: 32px;
-}
-
-.content-card h2,
-.form-card h2 {
-font-size: 26px;
-}
-
-.hero-line {
-font-size: 22px;
-}
-
-.form-grid {
-grid-template-columns: 1fr;
-}
-
-.gift-float {
-width: 48px;
-height: 48px;
-font-size: 18px;
-left: 12px;
-bottom: 12px;
-}
-
-.quote-btn {
-right: 12px;
-bottom: 12px;
-font-size: 14px;
-padding: 11px 16px;
-}
-
-body {
-padding-bottom: 110px;
-}
 }
 </style>
 </head>
@@ -336,78 +152,63 @@ padding-bottom: 110px;
 
 <nav>
 <a href="index.html">Home</a>
-
-<div class="dropdown">
-<a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
-<div class="dropdown-content">
-<a href="residential-commercial.html">Residential & Commercial</a>
-<a href="deep-cleaning.html">Deep Cleaning</a>
-<a href="standard-cleaning.html">Routine Cleaning</a>
-<a href="move-cleaning.html">Move in / Move out Cleaning</a>
-<a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
-<a href="organization.html">Organization</a>
-<a href="laundry.html">Laundry</a>
-<a href="carpet-cleaning.html">Carpet Cleaning</a>
-<a href="post-construction.html">Post Construction</a>
-</div>
-</div>
-
+<a href="results.html">Results</a>
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
 </nav>
 
 <header>
 <h1>Gift Certificates</h1>
-<p>Give the gift of a clean, refreshed, and stress-free space.</p>
+<p>Give the gift of a clean, refreshed home</p>
 </header>
 
-<div class="main-wrap">
+<div class="main">
 
-<div class="content-card intro-center">
-<div class="hero-line">Every Home Deserves a Miracle!</div>
-<p>
-Give the gift of a clean, refreshed, and stress-free space. A Miracle Home Makeover LLC gift certificate is more than just a cleaning; it’s time, peace of mind, and a beautifully transformed home.
-</p>
+<div class="hero">
+<h2>Every Home Deserves a Miracle!</h2>
+<p>Give the gift of time, peace of mind, and a beautifully transformed space.</p>
 </div>
 
-<div class="form-card">
-<h2>Gift Certificate Request</h2>
-<p>Fill out the form below and I’ll follow up with the final details.</p>
+<form action="https://formspree.io/f/maqawldk" method="POST">
 
-<form action="https:https://formspree.io/f/maqawldk" method="POST">
-<input type="hidden" name="_subject" value="New Gift Certificate Request - Miracle Home Makeover LLC">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Gift Certificate Request">
 
-<div class="form-grid">
-
+<!-- EMAIL (REQUIRED FOR FORMSPREE) -->
 <div class="form-group">
-<label for="from_name">Who is the Certificate from?</label>
-<input type="text" id="from_name" name="Who is the Certificate from?" required>
+<label>Your Email</label>
+<input type="email" name="email" required>
 </div>
 
 <div class="form-group">
-<label for="for_name">Who is the Certificate for? (Full Name)</label>
-<input type="text" id="for_name" name="Who is the Certificate for?" required>
+<label>Who is the Certificate from?</label>
+<input type="text" name="From" required>
 </div>
 
 <div class="form-group">
-<label for="recipient_phone">Recipient's phone number?</label>
-<input type="tel" id="recipient_phone" name="Recipient Phone Number" required>
+<label>Who is the Certificate for? (Full Name)</label>
+<input type="text" name="For" required>
 </div>
 
 <div class="form-group">
-<label for="service_address">Address for Services?</label>
-<input type="text" id="service_address" name="Address for Services" required>
+<label>Recipient's phone number?</label>
+<input type="tel" name="Recipient Phone" required>
 </div>
 
-<div class="form-group full">
-<label for="occasion">What’s the occasion?</label>
-<input type="text" id="occasion" name="Occasion">
+<div class="form-group">
+<label>Address for Services?</label>
+<input type="text" name="Service Address" required>
 </div>
 
-<div class="form-group full">
-<label for="service_type">What kind of Service would you like me to perform:</label>
-<select id="service_type" name="Requested Service Type" required>
-<option value="">Select a service</option>
+<div class="form-group">
+<label>What’s the occasion?</label>
+<input type="text" name="Occasion">
+</div>
+
+<div class="form-group">
+<label>What kind of Service would you like me to perform:</label>
+<select name="Service Type" required>
+<option value="">Select</option>
 <option>Deep Cleaning</option>
 <option>Standard Cleaning</option>
 <option>Move-In/Move-Out</option>
@@ -418,62 +219,46 @@ Give the gift of a clean, refreshed, and stress-free space. A Miracle Home Makeo
 </select>
 </div>
 
-<div class="form-group full">
-<label for="message">Would you like to include a message for the recipient?</label>
-<textarea id="message" name="Message for Recipient"></textarea>
+<div class="form-group">
+<label>Would you like to include a message for the recipient?</label>
+<textarea name="Message"></textarea>
 </div>
 
-<div class="form-group full">
-<label for="schedule_preference">Do you want to pre-schedule the cleaning, or let the recipient book at their convenience?</label>
-<select id="schedule_preference" name="Scheduling Preference" required>
-<option value="">Select an option</option>
-<option>Pre-schedule the cleaning</option>
-<option>Let the recipient book at their convenience</option>
+<div class="form-group">
+<label>Pre-schedule or let them book?</label>
+<select name="Scheduling">
+<option>Pre-schedule</option>
+<option>Let them book</option>
 </select>
 </div>
 
-<div class="form-group full">
-<label for="gift_value">What value would you like your gift certificate to be issued for?</label>
-<input type="text" id="gift_value" name="Gift Certificate Value" placeholder="$100">
-<div class="helper-text">I’m happy to help guide you based on the service you have in mind!</div>
+<div class="form-group">
+<label>Gift certificate value?</label>
+<input type="text" name="Amount" placeholder="$100">
 </div>
 
-<div class="form-group full">
-<label for="certificate_type">Would you like a physical or digital certificate?</label>
-<select id="certificate_type" name="Certificate Type" required>
-<option value="">Select an option</option>
-<option>Physical certificate</option>
-<option>Digital certificate</option>
+<div class="form-group">
+<label>Physical or Digital certificate?</label>
+<select name="Type">
+<option>Physical</option>
+<option>Digital</option>
 </select>
 </div>
 
-</div>
+<button type="submit" class="submit-btn">
+Send Gift Certificate Request
+</button>
 
-<div class="soft-note">
-<p>Final service details will be customized and confirmed during a complimentary walkthrough to ensure the best results for your recipient.</p>
-</div>
-
-<div class="submit-wrap">
-<button type="submit" class="submit-btn">Send Gift Certificate Request</button>
-</div>
 </form>
+
+<div class="note">
+Final service details will be customized and confirmed during a complimentary walkthrough to ensure the best results for your recipient.
 </div>
 
 </div>
 
-<a href="gift-cards.html" class="float-base gift-float show-btn" title="Gift Cards">
-<i class="fa-solid fa-gift"></i>
-</a>
-
-<a href="quote.html" class="float-base quote-btn" id="quoteBtn">Request Quote</a>
-
-<script>
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('quoteBtn').classList.add('show-btn');
-  }, 700);
-});
-</script>
+<a href="gift-cards.html" class="float-gift">🎁</a>
+<a href="quote.html" class="float-quote">Request Quote</a>
 
 </body>
 </html>
