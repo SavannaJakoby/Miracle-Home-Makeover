@@ -13,7 +13,7 @@ line-height: 1.6;
 background: #f4f4f4;
 }
 
-/* NAV */
+/* NAV (PINK) */
 nav {
 background: #e84d8a;
 padding: 12px;
@@ -27,7 +27,7 @@ text-decoration: none;
 font-weight: bold;
 }
 
-/* DROPDOWN */
+/* 🔥 ANIMATED DROPDOWN */
 .dropdown {
 display: inline-block;
 position: relative;
@@ -57,11 +57,13 @@ transform: translateY(0);
 display: block;
 padding: 12px;
 color: white;
+transition: all 0.25s ease;
 }
 
 .dropdown-content a:hover {
 background: #f4e1c1;
 color: #e84d8a;
+padding-left: 18px;
 }
 
 /* HEADER */
@@ -85,11 +87,16 @@ margin-top: 30px;
 color: #0d1b2a;
 }
 
+h3 {
+margin-top: 20px;
+color: #1b9aaa;
+}
+
 ul {
 padding-left: 20px;
 }
 
-/* PACKAGE */
+/* PACKAGE BOX */
 .package {
 background: #f9f9f9;
 padding: 20px;
@@ -98,7 +105,7 @@ border-left: 5px solid #1b9aaa;
 border-radius: 6px;
 }
 
-/* SIDE BY SIDE */
+/* IMAGE ROW */
 .image-row {
 display: flex;
 gap: 10px;
@@ -110,35 +117,69 @@ width: 50%;
 height: 180px;
 object-fit: cover;
 border-radius: 12px;
-cursor: pointer;
+display: block;
 box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+cursor: pointer;
 }
 
 /* LIGHTBOX */
 .lightbox {
 display: none;
 position: fixed;
-top: 0;
+z-index: 2000;
 left: 0;
+top: 0;
 width: 100%;
 height: 100%;
 background: rgba(0,0,0,0.9);
 justify-content: center;
 align-items: center;
-z-index: 2000;
-}
-
-.lightbox img {
-max-width: 95%;
-max-height: 90%;
-border-radius: 10px;
+padding: 20px;
+box-sizing: border-box;
 }
 
 .lightbox.active {
 display: flex;
 }
 
-/* FLOAT BUTTON */
+.lightbox img {
+max-width: 95%;
+max-height: 90%;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.close-lightbox {
+position: absolute;
+top: 20px;
+right: 25px;
+font-size: 36px;
+font-weight: bold;
+color: white;
+cursor: pointer;
+line-height: 1;
+}
+
+.arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 40px;
+color: white;
+cursor: pointer;
+padding: 10px;
+user-select: none;
+}
+
+.arrow.left {
+left: 20px;
+}
+
+.arrow.right {
+right: 20px;
+}
+
+/* 🔥 FLOAT BUTTON */
 .quote-btn {
 position: fixed;
 bottom: 60px;
@@ -197,46 +238,169 @@ animation: pulse 2s infinite;
 Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup, and hard-to-reach areas to restore your space to a like-new condition.
 </p>
 
-<!-- IMAGES -->
 <div class="image-row">
   <img src="IMG_5660.jpeg" alt="Deep cleaning">
   <img src="IMG_5659.jpeg" alt="Deep cleaning">
 </div>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <img id="lightbox-img">
+<div class="package">
+<h2>Standard Deep Clean</h2>
+<p><strong>Perfect for homes that need a refresh</strong></p>
+
+<ul>
+<li>Kitchen detailing including cabinet faces, cabinet tops, and appliance exteriors</li>
+<li>Interior appliance cleaning (microwave, oven, refrigerator)</li>
+<li>Scrubbing sink, stovetop, backsplash, and countertops</li>
+<li>Bathroom sanitation (toilets, tubs, showers, sinks)</li>
+<li>Polishing bathroom cabinets and mirrors</li>
+<li>Detailed dusting (baseboards, blinds, furniture)</li>
+<li>Light fixture and ceiling fan dusting</li>
+<li>Interior window cleaning (accessible areas)</li>
+<li>Glass and window shining</li>
+<li>Vacuuming and mopping all floors (including stairs)</li>
+<li>Trash removal</li>
+</ul>
+
+<p><strong>Best For:</strong> First-time clients, seasonal cleaning</p>
 </div>
 
 <div class="package">
-<h2>Standard Deep Clean</h2>
+<h2>Premium Deep Clean</h2>
+<p><strong>More detailed attention for heavily used spaces</strong></p>
+
+<p><strong>Includes everything in Standard PLUS:</strong></p>
+
 <ul>
-<li>Kitchen detailing including cabinet faces</li>
-<li>Interior appliance cleaning</li>
-<li>Bathroom sanitation</li>
-<li>Dusting and floors</li>
+<li>Cabinet interior wipe-down</li>
+<li>Door and vent cleaning</li>
+<li>Heavy grease and grime removal</li>
+<li>Detailed tile and grout scrubbing</li>
+<li>Spot cleaning walls and high-touch areas</li>
+</ul>
+
+<p><strong>Best For:</strong> Homes needing extra care</p>
+</div>
+
+<div class="package">
+<h2>Ultimate Deep Clean</h2>
+<p><strong>Top-to-bottom, no-detail-missed cleaning</strong></p>
+
+<p><strong>Includes everything in Premium PLUS:</strong></p>
+
+<ul>
+<li>Behind and under furniture/appliances (if accessible)</li>
+<li>Hand-scrubbed baseboards throughout</li>
+<li>Upholstery vacuuming</li>
+<li>Closet and pantry wipe-down</li>
+<li>Extra attention to buildup and stains</li>
+</ul>
+
+<p><strong>Best For:</strong> Move-ins, move-outs, extreme cleaning</p>
+</div>
+
+<div class="package">
+<h2>Add-On Services</h2>
+<ul>
+<li>Carpet shampooing</li>
+<li>Post-construction cleanup</li>
+<li>Laundry or linen changing services</li>
 </ul>
 </div>
 
 </section>
 
+<div class="lightbox" id="lightbox">
+<span class="close-lightbox" id="closeLightbox">&times;</span>
+<div class="arrow left" id="prev">&#10094;</div>
+<img id="lightbox-img" alt="Expanded deep cleaning image">
+<div class="arrow right" id="next">&#10095;</div>
+</div>
+
 <a href="quote.html" class="quote-btn">Request Quote</a>
 
 <script>
-const images = document.querySelectorAll('.image-row img');
+const galleryImages = document.querySelectorAll('.image-row img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
+const closeLightbox = document.getElementById('closeLightbox');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
 
-images.forEach(img => {
+let currentIndex = 0;
+
+function showImage(index) {
+  lightboxImg.src = galleryImages[index].src;
+  lightboxImg.alt = galleryImages[index].alt || 'Expanded deep cleaning image';
+  currentIndex = index;
+}
+
+galleryImages.forEach((img, index) => {
   img.addEventListener('click', () => {
     lightbox.classList.add('active');
-    lightboxImg.src = img.src;
+    showImage(index);
   });
 });
 
-lightbox.addEventListener('click', () => {
+nextBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  showImage(currentIndex);
+});
+
+prevBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  showImage(currentIndex);
+});
+
+closeLightbox.addEventListener('click', (e) => {
+  e.stopPropagation();
   lightbox.classList.remove('active');
 });
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove('active');
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('active')) return;
+
+  if (e.key === 'ArrowRight') {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage(currentIndex);
+  }
+
+  if (e.key === 'ArrowLeft') {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(currentIndex);
+  }
+
+  if (e.key === 'Escape') {
+    lightbox.classList.remove('active');
+  }
+});
+
+let startX = 0;
+
+lightbox.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', (e) => {
+  const endX = e.changedTouches[0].clientX;
+
+  if (startX - endX > 50) {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage(currentIndex);
+  }
+
+  if (endX - startX > 50) {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(currentIndex);
+  }
+}, { passive: true });
 </script>
 
 </body>
