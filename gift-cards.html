@@ -9,180 +9,278 @@
 
 <style>
 body {
-margin: 0;
-font-family: 'Poppins', sans-serif;
-background: #f4f4f4;
-padding-bottom: 120px;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+  padding-bottom: 120px;
+  color: #333;
 }
 
 /* NAV */
 nav {
-background: #e84d8a;
-padding: 14px;
-text-align: center;
+  background: #e84d8a;
+  padding: 14px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 nav a {
-color: white;
-padding: 12px 15px;
-text-decoration: none;
-font-weight: 600;
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /* HEADER */
 header {
-text-align: center;
-padding: 70px 20px;
-background: linear-gradient(135deg, #1b9aaa, #157f86);
-color: white;
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #1b9aaa, #157f86);
+  color: white;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 38px;
+}
+
+header p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 /* MAIN */
-.main {
-max-width: 950px;
-margin: 30px auto;
-padding: 20px;
+.main-wrap {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-/* CARD */
-.card {
-background: white;
-padding: 25px;
-border-radius: 15px;
-box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-margin-bottom: 25px;
+.content-card,
+.form-card {
+  background: white;
+  padding: 30px 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin-bottom: 28px;
 }
 
-/* TEXT */
-.hero-title {
-font-size: 26px;
-font-weight: 700;
-color: #e84d8a;
-text-align: center;
-margin-bottom: 15px;
+.content-card h2,
+.form-card h2 {
+  margin: 0 0 14px;
+  color: #e84d8a;
+  font-size: 30px;
+  text-align: center;
 }
 
-.section-title {
-font-size: 22px;
-font-weight: 700;
-color: #e84d8a;
-margin-bottom: 10px;
+.content-card p,
+.form-card p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #555;
 }
 
-.card p {
-color: #555;
-line-height: 1.7;
+.content-card ul {
+  margin: 0;
+  padding-left: 22px;
+  color: #555;
+  line-height: 1.75;
 }
 
-.card ul {
-padding-left: 20px;
-line-height: 1.7;
-color: #555;
+.content-card li {
+  margin-bottom: 10px;
 }
 
-/* TEXT BUTTON */
-.text-btn {
-display: inline-block;
-margin-top: 15px;
-background: #1b9aaa;
-color: white;
-padding: 14px 22px;
-border-radius: 30px;
-text-decoration: none;
-font-weight: 700;
+.intro-center {
+  text-align: center;
+}
+
+.hero-line {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e84d8a;
+  margin-bottom: 14px;
+}
+
+.soft-note {
+  background: #fff7fb;
+  border: 1px solid rgba(232,77,138,0.15);
+  padding: 18px;
+  border-radius: 16px;
+  margin-top: 18px;
 }
 
 /* FORM */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
 .form-group {
-margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
 }
 
 label {
-display: block;
-font-weight: 600;
-margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
 }
 
-input, select, textarea {
-width: 100%;
-padding: 12px;
-border-radius: 10px;
-border: 1px solid #ddd;
-font-family: inherit;
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #fff;
+  color: #333;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1b9aaa;
+  box-shadow: 0 0 0 3px rgba(27,154,170,0.12);
 }
 
 textarea {
-min-height: 100px;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.helper-text {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.button-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.text-btn,
+.submit-btn {
+  flex: 1 1 240px;
+  border: none;
+  padding: 15px 22px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.text-btn {
+  background: #1b9aaa;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.16);
 }
 
 .submit-btn {
-width: 100%;
-background: #e84d8a;
-color: white;
-padding: 14px;
-border: none;
-border-radius: 30px;
-font-weight: 700;
-cursor: pointer;
+  background: linear-gradient(135deg, #e84d8a, #d63d78);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
 }
 
-/* NOTE */
-.note {
-margin-top: 15px;
-background: #fff7fb;
-padding: 15px;
-border-radius: 12px;
-font-size: 14px;
+.text-btn:hover,
+.submit-btn:hover {
+  transform: translateY(-2px);
 }
 
-/* POPUP */
-.modal {
-position: fixed;
-inset: 0;
-background: rgba(0,0,0,0.6);
-display: none;
-align-items: center;
-justify-content: center;
-z-index: 2000;
+/* FLOATING BUTTONS */
+.float-base {
+  position: fixed;
+  bottom: 14px;
+  z-index: 1001;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.22);
 }
 
-.modal.show {
-display: flex;
+.gift-float {
+  left: 14px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1b9aaa, #157f86);
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.modal-box {
-background: white;
-padding: 25px;
-border-radius: 15px;
-text-align: center;
-max-width: 350px;
+.quote-btn {
+  right: 14px;
+  background: linear-gradient(135deg, #e84d8a, #d63d78);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
 }
 
-/* FLOAT */
-.float-gift {
-position: fixed;
-left: 14px;
-bottom: 14px;
-background: #1b9aaa;
-color: white;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-}
+/* MOBILE */
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 32px;
+  }
 
-.float-quote {
-position: fixed;
-right: 14px;
-bottom: 14px;
-background: #e84d8a;
-color: white;
-padding: 12px 18px;
-border-radius: 999px;
-text-decoration: none;
-font-weight: 700;
+  .content-card h2,
+  .form-card h2 {
+    font-size: 26px;
+  }
+
+  .hero-line {
+    font-size: 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-float {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .quote-btn {
+    right: 12px;
+    bottom: 12px;
+    font-size: 14px;
+    padding: 11px 16px;
+  }
+
+  body {
+    padding-bottom: 110px;
+  }
 }
 </style>
 </head>
@@ -198,141 +296,190 @@ font-weight: 700;
 
 <header>
 <h1>Gift Certificates</h1>
-<p>Give the gift of a clean, refreshed, stress-free home</p>
+<p>Give the gift of a clean, refreshed, and stress-free space.</p>
 </header>
 
-<div class="main">
+<div class="main-wrap">
 
-<!-- INTRO -->
-<div class="card">
-<div class="hero-title">Every Home Deserves a Miracle!</div>
+  <div class="content-card intro-center">
+    <div class="hero-line">Every Home Deserves a Miracle!</div>
+    <p>
+      Give the gift of a clean, refreshed, and stress-free space. A Miracle Home Makeover LLC gift certificate is more than just a cleaning; it’s time, peace of mind, and a beautifully transformed home.
+    </p>
+  </div>
 
-<p>
-Give the gift of a clean, refreshed, and stress-free space. A Miracle Home Makeover LLC gift certificate is more than just a cleaning; it’s time, peace of mind, and a beautifully transformed home.
-</p>
+  <div class="content-card">
+    <h2>What This Certificate Can Be Used For:</h2>
+    <p>
+      My services are fully customizable to meet each client’s needs. Gift recipients can apply this certificate toward:
+    </p>
 
-<a href="sms:13043502545?body=Hi! I’d like to purchase a gift card." class="text-btn">
-📲 Text Me to Purchase
-</a>
+    <ul>
+      <li><strong>Deep Cleaning</strong> – A detailed, top-to-bottom transformation targeting built-up dirt, grime, and overlooked areas</li>
+      <li><strong>Standard/Routine Cleaning</strong> – Maintenance cleans to keep homes fresh, tidy, and organized</li>
+      <li><strong>Move-In/Move-Out Cleaning</strong> – Perfect for preparing a space for a fresh start or leaving it spotless</li>
+      <li><strong>Carpet Cleaning</strong> – Refresh and revive carpets by removing stains, odors, and buildup</li>
+      <li><strong>Appliance Detailing</strong> – Interior and exterior cleaning of ovens, refrigerators, microwaves, and more</li>
+      <li><strong>Kitchen & Bathroom Detailing</strong> – Deep sanitation and shine where it matters most</li>
+      <li><strong>Laundry Services</strong> – Wash, dry, and fold for added convenience</li>
+      <li><strong>Organizing & Decluttering</strong> – Bringing structure and functionality back into your space</li>
+    </ul>
+
+    <div class="soft-note">
+      <p>✨ And so much more! Each service is tailored during your complimentary walkthrough.</p>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>💖 Who This Gift Is Perfect For:</h2>
+    <ul>
+      <li>Busy individuals balancing work, family, and life</li>
+      <li>Parents who deserve a well-earned break</li>
+      <li>New homeowners settling into their space</li>
+      <li>Anyone moving in or out of a home</li>
+      <li>Friends or loved ones who could use a fresh start</li>
+      <li>Holiday gift giving (pre- or post-holiday cleanup)</li>
+      <li>Mother’s Day, Father’s Day, birthdays, or special occasions</li>
+      <li>Realtors or clients preparing a home for sale</li>
+      <li>Anyone who deserves a clean, calm, and elevated environment</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Why Choose Miracle Home Makeover LLC?</h2>
+    <p>
+      I go beyond basic cleaning to truly transform your space into a clean, comfortable, and stress-free environment. Every service is performed with attention to detail, care, and professionalism treating your home like my own.
+    </p>
+  </div>
+
+  <div class="content-card">
+    <h2>📞 How to Redeem:</h2>
+    <p><strong>Call or text:</strong> (304) 350-2545</p>
+    <p><strong>Visit:</strong> www.miraclehomemakeover.com</p>
+    <p>Schedule your complimentary walkthrough to customize your service.</p>
+  </div>
+
+  <div class="form-card">
+    <h2>Gift Certificate Request</h2>
+    <p>Fill this out and either text it to me or submit it through the form.</p>
+
+    <form id="giftForm" action="https://formspree.io/f/maqawldk" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Gift Certificate Request">
+
+      <div class="form-grid">
+        <div class="form-group full">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group full">
+          <label for="fromName">Who is the Certificate from?</label>
+          <input type="text" id="fromName" name="Who is the Certificate from?" required>
+        </div>
+
+        <div class="form-group full">
+          <label for="forName">Who is the Certificate for? (Full Name)</label>
+          <input type="text" id="forName" name="Who is the Certificate for? (Full Name)" required>
+        </div>
+
+        <div class="form-group full">
+          <label for="serviceAddress">Address for Services?</label>
+          <input type="text" id="serviceAddress" name="Address for Services?" required>
+        </div>
+
+        <div class="form-group full">
+          <label for="occasion">What’s the occasion?</label>
+          <input type="text" id="occasion" name="What’s the occasion?">
+        </div>
+
+        <div class="form-group full">
+          <label for="serviceType">What kind of Service would you like me to perform:</label>
+          <select id="serviceType" name="What kind of Service would you like me to perform:" required>
+            <option value="">Select a service</option>
+            <option>Deep Cleaning</option>
+            <option>Standard Cleaning</option>
+            <option>Move-In/Move-Out</option>
+            <option>Carpet Cleaning</option>
+            <option>Laundry Services</option>
+            <option>Appliance Detailing</option>
+            <option>Organizing/Tidying</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label for="message">Would you like to include a message for the recipient?</label>
+          <textarea id="message" name="Would you like to include a message for the recipient?"></textarea>
+        </div>
+
+        <div class="form-group full">
+          <label for="scheduleChoice">Do you want to pre-schedule the cleaning, or let the recipient book at their convenience?</label>
+          <select id="scheduleChoice" name="Do you want to pre-schedule the cleaning, or let the recipient book at their convenience?" required>
+            <option value="">Select an option</option>
+            <option>Pre-schedule the cleaning</option>
+            <option>Let the recipient book at their convenience</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label for="giftValue">What value would you like your gift certificate to be issued for?</label>
+          <input type="text" id="giftValue" name="What value would you like your gift certificate to be issued for?" placeholder="$100">
+          <div class="helper-text">
+            I’m happy to help guide you based on the service you have in mind!
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label for="certificateType">Would you like a physical or digital certificate?</label>
+          <select id="certificateType" name="Would you like a physical or digital certificate?" required>
+            <option value="">Select an option</option>
+            <option>Physical</option>
+            <option>Digital</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="soft-note">
+        <p>Final service details will be customized and confirmed during a complimentary walkthrough to ensure the best results for your recipient.</p>
+      </div>
+
+      <div class="button-row">
+        <button type="button" class="text-btn" onclick="sendText()">Text Me</button>
+        <button type="submit" class="submit-btn">Submit Request</button>
+      </div>
+    </form>
+  </div>
+
 </div>
 
-<!-- FORM -->
-<div class="card">
-
-<form id="giftForm" action="https://formspree.io/f/maqawldk" method="POST">
-
-<input type="hidden" name="_captcha" value="false">
-
-<div class="form-group">
-<label>Your Email</label>
-<input type="email" name="email" required>
-</div>
-
-<div class="form-group">
-<label>Who is the Certificate from?</label>
-<input type="text" name="From" required>
-</div>
-
-<div class="form-group">
-<label>Who is the Certificate for? (Full Name)</label>
-<input type="text" name="For" required>
-</div>
-
-<div class="form-group">
-<label>Address for Services?</label>
-<input type="text" name="Address" required>
-</div>
-
-<div class="form-group">
-<label>What’s the occasion?</label>
-<input type="text" name="Occasion">
-</div>
-
-<div class="form-group">
-<label>What kind of Service would you like me to perform:</label>
-<select name="Service" required>
-<option value="">Select</option>
-<option>Deep Cleaning</option>
-<option>Standard Cleaning</option>
-<option>Move-In/Move-Out</option>
-<option>Carpet Cleaning</option>
-<option>Laundry Services</option>
-<option>Appliance Detailing</option>
-<option>Organizing/Tidying</option>
-</select>
-</div>
-
-<div class="form-group">
-<label>Would you like to include a message for the recipient?</label>
-<textarea name="Message"></textarea>
-</div>
-
-<div class="form-group">
-<label>Pre-schedule or let them book?</label>
-<select name="Schedule">
-<option>Pre-schedule</option>
-<option>Let them book</option>
-</select>
-</div>
-
-<div class="form-group">
-<label>Gift certificate value?</label>
-<input type="text" name="Amount" placeholder="$100">
-</div>
-
-<div class="form-group">
-<label>Physical or Digital certificate?</label>
-<select name="Type">
-<option>Physical</option>
-<option>Digital</option>
-</select>
-</div>
-
-<div class="note">
-Final service details will be customized and confirmed during a complimentary walkthrough to ensure the best results for your recipient.
-</div>
-
-<button class="submit-btn">Send Gift Certificate Request</button>
-
-</form>
-
-</div>
-
-</div>
-
-<!-- POPUP -->
-<div class="modal" id="popup">
-<div class="modal-box">
-<h3>Thank you!</h3>
-<p>Your request was sent successfully.</p>
-<button onclick="closePopup()">Close</button>
-</div>
-</div>
-
-<a href="gift-cards.html" class="float-gift">🎁</a>
-<a href="quote.html" class="float-quote">Request Quote</a>
+<a href="gift-cards.html" class="float-base gift-float" title="Gift Cards">🎁</a>
+<a href="quote.html" class="float-base quote-btn">Request Quote</a>
 
 <script>
-const form = document.getElementById('giftForm');
-const popup = document.getElementById('popup');
+function sendText() {
+  const fromName = document.getElementById('fromName').value;
+  const forName = document.getElementById('forName').value;
+  const serviceAddress = document.getElementById('serviceAddress').value;
+  const occasion = document.getElementById('occasion').value;
+  const serviceType = document.getElementById('serviceType').value;
+  const message = document.getElementById('message').value;
+  const scheduleChoice = document.getElementById('scheduleChoice').value;
+  const giftValue = document.getElementById('giftValue').value;
+  const certificateType = document.getElementById('certificateType').value;
 
-form.addEventListener('submit', async function(e){
-e.preventDefault();
+  const textBody =
+    "Gift Certificate Request:%0A%0A" +
+    "From: " + encodeURIComponent(fromName) + "%0A" +
+    "For: " + encodeURIComponent(forName) + "%0A" +
+    "Address for Services: " + encodeURIComponent(serviceAddress) + "%0A" +
+    "Occasion: " + encodeURIComponent(occasion) + "%0A" +
+    "Service Type: " + encodeURIComponent(serviceType) + "%0A" +
+    "Message for Recipient: " + encodeURIComponent(message) + "%0A" +
+    "Scheduling: " + encodeURIComponent(scheduleChoice) + "%0A" +
+    "Gift Certificate Value: " + encodeURIComponent(giftValue) + "%0A" +
+    "Certificate Type: " + encodeURIComponent(certificateType);
 
-const res = await fetch(form.action, {
-method: 'POST',
-body: new FormData(form),
-headers: { 'Accept': 'application/json' }
-});
-
-if(res.ok){
-form.reset();
-popup.classList.add('show');
-}
-});
-
-function closePopup(){
-popup.classList.remove('show');
+  window.location.href = "sms:13043502545?body=" + textBody;
 }
 </script>
 
