@@ -34,6 +34,53 @@ nav a {
   font-weight: 600;
 }
 
+/* DROPDOWN */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #e84d8a;
+  min-width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  overflow: hidden;
+  z-index: 999;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 14px 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255,255,255,0.15);
+  padding-left: 22px;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
 /* HEADER */
 header {
   text-align: center;
@@ -289,7 +336,22 @@ textarea {
 
 <nav>
 <a href="index.html">Home</a>
-<a href="results.html">Results</a>
+
+<div class="dropdown">
+<a href="#">Services</a>
+<div class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move in / Move out Cleaning</a>
+<a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
+
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
 </nav>
