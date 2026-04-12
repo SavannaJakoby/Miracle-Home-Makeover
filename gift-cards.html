@@ -432,8 +432,8 @@ textarea {
 
       <div class="form-grid">
         <div class="form-group full">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" required>
+          <label for="yourPhone">Your Phone Number</label>
+          <input type="tel" id="yourPhone" name="Your Phone Number" required>
         </div>
 
         <div class="form-group full">
@@ -520,6 +520,7 @@ textarea {
 
 <script>
 function sendText() {
+  const yourPhone = document.getElementById('yourPhone').value;
   const fromName = document.getElementById('fromName').value;
   const forName = document.getElementById('forName').value;
   const serviceAddress = document.getElementById('serviceAddress').value;
@@ -532,6 +533,7 @@ function sendText() {
 
   const textBody =
     "Gift Certificate Request:%0A%0A" +
+    "Your Phone Number: " + encodeURIComponent(yourPhone) + "%0A" +
     "From: " + encodeURIComponent(fromName) + "%0A" +
     "For: " + encodeURIComponent(forName) + "%0A" +
     "Address for Services: " + encodeURIComponent(serviceAddress) + "%0A" +
