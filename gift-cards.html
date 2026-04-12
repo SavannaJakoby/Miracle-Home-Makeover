@@ -108,7 +108,8 @@ margin: 30px auto;
 padding: 0 20px;
 }
 
-.content-card {
+.content-card,
+.form-card {
 background: white;
 padding: 30px 24px;
 border-radius: 20px;
@@ -116,20 +117,16 @@ box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 margin-bottom: 28px;
 }
 
-.content-card h2 {
+.content-card h2,
+.form-card h2 {
 margin: 0 0 14px;
 color: #e84d8a;
 font-size: 30px;
 text-align: center;
 }
 
-.content-card h3 {
-margin: 0 0 14px;
-color: #1b9aaa;
-font-size: 24px;
-}
-
-.content-card p {
+.content-card p,
+.form-card p {
 margin: 0 0 16px;
 font-size: 16px;
 line-height: 1.75;
@@ -166,117 +163,83 @@ border-radius: 16px;
 margin-top: 18px;
 }
 
-/* GIFT OPTIONS */
-.gift-grid {
+/* FORM */
+.form-grid {
 display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
 }
 
-.gift-card {
-background: white;
-border-radius: 20px;
-padding: 28px 22px;
-box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-text-align: center;
-transition: 0.25s ease;
-}
-
-.gift-card:hover {
-transform: translateY(-4px);
-box-shadow: 0 16px 30px rgba(0,0,0,0.12);
-}
-
-.gift-icon {
-width: 74px;
-height: 74px;
-margin: 0 auto 16px;
-border-radius: 50%;
-background: linear-gradient(135deg, #e84d8a, #d63d78);
+.form-group {
 display: flex;
-align-items: center;
-justify-content: center;
-font-size: 30px;
-color: white;
-box-shadow: 0 8px 20px rgba(232,77,138,0.28);
+flex-direction: column;
 }
 
-.gift-card h3 {
-margin: 0 0 8px;
-font-size: 28px;
-color: #1b9aaa;
+.form-group.full {
+grid-column: 1 / -1;
 }
 
-.gift-card p {
-margin: 0 0 18px;
-font-size: 15px;
-line-height: 1.6;
-color: #666;
-}
-
-.gift-btn {
-display: inline-block;
-background: #e84d8a;
-color: white;
-padding: 13px 22px;
-border-radius: 999px;
-text-decoration: none;
-font-weight: 700;
-font-size: 15px;
-box-shadow: 0 8px 18px rgba(0,0,0,0.16);
-transition: 0.2s ease;
-}
-
-.gift-btn:hover {
-transform: translateY(-2px);
-}
-
-/* REDEEM */
-.redeem-box {
-text-align: center;
-}
-
-.redeem-box a {
-color: #e84d8a;
-text-decoration: none;
+label {
+font-size: 14px;
 font-weight: 600;
+color: #444;
+margin-bottom: 8px;
 }
 
-.contact-actions {
-display: flex;
-justify-content: center;
-gap: 14px;
-flex-wrap: wrap;
-margin-top: 18px;
-}
-
-.contact-btn {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-background: #1b9aaa;
-color: white;
-padding: 14px 22px;
-border-radius: 999px;
-text-decoration: none;
-font-weight: 700;
+input,
+select,
+textarea {
+width: 100%;
+box-sizing: border-box;
+padding: 14px;
+border: 1px solid #ddd;
+border-radius: 12px;
 font-size: 15px;
-box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+font-family: inherit;
+background: #fff;
+color: #333;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+outline: none;
+border-color: #1b9aaa;
+box-shadow: 0 0 0 3px rgba(27,154,170,0.12);
+}
+
+textarea {
+min-height: 120px;
+resize: vertical;
+}
+
+.helper-text {
+font-size: 14px;
+color: #666;
+margin-top: 8px;
+line-height: 1.6;
+}
+
+.submit-wrap {
+text-align: center;
+margin-top: 22px;
+}
+
+.submit-btn {
+background: linear-gradient(135deg, #e84d8a, #d63d78);
+color: white;
+border: none;
+padding: 15px 28px;
+border-radius: 999px;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+box-shadow: 0 8px 20px rgba(0,0,0,0.18);
 transition: 0.2s ease;
 }
 
-.contact-btn:hover {
+.submit-btn:hover {
 transform: translateY(-2px);
-}
-
-.contact-btn.pink {
-background: #e84d8a;
-}
-
-/* ✅ ONLY CHANGE (TEAL TEXT ON TEXT BUTTON) */
-.contact-btn.pink,
-.contact-btn.pink i {
-color: #1b9aaa !important;
 }
 
 /* FLOATING BUTTONS */
@@ -312,11 +275,6 @@ transform: translateX(-90px);
 transform: translateX(0);
 }
 
-.gift-float:hover {
-transform: translateY(-2px) scale(1.05);
-box-shadow: 0 12px 24px rgba(0,0,0,0.28);
-}
-
 .quote-btn {
 right: 14px;
 background: linear-gradient(135deg, #e84d8a, #d63d78);
@@ -333,33 +291,23 @@ transform: translateX(120px);
 transform: translateX(0);
 }
 
-.quote-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 12px 24px rgba(0,0,0,0.28);
-}
-
 /* MOBILE */
-@media (max-width: 900px) {
-.gift-grid {
-grid-template-columns: 1fr;
-}
-}
-
 @media (max-width: 700px) {
 header h1 {
 font-size: 32px;
 }
 
-.content-card h2 {
+.content-card h2,
+.form-card h2 {
 font-size: 26px;
-}
-
-.content-card h3 {
-font-size: 22px;
 }
 
 .hero-line {
 font-size: 22px;
+}
+
+.form-grid {
+grid-template-columns: 1fr;
 }
 
 .gift-float {
@@ -386,8 +334,6 @@ padding-bottom: 110px;
 
 <body>
 
-<!-- EVERYTHING ELSE BELOW IS UNCHANGED -->
-
 <nav>
 <a href="index.html">Home</a>
 
@@ -411,119 +357,123 @@ padding-bottom: 110px;
 </nav>
 
 <header>
-<h1>Gift Certificate</h1>
-<p>A little gift… with a Big Impact!</p> 
-<p>Click. Book. Gift. 💝</p>
+<h1>Gift Certificates</h1>
+<p>Give the gift of a clean, refreshed, and stress-free space.</p>
 </header>
 
 <div class="main-wrap">
 
 <div class="content-card intro-center">
-<div class="hero-line">From Messy to Miracle!</div>
+<div class="hero-line">Every Home Deserves a Miracle!</div>
 <p>
 Give the gift of a clean, refreshed, and stress-free space. A Miracle Home Makeover LLC gift certificate is more than just a cleaning; it’s time, peace of mind, and a beautifully transformed home.
 </p>
 </div>
 
-<div class="content-card">
-<h2>What This Certificate Can Be Used For</h2>
-<p>
-My services are fully customizable to meet each client’s needs. Gift recipients can apply this certificate toward:
-</p>
+<div class="form-card">
+<h2>Gift Certificate Request</h2>
+<p>Fill out the form below and I’ll follow up with the final details.</p>
 
-<ul>
-<li><strong>Deep Cleaning</strong> – A detailed, top-to-bottom transformation targeting built-up dirt, grime, and overlooked areas</li>
-<li><strong>Standard/Routine Cleaning</strong> – Maintenance cleans to keep homes fresh, tidy, and organized</li>
-<li><strong>Move-In/Move-Out Cleaning</strong> – Perfect for preparing a space for a fresh start or leaving it spotless</li>
-<li><strong>Carpet Cleaning</strong> – Refresh and revive carpets by removing stains, odors, and buildup</li>
-<li><strong>Appliance Detailing</strong> – Interior and exterior cleaning of ovens, refrigerators, microwaves, and more</li>
-<li><strong>Kitchen & Bathroom Detailing</strong> – Deep sanitation and shine where it matters most</li>
-<li><strong>Laundry Services</strong> – Wash, dry, and fold for added convenience</li>
-<li><strong>Organizing & Decluttering</strong> – Bringing structure and functionality back into your space</li>
-</ul>
+<form action="https:https://formspree.io/f/maqawldk" method="POST">
+<input type="hidden" name="_subject" value="New Gift Certificate Request - Miracle Home Makeover LLC">
+
+<div class="form-grid">
+
+<div class="form-group">
+<label for="from_name">Who is the Certificate from?</label>
+<input type="text" id="from_name" name="Who is the Certificate from?" required>
+</div>
+
+<div class="form-group">
+<label for="for_name">Who is the Certificate for? (Full Name)</label>
+<input type="text" id="for_name" name="Who is the Certificate for?" required>
+</div>
+
+<div class="form-group">
+<label for="recipient_phone">Recipient's phone number?</label>
+<input type="tel" id="recipient_phone" name="Recipient Phone Number" required>
+</div>
+
+<div class="form-group">
+<label for="service_address">Address for Services?</label>
+<input type="text" id="service_address" name="Address for Services" required>
+</div>
+
+<div class="form-group full">
+<label for="occasion">What’s the occasion?</label>
+<input type="text" id="occasion" name="Occasion">
+</div>
+
+<div class="form-group full">
+<label for="service_type">What kind of Service would you like me to perform:</label>
+<select id="service_type" name="Requested Service Type" required>
+<option value="">Select a service</option>
+<option>Deep Cleaning</option>
+<option>Standard Cleaning</option>
+<option>Move-In/Move-Out</option>
+<option>Carpet Cleaning</option>
+<option>Laundry Services</option>
+<option>Appliance Detailing</option>
+<option>Organizing/Tidying</option>
+</select>
+</div>
+
+<div class="form-group full">
+<label for="message">Would you like to include a message for the recipient?</label>
+<textarea id="message" name="Message for Recipient"></textarea>
+</div>
+
+<div class="form-group full">
+<label for="schedule_preference">Do you want to pre-schedule the cleaning, or let the recipient book at their convenience?</label>
+<select id="schedule_preference" name="Scheduling Preference" required>
+<option value="">Select an option</option>
+<option>Pre-schedule the cleaning</option>
+<option>Let the recipient book at their convenience</option>
+</select>
+</div>
+
+<div class="form-group full">
+<label for="gift_value">What value would you like your gift certificate to be issued for?</label>
+<input type="text" id="gift_value" name="Gift Certificate Value" placeholder="$100">
+<div class="helper-text">I’m happy to help guide you based on the service you have in mind!</div>
+</div>
+
+<div class="form-group full">
+<label for="certificate_type">Would you like a physical or digital certificate?</label>
+<select id="certificate_type" name="Certificate Type" required>
+<option value="">Select an option</option>
+<option>Physical certificate</option>
+<option>Digital certificate</option>
+</select>
+</div>
+
+</div>
 
 <div class="soft-note">
-<p>✨ And so much more! Each service is tailored during your complimentary walkthrough.</p>
-</div>
-</div>
-
-<div class="content-card">
-<h2>Who This Gift Is Perfect For</h2>
-<ul>
-<li>Busy individuals balancing work, family, and life</li>
-<li>Parents who deserve a well-earned break</li>
-<li>New homeowners settling into their space</li>
-<li>Anyone moving in or out of a home</li>
-<li>Friends or loved ones who could use a fresh start</li>
-<li>Holiday gift giving (pre- or post-holiday cleanup)</li>
-<li>Mother’s Day, Father’s Day, birthdays, or special occasions</li>
-<li>Realtors or clients preparing a home for sale</li>
-<li>Anyone who deserves a clean, calm, and elevated environment</li>
-</ul>
+<p>Final service details will be customized and confirmed during a complimentary walkthrough to ensure the best results for your recipient.</p>
 </div>
 
-<div class="content-card">
-<h2>Why Choose Miracle Home Makeover LLC?</h2>
-<p>
-I go beyond basic cleaning to truly transform your space into a clean, comfortable, and stress-free environment. Every service is performed with attention to detail, care, and professionalism treating your home like my own.
-</p>
+<div class="submit-wrap">
+<button type="submit" class="submit-btn">Send Gift Certificate Request</button>
 </div>
-
-<div class="gift-grid">
-
-<div class="gift-card">
-<div class="gift-icon">
-<i class="fa-solid fa-gift"></i>
-</div>
-<h3>$100</h3>
-<p>Great for a thoughtful surprise or to put toward a future cleaning service.</p>
-<a href="sms:13043502545?body=Hi! I’d like to purchase a $100 Miracle Home Makeover gift card." class="gift-btn">Purchase by Text</a>
-</div>
-
-<div class="gift-card">
-<div class="gift-icon">
-<i class="fa-solid fa-gift"></i>
-</div>
-<h3>$150</h3>
-<p>A generous gift option that helps cover a larger portion of a cleaning service.</p>
-<a href="sms:13043502545?body=Hi! I’d like to purchase a $150 Miracle Home Makeover gift card." class="gift-btn">Purchase by Text</a>
-</div>
-
-<div class="gift-card">
-<div class="gift-icon">
-<i class="fa-solid fa-gift"></i>
-</div>
-<h3>Custom</h3>
-<p>Choose the amount that works best for your occasion and gifting needs.</p>
-<a href="sms:13043502545?body=Hi! I’d like to purchase a custom amount Miracle Home Makeover gift card." class="gift-btn">Choose Amount</a>
+</form>
 </div>
 
 </div>
 
-<div class="content-card redeem-box">
-<h2>How to Redeem</h2>
-<p><strong>Call or text:</strong> <a href="tel:13043502545">(304) 350-2545</a></p>
-<p><strong>Visit:</strong> <a href="https://www.miraclehomemakeover.com" target="_blank">www.miraclehomemakeover.com</a></p>
-<p>Schedule your complimentary walkthrough to customize your service.</p>
-
-<div class="contact-actions">
-<a href="sms:13043502545?body=Hi! I’d like to purchase a Miracle Home Makeover gift card." class="contact-btn pink">
-<i class="fa-solid fa-comment"></i> Text Me
-</a>
-
-<a href="mailto:miraclehomemakeover@gmail.com?subject=Gift Card Purchase&body=Hi! I’d like to purchase a Miracle Home Makeover gift card." class="contact-btn">
-<i class="fa-solid fa-envelope"></i> Email Me
-</a>
-</div>
-</div>
-
-</div>
-
-<a href="gift-cards.html" class="float-base gift-float show-btn">
+<a href="gift-cards.html" class="float-base gift-float show-btn" title="Gift Cards">
 <i class="fa-solid fa-gift"></i>
 </a>
 
-<a href="quote.html" class="float-base quote-btn">Request Quote</a>
+<a href="quote.html" class="float-base quote-btn" id="quoteBtn">Request Quote</a>
+
+<script>
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('quoteBtn').classList.add('show-btn');
+  }, 700);
+});
+</script>
 
 </body>
 </html>
