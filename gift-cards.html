@@ -14,6 +14,7 @@ margin: 0;
 font-family: 'Poppins', sans-serif;
 background: #f4f4f4;
 padding-bottom: 120px;
+color: #333;
 }
 
 /* NAV */
@@ -107,26 +108,62 @@ margin: 30px auto;
 padding: 0 20px;
 }
 
-.intro-card {
+.content-card {
 background: white;
 padding: 30px 24px;
 border-radius: 20px;
 box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-text-align: center;
 margin-bottom: 28px;
 }
 
-.intro-card h2 {
-margin: 0 0 12px;
+.content-card h2 {
+margin: 0 0 14px;
 color: #e84d8a;
 font-size: 30px;
+text-align: center;
 }
 
-.intro-card p {
-margin: 0;
+.content-card h3 {
+margin: 0 0 14px;
+color: #1b9aaa;
+font-size: 24px;
+}
+
+.content-card p {
+margin: 0 0 16px;
 font-size: 16px;
-line-height: 1.7;
+line-height: 1.75;
 color: #555;
+}
+
+.content-card ul {
+margin: 0;
+padding-left: 22px;
+color: #555;
+line-height: 1.75;
+}
+
+.content-card li {
+margin-bottom: 10px;
+}
+
+.intro-center {
+text-align: center;
+}
+
+.hero-line {
+font-size: 24px;
+font-weight: 700;
+color: #e84d8a;
+margin-bottom: 14px;
+}
+
+.soft-note {
+background: #fff7fb;
+border: 1px solid rgba(232,77,138,0.15);
+padding: 18px;
+border-radius: 16px;
+margin-top: 18px;
 }
 
 /* GIFT OPTIONS */
@@ -194,27 +231,15 @@ transition: 0.2s ease;
 transform: translateY(-2px);
 }
 
-/* CUSTOM */
-.custom-section {
-background: white;
-margin-top: 28px;
-padding: 30px 24px;
-border-radius: 20px;
-box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+/* REDEEM */
+.redeem-box {
 text-align: center;
 }
 
-.custom-section h2 {
-margin: 0 0 10px;
-font-size: 30px;
+.redeem-box a {
 color: #e84d8a;
-}
-
-.custom-section p {
-margin: 0 0 18px;
-font-size: 16px;
-line-height: 1.7;
-color: #555;
+text-decoration: none;
+font-weight: 600;
 }
 
 .contact-actions {
@@ -246,23 +271,6 @@ transform: translateY(-2px);
 
 .contact-btn.pink {
 background: #e84d8a;
-}
-
-/* NOTE */
-.note-box {
-background: #fff7fb;
-border: 1px solid rgba(232,77,138,0.15);
-margin-top: 28px;
-padding: 22px;
-border-radius: 18px;
-text-align: center;
-}
-
-.note-box p {
-margin: 0;
-color: #666;
-font-size: 15px;
-line-height: 1.7;
 }
 
 /* FLOATING BUTTONS */
@@ -336,9 +344,16 @@ header h1 {
 font-size: 32px;
 }
 
-.intro-card h2,
-.custom-section h2 {
+.content-card h2 {
 font-size: 26px;
+}
+
+.content-card h3 {
+font-size: 22px;
+}
+
+.hero-line {
+font-size: 22px;
 }
 
 .gift-float {
@@ -389,15 +404,59 @@ padding-bottom: 110px;
 
 <header>
 <h1>Gift Cards</h1>
-<p>Give the gift of a clean, refreshed home.</p>
+<p>Give the gift of a clean, refreshed, and stress-free space.</p>
 </header>
 
 <div class="main-wrap">
 
-<div class="intro-card">
-<h2>Thoughtful, Useful, and Always Appreciated</h2>
+<div class="content-card intro-center">
+<div class="hero-line">Every Home Deserves a Miracle!</div>
 <p>
-A Miracle Home Makeover LLC gift card is a perfect gift for busy families, new moms, birthdays, holidays, move-ins, or anyone who could use a little extra help and a lot more peace of mind.
+Give the gift of a clean, refreshed, and stress-free space. A Miracle Home Makeover LLC gift certificate is more than just a cleaning; it’s time, peace of mind, and a beautifully transformed home.
+</p>
+</div>
+
+<div class="content-card">
+<h2>What This Certificate Can Be Used For</h2>
+<p>
+My services are fully customizable to meet each client’s needs. Gift recipients can apply this certificate toward:
+</p>
+
+<ul>
+<li><strong>Deep Cleaning</strong> – A detailed, top-to-bottom transformation targeting built-up dirt, grime, and overlooked areas</li>
+<li><strong>Standard/Routine Cleaning</strong> – Maintenance cleans to keep homes fresh, tidy, and organized</li>
+<li><strong>Move-In/Move-Out Cleaning</strong> – Perfect for preparing a space for a fresh start or leaving it spotless</li>
+<li><strong>Carpet Cleaning</strong> – Refresh and revive carpets by removing stains, odors, and buildup</li>
+<li><strong>Appliance Detailing</strong> – Interior and exterior cleaning of ovens, refrigerators, microwaves, and more</li>
+<li><strong>Kitchen & Bathroom Detailing</strong> – Deep sanitation and shine where it matters most</li>
+<li><strong>Laundry Services</strong> – Wash, dry, and fold for added convenience</li>
+<li><strong>Organizing & Decluttering</strong> – Bringing structure and functionality back into your space</li>
+</ul>
+
+<div class="soft-note">
+<p>✨ And so much more! Each service is tailored during your complimentary walkthrough.</p>
+</div>
+</div>
+
+<div class="content-card">
+<h2>Who This Gift Is Perfect For</h2>
+<ul>
+<li>Busy individuals balancing work, family, and life</li>
+<li>Parents who deserve a well-earned break</li>
+<li>New homeowners settling into their space</li>
+<li>Anyone moving in or out of a home</li>
+<li>Friends or loved ones who could use a fresh start</li>
+<li>Holiday gift giving (pre- or post-holiday cleanup)</li>
+<li>Mother’s Day, Father’s Day, birthdays, or special occasions</li>
+<li>Realtors or clients preparing a home for sale</li>
+<li>Anyone who deserves a clean, calm, and elevated environment</li>
+</ul>
+</div>
+
+<div class="content-card">
+<h2>Why Choose Miracle Home Makeover LLC?</h2>
+<p>
+I go beyond basic cleaning to truly transform your space into a clean, comfortable, and stress-free environment. Every service is performed with attention to detail, care, and professionalism treating your home like my own.
 </p>
 </div>
 
@@ -432,14 +491,14 @@ A Miracle Home Makeover LLC gift card is a perfect gift for busy families, new m
 
 </div>
 
-<div class="custom-section">
-<h2>Need a Custom Gift Card?</h2>
-<p>
-I can create a custom gift card amount and help you arrange the details. Reach out and I’ll make it easy.
-</p>
+<div class="content-card redeem-box">
+<h2>How to Redeem</h2>
+<p><strong>Call or text:</strong> <a href="tel:13043502545">(304) 350-2545</a></p>
+<p><strong>Visit:</strong> <a href="https://www.miraclehomemakeover.com" target="_blank">www.miraclehomemakeover.com</a></p>
+<p>Schedule your complimentary walkthrough to customize your service.</p>
 
 <div class="contact-actions">
-<a href="sms:13043502545?body=Hi! I’d like to purchase a custom Miracle Home Makeover gift card." class="contact-btn pink">
+<a href="sms:13043502545?body=Hi! I’d like to purchase a Miracle Home Makeover gift card." class="contact-btn pink">
 <i class="fa-solid fa-comment"></i> Text Me
 </a>
 
@@ -447,12 +506,6 @@ I can create a custom gift card amount and help you arrange the details. Reach o
 <i class="fa-solid fa-envelope"></i> Email Me
 </a>
 </div>
-</div>
-
-<div class="note-box">
-<p>
-Gift cards are available in custom amounts and can be used toward eligible Miracle Home Makeover LLC cleaning services.
-</p>
 </div>
 
 </div>
