@@ -1,1 +1,475 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Cards - Miracle Home Makeover LLC</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+margin: 0;
+font-family: 'Poppins', sans-serif;
+background: #f4f4f4;
+padding-bottom: 120px;
+}
+
+/* NAV */
+nav {
+background: #e84d8a;
+padding: 14px;
+text-align: center;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+nav a {
+color: white;
+padding: 12px 15px;
+text-decoration: none;
+font-weight: 600;
+}
+
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
+
+.dropdown-content {
+position: absolute;
+top: 120%;
+left: 50%;
+transform: translateX(-50%) translateY(10px);
+background: #e84d8a;
+min-width: 240px;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+opacity: 0;
+visibility: hidden;
+transition: all 0.25s ease;
+overflow: hidden;
+z-index: 999;
+border: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown-content a {
+display: block;
+padding: 14px 18px;
+color: white;
+text-decoration: none;
+font-weight: 500;
+border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown-content a:last-child {
+border-bottom: none;
+}
+
+.dropdown-content a:hover {
+background: rgba(255,255,255,0.15);
+padding-left: 22px;
+}
+
+.dropdown:hover .dropdown-content {
+opacity: 1;
+visibility: visible;
+transform: translateX(-50%) translateY(0);
+}
+
+/* HEADER */
+header {
+text-align: center;
+padding: 70px 20px;
+background: linear-gradient(135deg, #1b9aaa, #157f86);
+color: white;
+}
+
+header h1 {
+margin: 0 0 10px;
+font-size: 38px;
+}
+
+header p {
+margin: 0;
+font-size: 18px;
+font-weight: 600;
+}
+
+/* MAIN */
+.main-wrap {
+max-width: 1100px;
+margin: 30px auto;
+padding: 0 20px;
+}
+
+.intro-card {
+background: white;
+padding: 30px 24px;
+border-radius: 20px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+text-align: center;
+margin-bottom: 28px;
+}
+
+.intro-card h2 {
+margin: 0 0 12px;
+color: #e84d8a;
+font-size: 30px;
+}
+
+.intro-card p {
+margin: 0;
+font-size: 16px;
+line-height: 1.7;
+color: #555;
+}
+
+/* GIFT OPTIONS */
+.gift-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.gift-card {
+background: white;
+border-radius: 20px;
+padding: 28px 22px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+text-align: center;
+transition: 0.25s ease;
+}
+
+.gift-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 16px 30px rgba(0,0,0,0.12);
+}
+
+.gift-icon {
+width: 74px;
+height: 74px;
+margin: 0 auto 16px;
+border-radius: 50%;
+background: linear-gradient(135deg, #e84d8a, #d63d78);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+color: white;
+box-shadow: 0 8px 20px rgba(232,77,138,0.28);
+}
+
+.gift-card h3 {
+margin: 0 0 8px;
+font-size: 28px;
+color: #1b9aaa;
+}
+
+.gift-card p {
+margin: 0 0 18px;
+font-size: 15px;
+line-height: 1.6;
+color: #666;
+}
+
+.gift-btn {
+display: inline-block;
+background: #e84d8a;
+color: white;
+padding: 13px 22px;
+border-radius: 999px;
+text-decoration: none;
+font-weight: 700;
+font-size: 15px;
+box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+transition: 0.2s ease;
+}
+
+.gift-btn:hover {
+transform: translateY(-2px);
+}
+
+/* CUSTOM */
+.custom-section {
+background: white;
+margin-top: 28px;
+padding: 30px 24px;
+border-radius: 20px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+text-align: center;
+}
+
+.custom-section h2 {
+margin: 0 0 10px;
+font-size: 30px;
+color: #e84d8a;
+}
+
+.custom-section p {
+margin: 0 0 18px;
+font-size: 16px;
+line-height: 1.7;
+color: #555;
+}
+
+.contact-actions {
+display: flex;
+justify-content: center;
+gap: 14px;
+flex-wrap: wrap;
+margin-top: 18px;
+}
+
+.contact-btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: #1b9aaa;
+color: white;
+padding: 14px 22px;
+border-radius: 999px;
+text-decoration: none;
+font-weight: 700;
+font-size: 15px;
+box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+transition: 0.2s ease;
+}
+
+.contact-btn:hover {
+transform: translateY(-2px);
+}
+
+.contact-btn.pink {
+background: #e84d8a;
+}
+
+/* NOTE */
+.note-box {
+background: #fff7fb;
+border: 1px solid rgba(232,77,138,0.15);
+margin-top: 28px;
+padding: 22px;
+border-radius: 18px;
+text-align: center;
+}
+
+.note-box p {
+margin: 0;
+color: #666;
+font-size: 15px;
+line-height: 1.7;
+}
+
+/* FLOATING BUTTONS */
+.float-base {
+position: fixed;
+bottom: 14px;
+z-index: 1001;
+transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.45s ease;
+box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+opacity: 0;
+}
+
+.float-base.show-btn {
+opacity: 1;
+}
+
+.gift-float {
+left: 14px;
+width: 52px;
+height: 52px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+background: linear-gradient(135deg, #1b9aaa, #157f86);
+color: white;
+text-decoration: none;
+font-size: 20px;
+transform: translateX(-90px);
+}
+
+.gift-float.show-btn {
+transform: translateX(0);
+}
+
+.gift-float:hover {
+transform: translateY(-2px) scale(1.05);
+box-shadow: 0 12px 24px rgba(0,0,0,0.28);
+}
+
+.quote-btn {
+right: 14px;
+background: linear-gradient(135deg, #e84d8a, #d63d78);
+color: white;
+padding: 12px 18px;
+border-radius: 999px;
+text-decoration: none;
+font-weight: 700;
+font-size: 16px;
+transform: translateX(120px);
+}
+
+.quote-btn.show-btn {
+transform: translateX(0);
+}
+
+.quote-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 12px 24px rgba(0,0,0,0.28);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+.gift-grid {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 700px) {
+header h1 {
+font-size: 32px;
+}
+
+.intro-card h2,
+.custom-section h2 {
+font-size: 26px;
+}
+
+.gift-float {
+width: 48px;
+height: 48px;
+font-size: 18px;
+left: 12px;
+bottom: 12px;
+}
+
+.quote-btn {
+right: 12px;
+bottom: 12px;
+font-size: 14px;
+padding: 11px 16px;
+}
+
+body {
+padding-bottom: 110px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+
+<div class="dropdown">
+<a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+<div class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move in / Move out Cleaning</a>
+<a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
+
+<a href="about.html">About</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+
+<header>
+<h1>Gift Cards</h1>
+<p>Give the gift of a clean, refreshed home.</p>
+</header>
+
+<div class="main-wrap">
+
+<div class="intro-card">
+<h2>Thoughtful, Useful, and Always Appreciated</h2>
+<p>
+A Miracle Home Makeover LLC gift card is a perfect gift for busy families, new moms, birthdays, holidays, move-ins, or anyone who could use a little extra help and a lot more peace of mind.
+</p>
+</div>
+
+<div class="gift-grid">
+
+<div class="gift-card">
+<div class="gift-icon">
+<i class="fa-solid fa-gift"></i>
+</div>
+<h3>$100</h3>
+<p>Great for a thoughtful surprise or to put toward a future cleaning service.</p>
+<a href="sms:13043502545?body=Hi! I’d like to purchase a $100 Miracle Home Makeover gift card." class="gift-btn">Purchase by Text</a>
+</div>
+
+<div class="gift-card">
+<div class="gift-icon">
+<i class="fa-solid fa-gift"></i>
+</div>
+<h3>$150</h3>
+<p>A generous gift option that helps cover a larger portion of a cleaning service.</p>
+<a href="sms:13043502545?body=Hi! I’d like to purchase a $150 Miracle Home Makeover gift card." class="gift-btn">Purchase by Text</a>
+</div>
+
+<div class="gift-card">
+<div class="gift-icon">
+<i class="fa-solid fa-gift"></i>
+</div>
+<h3>Custom</h3>
+<p>Choose the amount that works best for your occasion and gifting needs.</p>
+<a href="sms:13043502545?body=Hi! I’d like to purchase a custom amount Miracle Home Makeover gift card." class="gift-btn">Choose Amount</a>
+</div>
+
+</div>
+
+<div class="custom-section">
+<h2>Need a Custom Gift Card?</h2>
+<p>
+I can create a custom gift card amount and help you arrange the details. Reach out and I’ll make it easy.
+</p>
+
+<div class="contact-actions">
+<a href="sms:13043502545?body=Hi! I’d like to purchase a custom Miracle Home Makeover gift card." class="contact-btn pink">
+<i class="fa-solid fa-comment"></i> Text Me
+</a>
+
+<a href="mailto:miraclehomemakeover@gmail.com?subject=Gift Card Purchase&body=Hi! I’d like to purchase a Miracle Home Makeover gift card." class="contact-btn">
+<i class="fa-solid fa-envelope"></i> Email Me
+</a>
+</div>
+</div>
+
+<div class="note-box">
+<p>
+Gift cards are available in custom amounts and can be used toward eligible Miracle Home Makeover LLC cleaning services.
+</p>
+</div>
+
+</div>
+
+<a href="gift-cards.html" class="float-base gift-float show-btn" title="Gift Cards">
+<i class="fa-solid fa-gift"></i>
+</a>
+
+<a href="quote.html" class="float-base quote-btn" id="quoteBtn">Request Quote</a>
+
+<script>
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('quoteBtn').classList.add('show-btn');
+  }, 700);
+});
+</script>
+
+</body>
+</html>
