@@ -1001,21 +1001,6 @@ function initServiceMap() {
     }
   });
 
-  new google.maps.Marker({
-    position: { lat: 39.6418, lng: -77.7200 },
-    map: map,
-    label: {
-      text: "Hagerstown",
-      color: "#333",
-      fontSize: "12px",
-      fontWeight: "600"
-    },
-    icon: {
-      path: google.maps.SymbolPath.CIRCLE,
-      scale: 0
-    }
-  });
-
   let pulseStep = 0;
 
   setInterval(() => {
