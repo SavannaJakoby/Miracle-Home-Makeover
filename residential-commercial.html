@@ -114,6 +114,22 @@ ul {
 padding-left: 20px;
 }
 
+/* COMMERCIAL PHOTOS */
+.commercial-photo-row {
+display: flex;
+gap: 12px;
+margin: 18px 0 25px;
+}
+
+.commercial-photo-row img {
+width: 50%;
+height: 220px;
+object-fit: cover;
+border-radius: 12px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+display: block;
+}
+
 /* 🔥 FLOAT BUTTON */
 .quote-btn {
 position: fixed;
@@ -133,6 +149,17 @@ animation: pulse 2s infinite;
 0% { transform: scale(1); }
 50% { transform: scale(1.05); }
 100% { transform: scale(1); }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+.commercial-photo-row {
+gap: 10px;
+}
+
+.commercial-photo-row img {
+height: 150px;
+}
 }
 </style>
 </head>
@@ -223,6 +250,11 @@ Residential cleaning is designed to improve comfort, hygiene, and peace of mind 
 
 <h2>Commercial Cleaning</h2>
 
+<div class="commercial-photo-row">
+<img src="IMG_5610.jpeg" alt="Commercial cleaning result by Miracle Home Makeover LLC">
+<img src="IMG_5604.jpeg" alt="Commercial cleaning result by Miracle Home Makeover LLC">
+</div>
+
 <p>
 Focuses on maintaining clean, safe, and professional environments for businesses, employees, and customers. These services are often scheduled regularly and tailored to the size and type of facility.
 </p>
@@ -289,7 +321,6 @@ Commercial cleaning helps businesses maintain a professional image, ensure healt
 
 </section>
 
-<!-- 🔥 FLOAT BUTTON -->
 <a href="quote.html" class="quote-btn">Request Quote</a>
 
 </body>
