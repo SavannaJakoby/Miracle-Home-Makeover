@@ -105,21 +105,42 @@ border-left: 5px solid #1b9aaa;
 border-radius: 6px;
 }
 
-/* IMAGE ROW */
-.image-row {
-display: flex;
-gap: 10px;
-margin: 20px 0;
+/* DEEP CLEANING GALLERY */
+.deep-gallery-title {
+text-align: center;
+color: #e84d8a;
+font-size: 28px;
+margin-top: 35px;
+margin-bottom: 5px;
 }
 
-.image-row img {
-width: 50%;
-height: 180px;
+.deep-gallery-subtitle {
+text-align: center;
+color: #555;
+margin-bottom: 20px;
+font-size: 15px;
+}
+
+.deep-gallery {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 12px;
+margin: 25px 0 35px;
+}
+
+.deep-gallery img {
+width: 100%;
+height: 170px;
 object-fit: cover;
 border-radius: 12px;
 display: block;
 box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 cursor: pointer;
+transition: 0.3s ease;
+}
+
+.deep-gallery img:hover {
+transform: scale(1.03);
 }
 
 /* LIGHTBOX */
@@ -192,12 +213,49 @@ text-decoration: none;
 font-weight: bold;
 box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 animation: pulse 2s infinite;
+z-index: 1000;
 }
 
 @keyframes pulse {
 0% { transform: scale(1); }
 50% { transform: scale(1.05); }
 100% { transform: scale(1); }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+nav a {
+display: inline-block;
+padding: 10px 8px;
+font-size: 14px;
+}
+
+header {
+padding: 55px 18px;
+}
+
+header h1 {
+font-size: 30px;
+}
+
+section {
+padding: 24px 18px;
+}
+
+.deep-gallery {
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+}
+
+.deep-gallery img {
+height: 150px;
+}
+
+.quote-btn {
+bottom: 18px;
+right: 12px;
+font-size: 14px;
+}
 }
 </style>
 </head>
@@ -238,9 +296,18 @@ animation: pulse 2s infinite;
 Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup, and hard-to-reach areas to restore your space to a like-new condition.
 </p>
 
-<div class="image-row">
-  <img src="IMG_5660.jpeg" alt="Deep cleaning">
-  <img src="IMG_5659.jpeg" alt="Deep cleaning">
+<h2 class="deep-gallery-title">Deep Cleaning Results</h2>
+<p class="deep-gallery-subtitle">A closer look at the details that make the difference.</p>
+
+<div class="deep-gallery">
+  <img src="AD9C327C-D10E-4E55-A82B-AF91AE6A260D.png" alt="Deep cleaning result">
+  <img src="IMG_6209.jpeg" alt="Deep cleaning result">
+  <img src="IMG_6214.jpeg" alt="Deep cleaning result">
+  <img src="IMG_6220.jpeg" alt="Deep cleaning result">
+  <img src="IMG_6805.jpeg" alt="Deep cleaning result">
+  <img src="IMG_6808.jpeg" alt="Deep cleaning result">
+  <img src="IMG_6837.jpeg" alt="Deep cleaning result">
+  <img src="IMG_6838.jpeg" alt="Deep cleaning result">
 </div>
 
 <div class="package">
@@ -319,7 +386,7 @@ Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup,
 <a href="quote.html" class="quote-btn">Request Quote</a>
 
 <script>
-const galleryImages = document.querySelectorAll('.image-row img');
+const galleryImages = document.querySelectorAll('.deep-gallery img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const closeLightbox = document.getElementById('closeLightbox');
@@ -360,7 +427,7 @@ closeLightbox.addEventListener('click', (e) => {
 
 lightbox.addEventListener('click', (e) => {
   if (e.target === lightbox) {
-    lightbox.classList.remove('active');
+    lightbox.classList.remove('active);
   }
 });
 
