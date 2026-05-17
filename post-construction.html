@@ -241,6 +241,7 @@ background: #fafafa;
 padding: 12px;
 border-radius: 14px;
 box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+position: relative;
 }
 
 .video-box video {
@@ -250,6 +251,27 @@ object-fit: cover;
 border-radius: 12px;
 display: block;
 background: #000;
+}
+
+.video-label {
+position: absolute;
+top: 22px;
+left: 22px;
+padding: 8px 14px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: bold;
+color: white;
+z-index: 5;
+box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.before-label {
+background: rgba(55,55,55,0.92);
+}
+
+.after-label {
+background: #e84d8a;
 }
 
 /* BOX */
@@ -316,6 +338,13 @@ gap: 16px;
 height: 360px;
 }
 
+.video-label {
+top: 22px;
+left: 22px;
+font-size: 12px;
+padding: 7px 13px;
+}
+
 .quote-btn {
 bottom: 18px;
 right: 12px;
@@ -364,7 +393,9 @@ My post-construction cleaning service is designed to remove dust, debris, and co
 <p class="video-subtitle">A closer look at the cleanup process after renovation and construction work.</p>
 
 <div class="video-grid">
+
 <div class="video-box">
+<span class="video-label before-label">Before</span>
 <video controls playsinline preload="metadata">
 <source src="IMG_6687.mov" type="video/quicktime">
 <source src="IMG_6687.mov" type="video/mp4">
@@ -373,12 +404,14 @@ Your browser does not support the video tag.
 </div>
 
 <div class="video-box">
+<span class="video-label after-label">After</span>
 <video controls playsinline preload="metadata">
 <source src="IMG_6724.mov" type="video/quicktime">
 <source src="IMG_6724.mov" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 </div>
+
 </div>
 
 <div class="box">
