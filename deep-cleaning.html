@@ -27,7 +27,7 @@ text-decoration: none;
 font-weight: bold;
 }
 
-/* 🔥 ANIMATED DROPDOWN */
+/* ANIMATED DROPDOWN */
 .dropdown {
 display: inline-block;
 position: relative;
@@ -137,6 +137,9 @@ display: block;
 box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 cursor: pointer;
 transition: 0.3s ease;
+border: none;
+outline: none;
+background: transparent;
 }
 
 .deep-gallery img:hover {
@@ -168,6 +171,8 @@ max-width: 95%;
 max-height: 90%;
 border-radius: 12px;
 box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+border: none;
+outline: none;
 }
 
 .close-lightbox {
@@ -200,7 +205,7 @@ left: 20px;
 right: 20px;
 }
 
-/* 🔥 FLOAT BUTTON */
+/* FLOAT BUTTON */
 .quote-btn {
 position: fixed;
 bottom: 60px;
@@ -249,6 +254,9 @@ gap: 10px;
 
 .deep-gallery img {
 height: 150px;
+border: none;
+outline: none;
+background: transparent;
 }
 
 .quote-btn {
@@ -470,7 +478,7 @@ lightbox.addEventListener('touchend', (e) => {
   }
 
   if (endX - startX > 50) {
-    currentIndex = (currentIndex - 1 + galleryImages.length;
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
     showImage(currentIndex);
   }
 }, { passive: true });
