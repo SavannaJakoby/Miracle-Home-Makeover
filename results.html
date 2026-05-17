@@ -6,7 +6,7 @@
 
 <title>Cleaning Results Martinsburg WV | Miracle Home Makeover LLC</title>
 
-<meta name="description" content="View cleaning results from Miracle Home Makeover LLC in Martinsburg WV and surrounding areas. Before-and-after cleaning transformations, deep cleaning results, move-out cleaning results, carpet cleaning results, and home makeover details will be featured here.">
+<meta name="description" content="View before-and-after cleaning results from Miracle Home Makeover LLC in Martinsburg WV and surrounding areas. See real cleaning transformations, deep cleaning results, move-out cleaning results, and detailed home makeover photos.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Miracle Home Makeover LLC">
 <meta name="theme-color" content="#1b9aaa">
@@ -15,17 +15,17 @@
 <link rel="icon" type="image/png" href="/AD26E661-D90D-48F8-BEBB-81401EB5A19E.png">
 
 <meta property="og:title" content="Cleaning Results Martinsburg WV | Miracle Home Makeover LLC">
-<meta property="og:description" content="Cleaning results and home transformations from Miracle Home Makeover LLC in Martinsburg WV and surrounding areas.">
+<meta property="og:description" content="Before-and-after cleaning results and home transformations from Miracle Home Makeover LLC in Martinsburg WV and surrounding areas.">
 <meta property="og:url" content="https://miraclehomemakeover.com/results.html">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png">
+<meta property="og:image" content="https://miraclehomemakeover.com/FullSizeRender.jpeg">
 <meta property="og:site_name" content="Miracle Home Makeover LLC">
 <meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cleaning Results Martinsburg WV | Miracle Home Makeover LLC">
-<meta name="twitter:description" content="Cleaning transformations and completed work from Miracle Home Makeover LLC.">
-<meta name="twitter:image" content="https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png">
+<meta name="twitter:description" content="Real before-and-after cleaning transformations from Miracle Home Makeover LLC.">
+<meta name="twitter:image" content="https://miraclehomemakeover.com/FullSizeRender.jpeg">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -71,7 +71,7 @@
       "@id": "https://miraclehomemakeover.com/results.html#webpage",
       "url": "https://miraclehomemakeover.com/results.html",
       "name": "Cleaning Results Martinsburg WV | Miracle Home Makeover LLC",
-      "description": "Cleaning results and home transformations from Miracle Home Makeover LLC in Martinsburg WV and surrounding areas.",
+      "description": "Before-and-after cleaning results and home transformations from Miracle Home Makeover LLC in Martinsburg WV and surrounding areas.",
       "isPartOf": {
         "@type": "WebSite",
         "@id": "https://miraclehomemakeover.com/#website",
@@ -80,6 +80,10 @@
       },
       "about": {
         "@id": "https://miraclehomemakeover.com/#business"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://miraclehomemakeover.com/FullSizeRender.jpeg"
       }
     },
     {
@@ -202,49 +206,152 @@ margin-top: 8px;
 opacity: 0.96;
 }
 
-/* RESULTS PLACEHOLDER */
+/* RESULTS */
 .results-wrap {
 max-width: 1050px;
 margin: 30px auto;
-padding: 40px 24px;
+padding: 28px 20px;
 background: white;
 border-radius: 22px;
 box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-text-align: center;
 }
 
-.results-wrap h2 {
-margin: 0 0 10px;
+.results-head {
+text-align: center;
+margin-bottom: 28px;
+}
+
+.results-head h2 {
+margin: 0 0 8px;
 font-size: 30px;
 color: #e84d8a;
 }
 
-.results-wrap p {
-max-width: 720px;
-margin: 0 auto 18px;
-font-size: 16px;
-color: #555;
-line-height: 1.7;
+.results-head p {
+margin: 0 auto;
+max-width: 760px;
+font-size: 15px;
+color: #666;
+line-height: 1.6;
 }
 
-.update-box {
-margin: 25px auto 0;
-max-width: 720px;
-background: #f9f9f9;
-padding: 24px;
-border-left: 5px solid #1b9aaa;
+/* BEFORE / AFTER */
+.ba-wrapper {
+display: flex;
+flex-direction: column;
+gap: 26px;
+}
+
+.ba-pair {
+background: linear-gradient(180deg, #ffffff, #fcfcfc);
+padding: 18px;
+border-radius: 20px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+border: 1px solid rgba(0,0,0,0.04);
+}
+
+.ba-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px;
+}
+
+.ba-img {
+position: relative;
+}
+
+.ba-img img {
+width: 100%;
+height: 300px;
+object-fit: cover;
+border-radius: 14px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+display: block;
+cursor: pointer;
+transition: 0.3s ease;
+}
+
+.ba-img img:hover {
+transform: scale(1.02);
+}
+
+.ba-label {
+position: absolute;
+top: 12px;
+left: 12px;
+padding: 8px 14px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 700;
+color: white;
+z-index: 2;
+letter-spacing: 0.3px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.before {
+background: rgba(55,55,55,0.92);
+}
+
+.after {
+background: #e84d8a;
+}
+
+/* LIGHTBOX */
+.lightbox {
+display: none;
+position: fixed;
+z-index: 2000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.92);
+justify-content: center;
+align-items: center;
+padding: 20px;
+box-sizing: border-box;
+}
+
+.lightbox img {
+max-width: 95%;
+max-height: 88%;
 border-radius: 12px;
-text-align: left;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-.update-box h3 {
-margin-top: 0;
-color: #1b9aaa;
+.lightbox.active {
+display: flex;
 }
 
-.update-box ul {
-margin-bottom: 0;
-padding-left: 20px;
+.close-lightbox {
+position: absolute;
+top: 18px;
+right: 24px;
+font-size: 38px;
+font-weight: bold;
+color: white;
+cursor: pointer;
+line-height: 1;
+}
+
+.arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 42px;
+color: white;
+cursor: pointer;
+padding: 10px;
+user-select: none;
+}
+
+.arrow.left {
+left: 20px;
+}
+
+.arrow.right {
+right: 20px;
 }
 
 /* FOOTER */
@@ -280,11 +387,19 @@ font-size: 30px;
 
 .results-wrap {
 margin: 24px 14px;
-padding: 32px 18px;
+padding: 24px 14px;
 }
 
-.results-wrap h2 {
+.results-head h2 {
 font-size: 26px;
+}
+
+.ba-grid {
+grid-template-columns: 1fr;
+}
+
+.ba-img img {
+height: 220px;
 }
 
 body {
@@ -310,45 +425,3 @@ padding-bottom: 110px;
 <a href="organization.html">Organization</a>
 <a href="laundry.html">Laundry</a>
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
-<a href="post-construction.html">Post Construction</a>
-</div>
-</div>
-
-<a href="about.html">About</a>
-<a href="index.html#contact">Contact</a>
-</nav>
-
-<header>
-<h1>Results</h1>
-<p>Your Home, But Elevated.</p>
-<p class="header-sub">Every Home Deserves a Miracle!</p>
-</header>
-
-<section class="results-wrap">
-<h2>Results Page Being Rebuilt</h2>
-
-<p>
-This page is being updated with fresh cleaning transformations, completed spaces, and before-and-after results from Miracle Home Makeover LLC.
-</p>
-
-<div class="update-box">
-<h3>Coming Soon</h3>
-<ul>
-<li>Before-and-after cleaning transformations</li>
-<li>Deep cleaning results</li>
-<li>Move-in and move-out cleaning results</li>
-<li>Carpet cleaning results</li>
-<li>Post-construction cleaning results</li>
-<li>Detailed cleaning photos organized by service</li>
-</ul>
-</div>
-</section>
-
-<footer>
-Results and transformation photos will be added soon.
-</footer>
-
-<a href="quote.html" class="float-btn">Request Quote</a>
-
-</body>
-</html>
