@@ -36,7 +36,7 @@ text-decoration: none;
 font-weight: bold;
 }
 
-/* 🔥 DROPDOWN (ANIMATED) */
+/* DROPDOWN */
 .dropdown {
 display: inline-block;
 position: relative;
@@ -114,23 +114,86 @@ ul {
 padding-left: 20px;
 }
 
-/* COMMERCIAL PHOTOS */
-.commercial-photo-row {
+/* PHOTO ROWS */
+.photo-row {
 display: flex;
 gap: 12px;
 margin: 18px 0 25px;
 }
 
-.commercial-photo-row img {
+.photo-row img {
 width: 50%;
 height: 220px;
 object-fit: cover;
 border-radius: 12px;
 box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 display: block;
+cursor: pointer;
+transition: 0.3s ease;
 }
 
-/* 🔥 FLOAT BUTTON */
+.photo-row img:hover {
+transform: scale(1.03);
+}
+
+/* LIGHTBOX */
+.lightbox {
+display: none;
+position: fixed;
+z-index: 2000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.9);
+justify-content: center;
+align-items: center;
+padding: 20px;
+box-sizing: border-box;
+}
+
+.lightbox.active {
+display: flex;
+}
+
+.lightbox img {
+max-width: 95%;
+max-height: 90%;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.close-lightbox {
+position: absolute;
+top: 20px;
+right: 25px;
+font-size: 36px;
+font-weight: bold;
+color: white;
+cursor: pointer;
+line-height: 1;
+}
+
+.arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 40px;
+color: white;
+cursor: pointer;
+padding: 10px;
+user-select: none;
+}
+
+.arrow.left {
+left: 20px;
+}
+
+.arrow.right {
+right: 20px;
+}
+
+/* FLOAT BUTTON */
 .quote-btn {
 position: fixed;
 bottom: 60px;
@@ -143,6 +206,7 @@ text-decoration: none;
 font-weight: bold;
 box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 animation: pulse 2s infinite;
+z-index: 1000;
 }
 
 @keyframes pulse {
@@ -153,12 +217,36 @@ animation: pulse 2s infinite;
 
 /* MOBILE */
 @media (max-width: 700px) {
-.commercial-photo-row {
+.photo-row {
 gap: 10px;
 }
 
-.commercial-photo-row img {
+.photo-row img {
 height: 150px;
+}
+
+nav a {
+display: inline-block;
+padding: 10px 8px;
+font-size: 14px;
+}
+
+header {
+padding: 55px 18px;
+}
+
+header h1 {
+font-size: 30px;
+}
+
+section {
+padding: 24px 18px;
+}
+
+.quote-btn {
+bottom: 18px;
+right: 12px;
+font-size: 14px;
 }
 }
 </style>
@@ -196,6 +284,11 @@ height: 150px;
 <section>
 
 <h2>Residential Cleaning</h2>
+
+<div class="photo-row">
+<img src="IMG_5824.jpeg" alt="Residential cleaning result by Miracle Home Makeover LLC">
+<img src="IMG_6176.jpeg" alt="Residential cleaning result by Miracle Home Makeover LLC">
+</div>
 
 <p>
 Focuses on maintaining a spotless living environment for homeowners, renters, and families. These services are customized to fit the needs of each home, whether it’s routine upkeep or a major deep clean.
@@ -250,7 +343,7 @@ Residential cleaning is designed to improve comfort, hygiene, and peace of mind 
 
 <h2>Commercial Cleaning</h2>
 
-<div class="commercial-photo-row">
+<div class="photo-row">
 <img src="IMG_5610.jpeg" alt="Commercial cleaning result by Miracle Home Makeover LLC">
 <img src="IMG_5604.jpeg" alt="Commercial cleaning result by Miracle Home Makeover LLC">
 </div>
@@ -321,7 +414,99 @@ Commercial cleaning helps businesses maintain a professional image, ensure healt
 
 </section>
 
+<div class="lightbox" id="lightbox">
+<span class="close-lightbox" id="closeLightbox">&times;</span>
+<div class="arrow left" id="prev">&#10094;</div>
+<img id="lightbox-img" alt="Expanded cleaning image">
+<div class="arrow right" id="next">&#10095;</div>
+</div>
+
 <a href="quote.html" class="quote-btn">Request Quote</a>
+
+<script>
+const galleryImages = document.querySelectorAll('.photo-row img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeLightbox = document.getElementById('closeLightbox');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+
+let currentIndex = 0;
+
+function showImage(index) {
+  lightboxImg.src = galleryImages[index].src;
+  lightboxImg.alt = galleryImages[index].alt || 'Expanded cleaning image';
+  currentIndex = index;
+}
+
+galleryImages.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    lightbox.classList.add('active');
+    showImage(index);
+  });
+});
+
+nextBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  showImage(currentIndex);
+});
+
+prevBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  showImage(currentIndex);
+});
+
+closeLightbox.addEventListener('click', (e) => {
+  e.stopPropagation();
+  lightbox.classList.remove('active');
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove('active');
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('active')) return;
+
+  if (e.key === 'ArrowRight') {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage(currentIndex);
+  }
+
+  if (e.key === 'ArrowLeft') {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(currentIndex);
+  }
+
+  if (e.key === 'Escape') {
+    lightbox.classList.remove('active');
+  }
+});
+
+let startX = 0;
+
+lightbox.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', (e) => {
+  const endX = e.changedTouches[0].clientX;
+
+  if (startX - endX > 50) {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage(currentIndex);
+  }
+
+  if (endX - startX > 50) {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(currentIndex);
+  }
+}, { passive: true });
+</script>
 
 </body>
 </html>
