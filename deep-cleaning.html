@@ -13,7 +13,7 @@ line-height: 1.6;
 background: #f4f4f4;
 }
 
-/* NAV (PINK) */
+/* NAV */
 nav {
 background: #e84d8a;
 padding: 12px;
@@ -27,7 +27,7 @@ text-decoration: none;
 font-weight: bold;
 }
 
-/* ANIMATED DROPDOWN */
+/* DROPDOWN */
 .dropdown {
 display: inline-block;
 position: relative;
@@ -132,18 +132,32 @@ margin: 25px 0 35px;
 width: 100%;
 height: 170px;
 object-fit: cover;
+object-position: center;
 border-radius: 12px;
 display: block;
 box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 cursor: pointer;
 transition: 0.3s ease;
-border: none;
-outline: none;
-background: transparent;
+border: none !important;
+outline: none !important;
+background: none !important;
+padding: 0 !important;
+}
+
+/* CROPS OUT THE TEAL SIDE STRIPS ON THE FIRST TWO PHOTOS */
+.deep-gallery img:nth-child(1),
+.deep-gallery img:nth-child(2) {
+clip-path: inset(0 10px 0 10px round 12px);
+transform: scale(1.04);
 }
 
 .deep-gallery img:hover {
 transform: scale(1.03);
+}
+
+.deep-gallery img:nth-child(1):hover,
+.deep-gallery img:nth-child(2):hover {
+transform: scale(1.06);
 }
 
 /* LIGHTBOX */
@@ -254,9 +268,16 @@ gap: 10px;
 
 .deep-gallery img {
 height: 150px;
-border: none;
-outline: none;
-background: transparent;
+border: none !important;
+outline: none !important;
+background: none !important;
+padding: 0 !important;
+}
+
+.deep-gallery img:nth-child(1),
+.deep-gallery img:nth-child(2) {
+clip-path: inset(0 10px 0 10px round 12px);
+transform: scale(1.04);
 }
 
 .quote-btn {
