@@ -20,28 +20,571 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://miraclehomemakeover.com/IMG_5660.jpeg">
 <meta property="og:site_name" content="Miracle Home Makeover LLC">
-<meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Deep Cleaning Martinsburg WV | Miracle Home Makeover LLC">
-<meta name="twitter:description" content="Professional deep cleaning in Martinsburg WV and surrounding areas. Detailed, thorough, top-to-bottom cleaning you can trust.">
+<meta name="twitter:description" content="Professional deep cleaning in Martinsburg WV and surrounding areas.">
 <meta name="twitter:image" content="https://miraclehomemakeover.com/IMG_5660.jpeg">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://miraclehomemakeover.com/#business",
-      "name": "Miracle Home Makeover LLC",
-      "url": "https://miraclehomemakeover.com/",
-      "image": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
-      "logo": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
-      "telephone": "+1-304-350-2545",
-      "email": "miraclehomemakeover@gmail.com",
-      "priceRange": "$$",
-      "description": "Miracle Home Makeover LLC provides professional cleaning services in Martinsburg WV and surrounding areas, including deep cleaning, routine cleaning, move-in and move-out cleaning, organization, carpet cleaning, laundry, Airbnb cleaning, and post-construction cleaning.",
-      "address": {
-        "@type": "PostalAddress",
-        "
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background: #f4f4f4;
+}
+
+/* NAV */
+nav {
+background: #e84d8a;
+padding: 12px;
+text-align: center;
+}
+
+nav a {
+color: white;
+padding: 12px 15px;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* DROPDOWN */
+.dropdown {
+display: inline-block;
+position: relative;
+}
+
+.dropdown-content {
+opacity: 0;
+visibility: hidden;
+transform: translateY(10px);
+transition: all 0.3s ease;
+background: #e84d8a;
+position: absolute;
+min-width: 220px;
+z-index: 999;
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+border-radius: 8px;
+overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+.dropdown-content a {
+display: block;
+padding: 12px;
+color: white;
+transition: all 0.25s ease;
+}
+
+.dropdown-content a:hover {
+background: #f4e1c1;
+color: #e84d8a;
+padding-left: 18px;
+}
+
+/* HEADER */
+header {
+text-align: center;
+padding: 70px 20px;
+background: #1b9aaa;
+color: white;
+}
+
+/* CONTENT */
+section {
+max-width: 900px;
+margin: auto;
+padding: 30px 20px;
+background: white;
+}
+
+h2 {
+margin-top: 30px;
+color: #0d1b2a;
+}
+
+h3 {
+margin-top: 20px;
+color: #1b9aaa;
+}
+
+ul {
+padding-left: 20px;
+}
+
+/* PACKAGE BOX */
+.package {
+background: #f9f9f9;
+padding: 20px;
+margin-top: 20px;
+border-left: 5px solid #1b9aaa;
+border-radius: 6px;
+}
+
+/* GALLERY */
+.deep-gallery-title {
+text-align: center;
+color: #e84d8a;
+font-size: 28px;
+margin-top: 35px;
+margin-bottom: 5px;
+}
+
+.deep-gallery-subtitle {
+text-align: center;
+color: #555;
+margin-bottom: 20px;
+font-size: 15px;
+}
+
+.deep-gallery {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 12px;
+margin: 25px 0 35px;
+}
+
+.deep-photo {
+position: relative;
+overflow: hidden;
+border-radius: 12px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.deep-photo img {
+width: 100%;
+height: 170px;
+object-fit: cover;
+object-position: center;
+border-radius: 12px;
+display: block;
+cursor: pointer;
+transition: 0.3s ease;
+border: none;
+outline: none;
+background: none;
+padding: 0;
+}
+
+.deep-photo:hover img {
+transform: scale(1.03);
+}
+
+/* CROPS OUT THE TEAL SIDE STRIPS ON THE FIRST TWO PHOTOS */
+.deep-photo:nth-child(1) img,
+.deep-photo:nth-child(2) img {
+clip-path: inset(0 10px 0 10px round 12px);
+transform: scale(1.04);
+}
+
+.deep-photo:nth-child(1):hover img,
+.deep-photo:nth-child(2):hover img {
+transform: scale(1.06);
+}
+
+/* LABELS */
+.photo-label {
+position: absolute;
+top: 10px;
+left: 10px;
+padding: 7px 13px;
+border-radius: 999px;
+font-size: 12px;
+font-weight: bold;
+color: white;
+z-index: 2;
+box-shadow: 0 4px 10px rgba(0,0,0,0.22);
+}
+
+.before-label {
+background: rgba(55,55,55,0.92);
+}
+
+.after-label {
+background: #e84d8a;
+}
+
+/* LIGHTBOX */
+.lightbox {
+display: none;
+position: fixed;
+z-index: 2000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.9);
+justify-content: center;
+align-items: center;
+padding: 20px;
+box-sizing: border-box;
+}
+
+.lightbox.active {
+display: flex;
+}
+
+.lightbox img {
+max-width: 95%;
+max-height: 90%;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.close-lightbox {
+position: absolute;
+top: 20px;
+right: 25px;
+font-size: 36px;
+font-weight: bold;
+color: white;
+cursor: pointer;
+line-height: 1;
+}
+
+.arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 40px;
+color: white;
+cursor: pointer;
+padding: 10px;
+user-select: none;
+}
+
+.arrow.left {
+left: 20px;
+}
+
+.arrow.right {
+right: 20px;
+}
+
+/* FLOAT BUTTON */
+.quote-btn {
+position: fixed;
+bottom: 60px;
+right: 15px;
+background: #e84d8a;
+color: white;
+padding: 10px 16px;
+border-radius: 25px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+animation: pulse 2s infinite;
+z-index: 1000;
+}
+
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+nav a {
+display: inline-block;
+padding: 10px 8px;
+font-size: 14px;
+}
+
+header {
+padding: 55px 18px;
+}
+
+header h1 {
+font-size: 30px;
+}
+
+section {
+padding: 24px 18px;
+}
+
+.deep-gallery {
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+}
+
+.deep-photo img {
+height: 150px;
+}
+
+.photo-label {
+font-size: 11px;
+padding: 6px 11px;
+top: 8px;
+left: 8px;
+}
+
+.quote-btn {
+bottom: 18px;
+right: 12px;
+font-size: 14px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+
+<div class="dropdown">
+<a href="#">Services ▼</a>
+
+<div class="dropdown-content">
+<a href="residential-commercial.html">Residential & Commercial</a>
+<a href="deep-cleaning.html">Deep Cleaning</a>
+<a href="standard-cleaning.html">Routine Cleaning</a>
+<a href="move-cleaning.html">Move in / Move out Cleaning</a>
+<a href="airbnb-cleaning.html">Airbnb / Rental Turnover</a>
+<a href="organization.html">Organization</a>
+<a href="laundry.html">Laundry</a>
+<a href="carpet-cleaning.html">Carpet Cleaning</a>
+<a href="post-construction.html">Post Construction</a>
+</div>
+</div>
+
+<a href="about.html">About</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+
+<header>
+<h1>Deep Cleaning</h1>
+<p>Detailed. Thorough. Top-to-Bottom Cleaning You Can Trust.</p>
+</header>
+
+<section>
+
+<p>
+Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup, and hard-to-reach areas to restore your space to a like-new condition.
+</p>
+
+<h2 class="deep-gallery-title">Deep Cleaning Results</h2>
+<p class="deep-gallery-subtitle">A closer look at the details that make the difference.</p>
+
+<div class="deep-gallery">
+
+<div class="deep-photo">
+<span class="photo-label before-label">Before</span>
+<img src="IMG_5660.jpeg" alt="Deep cleaning before result in Martinsburg WV by Miracle Home Makeover LLC">
+</div>
+
+<div class="deep-photo">
+<span class="photo-label after-label">After</span>
+<img src="IMG_5659.jpeg" alt="Deep cleaning after result in Martinsburg WV by Miracle Home Makeover LLC">
+</div>
+
+<div class="deep-photo">
+<span class="photo-label before-label">Before</span>
+<img src="IMG_6209.jpeg" alt="Detailed deep cleaning before result by Miracle Home Makeover LLC">
+</div>
+
+<div class="deep-photo">
+<span class="photo-label after-label">After</span>
+<img src="AD9C327C-D10E-4E55-A82B-AF91AE6A260D.png" alt="Detailed deep cleaning after result by Miracle Home Makeover LLC">
+</div>
+
+<div class="deep-photo">
+<span class="photo-label before-label">Before</span>
+<img src="IMG_6214.jpeg" alt="Kitchen and home deep cleaning before result by Miracle Home Makeover LLC">
+</div>
+
+<div class="deep-photo">
+<span class="photo-label after-label">After</span>
+<img src="IMG_6220.jpeg" alt="Kitchen and home deep cleaning after result by Miracle Home Makeover LLC">
+</div>
+
+<div class="deep-photo">
+<span class="photo-label before-label">Before</span>
+<img src="IMG_6805.jpeg" alt="Deep cleaning before detail result">
+</div>
+
+<div class="deep-photo">
+<span class="photo-label after-label">After</span>
+<img src="IMG_6838.jpeg" alt="Deep cleaning after detail result">
+</div>
+
+<div class="deep-photo">
+<span class="photo-label before-label">Before</span>
+<img src="IMG_6808.jpeg" alt="Residential deep cleaning before result by Miracle Home Makeover LLC">
+</div>
+
+<div class="deep-photo">
+<span class="photo-label after-label">After</span>
+<img src="IMG_6837.jpeg" alt="Residential deep cleaning after result by Miracle Home Makeover LLC">
+</div>
+
+</div>
+
+<div class="package">
+<h2>Standard Deep Clean</h2>
+<p><strong>Perfect for homes that need a refresh</strong></p>
+
+<ul>
+<li>Kitchen detailing including cabinet faces, cabinet tops, and appliance exteriors</li>
+<li>Interior appliance cleaning including microwave, oven, and refrigerator</li>
+<li>Scrubbing sink, stovetop, backsplash, and countertops</li>
+<li>Bathroom sanitation including toilets, tubs, showers, and sinks</li>
+<li>Polishing bathroom cabinets and mirrors</li>
+<li>Detailed dusting including baseboards, blinds, and furniture</li>
+<li>Light fixture and ceiling fan dusting</li>
+<li>Interior window cleaning in accessible areas</li>
+<li>Glass and window shining</li>
+<li>Vacuuming and mopping all floors including stairs</li>
+<li>Trash removal</li>
+</ul>
+
+<p><strong>Best For:</strong> First-time clients and seasonal cleaning</p>
+</div>
+
+<div class="package">
+<h2>Premium Deep Clean</h2>
+<p><strong>More detailed attention for heavily used spaces</strong></p>
+
+<p><strong>Includes everything in Standard PLUS:</strong></p>
+
+<ul>
+<li>Cabinet interior wipe-down</li>
+<li>Door and vent cleaning</li>
+<li>Heavy grease and grime removal</li>
+<li>Detailed tile and grout scrubbing</li>
+<li>Spot cleaning walls and high-touch areas</li>
+</ul>
+
+<p><strong>Best For:</strong> Homes needing extra care</p>
+</div>
+
+<div class="package">
+<h2>Ultimate Deep Clean</h2>
+<p><strong>Top-to-bottom, no-detail-missed cleaning</strong></p>
+
+<p><strong>Includes everything in Premium PLUS:</strong></p>
+
+<ul>
+<li>Behind and under furniture and appliances if accessible</li>
+<li>Hand-scrubbed baseboards throughout</li>
+<li>Upholstery vacuuming</li>
+<li>Closet and pantry wipe-down</li>
+<li>Extra attention to buildup and stains</li>
+</ul>
+
+<p><strong>Best For:</strong> Move-ins, move-outs, and extreme cleaning</p>
+</div>
+
+<div class="package">
+<h2>Add-On Services</h2>
+<ul>
+<li>Carpet shampooing</li>
+<li>Post-construction cleanup</li>
+<li>Laundry or linen changing services</li>
+</ul>
+</div>
+
+</section>
+
+<div class="lightbox" id="lightbox">
+<span class="close-lightbox" id="closeLightbox">&times;</span>
+<div class="arrow left" id="prev">&#10094;</div>
+<img id="lightbox-img" alt="Expanded deep cleaning image">
+<div class="arrow right" id="next">&#10095;</div>
+</div>
+
+<a href="quote.html" class="quote-btn">Request Quote</a>
+
+<script>
+const galleryImages = document.querySelectorAll('.deep-gallery img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeLightbox = document.getElementById('closeLightbox');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+
+let currentIndex = 0;
+
+function showImage(index) {
+lightboxImg.src = galleryImages[index].src;
+lightboxImg.alt = galleryImages[index].alt || 'Expanded deep cleaning image';
+currentIndex = index;
+}
+
+galleryImages.forEach((img, index) => {
+img.addEventListener('click', () => {
+lightbox.classList.add('active');
+showImage(index);
+});
+});
+
+nextBtn.addEventListener('click', (e) => {
+e.stopPropagation();
+currentIndex = (currentIndex + 1) % galleryImages.length;
+showImage(currentIndex);
+});
+
+prevBtn.addEventListener('click', (e) => {
+e.stopPropagation();
+currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+showImage(currentIndex);
+});
+
+closeLightbox.addEventListener('click', (e) => {
+e.stopPropagation();
+lightbox.classList.remove('active');
+});
+
+lightbox.addEventListener('click', (e) => {
+if (e.target === lightbox) {
+lightbox.classList.remove('active');
+}
+});
+
+document.addEventListener('keydown', (e) => {
+if (!lightbox.classList.contains('active')) return;
+
+if (e.key === 'ArrowRight') {
+currentIndex = (currentIndex + 1) % galleryImages.length;
+showImage(currentIndex);
+}
+
+if (e.key === 'ArrowLeft') {
+currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+showImage(currentIndex);
+}
+
+if (e.key === 'Escape') {
+lightbox.classList.remove('active');
+}
+});
+
+let startX = 0;
+
+lightbox.addEventListener('touchstart', (e) => {
+startX = e.touches[0].clientX;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', (e) => {
+const endX = e.changedTouches[0].clientX;
+
+if (startX - endX > 50) {
+currentIndex = (currentIndex + 1) % galleryImages.length;
+showImage(currentIndex);
+}
+
+if (endX - startX > 50) {
+currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+showImage(currentIndex);
+}
+}, { passive: true });
+</script>
+
+</body>
+</html>
