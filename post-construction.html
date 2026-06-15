@@ -14,19 +14,6 @@
 <link rel="canonical" href="https://miraclehomemakeover.com/post-construction.html">
 <link rel="icon" type="image/png" href="/AD26E661-D90D-48F8-BEBB-81401EB5A19E.png">
 
-<meta property="og:title" content="Post-Construction Cleaning Martinsburg WV | Miracle Home Makeover LLC">
-<meta property="og:description" content="Detailed post-construction cleaning in Martinsburg WV and surrounding areas. Dust removal, debris cleanup, residue removal, windows, floors, kitchens, bathrooms, and final touch cleaning.">
-<meta property="og:url" content="https://miraclehomemakeover.com/post-construction.html">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png">
-<meta property="og:site_name" content="Miracle Home Makeover LLC">
-<meta property="og:locale" content="en_US">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Post-Construction Cleaning Martinsburg WV | Miracle Home Makeover LLC">
-<meta name="twitter:description" content="Post-construction cleaning for renovations, remodels, new builds, and construction projects in Martinsburg WV and surrounding areas.">
-<meta name="twitter:image" content="https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png">
-
 <style>
 body {
 margin: 0;
@@ -133,6 +120,7 @@ background: #fafafa;
 padding: 14px;
 border-radius: 16px;
 box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+touch-action: pan-y;
 }
 
 .slide {
@@ -177,34 +165,6 @@ background: rgba(55,55,55,0.92);
 
 .after-label {
 background: #e84d8a;
-}
-
-.prev, .next {
-cursor: pointer;
-position: absolute;
-top 80%;
-transform: translateY(-50%);
-padding: 12px 16px;
-color: white;
-font-weight: bold;
-font-size: 24px;
-background: rgba(0,0,0,0.45);
-border-radius: 50%;
-user-select: none;
-text-decoration: none;
-z-index: 20;
-}
-
-.prev {
-left: 22px;
-}
-
-.next {
-right: 22px;
-}
-
-.prev:hover, .next:hover {
-background: rgba(0,0,0,0.7);
 }
 
 .dots {
@@ -295,12 +255,6 @@ font-size: 12px;
 padding: 7px 13px;
 }
 
-.prev, .next {
-top: 210px;
-font-size: 20px;
-padding: 10px 13px;
-}
-
 .quote-btn {
 bottom: 18px;
 right: 12px;
@@ -346,7 +300,7 @@ My post-construction cleaning service is designed to remove dust, debris, and co
 </p>
 
 <h2 class="slideshow-title">Post-Construction Cleaning Results</h2>
-<p class="slideshow-subtitle">Before and after photos from a post-construction cleanup.</p>
+<p class="slideshow-subtitle">Swipe left or right to view before and after photos.</p>
 
 <div class="slideshow-container">
 
@@ -441,9 +395,6 @@ My post-construction cleaning service is designed to remove dust, debris, and co
 </div>
 </div>
 
-<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-<a class="next" onclick="changeSlide(1)">&#10095;</a>
-
 <div class="dots">
 <span class="dot" onclick="currentSlide(1)"></span>
 <span class="dot" onclick="currentSlide(2)"></span>
@@ -509,7 +460,6 @@ My post-construction cleaning service is designed to remove dust, debris, and co
 <li>Removing any remaining dust or smudges</li>
 <li>Ensuring the space is spotless and presentation-ready</li>
 </ul>
-
 </div>
 
 <div class="box">
@@ -579,6 +529,30 @@ dots[i].className = dots[i].className.replace(" active-dot", "");
 
 slides[slideIndex - 1].style.display = "block";
 dots[slideIndex - 1].className += " active-dot";
+}
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const slider = document.querySelector(".slideshow-container");
+
+slider.addEventListener("touchstart", function(e) {
+touchStartX = e.changedTouches[0].screenX;
+}, false);
+
+slider.addEventListener("touchend", function(e) {
+touchEndX = e.changedTouches[0].screenX;
+handleSwipe();
+}, false);
+
+function handleSwipe() {
+if (touchEndX < touchStartX - 50) {
+changeSlide(1);
+}
+
+if (touchEndX > touchStartX + 50) {
+changeSlide(-1);
+}
 }
 </script>
 
