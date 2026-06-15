@@ -213,8 +213,8 @@ margin-top: 20px;
 color: #1b9aaa;
 }
 
-/* VIDEO SECTION */
-.video-title {
+/* BEFORE & AFTER SLIDESHOW */
+.slideshow-title {
 text-align: center;
 color: #e84d8a;
 font-size: 28px;
@@ -222,41 +222,50 @@ margin-top: 35px;
 margin-bottom: 5px;
 }
 
-.video-subtitle {
+.slideshow-subtitle {
 text-align: center;
 color: #555;
 margin-bottom: 20px;
 font-size: 15px;
 }
 
-.video-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 14px;
-margin: 25px 0 35px;
+.slideshow-container {
+position: relative;
+max-width: 850px;
+margin: 25px auto 35px;
+background: #fafafa;
+padding: 14px;
+border-radius: 16px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.video-box {
-background: #fafafa;
-padding: 12px;
-border-radius: 14px;
-box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+.slide {
+display: none;
+}
+
+.before-after-pair {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 14px;
+}
+
+.photo-card {
 position: relative;
 }
 
-.video-box video {
+.photo-card img {
 width: 100%;
-height: 320px;
+height: 430px;
 object-fit: cover;
-border-radius: 12px;
+border-radius: 14px;
 display: block;
-background: #000;
+background: #eee;
 }
 
-.video-label {
+.slide-label {
 position: absolute;
-top: 22px;
-left: 22px;
+top: 16px;
+left: 16px;
 padding: 8px 14px;
 border-radius: 999px;
 font-size: 13px;
@@ -271,6 +280,53 @@ background: rgba(55,55,55,0.92);
 }
 
 .after-label {
+background: #e84d8a;
+}
+
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+padding: 12px 16px;
+color: white;
+font-weight: bold;
+font-size: 24px;
+background: rgba(0,0,0,0.45);
+border-radius: 50%;
+user-select: none;
+text-decoration: none;
+}
+
+.prev {
+left: 22px;
+}
+
+.next {
+right: 22px;
+}
+
+.prev:hover, .next:hover {
+background: rgba(0,0,0,0.7);
+}
+
+.dots {
+text-align: center;
+margin-top: 12px;
+}
+
+.dot {
+cursor: pointer;
+height: 10px;
+width: 10px;
+margin: 0 4px;
+background: #ccc;
+border-radius: 50%;
+display: inline-block;
+transition: background 0.3s ease;
+}
+
+.active-dot {
 background: #e84d8a;
 }
 
@@ -329,20 +385,25 @@ section {
 padding: 24px 18px;
 }
 
-.video-grid {
+.before-after-pair {
 grid-template-columns: 1fr;
 gap: 16px;
 }
 
-.video-box video {
+.photo-card img {
 height: 360px;
 }
 
-.video-label {
-top: 22px;
-left: 22px;
+.slide-label {
+top: 14px;
+left: 14px;
 font-size: 12px;
 padding: 7px 13px;
+}
+
+.prev, .next {
+font-size: 20px;
+padding: 10px 13px;
 }
 
 .quote-btn {
@@ -389,27 +450,113 @@ font-size: 14px;
 My post-construction cleaning service is designed to remove dust, debris, and construction residue left behind after building, remodeling, or renovation projects. I transform newly built or renovated spaces into clean, safe, and ready-to-use environments.
 </p>
 
-<h2 class="video-title">Post-Construction Cleaning Results</h2>
-<p class="video-subtitle">A closer look at the cleanup process after renovation and construction work.</p>
+<h2 class="slideshow-title">Post-Construction Cleaning Results</h2>
+<p class="slideshow-subtitle">Before and after photos from a post-construction cleanup.</p>
 
-<div class="video-grid">
+<div class="slideshow-container">
 
-<div class="video-box">
-<span class="video-label before-label">Before</span>
-<video controls playsinline preload="metadata">
-<source src="IMG_6687.mov" type="video/quicktime">
-<source src="IMG_6687.mov" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div class="slide">
+<div class="before-after-pair">
+<div class="photo-card">
+<span class="slide-label before-label">Before</span>
+<img src="IMG_7416.jpeg" alt="Post-construction cleaning before photo">
+</div>
+<div class="photo-card">
+<span class="slide-label after-label">After</span>
+<img src="IMG_7910.jpeg" alt="Post-construction cleaning after photo">
+</div>
+</div>
 </div>
 
-<div class="video-box">
-<span class="video-label after-label">After</span>
-<video controls playsinline preload="metadata">
-<source src="IMG_6724.mov" type="video/quicktime">
-<source src="IMG_6724.mov" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div class="slide">
+<div class="before-after-pair">
+<div class="photo-card">
+<span class="slide-label before-label">Before</span>
+<img src="IMG_7415.jpeg" alt="Post-construction cleaning before photo">
+</div>
+<div class="photo-card">
+<span class="slide-label after-label">After</span>
+<img src="IMG_7746.jpeg" alt="Post-construction cleaning after photo">
+</div>
+</div>
+</div>
+
+<div class="slide">
+<div class="before-after-pair">
+<div class="photo-card">
+<span class="slide-label before-label">Before</span>
+<img src="IMG_7727.jpeg" alt="Post-construction cleaning before photo">
+</div>
+<div class="photo-card">
+<span class="slide-label after-label">After</span>
+<img src="IMG_7908.jpeg" alt="Post-construction cleaning after photo">
+</div>
+</div>
+</div>
+
+<div class="slide">
+<div class="before-after-pair">
+<div class="photo-card">
+<span class="slide-label before-label">Before</span>
+<img src="IMG_7735.jpeg" alt="Post-construction cleaning before photo">
+</div>
+<div class="photo-card">
+<span class="slide-label after-label">After</span>
+<img src="IMG_7766.jpeg" alt="Post-construction cleaning after photo">
+</div>
+</div>
+</div>
+
+<div class="slide">
+<div class="before-after-pair">
+<div class="photo-card">
+<span class="slide-label before-label">Before</span>
+<img src="IMG_7728.jpeg" alt="Post-construction cleaning before photo">
+</div>
+<div class="photo-card">
+<span class="slide-label after-label">After</span>
+<img src="IMG_7742.jpeg" alt="Post-construction cleaning after photo">
+</div>
+</div>
+</div>
+
+<div class="slide">
+<div class="before-after-pair">
+<div class="photo-card">
+<span class="slide-label before-label">Before</span>
+<img src="IMG_7734.jpeg" alt="Post-construction cleaning before photo">
+</div>
+<div class="photo-card">
+<span class="slide-label after-label">After</span>
+<img src="IMG_7769.jpeg" alt="Post-construction cleaning after photo">
+</div>
+</div>
+</div>
+
+<div class="slide">
+<div class="before-after-pair">
+<div class="photo-card">
+<span class="slide-label before-label">Before</span>
+<img src="IMG_7731.jpeg" alt="Post-construction cleaning before photo">
+</div>
+<div class="photo-card">
+<span class="slide-label after-label">After</span>
+<img src="IMG_7776.jpeg" alt="Post-construction cleaning after photo">
+</div>
+</div>
+</div>
+
+<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+<a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+<div class="dots">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+<span class="dot" onclick="currentSlide(5)"></span>
+<span class="dot" onclick="currentSlide(6)"></span>
+<span class="dot" onclick="currentSlide(7)"></span>
 </div>
 
 </div>
@@ -502,6 +649,43 @@ Your browser does not support the video tag.
 </section>
 
 <a href="quote.html" class="quote-btn">Request Quote</a>
+
+<script>
+let slideIndex = 1;
+showSlide(slideIndex);
+
+function changeSlide(n) {
+showSlide(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlide(slideIndex = n);
+}
+
+function showSlide(n) {
+let slides = document.getElementsByClassName("slide");
+let dots = document.getElementsByClassName("dot");
+
+if (n > slides.length) {
+slideIndex = 1;
+}
+
+if (n < 1) {
+slideIndex = slides.length;
+}
+
+for (let i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+
+for (let i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active-dot", "");
+}
+
+slides[slideIndex - 1].style.display = "block";
+dots[slideIndex - 1].className += " active-dot";
+}
+</script>
 
 </body>
 </html>
