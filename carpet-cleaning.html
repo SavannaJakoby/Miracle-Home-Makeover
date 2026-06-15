@@ -109,6 +109,25 @@ ul ul {
 margin-top: 8px;
 }
 
+/* VIDEO */
+.video-box {
+background: #fafafa;
+padding: 14px;
+border-radius: 14px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+margin: 25px auto 35px;
+max-width: 700px;
+}
+
+.video-box video {
+width: 100%;
+height: 420px;
+object-fit: cover;
+border-radius: 12px;
+display: block;
+background: #000;
+}
+
 /* BEFORE / AFTER GALLERY */
 .ba-title {
 text-align: center;
@@ -272,6 +291,10 @@ grid-template-columns: 1fr;
 height: 220px;
 }
 
+.video-box video {
+height: 360px;
+}
+
 .quote-btn {
 bottom: 18px;
 right: 12px;
@@ -316,6 +339,17 @@ font-size: 14px;
 <p>
 My professional carpet cleaning service is designed to remove dirt, stains, allergens, and odors from deep within carpet fibers, restoring freshness, appearance, and comfort to your space.
 </p>
+
+<h2 class="ba-title">Carpet Cleaning in Action</h2>
+<p class="ba-subtitle">A closer look at the carpet cleaning process.</p>
+
+<div class="video-box">
+<video controls playsinline preload="metadata">
+<source src="copy_9A486A13-8A26-43ED-9D36-EC054DE0DEBC.mov" type="video/quicktime">
+<source src="copy_9A486A13-8A26-43ED-9D36-EC054DE0DEBC.mov" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
 
 <h2 class="ba-title">Before & After Results</h2>
 <p class="ba-subtitle">See the difference professional carpet cleaning can make.</p>
@@ -439,7 +473,6 @@ My professional carpet cleaning service is designed to remove dirt, stains, alle
 <div class="arrow right" id="next">&#10095;</div>
 </div>
 
-<!-- 🔥 FLOAT BUTTON -->
 <a href="quote.html" class="quote-btn">Request Quote</a>
 
 <script>
