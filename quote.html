@@ -116,26 +116,30 @@ box-sizing: border-box;
 font-family: 'Poppins', sans-serif;
 }
 
+.walkthrough-section {
+margin: 18px 0 20px;
+}
+
+.walkthrough-title {
+font-weight: 700;
+font-size: 17px;
+color: #333;
+margin-bottom: 12px;
+text-align: center;
+}
+
 .walkthrough-option {
-margin: 18px 0 10px;
+margin: 12px 0;
 padding: 16px;
 background: linear-gradient(135deg, #fff0f6, #ffe6ef);
 border-radius: 10px;
 border: 1px solid #f3c6d9;
-animation: walkthroughGlow 2.5s ease-in-out infinite;
+transition: all 0.3s ease;
 }
 
-@keyframes walkthroughGlow {
-0% {
-box-shadow: 0 0 0 rgba(232,77,138,0);
-}
-50% {
-box-shadow: 0 0 18px rgba(232,77,138,0.5),
-0 0 30px rgba(232,77,138,0.3);
-}
-100% {
-box-shadow: 0 0 0 rgba(232,77,138,0);
-}
+.walkthrough-option:hover {
+box-shadow: 0 0 18px rgba(232,77,138,0.3);
+transform: translateY(-2px);
 }
 
 .walkthrough-option label {
@@ -147,16 +151,16 @@ color: #e84d8a;
 cursor: pointer;
 }
 
-.walkthrough-option input {
+.walkthrough-option input[type="radio"] {
 width: auto;
-margin-top: 3px;
-transform: scale(1.2);
+margin-top: 4px;
+transform: scale(1.25);
 accent-color: #e84d8a;
 cursor: pointer;
 }
 
 .walkthrough-note {
-margin: 10px 0 0 26px;
+margin: 8px 0 0 28px;
 font-size: 14px;
 color: #555;
 line-height: 1.5;
@@ -235,15 +239,46 @@ Experience the difference for yourself!
 
 <textarea id="details" name="Details" placeholder="Describe what services you need..." rows="5" required></textarea>
 
+<div class="walkthrough-section">
+
+<div class="walkthrough-title">
+How would you like to complete your walkthrough?
+</div>
+
 <div class="walkthrough-option">
 <label>
-<input type="checkbox" id="walkthrough" name="Video Walkthrough Requested" value="Yes">
-<span>Request a Video Walkthrough</span>
+<input
+type="radio"
+id="videoWalkthrough"
+name="Walkthrough Type"
+value="Video Walkthrough"
+required
+>
+<span>📱 Video Walkthrough</span>
 </label>
 
 <p class="walkthrough-note">
-Fast, simple, and flexible. A video walkthrough lets us evaluate your space and tailor your cleaning plan, all on your schedule!
+Fast, simple, and flexible. Send a video of your space so I can evaluate your cleaning needs and tailor your cleaning plan around your schedule.
 </p>
+</div>
+
+<div class="walkthrough-option">
+<label>
+<input
+type="radio"
+id="inPersonWalkthrough"
+name="Walkthrough Type"
+value="In-Person Walkthrough"
+required
+>
+<span>🏡 In-Person Walkthrough</span>
+</label>
+
+<p class="walkthrough-note">
+Prefer to meet in person? I can come to your home, walk through the space with you, discuss your cleaning needs, and create a personalized plan.
+</p>
+</div>
+
 </div>
 
 <button type="submit">Request Quote</button>
@@ -256,17 +291,26 @@ Fast, simple, and flexible. A video walkthrough lets us evaluate your space and 
 
 <script>
 function sendText() {
+
 const name = document.getElementById('name').value;
 const email = document.getElementById('email').value;
 const phone = document.getElementById('phone').value;
 const address = document.getElementById('address').value;
 const details = document.getElementById('details').value;
-const walkthrough = document.getElementById('walkthrough').checked;
+
+const walkthroughChoice =
+document.querySelector('input[name="Walkthrough Type"]:checked');
+
+let walkthrough = "";
+
+if (walkthroughChoice) {
+walkthrough = walkthroughChoice.value;
+}
 
 let message = "Hi, I'd like a quote for cleaning services.\n\n";
 
 if (walkthrough) {
-message += "I would like to schedule a video walkthrough.\n\n";
+message += "Walkthrough Preference: " + walkthrough + "\n\n";
 }
 
 message += "Name: " + name + "\n";
@@ -276,7 +320,9 @@ message += "Address: " + address + "\n";
 message += "Services Needed: " + details;
 
 const encoded = encodeURIComponent(message);
-window.location.href = "sms:13043502545?body=" + encoded;
+
+window.location.href =
+"sms:13043502545?body=" + encoded;
 }
 </script>
 
