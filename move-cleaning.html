@@ -39,7 +39,7 @@
       "image": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
       "logo": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
       "telephone": "+1-304-350-2545",
-      "email": "miraclehomemakeover@gmail.com",
+      "email": "miraclehomemakeoverllc@gmail.com",
       "priceRange": "$$",
       "description": "Miracle Home Makeover LLC provides professional cleaning services in Martinsburg WV and surrounding areas, including move-in and move-out cleaning, deep cleaning, routine cleaning, organization, carpet cleaning, laundry, Airbnb cleaning, and post-construction cleaning.",
       "address": {
@@ -384,6 +384,7 @@ font-size: 14px;
 }
 }
 </style>
+<link rel="stylesheet" href="site-improvements.css">
 </head>
 
 <body>
@@ -391,9 +392,8 @@ font-size: 14px;
 <nav>
 <a href="index.html">Home</a>
 
-<div class="dropdown">
-<a href="#">Services ▼</a>
-
+<details class="dropdown service-menu">
+<summary>Services <span aria-hidden="true">▾</span></summary>
 <div class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
@@ -405,7 +405,7 @@ font-size: 14px;
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
 <a href="post-construction.html">Post Construction</a>
 </div>
-</div>
+</details>
 
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
@@ -426,12 +426,12 @@ My Move-In / Move-Out Cleaning service provides a thorough, top-to-bottom deep c
 <p class="move-gallery-subtitle">A closer look at detailed cleaning for fresh starts and spotless finishes.</p>
 
 <div class="move-gallery">
-<img src="IMG_6851.jpeg" alt="Move-out cleaning result in Martinsburg WV by Miracle Home Makeover LLC">
-<img src="IMG_6865.jpeg" alt="Move-in cleaning result by Miracle Home Makeover LLC">
-<img src="IMG_6754.jpeg" alt="Detailed move-out cleaning result by Miracle Home Makeover LLC">
-<img src="IMG_6744.jpeg" alt="Move-in and move-out cleaning detail result">
-<img src="IMG_5382.jpeg" alt="Professional cleaning result for move-out cleaning">
-<img src="IMG_5372.jpeg" alt="Residential move-out cleaning result by Miracle Home Makeover LLC">
+<img src="IMG_6851.jpeg" alt="Move-out cleaning result in Martinsburg WV by Miracle Home Makeover LLC" loading="lazy" decoding="async">
+<img src="IMG_6865.jpeg" alt="Move-in cleaning result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
+<img src="IMG_6754.jpeg" alt="Detailed move-out cleaning result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
+<img src="IMG_6744.jpeg" alt="Move-in and move-out cleaning detail result" loading="lazy" decoding="async">
+<img src="IMG_5382.jpeg" alt="Professional cleaning result for move-out cleaning" loading="lazy" decoding="async">
+<img src="IMG_5372.jpeg" alt="Residential move-out cleaning result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
 </div>
 
 <div class="box">
@@ -592,5 +592,6 @@ lightbox.addEventListener('touchend', (e) => {
 }, { passive: true });
 </script>
 
+<script src="site-menu.js" defer></script>
 </body>
 </html>

@@ -39,7 +39,7 @@
   "image": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
   "logo": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
   "telephone": "+1-304-350-2545",
-  "email": "miraclehomemakeover@gmail.com",
+  "email": "miraclehomemakeoverllc@gmail.com",
   "priceRange": "$$",
   "description": "Miracle Home Makeover LLC provides professional house cleaning, deep cleaning, routine cleaning, move-in and move-out cleaning, organization, carpet cleaning, laundry, Airbnb cleaning, and post-construction cleaning in Martinsburg WV and surrounding areas.",
   "address": {
@@ -867,6 +867,7 @@ padding-bottom: 110px;
 }
 }
 </style>
+<link rel="stylesheet" href="site-improvements.css">
 </head>
 
 <body>
@@ -876,8 +877,8 @@ padding-bottom: 110px;
 <nav aria-label="Main navigation">
 <a href="index.html">Home</a>
 
-<div class="dropdown">
-<a href="#" aria-haspopup="true" aria-expanded="false">Services <i class="fa-solid fa-chevron-down"></i></a>
+<details class="dropdown service-menu">
+<summary>Services <span aria-hidden="true">▾</span></summary>
 <div class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
@@ -889,7 +890,7 @@ padding-bottom: 110px;
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
 <a href="post-construction.html">Post Construction</a>
 </div>
-</div>
+</details>
 
 <a href="about.html">About</a>
 <a href="#contact">Contact</a>
@@ -904,7 +905,7 @@ width="580"
 height="300"
 loading="eager"
 decoding="async"
->
+ fetchpriority="high">
 <p>Professional Cleaning</p>
 <p>& Organization Services</p>
 <p class="subtext">I don't just clean houses, I transform them!</p>
@@ -1153,5 +1154,6 @@ if (quoteBtn) quoteBtn.classList.add('show-btn');
 
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLCY8YSgkBE-KKq10-zEV6TcJaCc03YU&callback=initServiceMap"></script>
 
+<script src="site-menu.js" defer></script>
 </body>
 </html>
