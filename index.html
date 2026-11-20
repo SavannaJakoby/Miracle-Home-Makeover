@@ -866,6 +866,99 @@ body {
 padding-bottom: 110px;
 }
 }
+
+/* Customer reviews — standalone homepage section */
+.customer-reviews {
+  max-width: 900px;
+  margin: 38px auto;
+  padding: 36px 26px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  text-align: center;
+}
+.customer-reviews .reviews-eyebrow {
+  margin: 0 0 7px;
+  color: #1b9aaa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+.customer-reviews h2 {
+  color: #e84d8a;
+  margin: 0 0 10px;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+}
+.customer-reviews .reviews-intro {
+  margin: 0 auto 23px;
+  max-width: 590px;
+  color: #536369;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.customer-reviews .reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  text-align: left;
+}
+.customer-reviews .review-card {
+  margin: 0;
+  padding: 22px;
+  border: 1px solid #e4eeee;
+  border-radius: 12px;
+  background: #f9fdfc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.customer-reviews .review-card blockquote {
+  margin: 0 0 16px;
+  color: #344e55;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.customer-reviews .review-card figcaption {
+  padding-top: 12px;
+  border-top: 1px solid #dfe9e7;
+  color: #4c7c80;
+  font-size: 13px;
+  font-weight: 600;
+}
+.customer-reviews .reviews-link {
+  display: inline-block;
+  margin-top: 23px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: #e84d8a;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background .2s ease, transform .2s ease;
+}
+.customer-reviews .reviews-link:hover,
+.customer-reviews .reviews-link:focus-visible {
+  background: #cf3b77;
+}
+.customer-reviews .reviews-link:focus-visible {
+  outline: 3px solid #1b9aaa;
+  outline-offset: 3px;
+}
+@media (max-width: 700px) {
+  .customer-reviews {
+    margin: 24px 12px;
+    padding: 28px 17px;
+  }
+  .customer-reviews .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .customer-reviews .review-card blockquote {
+    font-size: 16px;
+  }
+}
+
 </style>
 <link rel="stylesheet" href="site-improvements.css">
 </head>
@@ -1047,6 +1140,24 @@ RESULTS
 </div>
 
 <p class="small-note">Not sure if you're in range? Reach out — I’ll confirm!</p>
+</section>
+
+
+<section class="customer-reviews" id="reviews" aria-labelledby="customer-reviews-title">
+  <p class="reviews-eyebrow">A Personal Touch, Beautiful Results</p>
+  <h2 id="customer-reviews-title">Kind Words From My Clients</h2>
+  <p class="reviews-intro">I'm grateful for the trust my clients place in me. Here's what they're sharing about Miracle Home Makeover.</p>
+  <div class="reviews-grid">
+    <figure class="review-card">
+      <blockquote>“The deep cleaning included my sink, fridge, and oven.”</blockquote>
+      <figcaption>Google customer review excerpt</figcaption>
+    </figure>
+    <figure class="review-card">
+      <blockquote>“We have Miracle Home Makeover for our weekly service here in Charles Town.”</blockquote>
+      <figcaption>Google customer review excerpt</figcaption>
+    </figure>
+  </div>
+  <a class="reviews-link" href="https://www.google.com/maps/search/?api=1&amp;query=Miracle%20Home%20Makeover%20LLC&amp;query_place_id=ChIJ59Nw_pIGigkRhXFGTQxjpwQ" target="_blank" rel="noopener noreferrer">Read More Google Reviews</a>
 </section>
 
 <section id="contact" class="contact">
