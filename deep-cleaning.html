@@ -331,6 +331,7 @@ font-size: 14px;
 }
 }
 </style>
+<link rel="stylesheet" href="site-improvements.css">
 </head>
 
 <body>
@@ -338,9 +339,8 @@ font-size: 14px;
 <nav>
 <a href="index.html">Home</a>
 
-<div class="dropdown">
-<a href="#">Services ▼</a>
-
+<details class="dropdown service-menu">
+<summary>Services <span aria-hidden="true">▾</span></summary>
 <div class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
@@ -352,7 +352,7 @@ font-size: 14px;
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
 <a href="post-construction.html">Post Construction</a>
 </div>
-</div>
+</details>
 
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
@@ -376,52 +376,52 @@ Deep cleaning goes beyond regular maintenance by targeting hidden dirt, buildup,
 
 <div class="deep-photo">
 <span class="photo-label before-label">Before</span>
-<img src="IMG_5660.jpeg" alt="Deep cleaning before result in Martinsburg WV by Miracle Home Makeover LLC">
+<img src="IMG_5660.jpeg" alt="Deep cleaning before result in Martinsburg WV by Miracle Home Makeover LLC" loading="lazy" decoding="async">
 </div>
 
 <div class="deep-photo">
 <span class="photo-label after-label">After</span>
-<img src="IMG_5659.jpeg" alt="Deep cleaning after result in Martinsburg WV by Miracle Home Makeover LLC">
+<img src="IMG_5659.jpeg" alt="Deep cleaning after result in Martinsburg WV by Miracle Home Makeover LLC" loading="lazy" decoding="async">
 </div>
 
 <div class="deep-photo">
 <span class="photo-label before-label">Before</span>
-<img src="IMG_6209.jpeg" alt="Detailed deep cleaning before result by Miracle Home Makeover LLC">
+<img src="IMG_6209.jpeg" alt="Detailed deep cleaning before result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
 </div>
 
 <div class="deep-photo">
 <span class="photo-label after-label">After</span>
-<img src="AD9C327C-D10E-4E55-A82B-AF91AE6A260D.png" alt="Detailed deep cleaning after result by Miracle Home Makeover LLC">
+<img src="AD9C327C-D10E-4E55-A82B-AF91AE6A260D.png" alt="Detailed deep cleaning after result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
 </div>
 
 <div class="deep-photo">
 <span class="photo-label before-label">Before</span>
-<img src="IMG_6214.jpeg" alt="Kitchen and home deep cleaning before result by Miracle Home Makeover LLC">
+<img src="IMG_6214.jpeg" alt="Kitchen and home deep cleaning before result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
 </div>
 
 <div class="deep-photo">
 <span class="photo-label after-label">After</span>
-<img src="IMG_6220.jpeg" alt="Kitchen and home deep cleaning after result by Miracle Home Makeover LLC">
+<img src="IMG_6220.jpeg" alt="Kitchen and home deep cleaning after result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
 </div>
 
 <div class="deep-photo">
 <span class="photo-label before-label">Before</span>
-<img src="IMG_6805.jpeg" alt="Deep cleaning before detail result">
+<img src="IMG_6805.jpeg" alt="Deep cleaning before detail result" loading="lazy" decoding="async">
 </div>
 
 <div class="deep-photo">
 <span class="photo-label after-label">After</span>
-<img src="IMG_6838.jpeg" alt="Deep cleaning after detail result">
+<img src="IMG_6838.jpeg" alt="Deep cleaning after detail result" loading="lazy" decoding="async">
 </div>
 
 <div class="deep-photo">
 <span class="photo-label before-label">Before</span>
-<img src="IMG_6808.jpeg" alt="Residential deep cleaning before result by Miracle Home Makeover LLC">
+<img src="IMG_6808.jpeg" alt="Residential deep cleaning before result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
 </div>
 
 <div class="deep-photo">
 <span class="photo-label after-label">After</span>
-<img src="IMG_6837.jpeg" alt="Residential deep cleaning after result by Miracle Home Makeover LLC">
+<img src="IMG_6837.jpeg" alt="Residential deep cleaning after result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
 </div>
 
 </div>
@@ -586,5 +586,6 @@ showImage(currentIndex);
 }, { passive: true });
 </script>
 
+<script src="site-menu.js" defer></script>
 </body>
 </html>

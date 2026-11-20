@@ -39,7 +39,7 @@
       "image": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
       "logo": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
       "telephone": "+1-304-350-2545",
-      "email": "miraclehomemakeover@gmail.com",
+      "email": "miraclehomemakeoverllc@gmail.com",
       "priceRange": "$$",
       "description": "Miracle Home Makeover LLC provides professional cleaning and laundry services in Martinsburg WV and surrounding areas, including routine cleaning, deep cleaning, move-in and move-out cleaning, Airbnb cleaning, organizing, carpet cleaning, laundry, and post-construction cleaning.",
       "address": {
@@ -247,6 +247,7 @@ animation: pulse 2s infinite;
 100% { transform: scale(1); }
 }
 </style>
+<link rel="stylesheet" href="site-improvements.css">
 </head>
 
 <body>
@@ -254,9 +255,8 @@ animation: pulse 2s infinite;
 <nav>
 <a href="index.html">Home</a>
 
-<div class="dropdown">
-<a href="#">Services ▼</a>
-
+<details class="dropdown service-menu">
+<summary>Services <span aria-hidden="true">▾</span></summary>
 <div class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
@@ -268,7 +268,7 @@ animation: pulse 2s infinite;
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
 <a href="post-construction.html">Post Construction</a>
 </div>
-</div>
+</details>
 
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
@@ -328,5 +328,6 @@ My laundry services are designed to take the hassle out of washing, drying, and 
 <!-- 🔥 FLOAT BUTTON -->
 <a href="quote.html" class="quote-btn">Request Quote</a>
 
+<script src="site-menu.js" defer></script>
 </body>
 </html>

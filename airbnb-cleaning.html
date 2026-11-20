@@ -39,7 +39,7 @@
       "image": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
       "logo": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
       "telephone": "+1-304-350-2545",
-      "email": "miraclehomemakeover@gmail.com",
+      "email": "miraclehomemakeoverllc@gmail.com",
       "priceRange": "$$",
       "description": "Miracle Home Makeover LLC provides professional cleaning services in Martinsburg WV and surrounding areas, including Airbnb cleaning, rental turnover cleaning, deep cleaning, routine cleaning, move-in and move-out cleaning, organization, carpet cleaning, laundry, and post-construction cleaning.",
       "address": {
@@ -384,6 +384,7 @@ font-size: 14px;
 }
 }
 </style>
+<link rel="stylesheet" href="site-improvements.css">
 </head>
 
 <body>
@@ -391,9 +392,8 @@ font-size: 14px;
 <nav>
 <a href="index.html">Home</a>
 
-<div class="dropdown">
-<a href="#">Services ▼</a>
-
+<details class="dropdown service-menu">
+<summary>Services <span aria-hidden="true">▾</span></summary>
 <div class="dropdown-content">
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
@@ -405,7 +405,7 @@ font-size: 14px;
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
 <a href="post-construction.html">Post Construction</a>
 </div>
-</div>
+</details>
 
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
@@ -426,9 +426,9 @@ My Airbnb and rental turnover cleaning service ensures your property is spotless
 <p class="airbnb-gallery-subtitle">Guest-ready details for short-term rentals, vacation homes, and turnover cleanings.</p>
 
 <div class="airbnb-gallery">
-<img src="IMG_5635.jpeg" alt="Airbnb turnover cleaning result in Martinsburg WV by Miracle Home Makeover LLC">
-<img src="IMG_5637.jpeg" alt="Rental turnover cleaning result by Miracle Home Makeover LLC">
-<img src="IMG_5643.jpeg" alt="Short-term rental cleaning result by Miracle Home Makeover LLC">
+<img src="IMG_5635.jpeg" alt="Airbnb turnover cleaning result in Martinsburg WV by Miracle Home Makeover LLC" loading="lazy" decoding="async">
+<img src="IMG_5637.jpeg" alt="Rental turnover cleaning result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
+<img src="IMG_5643.jpeg" alt="Short-term rental cleaning result by Miracle Home Makeover LLC" loading="lazy" decoding="async">
 </div>
 
 <div class="box">
@@ -587,5 +587,6 @@ lightbox.addEventListener('touchend', (e) => {
 }, { passive: true });
 </script>
 
+<script src="site-menu.js" defer></script>
 </body>
 </html>
