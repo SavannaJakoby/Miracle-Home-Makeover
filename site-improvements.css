@@ -1,72 +1,87 @@
-/* Shared Services navigation. The dropdown stays anchored to its trigger,
-   including on pages whose main navigation is not sticky. */
+/* Consistent click/tap Services menu. This replaces the legacy hover behavior. */
 nav .service-menu {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  z-index: 1100;
+  z-index: 1200;
 }
-nav .service-menu > summary {
+nav .service-menu-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
-  list-style: none;
-  cursor: pointer;
-  color: white;
-  padding: 12px 15px;
-  font: inherit;
-  font-weight: 600;
-  border-radius: 7px;
   min-height: 44px;
+  padding: 12px 15px;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  color: #fff;
+  font: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  cursor: pointer;
   box-sizing: border-box;
+  touch-action: manipulation;
 }
-nav .service-menu > summary::-webkit-details-marker { display: none; }
-nav .service-menu > summary:focus-visible {
+nav .service-menu-toggle:hover,
+nav .service-menu.is-open .service-menu-toggle {
+  background: rgba(255,255,255,.14);
+}
+nav .service-menu-toggle:focus-visible {
   outline: 3px solid white;
   outline-offset: 2px;
 }
-nav .service-menu > summary:hover,
-nav .service-menu[open] > summary {
-  background: rgba(255,255,255,.14);
+nav .service-menu-toggle span[aria-hidden="true"] {
+  transition: transform .15s ease;
 }
-nav .service-menu > summary span[aria-hidden] {
-  display: inline-block;
-  transition: transform .18s ease;
-}
-nav .service-menu[open] > summary span[aria-hidden] {
+nav .service-menu.is-open .service-menu-toggle span[aria-hidden="true"] {
   transform: rotate(180deg);
 }
-/* Override the older hover-only rules embedded in each HTML page. */
 nav .service-menu .dropdown-content {
   position: absolute;
-  top: calc(100% + 3px);
+  top: 100%;
   left: 50%;
   right: auto;
   width: min(320px, calc(100vw - 24px));
   min-width: 0;
   max-width: none;
-  max-height: min(65vh, 500px);
+  max-height: min(66vh, 500px);
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
   box-sizing: border-box;
-  z-index: 1101;
-  transition: none;
+  background: #e84d8a;
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.2);
+  z-index: 1201;
+  transition: none !important;
   transform: translateX(calc(-50% + var(--service-menu-shift, 0px))) !important;
 }
-nav .service-menu:not([open]) .dropdown-content {
+nav .service-menu:not(.is-open) .dropdown-content {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
   pointer-events: none !important;
 }
-nav .service-menu[open] .dropdown-content {
+nav .service-menu.is-open .dropdown-content {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
   pointer-events: auto !important;
-  transform: translateX(calc(-50% + var(--service-menu-shift, 0px))) !important;
+}
+nav .service-menu .dropdown-content a {
+  display: block;
+  padding: 13px 16px;
+  text-align: left;
+  white-space: normal;
+  color: #fff;
+  text-decoration: none;
+}
+nav .service-menu .dropdown-content a:hover,
+nav .service-menu .dropdown-content a:focus-visible {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  padding-left: 16px;
 }
 @media (max-width: 700px) {
   nav {
@@ -78,21 +93,17 @@ nav .service-menu[open] .dropdown-content {
     padding: 8px;
   }
   nav > a,
-  nav .service-menu > summary {
+  nav .service-menu-toggle {
     padding: 10px 9px;
     font-size: 14px;
   }
-  /* Don't set position:static here: that made menus jump on service pages. */
   nav .service-menu { position: relative; }
   nav .service-menu .dropdown-content {
-    top: calc(100% + 3px);
-    left: 50%;
-    right: auto;
+    top: 100%;
     width: min(320px, calc(100vw - 24px));
-    max-width: none;
-    max-height: min(65vh, 500px);
+    max-height: 66vh;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  nav .service-menu > summary span[aria-hidden] { transition: none; }
+  nav .service-menu-toggle span[aria-hidden="true"] { transition: none; }
 }
