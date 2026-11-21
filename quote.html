@@ -199,7 +199,7 @@ text-decoration: none;
 font-weight: 700;
 }
 </style>
-<link rel="stylesheet" href="site-improvements.css">
+<link rel="stylesheet" href="site-improvements.css?v=20261121b">
 </head>
 
 <body>
@@ -207,9 +207,9 @@ font-weight: 700;
 <nav>
 <a href="index.html">Home</a>
 
-<details class="dropdown service-menu">
-<summary>Services <span aria-hidden="true">▾</span></summary>
-<div class="dropdown-content">
+<div class="service-menu">
+<button type="button" class="service-menu-toggle" aria-expanded="false" aria-controls="services-menu">Services <span aria-hidden="true">▾</span></button>
+<div class="dropdown-content" id="services-menu" hidden>
 <a href="residential-commercial.html">Residential & Commercial</a>
 <a href="deep-cleaning.html">Deep Cleaning</a>
 <a href="standard-cleaning.html">Routine Cleaning</a>
@@ -220,7 +220,7 @@ font-weight: 700;
 <a href="carpet-cleaning.html">Carpet Cleaning</a>
 <a href="post-construction.html">Post Construction</a>
 </div>
-</details>
+</div>
 
 <a href="about.html">About</a>
 <a href="index.html#contact">Contact</a>
@@ -335,6 +335,6 @@ window.location.href =
 }
 </script>
 
-<script src="site-menu.js" defer></script>
+<script src="site-menu.js?v=20261121b" defer></script>
 </body>
 </html>
