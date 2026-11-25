@@ -32,77 +32,202 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://miraclehomemakeover.com/#business",
-  "name": "Miracle Home Makeover LLC",
-  "url": "https://miraclehomemakeover.com/",
-  "image": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
-  "logo": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
-  "telephone": "+1-304-350-2545",
-  "email": "miraclehomemakeoverllc@gmail.com",
-  "priceRange": "$$",
-  "description": "Miracle Home Makeover LLC provides professional house cleaning, deep cleaning, routine cleaning, move-in and move-out cleaning, organization, carpet cleaning, laundry, Airbnb cleaning, and post-construction cleaning in Martinsburg WV and surrounding areas.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Martinsburg",
-    "addressRegion": "WV",
-    "addressCountry": "US"
-  },
-  "areaServed": [
-    { "@type": "City", "name": "Martinsburg" },
-    { "@type": "City", "name": "Hedgesville" },
-    { "@type": "City", "name": "Inwood" },
-    { "@type": "City", "name": "Falling Waters" },
-    { "@type": "City", "name": "Bunker Hill" },
-    { "@type": "City", "name": "Shepherdstown" },
-    { "@type": "City", "name": "Charles Town" },
-    { "@type": "AdministrativeArea", "name": "West Virginia" }
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Cleaning Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "House Cleaning" }
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://miraclehomemakeover.com/#business",
+      "name": "Miracle Home Makeover LLC",
+      "url": "https://miraclehomemakeover.com/",
+      "image": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
+      "logo": "https://miraclehomemakeover.com/1818846A-DCDF-4D12-9A19-FACBD9968E1A.png",
+      "telephone": "+1-304-350-2545",
+      "email": "miraclehomemakeoverllc@gmail.com",
+      "priceRange": "$$",
+      "description": "Miracle Home Makeover LLC provides residential and commercial cleaning, deep cleaning, routine cleaning, move-in and move-out cleaning, Airbnb and rental turnover cleaning, organization, laundry, carpet cleaning and post-construction cleaning in Martinsburg, WV and surrounding areas.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Martinsburg",
+        "addressRegion": "WV",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Deep Cleaning" }
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Martinsburg",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "West Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Hedgesville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "West Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Inwood",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "West Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Falling Waters",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "West Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Bunker Hill",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "West Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Shepherdstown",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "West Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Charles Town",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "West Virginia"
+          }
+        },
+        "Approximately 50 air miles from Martinsburg, West Virginia; contact to confirm coverage"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Cleaning Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://miraclehomemakeover.com/residential-commercial.html#service",
+              "name": "Residential & Commercial Cleaning",
+              "url": "https://miraclehomemakeover.com/residential-commercial.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://miraclehomemakeover.com/deep-cleaning.html#service",
+              "name": "Deep Cleaning",
+              "url": "https://miraclehomemakeover.com/deep-cleaning.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://miraclehomemakeover.com/standard-cleaning.html#service",
+              "name": "Routine Cleaning",
+              "url": "https://miraclehomemakeover.com/standard-cleaning.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://miraclehomemakeover.com/move-cleaning.html#service",
+              "name": "Move-In and Move-Out Cleaning",
+              "url": "https://miraclehomemakeover.com/move-cleaning.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://miraclehomemakeover.com/airbnb-cleaning.html#service",
+              "name": "Airbnb and Rental Turnover Cleaning",
+              "url": "https://miraclehomemakeover.com/airbnb-cleaning.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://miraclehomemakeover.com/organization.html#service",
+              "name": "Organizing and Decluttering",
+              "url": "https://miraclehomemakeover.com/organization.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://miraclehomemakeover.com/laundry.html#service",
+              "name": "Laundry Services",
+              "url": "https://miraclehomemakeover.com/laundry.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://miraclehomemakeover.com/carpet-cleaning.html#service",
+              "name": "Carpet Cleaning",
+              "url": "https://miraclehomemakeover.com/carpet-cleaning.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://miraclehomemakeover.com/post-construction.html#service",
+              "name": "Post-Construction Cleaning",
+              "url": "https://miraclehomemakeover.com/post-construction.html"
+            }
+          }
+        ]
       },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Routine Cleaning" }
+      "sameAs": [
+        "https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr",
+        "https://www.instagram.com/miraclehomemakeover/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://miraclehomemakeover.com/#website",
+      "url": "https://miraclehomemakeover.com/",
+      "name": "Miracle Home Makeover LLC",
+      "publisher": {
+        "@id": "https://miraclehomemakeover.com/#business"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Move-In and Move-Out Cleaning" }
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://miraclehomemakeover.com/#webpage",
+      "url": "https://miraclehomemakeover.com/",
+      "name": "House Cleaning Martinsburg WV | Miracle Home Makeover LLC",
+      "description": "Miracle Home Makeover LLC provides residential and commercial cleaning, deep cleaning, routine cleaning, move-in and move-out cleaning, Airbnb and rental turnover cleaning, organization, laundry, carpet cleaning and post-construction cleaning in Martinsburg, WV and surrounding areas.",
+      "isPartOf": {
+        "@id": "https://miraclehomemakeover.com/#website"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Airbnb and Rental Turnover Cleaning" }
+      "about": {
+        "@id": "https://miraclehomemakeover.com/#business"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Organization and Decluttering" }
+      "mainEntity": {
+        "@id": "https://miraclehomemakeover.com/#business"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Laundry Services" }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Carpet Cleaning" }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Post-Construction Cleaning" }
-      }
-    ]
-  },
-  "sameAs": [
-    "https://www.facebook.com/share/1CTJwfq5x7/?mibextid=wwXIfr",
-    "https://www.instagram.com/miraclehomemakeover/"
+      "inLanguage": "en-US"
+    }
   ]
 }
 </script>
@@ -1047,6 +1172,30 @@ RESULTS
 </div>
 
 <p class="small-note">Not sure if you're in range? Reach out — I’ll confirm!</p>
+</section>
+
+<section class="bio" id="cleaning-faq" aria-labelledby="cleaning-faq-heading">
+<h2 id="cleaning-faq-heading">Frequently Asked Questions</h2>
+<h3>What cleaning services does Miracle Home Makeover LLC offer?</h3>
+<p>I offer residential and commercial cleaning, deep cleaning, routine cleaning, move-in and move-out cleaning, Airbnb turnover cleaning, organizing, laundry, carpet cleaning and post-construction cleaning.</p>
+
+<h3>What areas do you serve?</h3>
+<p>I am based in Martinsburg, WV and serve approximately a 50-air-mile radius, including Hedgesville, Inwood, Falling Waters, Bunker Hill, Shepherdstown and Charles Town. Contact me to confirm your address.</p>
+
+<h3>How much does house cleaning cost?</h3>
+<p>I provide a customized quote based on your space and cleaning needs after a complimentary video or in-person walkthrough. <a href="quote.html">Request a quote</a> to get started.</p>
+
+<h3>What is the difference between routine and deep cleaning?</h3>
+<p><a href="standard-cleaning.html">Routine cleaning</a> maintains your space with regular tasks such as dusting, vacuuming and bathroom cleaning. <a href="deep-cleaning.html">Deep cleaning</a> targets buildup and more detailed areas, with Standard, Premium and Ultimate packages.</p>
+
+<h3>Are you licensed and insured?</h3>
+<p>Yes. Miracle Home Makeover LLC is licensed and insured, and I am a background-checked cleaner. <a href="about.html">Meet the owner, Savanna Jakoby.</a></p>
+
+<h3>Do you offer weekly or bi-weekly cleaning?</h3>
+<p>Yes. I offer weekly, bi-weekly, monthly and custom routine cleaning schedules, subject to availability.</p>
+
+<h3>How do I book a cleaning?</h3>
+<p>Start with a complimentary video or in-person walkthrough. I will create a personalized cleaning plan and schedule your first service after the plan is finalized. <a href="quote.html">Request a walkthrough</a> or call <a href="tel:+13043502545">304-350-2545</a>.</p>
 </section>
 
 <section id="contact" class="contact">
